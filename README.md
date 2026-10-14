@@ -31,6 +31,8 @@ It uses **public metadata only**:
   [ftp.ncbi.nlm.nih.gov/dbgap/studies](https://ftp.ncbi.nlm.nih.gov/dbgap/studies/)).
   These give variable names, descriptions and units, plus male and female counts
   in the shareable consent groups.
+- Or, in **snapshot mode** (below), the fixed public snapshot that NLM
+  published for the SPARK challenge.
 
 It never touches controlled-access data. Everything uses the Python standard
 library (3.8+), with no install and no API key.
@@ -46,6 +48,52 @@ Registration closes January 2, 2027, and the scored window runs January 15 to
 February 1, 2027. This repository is an open, reproducible **baseline** for
 that task and for anyone who needs to find dbGaP studies. It is not an official
 NIH tool and is not affiliated with NIH or NLM.
+
+## Snapshot mode (the official SPARK corpus)
+
+SPARK judges answers only against a fixed snapshot,
+[dbgap.tar.gz](https://ftp.ncbi.nlm.nih.gov/dbgap/NLM_Challenge/) (1.5 GB,
+August 2026: 3,578 studies and 465,853 variables). A study counts as relevant
+only if it meets **every** stated need, for example adults + lung
+adenocarcinoma + smoking variables + WGS. Two files work on that snapshot:
+
+- `snapshot_survey.py` streams the archive once, without unpacking it. It
+  writes one compact record per study (`studies.jsonl`), every variable
+  (`variables.jsonl.gz`), the coded values of enumerated variables
+  (`var_values.jsonl.gz`) and a census. From each dataset's aggregate
+  `var_summary.xml` it also reads:
+  - **participant age**: the age variable with the most values, preferring
+    age at enrollment, baseline or visit. Ages at diagnosis or onset, and the
+    ages of parents, are skipped. Months and days are converted to years.
+  - **reported race and ethnicity**: counts from the study's largest coded
+    race or ethnicity variable, with labels from `data_dict.xml`, mapped to
+    coarse groups.
+
+  Many study records leave the population label empty (MESA's does), so
+  these counts are often the only population evidence in the snapshot.
+- `snapshot.py` ranks the studies for an information need. It reuses
+  `cohort_finder`'s parser and BM25 index and adds four things:
+  - age needs ("adults", "children", "aged 40-60", "65 and older")
+  - race/ethnicity needs checked against those counts
+  - "with X variables / X measured" needs checked against the data dictionary
+  - conjunctive ranking: a study that clearly fails a need ranks below every
+    study that doesn't
+
+  It writes submissions in the SPARK Task 2 JSONL format.
+
+```
+$ python snapshot_survey.py --data data --out out          # downloads dbgap.tar.gz once
+$ python snapshot.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
+    --values data/var_values.jsonl.gz ask "adults with lung adenocarcinoma, smoking variables and WGS"
+$ python snapshot.py ... run --needs needs.jsonl --out submission.jsonl --team-id <team>
+$ python snapshot.py ... devset -n 150 --out devset.json && python snapshot.py ... bench --devset devset.json --out bench.json
+```
+
+`example_needs.jsonl` holds eight example needs. The `devset` labels come
+from the same snapshot fields the ranker reads, so `bench` catches
+regressions but does not predict the official score. Snapshot mode is new
+and hasn't been released yet. Its first full run on the snapshot is
+pending.
 
 ## How it ranks
 
@@ -155,6 +203,11 @@ ancestry. Limits: ancestry is reported for a whole study, not per consent group,
 and people enrolled in more than one study (for example a cohort and a TOPMed
 study built on it) are counted once per study.
 
+`snapshot_survey.py` writes a second census from the SPARK snapshot. It covers
+consent classes, study-level population labels, data types, participant age
+bands (children only, adults only, both, 65+ only) and reported race/ethnicity,
+summed from the coded variables of top-level studies.
+
 ## Docker
 
 ```
@@ -170,16 +223,19 @@ no GPU and makes no network calls after the harvest.
 
 - These are rules and BM25, not a language model. Paraphrases the rules don't
   cover ("genome-scale") fall back to text matching. A re-ranking step with a
-  local or hosted model is the planned next layer, and it will be measured
-  against this baseline with `devset` and `bench`.
+  local open-weight model (SPARK allows no hosted model APIs at run time) is
+  the planned next layer. It will be measured against this baseline with
+  `devset` and `bench`.
 - Counts are study-wide. The tool can't yet tell how many of a study's 5,000
-  subjects have the disease or the data type you asked about. The variable
-  summary reports hold those counts per variable, and reading them is the next
-  step.
+  subjects have the disease or the data type you asked about.
 - Consent matching reads the consent codes (for example `HMB-IRB-NPU`), not
   the full data use limitation text.
 - Sex counts come from each study's subject table. Studies whose subject table
   has a different name get no sex counts, and those count as partly met.
+- In snapshot mode, the participant-age and race/ethnicity readings are
+  rule-based picks from variable names and labels. Each pick is written to
+  `age_candidates.jsonl` and `studies.jsonl`, so it can be checked. Race and
+  ethnicity are reported or study-assigned categories, not genetic ancestry.
 
 ## Tests
 
@@ -188,11 +244,15 @@ python -m unittest -v
 ```
 
 The tests use fixtures shaped like the real FHIR record and the real data
-dictionary files for phs001218 (GeneSTAR), plus synthetic studies. They make no
-network calls.
+dictionary files for phs001218 (GeneSTAR), a synthetic snapshot archive shaped
+like the real `var_summary.xml` and `data_dict.xml` files of phs000001 (AREDS),
+and synthetic studies. They make no network calls.
 
 ## Changes
 
+- Unreleased: snapshot mode (`snapshot_survey.py`, `snapshot.py`) for the
+  official SPARK corpus, with participant age, reported race/ethnicity,
+  data-dictionary needs, conjunctive ranking and SPARK submission output.
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
