@@ -182,6 +182,15 @@ related conditions that lack the exact MeSH code count as not relevant. Use the
 score to compare versions of the ranker, not to predict the official score.
 `dev_queries.jsonl` has 12 hand-written example questions without judgments.
 
+On the October 2026 harvest (3,612 studies, 300 silver questions) the
+baseline scores NDCG@10 0.929 from metadata alone. Adding data-dictionary text
+for the 2,098 studies that have it lowered that to 0.918 at the default weight
+and 0.852 at weight 0.4. The silver questions never ask for a variable, so this
+shows the dictionary score adds noise to condition-only questions, not that it
+fails at "with X measured" questions. Snapshot mode also adds a variable score
+to every need (weight 0.3), so its own benchmark has to show whether that score
+should be limited to needs that name a variable.
+
 ## Census: who in dbGaP can be studied, and under which consent
 
 `census` adds up, over every public study:
@@ -202,6 +211,12 @@ Ontology from an October 2021 snapshot. It did not cross consent with computed
 ancestry. Limits: ancestry is reported for a whole study, not per consent group,
 and people enrolled in more than one study (for example a cohort and a TOPMed
 study built on it) are counted once per study.
+
+**Results, October 2026: [`census/2026-10/`](census/2026-10/README.md).** Of
+the enrolments with computed ancestry, 55.5% of European-ancestry (EUR) ones
+sit in studies with a general research use group, against 43.4% of African
+American (AFA) and 31.7% of Latin American (LEN) ones. Read the limits there
+before quoting a share: they are study-level upper bounds.
 
 `snapshot_survey.py` writes a second census from the SPARK snapshot. It covers
 consent classes, study-level population labels, data types, participant age
@@ -253,6 +268,8 @@ and synthetic studies. They make no network calls.
 - Unreleased: snapshot mode (`snapshot_survey.py`, `snapshot.py`) for the
   official SPARK corpus, with participant age, reported race/ethnicity,
   data-dictionary needs, conjunctive ranking and SPARK submission output.
+  Census results for October 2026 (`census/2026-10/`) and the first silver
+  benchmark on the full harvest.
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
@@ -264,4 +281,5 @@ and synthetic studies. They make no network calls.
 Made by MV2 of Munim, Inc. The code and this README were made with AI agents
 working in his name. Issues and corrections are welcome.
 
-Apache-2.0 license (see `LICENSE`).
+Apache-2.0 license (see `LICENSE`). The census results in `census/` are
+CC BY 4.0.

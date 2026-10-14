@@ -1,0 +1,197 @@
+{
+ "ancestry_by_most_open": {
+  "AFA": {
+   "DS": 51162,
+   "GRU": 145191,
+   "HMB": 110886,
+   "other": 27353
+  },
+  "AFO": {
+   "DS": 6812,
+   "GRU": 27920,
+   "HMB": 6695,
+   "other": 2679
+  },
+  "EAS": {
+   "DS": 20274,
+   "GRU": 51561,
+   "HMB": 9303,
+   "other": 9465
+  },
+  "EUR": {
+   "DS": 275150,
+   "GRU": 953381,
+   "HMB": 336315,
+   "other": 152589
+  },
+  "LAC": {
+   "DS": 10711,
+   "GRU": 22775,
+   "HMB": 16675,
+   "other": 1987
+  },
+  "LEN": {
+   "DS": 30697,
+   "GRU": 35294,
+   "HMB": 39431,
+   "other": 6030
+  },
+  "OAS": {
+   "DS": 2926,
+   "GRU": 18086,
+   "HMB": 3453,
+   "other": 3119
+  },
+  "OTR": {
+   "DS": 6858,
+   "GRU": 13747,
+   "HMB": 6632,
+   "other": 1099
+  },
+  "SAS": {
+   "DS": 3344,
+   "GRU": 10572,
+   "HMB": 5038,
+   "other": 1904
+  }
+ },
+ "ancestry_for_profit": {
+  "AFA": 249398,
+  "AFO": 37360,
+  "EAS": 63792,
+  "EUR": 1275306,
+  "LAC": 39380,
+  "LEN": 85468,
+  "OAS": 16130,
+  "OTR": 21669,
+  "SAS": 14944
+ },
+ "ancestry_top_level": {
+  "AFA": 326059,
+  "AFO": 43795,
+  "EAS": 90601,
+  "EUR": 1715146,
+  "LAC": 51611,
+  "LEN": 109041,
+  "OAS": 27561,
+  "OTR": 28133,
+  "SAS": 20856
+ },
+ "ancestry_total": {
+  "AFA": 334592,
+  "AFO": 44106,
+  "EAS": 90603,
+  "EUR": 1717435,
+  "LAC": 52148,
+  "LEN": 111452,
+  "OAS": 27584,
+  "OTR": 28336,
+  "SAS": 20858
+ },
+ "ancestry_with_wgs": {
+  "AFA": 86849,
+  "AFO": 6419,
+  "EAS": 9986,
+  "EUR": 89670,
+  "LAC": 15997,
+  "LEN": 23173,
+  "OAS": 5194,
+  "OTR": 6185,
+  "SAS": 1630
+ },
+ "consent_groups": {
+  "DS": 1413,
+  "GRU": 2157,
+  "HMB": 1120,
+  "other": 374
+ },
+ "consent_modifiers": {
+  "ADULT": 1,
+  "ADULTS": 2,
+  "ALL": 1,
+  "AO": 1,
+  "AT": 1,
+  "B": 2,
+  "BAILEYWILSON": 1,
+  "BEATY": 1,
+  "C": 3,
+  "CA": 5,
+  "CFS": 1,
+  "CHILD": 1,
+  "COL": 305,
+  "COM": 2,
+  "COMP": 4,
+  "COPD": 2,
+  "CRC": 1,
+  "D": 3,
+  "DIS": 4,
+  "EA": 1,
+  "EP": 1,
+  "GD": 4,
+  "GID": 4,
+  "GSO": 222,
+  "HMB": 3,
+  "HTD": 1,
+  "ID": 1,
+  "ILD": 1,
+  "IRB": 1050,
+  "MANGOLD": 1,
+  "MD": 2,
+  "MDS": 778,
+  "MDS_ONLY": 1,
+  "MULTI": 1,
+  "NEUROMSC": 1,
+  "NIC": 2,
+  "NOCTRL": 1,
+  "NOTHEN": 1,
+  "NPU": 825,
+  "OBS": 1,
+  "OPC": 2,
+  "PSA": 1,
+  "PUB": 567,
+  "RA": 1,
+  "RC": 1,
+  "RD": 132,
+  "RF": 3,
+  "RITPC": 1,
+  "RSC": 4,
+  "SKEL": 1,
+  "SLE": 1,
+  "STK": 1,
+  "TIBETANS": 1,
+  "URI": 1,
+  "VD": 1,
+  "X": 1
+ },
+ "data_types": {
+  "atacseq": 99,
+  "chipseq": 54,
+  "genotypes": 1940,
+  "imputed": 128,
+  "metabolomics": 21,
+  "methylation": 143,
+  "mirna": 55,
+  "proteomics": 17,
+  "rnaseq": 971,
+  "scrna": 3,
+  "wes": 725,
+  "wgs": 543
+ },
+ "sex_total": {
+  "female": 2076748,
+  "male": 1765220
+ },
+ "studies": 3612,
+ "studies_by_most_open": {
+  "DS": 642,
+  "GRU": 2069,
+  "HMB": 776,
+  "other": 124
+ },
+ "studies_for_profit_ok": 3083,
+ "subjects_total": 9312245,
+ "with_ancestry": 742,
+ "with_consents": 3611,
+ "with_sex": 1880,
+ "with_subjects": 3612
+}
