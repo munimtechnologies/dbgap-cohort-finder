@@ -31,7 +31,7 @@ from collections import Counter
 __version__ = "0.1.0"
 
 FHIR_BASE = "https://dbgap-api.ncbi.nlm.nih.gov/fhir/x1"
-REPO_URL = "https://github.com/munimv2/dbgap-cohort-finder"
+REPO_URL = "https://github.com/munimtechnologies/dbgap-cohort-finder"
 USER_AGENT = "dbgap-cohort-finder/%s (+%s)" % (__version__, REPO_URL)
 PAGE_SIZE = 100
 PAGE_DELAY = 0.5  # seconds between FHIR pages; NCBI asks for gentle use
