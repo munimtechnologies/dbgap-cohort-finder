@@ -1,0 +1,12 @@
+{"id": "dev01", "query": "Which studies have whole genome sequencing on at least 1,000 African American participants with type 2 diabetes?"}
+{"id": "dev02", "query": "Breast cancer tumor-normal exome sequencing studies usable for for-profit research"}
+{"id": "dev03", "query": "Prospective cohort study with RNA-seq and more than 500 participants with asthma"}
+{"id": "dev04", "query": "Alzheimer's disease GWAS with general research use consent"}
+{"id": "dev05", "query": "Hispanic/Latino adults with genotype data and cardiovascular outcomes"}
+{"id": "dev06", "query": "Family-based studies of autism spectrum disorder with whole exome sequencing"}
+{"id": "dev07", "query": "Schizophrenia case-control studies with at least 5,000 subjects"}
+{"id": "dev08", "query": "East Asian participants with DNA methylation data"}
+{"id": "dev09", "query": "Single-cell RNA sequencing of pancreatic islets in type 2 diabetes"}
+{"id": "dev10", "query": "Childhood obesity longitudinal cohort with imputed genotypes and health/medical/biomedical consent"}
+{"id": "dev11", "query": "Lung cancer clinical trial with tumor sequencing and no IRB approval required"}
+{"id": "dev12", "query": "Sickle cell disease studies in people of African ancestry with WGS"}
