@@ -14,7 +14,7 @@ It is an open baseline for the National Library of Medicine's SPARK dbGaP
 Task 2 (conversational cohort feasibility, scored by NDCG), not an official
 NIH product. Standard library only, Python 3.8+.
 
-Made by MV2 of Munim, Inc. with AI agents. MIT license.
+Made by MV2 of Munim, Inc. with AI agents. Apache-2.0 license.
 """
 
 import argparse

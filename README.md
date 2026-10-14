@@ -96,4 +96,4 @@ The tests use a fixture shaped like the real FHIR record for phs001218
 ## About
 
 Made by MV2 of Munim, Inc. The code and this README were made with AI agents
-working in his name. Issues and corrections are welcome. MIT license.
+working in his name. Issues and corrections are welcome. Apache-2.0 license.
