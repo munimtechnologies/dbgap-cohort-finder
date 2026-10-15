@@ -4,15 +4,19 @@
 SPARK dbGaP Task 2 judges systems only on a fixed public snapshot
 (https://ftp.ncbi.nlm.nih.gov/dbgap/NLM_Challenge/dbgap.tar.gz), and a study
 counts as relevant only if it meets every stated need ("adults + lung
-adenocarcinoma + smoking variables + WGS"). This module reads the files that
-snapshot_survey.py writes from that archive (studies.jsonl, variables.jsonl.gz,
-var_values.jsonl.gz), reuses cohort_finder's question parser and BM25 index,
-and adds what the snapshot makes possible:
+adenocarcinoma as the primary disease + smoking variables + WGS"). This module
+reads the files that snapshot_survey.py writes from that archive (studies.jsonl,
+variables.jsonl.gz, var_values.jsonl.gz), reuses cohort_finder's question parser
+and BM25 index, and adds what the snapshot makes possible:
 
 - participant age from the aggregate variable summaries ("adults", "children",
   "aged 40-60", "65 and older");
 - reported race/ethnicity counts from coded race and ethnicity variables;
 - "with X variables/measurements" needs checked against the data dictionary;
+- the primary disease: the need's topic words (what is left once age, group,
+  data type, consent and variable words are taken out) checked against the
+  study's main_disease, then its MeSH terms, then its title; a study that only
+  mentions the disease in its description scores low;
 - conjunctive ranking: a study that clearly fails a need ranks below every
   study that does not, whatever its text score.
 
@@ -29,11 +33,11 @@ import math
 import random
 import re
 import sys
-from collections import Counter, defaultdict
+from collections import defaultdict
 
 import cohort_finder as cf
 
-__version__ = "0.1.0"
+__version__ = "0.2.1"
 
 STUDY_URL = "https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id="
 EMPTY = {"", "not applicable", "not provided", "none", "null", "n/a"}
@@ -81,13 +85,48 @@ MAX_AGE = 110  # larger numbers in an age phrase are cohort sizes ("500+ partici
 NOT_AN_AGE = re.compile(r"\s*(?:%|percent|participants|subjects|individuals|people|patients|samples|cases|controls)",
                         re.I)
 
+# (?!with\b): in ", with smoking variables" the phrase is "smoking", not "with smoking".
 VAR_PHRASE_RE = re.compile(
-    r"(?:\bwith|\bhaving|\bhas|\bhave|\bincluding|\bincludes?|,|\band)\s+((?:[a-z0-9-]+\s+){0,2}?[a-z0-9-]+)\s+"
+    r"(?:\bwith|\bhaving|\bhas|\bhave|\bincluding|\bincludes?|,|\band)\s+((?:(?!with\b)[a-z0-9-]+\s+){0,2}?[a-z0-9-]+)\s+"
     r"(?:variables?|measurements?|measured|measures|data|information|records|assessments?|levels?|scores?"
     r"|status|history)\b", re.I)
 GENERIC_VAR = {"genetic", "genomic", "phenotype", "phenotypic", "clinical", "demographic", "sequencing",
                "genotype", "genotyping", "molecular", "omic", "omics", "individual", "level", "imaging",
                "available", "outcome", "health", "medical", "family"}
+
+# Words that state a constraint rather than what is studied. What is left of a
+# need once these (and its variable words) are taken out is its topic.
+CONSTRAINT_WORDS = set(cf.tokens("""
+adult adults child children pediatric paediatric kids infant infants newborn newborns neonatal adolescent adolescents
+teen teens teenager youth minor minors aged age ages year years old older elderly senior seniors geriatric young younger
+woman women female females male males men man girl girls boy boys mother mothers father pregnant
+african american americans black blacks white whites european caucasian hispanic latino latina latinx mexican
+puerto rican asian chinese japanese korean filipino indian alaska native pacific islander hawaiian indigenous
+ancestry race racial ethnicity ethnic
+whole genome genomes sequencing sequenced sequence wgs exome exomes wes wxs rna seq rnaseq transcriptome
+transcriptomic expression methylation dna genotype genotypes genotyped genotyping gwas snp snps array arrays imputed
+imputation chip atac single cell proteomic proteomics metabolomic metabolomics mirna
+general research gru hmb health medical biomedical profit commercial industry irb approval consent
+case control controls cohort cohorts longitudinal prospective cross sectional family families trio trios twin twins
+trial trials randomized
+primary main disease diseases condition conditions diagnosis diagnosed patient patients cases
+variable variables measurement measurements measured measure measures information record records assessment
+assessments level levels score scores status history
+fewer minimum number total
+"""))
+# Topic words that MeSH and study titles often spell another way.
+DISEASE_SYNONYMS = {
+    "cancer": {"neoplasm", "carcinoma", "adenocarcinoma", "tumor", "malignancy"},
+    "tumor": {"neoplasm", "cancer", "carcinoma", "tumour"},
+    "tumour": {"neoplasm", "cancer", "carcinoma", "tumor"},
+    "carcinoma": {"cancer", "neoplasm"},
+    "neoplasm": {"cancer", "tumor", "carcinoma"},
+    "kidney": {"renal"}, "renal": {"kidney"},
+    "heart": {"cardiac", "cardiovascular", "coronary", "myocardial"}, "cardiac": {"heart"},
+    "lung": {"pulmonary"}, "pulmonary": {"lung"},
+    "liver": {"hepatic"}, "hepatic": {"liver"},
+    "breast": {"mammary"},
+}
 
 
 def is_empty(value):
@@ -244,17 +283,39 @@ def query_groups(text):
     return out
 
 
+def var_phrases(text):
+    """The X of every 'with X variables / X measured / X data' phrase, as written."""
+    return [m.group(1) for m in VAR_PHRASE_RE.finditer(text or "")]
+
+
 def query_var_terms(text):
     """Token lists for 'with X variables / X measured / X data' needs (data types are left to their own rule)."""
     out = []
-    for m in VAR_PHRASE_RE.finditer(text or ""):
-        phrase = m.group(1)
+    for phrase in var_phrases(text):
         if cf._tags(phrase, cf.DATA_TYPE_RULES):
             continue
         words = [t for t in cf.tokens(phrase) if t not in GENERIC_VAR]
         if words and words not in out:
             out.append(words)
     return out
+
+
+def topic_tokens(text, query):
+    """The need's words for what is studied (its disease), once constraint and variable words are taken out.
+
+    Abbreviations count through their spelled-out words ("COPD" -> chronic obstructive pulmonary).
+    If the variable words would leave nothing ("adults with asthma and smoking history"), only
+    constraint words are taken out."""
+    abbrevs = set()
+    for regex in (cf.ABBREV_CS_RE, cf.ABBREV_CI_RE):
+        for m in regex.finditer(text or ""):
+            abbrevs.update(cf.tokens(m.group(1)))
+    var_words = set()
+    for phrase in var_phrases(text):
+        var_words.update(cf.tokens(phrase))
+        var_words.update(cf.tokens(" ".join(cf.expand_abbreviations(phrase))))
+    base = [t for t in cf._unique(query.get("tokens") or []) if t not in CONSTRAINT_WORDS and t not in abbrevs]
+    return [t for t in base if t not in var_words] or base
 
 
 def parse_need(text):
@@ -265,6 +326,7 @@ def parse_need(text):
         q["min_subjects"] = None  # "aged 65 and older adults" names an age, not a cohort size
     q["groups"] = query_groups(text)
     q["var_terms"] = query_var_terms(text)
+    q["topic"] = topic_tokens(text, q)
     return q
 
 
@@ -332,7 +394,33 @@ def var_requirement(words, var_doc, has_dictionary):
     return (0.0, "data dictionary has no %s variables" % phrase)
 
 
-def requirements(index, i, query):
+def _matches(word, words):
+    return word in words or any(s in words for s in DISEASE_SYNONYMS.get(word, ()))
+
+
+def disease_requirement(study, topic):
+    """How well the need's topic words match the study's primary disease: main_disease, then MeSH terms, then title."""
+    label = " ".join(topic)
+    focus = set(cf.tokens(" ".join(study.get("focus") or [])))
+    conditions = set(cf.tokens(" ".join(study.get("conditions") or [])))
+    title = set(cf.tokens(study.get("title")))
+    for words, sat, where in ((focus, 1.0, "primary disease"), (conditions, 0.8, "disease terms"),
+                              (title, 0.7, "title")):
+        if words and all(_matches(t, words) for t in topic):
+            return (sat, "%s matches '%s'" % (where, label))
+    in_disease = [t for t in topic if _matches(t, conditions)]
+    if 2 * len(in_disease) > len(topic):  # most of the topic, e.g. 2 of 3 words
+        return (0.6, "disease terms match %s of '%s'" % (", ".join(in_disease), label))
+    anywhere = conditions | title | set(cf.tokens(study.get("description")))
+    hits = [t for t in topic if _matches(t, anywhere)]
+    if len(hits) == len(topic):
+        return (0.3, "mentions '%s', but not as the primary disease" % label)
+    if hits:
+        return (0.2, "mentions only %s of '%s'" % (", ".join(hits), label))
+    return (0.0, "no '%s' in the study's disease terms, title or description" % label)
+
+
+def requirements(index, i, query, disease=True):
     study = index.studies[i]
     out = cf.requirements(study, query)
     if query.get("age"):
@@ -342,16 +430,23 @@ def requirements(index, i, query):
         out.append(group_requirement(study, group, need))
     for words in query.get("var_terms") or []:
         out.append(var_requirement(words, index.var_docs[i], bool(study.get("dictionary"))))
+    if disease and query.get("topic"):
+        out.append(disease_requirement(study, query["topic"]))
     return out
 
 
 # ------------------------------------------------------------------ ranking
 
-def rank(index, query, k=K, constraints=True):
-    """Studies for a parsed need: clear failures last, then text relevance scaled by constraint fit."""
+def rank(index, query, k=K, constraints=True, disease=True, gate_vars=False):
+    """Studies for a parsed need: clear failures last, then text relevance scaled by constraint fit.
+
+    gate_vars: score the data dictionary only for needs that name variables ("with X measured")."""
     n = len(index.studies)
     raw = [index.bm25(i, query["tokens"]) for i in range(n)]
-    var_raw = [index.var_score(i, query["tokens"]) for i in range(n)]
+    if gate_vars and not query.get("var_terms"):
+        var_raw = [0.0] * n
+    else:
+        var_raw = [index.var_score(i, query["tokens"]) for i in range(n)]
     top = max(raw) if raw and max(raw) > 0 else 0.0
     var_top = max(var_raw) if var_raw and max(var_raw) > 0 else 0.0
     any_text = top > 0 or var_top > 0
@@ -361,7 +456,7 @@ def rank(index, query, k=K, constraints=True):
         var = var_raw[i] / var_top if var_top else 0.0
         if any_text and text <= 0 and var <= 0:
             continue
-        reqs = requirements(index, i, query) if constraints else []
+        reqs = requirements(index, i, query, disease) if constraints else []
         sats = [s for s, _ in reqs]
         fails = sum(1 for s in sats if s <= 0)
         fit = sum(sats) / len(sats) if sats else 1.0
@@ -460,19 +555,28 @@ def make_devset(studies, n=100, seed=7, max_pool=60):
     return queries, qrels
 
 
+BENCH_CONFIGS = (("bm25_text_only", False, False), ("conjunctive_no_disease", True, False),
+                 ("conjunctive", True, True))
+# Same as "conjunctive", but the data dictionary scores only needs that name variables.
+GATED_CONFIG = ("conjunctive_vars_when_asked", True, True)
+
+
 def bench(studies, queries, qrels, k=10):
-    """Mean NDCG@k for text-only BM25 and for the conjunctive ranker on the same needs."""
+    """Mean NDCG@k for text-only BM25, the conjunctive ranker without the disease check (0.1.0), with it,
+    and with it plus the dictionary score limited to needs that name variables."""
     index = cf.Index(studies)
     out = {}
-    for name, constraints in (("bm25_text_only", False), ("conjunctive", True)):
+    for name, constraints, disease in BENCH_CONFIGS + (GATED_CONFIG,):
+        gate = name == GATED_CONFIG[0]
         scores = {}
         for q in queries:
-            ranked = [r["accession"] for r in rank(index, parse_need(q["query"]), K, constraints)]
+            ranked = [r["accession"] for r in rank(index, parse_need(q["query"]), K, constraints, disease, gate)]
             scores[q["id"]] = cf.ndcg(ranked, qrels.get(q["id"], {}), k)
         out[name] = {"ndcg@%d" % k: round(sum(scores.values()) / len(scores), 4) if scores else 0.0,
                      "per_query": scores}
     out["questions"] = len(queries)
-    out["note"] = ("Silver labels come from the same snapshot fields the ranker reads (circular); "
+    out["note"] = ("Silver labels come from the same snapshot fields the ranker reads (circular), and every "
+                   "question names its disease exactly as main_disease does, which favours the disease check; "
                    "use this to catch regressions, not to predict the official score.")
     return out
 
@@ -524,8 +628,8 @@ def main(argv=None):
         result = bench(studies, dev["queries"], dev["qrels"])
         with open(args.out, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=1)
-        print(json.dumps({k: v for k, v in result.items() if k not in ("bm25_text_only", "conjunctive")}))
-        for name in ("bm25_text_only", "conjunctive"):
+        print(json.dumps({k: v for k, v in result.items() if k in ("questions", "note")}))
+        for name, _, _ in BENCH_CONFIGS + (GATED_CONFIG,):
             print(name, result[name]["ndcg@10"])
     return 0
 
