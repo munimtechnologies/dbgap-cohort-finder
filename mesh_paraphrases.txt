@@ -1,0 +1,41 @@
+# Lay and clinical phrasings a SPARK need might use; the lookup report is checked by hand.
+adults who had a heart attack with whole genome sequencing
+high blood pressure in African American adults
+type 2 diabetes with HbA1c measured
+adult-onset diabetes cohorts
+kidney failure patients on dialysis
+chronic kidney disease with eGFR variables
+lung adenocarcinoma tumor and matched normal
+lung cancer in never smokers
+breast cancer with BRCA variables
+stroke survivors aged 65 and older
+Alzheimer disease with cognitive test scores
+dementia and APOE genotypes
+autism spectrum disorder in children
+ADHD in children with exome data
+schizophrenia case-control GWAS
+major depression and bipolar disorder
+sickle cell disease RNA-seq
+asthma in Hispanic children
+COPD smokers with spirometry
+atrial fibrillation with ECG measures
+obesity and BMI in adolescents
+preterm birth and gestational age
+inflammatory bowel disease, Crohn disease and ulcerative colitis
+rheumatoid arthritis methylation
+multiple sclerosis women
+Parkinson disease with motor scores
+HIV infection with viral load
+tuberculosis in household contacts
+heart failure with ejection fraction
+coronary artery disease with LDL cholesterol
+opioid use disorder
+alcohol dependence
+glioblastoma whole exome
+prostate cancer in Black men
+colorectal cancer screening
+age-related macular degeneration
+hearing loss in older adults
+osteoporosis in postmenopausal women
+sleep apnea and snoring
+cystic fibrosis lung function
