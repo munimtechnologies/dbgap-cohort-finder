@@ -15,6 +15,8 @@ stream, without unpacking it, and writes:
   /out/census.json, .md      studies and subjects by consent class, population, data type,
                              age band and reported race/ethnicity
   /out/age_candidates.jsonl  every variable considered as "participant age", with the pick
+  /out/race_labels.jsonl     every coded label of the picked race/ethnicity variables, with
+                             the group it was mapped to (for checking the mapping by hand)
   <data>/variables.jsonl.gz  every variable: study, dataset, name, description, type, units
   <data>/var_values.jsonl.gz coded values of every enumerated variable (data_dict.xml)
 
@@ -33,7 +35,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from collections import Counter, defaultdict
 
-__version__ = "0.2.0"
+__version__ = "0.2.2"
 
 SNAPSHOT_URL = "https://ftp.ncbi.nlm.nih.gov/dbgap/NLM_Challenge/dbgap.tar.gz"
 USER_AGENT = "dbgap-cohort-finder-survey/%s (+https://github.com/munimtechnologies/dbgap-cohort-finder)" % __version__
@@ -55,32 +57,54 @@ STUDY_KEEP = ("accession", "name", "description", "main_disease", "study_disease
 NAME_KEYS = ("name", "variable_name", "var_name")
 DESC_KEYS = ("description", "variable_description", "desc")
 
-# "Participant age" variables. Ages of other events or other people are skipped.
+# "Participant age" variables. Ages of other events or other people are skipped, and so are
+# counts and scores that merely mention age ("Number of sunburns at age 20+", "How many are
+# under age 6?", "Age and education corrected score", 0.2.2).
 AGE_RE = re.compile(r"\bages?\b", re.I)
 AGE_NAME_RE = re.compile(r"^age|_age$|_age_", re.I)  # not "...age$": STAGE, DOSAGE
 AGE_SKIP_RE = re.compile(
     r"onset|diagnos|\bdx\b|said|told|menarche|menopaus|death|died|deceased|smok|cigar|quit|stopp|start|began|begin"
     r"|mother|father|parent|sibling|brother|sister|spouse|partner|offspring|child(?:ren)?'?s age|gestation"
-    r"|\blast\b|surgery|group|categor|range|interval|first (?:use|time|drink|diagnos|symptom|period|pregnan)|when",
+    r"|\blast\b|surgery|group|categor|range|interval|first (?:use|time|drink|diagnos|symptom|period|pregnan)|when"
+    r"|number of|how many|\btimes\b|\bunder\b|frequen|score|calculat|corrected|adjusted|\b1st\b|initiat|exposure",
     re.I)
 AGE_PREFER_RE = re.compile(
     r"enrol|baseline|visit|exam|consent|interview|collect|recruit|entry|randomi|draw|blood|sample|participant"
     r"|current|at (?:the )?time|in years", re.I)
+DECADE_RE = re.compile(r"decade", re.I)
 
 # Race and ethnicity variables, and the coarse groups their coded labels map to.
 RACE_RE = re.compile(r"\brace\b|racial|ethnic|ancestr", re.I)
 RACE_SKIP_RE = re.compile(r"mother|father|parent|spouse|partner|grand|interviewer|child'?s|baby|infant'?s", re.I)
-NOT_HISPANIC_RE = re.compile(r"\bnon[- ]?hispanic|not hispanic|not latin", re.I)
+NOT_HISPANIC_RE = re.compile(r"\bnon[- ]?hispanic|not (?:of )?hispanic|\bnon[- ]?latin|not (?:of )?latin", re.I)
+# "Non-white", "Not Caucasian", "Other than White": the rest of the label decides, else "other" (0.2.2).
+NEG_RACE_RE = re.compile(
+    r"\b(?:non|not|other than)[- ]?(?:white|caucasian|european|black|african[- ]american|asian)\b", re.I)
+# Labels that say nothing about the person's group: not counted (0.2.0-0.2.1 counted them as "other").
+UNKNOWN_RE = re.compile(
+    r"missing|unknown|\bunk\b|not (?:available|reported|known|stated|ascertained|collected|obtained|provided"
+    r"|recorded|given)|data not|refus|declin|prefer not|cho+se not|no (?:answer|response|data)|don'?t know"
+    r"|not sure|unspecified|^\W*$|^\s*-?\d+(?:\.\d+)?\s*$|^\s*(?:n/?a|dk|nr)\s*$", re.I)
+# The pre-1997 OMB category "Asian or Pacific Islander" is mostly Asian people: count it as asian, not nhpi.
+ASIAN_PI_RE = re.compile(r"\basian\b[^;]{0,30}pacific island|pacific island\w*[^;]{0,10}\basian\b", re.I)
+HISPANIC_VAR_RE = re.compile(r"hispanic|latin[oax]", re.I)  # a "Hispanic? yes/no" variable
+YES_RE = re.compile(r"^\s*(?:yes|y|true)\b", re.I)
+NO_RE = re.compile(r"^\s*(?:no|n|false)\b", re.I)
 POP_GROUPS = [
-    ("nhpi", re.compile(r"hawaiian|pacific island", re.I)),
-    ("aian", re.compile(r"american indian|alaska|native american|first nation", re.I)),
-    ("hispanic", re.compile(r"hispanic|latin[oax]|mexican|puerto ric|cuban|dominican|central american", re.I)),
-    ("black", re.compile(r"black|african", re.I)),
-    ("white", re.compile(r"white|caucasian|european", re.I)),
-    ("asian", re.compile(r"asian|chinese|japanese|korean|filipino|vietnamese|\bindian\b|pakistan|bangladesh", re.I)),
+    ("nhpi", re.compile(r"hawaiian|pacific island|\bhaw\b|samoan|guamanian|chamorro|tongan", re.I)),
+    ("aian", re.compile(r"american indian|alaska|native american|first nation|\bnat\.? ?amer|\bam\.? ?ind\b", re.I)),
+    ("hispanic", re.compile(r"hispanic|latin(?:[oax]|\s?american)|\bhisp\b|mexican|puerto ric|cuban|dominican"
+                            r"|central american|south american", re.I)),
+    # Middle Eastern or North African: its own group, not black (0.2.2; OMB SPD 15 as revised in 2024).
+    ("mena", re.compile(r"middle east|north african|\barab", re.I)),
+    ("black", re.compile(r"black|african|\bafr\.? ?am", re.I)),
+    ("white", re.compile(r"white|caucasian|\bcauc\b|european", re.I)),
+    ("asian", re.compile(r"asian|chinese|japanese|korean|\bfilip|vietnamese|\bindian\b|pakistan|bangladesh"
+                         r"|\borient(?:al)?\b", re.I)),
     ("multiple", re.compile(r"more than one|multi|two or more|mixed|biracial", re.I)),
 ]
-GROUP_ORDER = ("white", "black", "hispanic", "asian", "aian", "nhpi", "multiple", "other")
+GROUP_ORDER = ("white", "black", "hispanic", "asian", "aian", "nhpi", "mena", "multiple", "other")
+NOT_COUNTED = "(not counted)"
 
 
 def is_empty(value):
@@ -239,6 +263,8 @@ def parse_var_summary(data):
 
 def years_factor(units):
     u = (units or "").strip().lower()
+    if "decade" in u:
+        return 10.0
     if not u or "year" in u or u in ("y", "yr", "yrs"):
         return 1.0
     if "month" in u:
@@ -257,7 +283,8 @@ def age_candidate(s):
         return None
     if AGE_SKIP_RE.search(desc) or AGE_SKIP_RE.search(name):
         return None
-    factor = years_factor(s.get("units"))
+    # "Age in decades (age/10)" usually has no units field.
+    factor = years_factor(s.get("units") or ("decades" if DECADE_RE.search(desc) else None))
     if factor is None or s.get("min") is None or s.get("max") is None or (s.get("n") or 0) < MIN_AGE_N:
         return None
     lo, hi = s["min"] * factor, s["max"] * factor
@@ -280,23 +307,47 @@ def is_race_var(name, desc):
     return bool(RACE_RE.search(text)) and not RACE_SKIP_RE.search(desc or "")
 
 
-def pop_group(label):
-    """A coded race/ethnicity label -> coarse group ('white', 'black', ...), or None for 'not Hispanic'."""
-    if NOT_HISPANIC_RE.search(label or ""):
-        return None
+def is_hispanic_var(name, desc):
+    return bool(HISPANIC_VAR_RE.search("%s %s" % (name or "", desc or "")))
+
+
+def pop_group(label, hispanic_var=False):
+    """A coded race/ethnicity label -> coarse group ('white', 'black', ...), or None when not counted.
+
+    'Non-Hispanic White' is white (combined race/ethnicity codes), 'Asian or Pacific Islander' is asian,
+    'Not Caucasian' is other, and on a Hispanic yes/no variable (hispanic_var) 'Yes' is hispanic and
+    'No' is None. Plain 'not Hispanic', 'Unknown', 'Missing', 'Refused' and bare codes are None."""
+    text = label or ""
+    if hispanic_var:
+        if YES_RE.search(text):
+            return "hispanic"
+        if NO_RE.search(text):
+            return None
+    not_hispanic = NOT_HISPANIC_RE.search(text)
+    if not_hispanic:
+        text = NOT_HISPANIC_RE.sub(" ", text)
+    negated = NEG_RACE_RE.search(text)
+    if negated:
+        text = NEG_RACE_RE.sub(" ", text)
+    if ASIAN_PI_RE.search(text):
+        return "asian"
     for group, regex in POP_GROUPS:
-        if regex.search(label or ""):
+        if regex.search(text) and not (not_hispanic and group == "hispanic"):
             return group
+    if negated:
+        return "other"
+    if not_hispanic or UNKNOWN_RE.search(text):
+        return None
     return "other"
 
 
-def group_counts(enums, labels):
+def group_counts(enums, labels, hispanic_var=False):
     """Enum counts {code: n} plus code labels -> ({group: n}, {label: n})."""
     groups, raw = Counter(), Counter()
     for code, count in enums.items():
         label = labels.get(code) or code
         raw[label] += count
-        g = pop_group(label)
+        g = pop_group(label, hispanic_var)
         if g:
             groups[g] += count
     return dict(groups), dict(raw)
@@ -397,7 +448,8 @@ class Survey:
         """Per study, the race/ethnicity variable with the most subjects, as coarse group counts."""
         best = {}
         for (study, key), s in self.race_sums.items():
-            groups, raw = group_counts(s["enums"], self.race_labels.get((study, key), {}))
+            hisp = is_hispanic_var(s["name"], s["desc"])
+            groups, raw = group_counts(s["enums"], self.race_labels.get((study, key), {}), hisp)
             real = {g: n for g, n in groups.items() if g != "other"}
             if not real:
                 continue
@@ -405,7 +457,7 @@ class Survey:
             ethnicity_only = set(real) == {"hispanic"}
             slot = "ethnicity" if ethnicity_only else "race"
             pick = {"var": "%s %s" % (s["dataset"], s["name"]), "desc": s["desc"][:200], "subjects": total,
-                    "groups": groups, "labels": dict(Counter(raw).most_common(12))}
+                    "groups": groups, "labels": dict(Counter(raw).most_common(MAX_VALUES)), "hispanic_var": hisp}
             cur = best.setdefault(study, {}).get(slot)
             if cur is None or total > cur["subjects"]:
                 best[study][slot] = pick
@@ -424,6 +476,9 @@ class Survey:
         with open(os.path.join(self.out, "field_coverage.json"), "w", encoding="utf-8") as f:
             json.dump(coverage, f, indent=1, ensure_ascii=False)
         race = self.race_by_study()
+        with open(os.path.join(self.out, "race_labels.jsonl"), "w", encoding="utf-8") as f:
+            for row in label_audit(race):
+                f.write(json.dumps(row, ensure_ascii=False) + "\n")
         with open(os.path.join(self.out, "age_candidates.jsonl"), "w", encoding="utf-8") as f:
             for acc in sorted(self.age_cands):
                 pick = best_age(self.age_cands[acc])
@@ -451,6 +506,20 @@ class Survey:
         with open(os.path.join(self.out, "census.md"), "w", encoding="utf-8") as f:
             f.write(census_markdown(census))
         return coverage
+
+
+def label_audit(race):
+    """Every coded label of the picked race/ethnicity variables -> the group it counted under.
+    One row per (label, group): how many picked variables use it and how many subjects carry it."""
+    rows = {}
+    for slots in race.values():
+        for pick in slots.values():
+            for label, n in pick["labels"].items():
+                g = pop_group(label, pick.get("hispanic_var", False)) or NOT_COUNTED
+                row = rows.setdefault((label, g), {"label": label, "group": g, "variables": 0, "subjects": 0})
+                row["variables"] += 1
+                row["subjects"] += n
+    return sorted(rows.values(), key=lambda r: (-r["variables"], -r["subjects"], r["label"]))
 
 
 def top_level(s):
@@ -531,7 +600,13 @@ def build_census(studies):
                   "Race/ethnicity counts come from each study's largest coded race or ethnicity variable in the "
                   "public aggregate summaries (var_summary.xml), mapped to coarse groups from the coded labels; "
                   "they are self-reported or study-assigned categories, not genetic ancestry.",
-                  "Age bands use the participant-age variable with the most values (baseline/visit ages preferred).",
+                  "Combined codes such as 'Non-Hispanic White' count under the race; 'Hispanic' in a combined "
+                  "code counts as hispanic; 'Asian or Pacific Islander' counts as asian, not nhpi; Middle Eastern "
+                  "or North African labels count as mena; 'Non-white' or 'Not Caucasian' counts as other. "
+                  "Unknown, missing, refused and unlabeled codes are not counted. "
+                  "race_labels.jsonl lists every label and the group it counted under.",
+                  "Age bands use the participant-age variable with the most values (baseline/visit ages preferred); "
+                  "counts and scores that mention age are skipped.",
                   "A study with several consent groups counts once in each of its classes.",
                   "Subject sums use top-level studies only."],
     }

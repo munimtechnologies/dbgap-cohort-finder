@@ -101,6 +101,10 @@ def make_tar(path):
             tar.addfile(info, io.BytesIO(data))
 
 
+def summary(name, desc, lo, hi, n=100, units=None, median=None):
+    return {"name": name, "desc": desc, "units": units, "n": n, "min": lo, "max": hi, "median": median}
+
+
 class HelperTest(unittest.TestCase):
     def test_empty_and_lists(self):
         self.assertTrue(ss.is_empty("Not Applicable"))
@@ -138,6 +142,7 @@ class HelperTest(unittest.TestCase):
         self.assertEqual(ss.years_factor("years"), 1.0)
         self.assertEqual(ss.years_factor(None), 1.0)
         self.assertEqual(ss.years_factor("Months"), 1 / 12.0)
+        self.assertEqual(ss.years_factor("decades"), 10.0)
         self.assertIsNone(ss.years_factor("mg/dL"))
 
     def test_pop_group(self):
@@ -150,7 +155,58 @@ class HelperTest(unittest.TestCase):
         self.assertIsNone(ss.pop_group("Non-Hispanic"))
         self.assertEqual(ss.pop_group("Chinese American"), "asian")
         self.assertEqual(ss.pop_group("More than one race"), "multiple")
-        self.assertEqual(ss.pop_group("Unknown"), "other")
+        self.assertEqual(ss.pop_group("Other"), "other")
+
+    def test_pop_group_combined_codes(self):
+        # 0.2.0 dropped these: the "not Hispanic" part hid the race.
+        self.assertEqual(ss.pop_group("Non-Hispanic White"), "white")
+        self.assertEqual(ss.pop_group("Black, not Hispanic or Latino"), "black")
+        self.assertEqual(ss.pop_group("Non-Hispanic Asian"), "asian")
+        self.assertEqual(ss.pop_group("White, not of Hispanic origin"), "white")
+        self.assertEqual(ss.pop_group("Caucasian non-Hispanic"), "white")
+        # 0.2.0 counted the old OMB "Asian or Pacific Islander" category as nhpi.
+        self.assertEqual(ss.pop_group("Asian or Pacific Islander"), "asian")
+        self.assertEqual(ss.pop_group("Asian/Pacific Islander"), "asian")
+        self.assertEqual(ss.pop_group("Pacific Islander/Asian"), "asian")
+
+    def test_pop_group_unknown_not_counted(self):
+        # 0.2.1 counted these as "other" (seen in the 2026-10-15 audit sample).
+        for label in ("Unknown", "Missing", "data not available", "Refused", "Prefer not to answer",
+                      "Choose not to answer", "Not reported", "Don't know", "-9", "99", "N/A"):
+            self.assertIsNone(ss.pop_group(label), label)
+        self.assertEqual(ss.pop_group("Hispanic, race unknown"), "hispanic")
+        self.assertIsNone(ss.pop_group("Non-Hispanic, race unknown"))
+
+    def test_pop_group_negated_race(self):
+        # 0.2.1 counted "Not Caucasian" as white (seen in phs000255).
+        self.assertEqual(ss.pop_group("Not Caucasian"), "other")
+        self.assertEqual(ss.pop_group("Non-white"), "other")
+        self.assertEqual(ss.pop_group("Other than White"), "other")
+        self.assertEqual(ss.pop_group("Non-white Hispanic"), "hispanic")
+
+    def test_pop_group_abbreviations_and_mena(self):
+        # The coded labels of phs000621 (ncirace): Hisp, Orient, Haw, Nat Amer, Filip.
+        self.assertEqual(ss.pop_group("Hisp"), "hispanic")
+        self.assertEqual(ss.pop_group("Orient"), "asian")
+        self.assertEqual(ss.pop_group("Oriental"), "asian")
+        self.assertEqual(ss.pop_group("Filip"), "asian")
+        self.assertEqual(ss.pop_group("Haw"), "nhpi")
+        self.assertEqual(ss.pop_group("Nat Amer"), "aian")
+        self.assertEqual(ss.pop_group("Afr Am"), "black")
+        self.assertEqual(ss.pop_group("Latin American"), "hispanic")
+        self.assertEqual(ss.pop_group("Middle Eastern or North African"), "mena")
+        self.assertEqual(ss.pop_group("North African"), "mena")
+        self.assertEqual(ss.pop_group("African"), "black")
+
+    def test_pop_group_hispanic_yes_no(self):
+        self.assertEqual(ss.pop_group("Yes", hispanic_var=True), "hispanic")
+        self.assertIsNone(ss.pop_group("No", hispanic_var=True))
+        self.assertIsNone(ss.pop_group("Not Hispanic or Latino", hispanic_var=True))
+        self.assertEqual(ss.pop_group("Hispanic or Latino", hispanic_var=True), "hispanic")
+        self.assertEqual(ss.pop_group("Native American", hispanic_var=True), "aian")
+        self.assertEqual(ss.pop_group("Yes"), "other")
+        self.assertTrue(ss.is_hispanic_var("HISPANIC", "Hispanic or Latino origin?"))
+        self.assertFalse(ss.is_hispanic_var("RACE", "Self-reported race"))
 
     def test_parse_var_summary(self):
         parsed = ss.parse_var_summary(VAR_SUMMARY)
@@ -179,10 +235,51 @@ class HelperTest(unittest.TestCase):
         b = {"name": "B", "desc": "age 2", "units": "years", "n": 99, "min": 1, "max": 2, "preferred": False}
         self.assertIs(ss.best_age([a, b]), a)
 
+    def test_age_counts_and_scores_skipped(self):
+        # Wrong 0.2.1 picks in the 2026-10-15 run (phs000519, phs001591, phs001471, phs000462, phs000219,
+        # phs004044, phs001310, phs001466).
+        for desc in ("Number of incidences of non-severe sunburn at Age greater than or equal to 20 years",
+                     "How many of these people are under age 6?",
+                     "Of the persons living in your household how many are under 18 years of age?",
+                     "Number of study visits for which we have Age of this participant",
+                     "AEMSS (Age and Education corrected MOANS scaled score)",
+                     "Calculation estimating liver fibrosis based on age, AST, ALT, and platelets",
+                     "Age of 1st infection",
+                     "Subject age at initiation of hydroxyurea"):
+            self.assertIsNone(ss.age_candidate(summary("X", desc, 0.0, 50.0, n=500)), desc)
+        self.assertIsNotNone(ss.age_candidate(summary("AGE", "Age at the time of sample collection", 20.0, 80.0)))
+
+    def test_age_in_decades(self):
+        c = ss.age_candidate(summary("aged", "Age in decades (age/10)", 2.0, 8.9, n=200, median=6.0))
+        self.assertEqual((c["min"], c["max"], c["median"]), (20.0, 89.0, 60.0))
+
     def test_group_counts(self):
         groups, raw = ss.group_counts({"1": 10, "2": 5, "9": 1}, {"1": "White", "2": "Not Hispanic"})
-        self.assertEqual(groups, {"white": 10, "other": 1})
+        self.assertEqual(groups, {"white": 10})  # the unlabeled code 9 is not counted (0.2.2)
         self.assertEqual(raw, {"White": 10, "Not Hispanic": 5, "9": 1})
+        groups, _ = ss.group_counts({"1": 12, "0": 88}, {"1": "Yes", "0": "No"}, hispanic_var=True)
+        self.assertEqual(groups, {"hispanic": 12})
+        groups, _ = ss.group_counts({"1": 50, "2": 7, "3": 4}, {"1": "Caucasian", "2": "Not Caucasian", "3": "Missing"})
+        self.assertEqual(groups, {"white": 50, "other": 7})
+
+    def test_race_by_study_combined(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            s = ss.Survey(os.path.join(tmp, "out"), os.path.join(tmp, "data"))
+            s.race_sums[("phs9", "phv1")] = {"dataset": "pht9.v1.p1", "name": "RACETH", "desc": "Race/ethnicity",
+                                             "enums": {"1": 60, "2": 30, "3": 10}}
+            s.race_labels[("phs9", "phv1")] = {"1": "Non-Hispanic White", "2": "Non-Hispanic Black", "3": "Hispanic"}
+            s.race_sums[("phs9", "phv2")] = {"dataset": "pht9.v1.p1", "name": "HISPANIC",
+                                             "desc": "Hispanic or Latino ethnicity", "enums": {"1": 12, "0": 88}}
+            s.race_labels[("phs9", "phv2")] = {"1": "Yes", "0": "No"}
+            best = s.race_by_study()
+            s.var_out.close()
+            s.values_out.close()
+        self.assertEqual(best["phs9"]["race"]["groups"], {"white": 60, "black": 30, "hispanic": 10})
+        self.assertEqual(best["phs9"]["race"]["var"], "pht9.v1.p1 RACETH")
+        self.assertEqual(best["phs9"]["ethnicity"]["groups"], {"hispanic": 12})
+        rows = ss.label_audit(best)
+        self.assertEqual(rows[0], {"label": "No", "group": ss.NOT_COUNTED, "variables": 1, "subjects": 88})
+        self.assertIn({"label": "Non-Hispanic White", "group": "white", "variables": 1, "subjects": 60}, rows)
 
 
 class SurveyTest(unittest.TestCase):
@@ -225,6 +322,12 @@ class SurveyTest(unittest.TestCase):
                 cands = [json.loads(l) for l in f]
             self.assertEqual([(c["study"], c["name"], c["picked"]) for c in cands],
                              [("phs000001.v1.p1", "AGE", True)])
+            with open(os.path.join(out, "race_labels.jsonl"), encoding="utf-8") as f:
+                labels = [json.loads(l) for l in f]
+            self.assertEqual([(r["label"], r["group"], r["subjects"]) for r in labels],
+                             [("Not Hispanic or Latino", ss.NOT_COUNTED, 1080), ("White", "white", 800),
+                              ("Black or African American", "black", 350), ("Hispanic or Latino", "hispanic", 120),
+                              ("American Indian or Alaska Native", "aian", 50)])
             with open(os.path.join(out, "census.json"), encoding="utf-8") as f:
                 c = json.load(f)
             self.assertEqual((c["studies"], c["top_level_studies"]), (3, 2))
