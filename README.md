@@ -92,8 +92,17 @@ $ python snapshot.py ... devset -n 150 --out devset.json && python snapshot.py .
 `example_needs.jsonl` holds eight example needs. The `devset` labels come
 from the same snapshot fields the ranker reads, so `bench` catches
 regressions but does not predict the official score. Snapshot mode is new
-and hasn't been released yet. Its first full run on the snapshot is
-pending.
+and hasn't been released yet. Its first full run on the snapshot
+(2026-10-15, 150 `devset` needs) gave NDCG@10 0.614 for text-only BM25,
+0.779 for conjunctive ranking without the disease check, 0.827 with it, and
+0.879 when the variable score counts only for needs that name a variable.
+Because these labels are circular, the numbers compare versions of the
+ranker; they are not an estimate of the official score.
+
+A second, independent label set comes from PhenX curators' links between
+PhenX measures and dbGaP studies: [`phenx_dev/`](phenx_dev/README.md). On it
+a question-blind popularity list beats this finder by a wide margin, so read
+any score on those labels next to the popularity score.
 
 ## How it ranks
 
@@ -269,7 +278,8 @@ and synthetic studies. They make no network calls.
   official SPARK corpus, with participant age, reported race/ethnicity,
   data-dictionary needs, conjunctive ranking and SPARK submission output.
   Census results for October 2026 (`census/2026-10/`) and the first silver
-  benchmark on the full harvest.
+  benchmark on the full harvest. PhenX labels (`phenx_dev/`, `phenx_crawl.py`)
+  and their scoring code (`phenx_dev.py`, `phenx_dev_v2.py`, `phenx_dev_v3.py`).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,

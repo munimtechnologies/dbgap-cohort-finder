@@ -1,0 +1,206 @@
+{
+ "version": "0.3.0",
+ "v1_version": "0.1.0",
+ "finder_sha": "dfc163881d97cf2bc624f4767c69090950487a91",
+ "facts": {
+  "xlsx": {
+   "data_rows": 29999,
+   "protocols": 182,
+   "rows_with_swapped_ids": 123,
+   "rows_without_study": 0,
+   "distinct_studies": 440,
+   "distinct_variables": 9935
+  },
+  "xlsx_bytes": 2486050,
+  "page_qrels_url": "https://raw.githubusercontent.com/munimtechnologies/dbgap-cohort-finder/main/phenx_dev/qrels_pages.txt",
+  "page_qrels_sha256": "9c4bc2e32f7b4b2bead41a98e5a0915e80521351393f43b822c4f4296f3387bf",
+  "page_qrels_lines": 9654,
+  "page_protocols": 257,
+  "page_protocols_without_name": 0,
+  "listed_protocols": 1009,
+  "union_protocols": 321,
+  "finder_retries_raised": true,
+  "xlsx_protocols_unlisted": 62,
+  "xlsx_unlisted_ids": [
+   "PX010101",
+   "PX010501",
+   "PX010601",
+   "PX010701",
+   "PX010801",
+   "PX010901",
+   "PX011001",
+   "PX011101",
+   "PX011401",
+   "PX011501",
+   "PX020801",
+   "PX020901",
+   "PX021001",
+   "PX021101",
+   "PX021201",
+   "PX021401",
+   "PX021501",
+   "PX021601",
+   "PX030201",
+   "PX030401",
+   "PX030501",
+   "PX030601",
+   "PX030602",
+   "PX030702",
+   "PX030801",
+   "PX030802",
+   "PX030901",
+   "PX031101",
+   "PX031201",
+   "PX031301",
+   "PX031401",
+   "PX060701",
+   "PX060801",
+   "PX081301",
+   "PX090201",
+   "PX090601",
+   "PX091701",
+   "PX100202",
+   "PX100301",
+   "PX100302",
+   "PX100501",
+   "PX100701",
+   "PX100801",
+   "PX101201",
+   "PX120501",
+   "PX120502",
+   "PX120701",
+   "PX151101",
+   "PX180301",
+   "PX510301",
+   "PX510302",
+   "PX510403",
+   "PX560302",
+   "PX560801",
+   "PX720101",
+   "PX720801",
+   "PX720901",
+   "PX741401",
+   "PX750601",
+   "PX750701",
+   "PX751401",
+   "PX751501"
+  ],
+  "xlsx_unlisted_studies": 407,
+  "xlsx_unlisted_studies_not_on_any_page": 8,
+  "finder_fetch_patched": true,
+  "corpus_studies": 3668,
+  "shared_questions": 118
+ },
+ "label_sets": {
+  "xlsx": {
+   "questions": 182,
+   "judged_studies": 425,
+   "relevant_per_question_median": 6,
+   "relevant_per_question_max": 386,
+   "systems": {
+    "finder": {
+     "ndcg10": 0.0529,
+     "ndcg10_condensed": 0.1637,
+     "recall100": 0.1328,
+     "rr10": 0.1103,
+     "questions_with_no_results": 1
+    },
+    "prior_loo": {
+     "ndcg10": 0.5832,
+     "ndcg10_condensed": 0.5832,
+     "recall100": 0.9055,
+     "rr10": 0.6628,
+     "questions_with_no_results": 0
+    }
+   }
+  },
+  "pages": {
+   "questions": 257,
+   "judged_studies": 592,
+   "relevant_per_question_median": 6,
+   "relevant_per_question_max": 499,
+   "systems": {
+    "finder": {
+     "ndcg10": 0.0455,
+     "ndcg10_condensed": 0.1415,
+     "recall100": 0.1109,
+     "rr10": 0.0927,
+     "questions_with_no_results": 2
+    },
+    "prior_loo": {
+     "ndcg10": 0.557,
+     "ndcg10_condensed": 0.557,
+     "recall100": 0.8,
+     "rr10": 0.6521,
+     "questions_with_no_results": 0
+    }
+   }
+  },
+  "union": {
+   "questions": 321,
+   "judged_studies": 594,
+   "relevant_per_question_median": 7,
+   "relevant_per_question_max": 501,
+   "systems": {
+    "finder": {
+     "ndcg10": 0.0503,
+     "ndcg10_condensed": 0.1493,
+     "recall100": 0.1261,
+     "rr10": 0.1026,
+     "questions_with_no_results": 2
+    },
+    "prior_loo": {
+     "ndcg10": 0.5659,
+     "ndcg10_condensed": 0.5659,
+     "recall100": 0.8215,
+     "rr10": 0.6687,
+     "questions_with_no_results": 0
+    }
+   }
+  },
+  "shared_xlsx": {
+   "questions": 118,
+   "judged_studies": 425,
+   "relevant_per_question_median": 6,
+   "relevant_per_question_max": 386,
+   "systems": {
+    "finder": {
+     "ndcg10": 0.044,
+     "ndcg10_condensed": 0.1301,
+     "recall100": 0.1036,
+     "rr10": 0.0927,
+     "questions_with_no_results": 1
+    },
+    "prior_loo": {
+     "ndcg10": 0.5751,
+     "ndcg10_condensed": 0.5751,
+     "recall100": 0.9084,
+     "rr10": 0.6383,
+     "questions_with_no_results": 0
+    }
+   }
+  },
+  "shared_pages": {
+   "questions": 118,
+   "judged_studies": 592,
+   "relevant_per_question_median": 6,
+   "relevant_per_question_max": 499,
+   "systems": {
+    "finder": {
+     "ndcg10": 0.0514,
+     "ndcg10_condensed": 0.1477,
+     "recall100": 0.1033,
+     "rr10": 0.1171,
+     "questions_with_no_results": 1
+    },
+    "prior_loo": {
+     "ndcg10": 0.6053,
+     "ndcg10_condensed": 0.6053,
+     "recall100": 0.7989,
+     "rr10": 0.6931,
+     "questions_with_no_results": 0
+    }
+   }
+  }
+ }
+}
