@@ -1,0 +1,61 @@
+{
+ "version": "0.1.0",
+ "listed_protocols": 1009,
+ "list_status": 200,
+ "xlsx_status": 200,
+ "xlsx_bytes": 2486050,
+ "fetch_errors": 0,
+ "left_unfetched": 0,
+ "minutes": 184.0,
+ "summary": {
+  "protocols_fetched": 1009,
+  "protocols_with_page_mappings": 257,
+  "xlsx_protocols": 182,
+  "xlsx_protocols_fetched": 120,
+  "page_phv": 15272,
+  "xlsx_phv_fetched": 6021,
+  "page_only_phv": 9451,
+  "xlsx_only_phv": 200,
+  "page_phs": 603,
+  "xlsx_phs_fetched": 425,
+  "page_only_phs": 184,
+  "xlsx_only_phs": 6,
+  "xlsx_protocols_compared": 120,
+  "xlsx_protocols_with_page_only_phv": 66,
+  "xlsx_protocols_complete": 54,
+  "page_protocols_absent_from_xlsx": 139
+ },
+ "probe_check": {
+  "PX030301": {
+   "want": {
+    "phv": 9,
+    "phs": 6
+   },
+   "got": {
+    "phv": 9,
+    "phs": 6
+   },
+   "match": true
+  },
+  "PX180801": {
+   "want": {
+    "phv": 13,
+    "phs": 5
+   },
+   "got": {
+    "phv": 13,
+    "phs": 5
+   },
+   "match": true
+  },
+  "PX161301": {
+   "want": {
+    "phv": 898
+   },
+   "got": {
+    "phv": 898
+   },
+   "match": true
+  }
+ }
+}
