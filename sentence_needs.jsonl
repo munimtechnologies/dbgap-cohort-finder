@@ -1,0 +1,8 @@
+{"info_need_id": "s1", "pair": "ex1", "info_need": "Find dbGaP studies involving adult participants with lung adenocarcinoma as the primary disease, where participant-level data include smoking variables and whole genome sequencing."}
+{"info_need_id": "s2", "pair": "ex2", "info_need": "Find dbGaP studies involving African American adults with type 2 diabetes as the primary disease, where participant-level data include HbA1c measurements and consent allows general research use."}
+{"info_need_id": "s3", "pair": "ex3", "info_need": "Find dbGaP studies involving Hispanic children with asthma as the primary disease, where participant-level data include exome sequencing."}
+{"info_need_id": "s4", "pair": "ex4", "info_need": "Find dbGaP studies involving women aged 40-70 with breast cancer as the primary disease, where participant-level data include RNA-seq data."}
+{"info_need_id": "s5", "pair": "ex5", "info_need": "Find dbGaP studies involving people 65 and older with Alzheimer disease as the primary disease, where participant-level data include APOE genotype data."}
+{"info_need_id": "s6", "pair": "ex6", "info_need": "Find dbGaP studies involving at least 1,000 participants with coronary artery disease as the primary disease, where participant-level data include LDL cholesterol measurements and genotype data."}
+{"info_need_id": "s7", "pair": "ex7", "info_need": "Find dbGaP studies involving children with autism spectrum disorder as the primary disease, where participant-level data include whole genome sequencing of families."}
+{"info_need_id": "s8", "pair": "ex8", "info_need": "Find dbGaP studies involving Black adults with chronic kidney disease as the primary disease, where participant-level data include eGFR measurements."}

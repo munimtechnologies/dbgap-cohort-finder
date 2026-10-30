@@ -99,6 +99,19 @@ and hasn't been released yet. Its first full run on the snapshot
 Because these labels are circular, the numbers compare versions of the
 ranker; they are not an estimate of the official score.
 
+**Needs written as full sentences.** SPARK's own example need is one sentence
+("Find dbGaP studies involving adult participants with lung adenocarcinoma as
+the primary disease, where participant-level data include a history of smoking
+or smoking exposure and whole genomic sequences."). `snapshot.py` alone ranks
+the expected answer 37th on it, against 3rd on the short wording.
+`sentence_need.py` reads that template (the disease from "X as the primary
+disease", "data include ..." lists as variable needs, "whole genomic sequences"
+as WGS) and leaves every other need as it was. It moves the expected answer to
+2nd, with no change on 150 silver needs and 32 short needs. Use
+`sentence_need.rank(index, sentence_need.parse_need(text), tier=0.6)`.
+Results, limits and the pre-registered predictions:
+[`sentence_need/`](sentence_need/README.md).
+
 A second, independent label set comes from PhenX curators' links between
 PhenX measures and dbGaP studies: [`phenx_dev/`](phenx_dev/README.md). On it
 a question-blind popularity list beats this finder by a wide margin, so read
@@ -250,6 +263,8 @@ no GPU and makes no network calls after the harvest.
   local open-weight model (SPARK allows no hosted model APIs at run time) is
   the planned next layer. It will be measured against this baseline with
   `devset` and `bench`.
+- `sentence_need.py` was written for the one sentence template SPARK has
+  published. Other templates may still break the parse.
 - Counts are study-wide. The tool can't yet tell how many of a study's 5,000
   subjects have the disease or the data type you asked about.
 - Consent matching reads the consent codes (for example `HMB-IRB-NPU`), not
@@ -280,6 +295,9 @@ and synthetic studies. They make no network calls.
   Census results for October 2026 (`census/2026-10/`) and the first silver
   benchmark on the full harvest. PhenX labels (`phenx_dev/`, `phenx_crawl.py`)
   and their scoring code (`phenx_dev.py`, `phenx_dev_v2.py`, `phenx_dev_v3.py`).
+  Sentence-style needs and primary-disease tiering (`sentence_need.py`, with
+  `official_needs.jsonl`, `sentence_needs.jsonl` and the 2026-10-30 report in
+  `sentence_need/`).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
@@ -291,5 +309,5 @@ and synthetic studies. They make no network calls.
 Made by MV2 of Munim, Inc. The code and this README were made with AI agents
 working in his name. Issues and corrections are welcome.
 
-Apache-2.0 license (see `LICENSE`). The census results in `census/` are
-CC BY 4.0.
+Apache-2.0 license (see `LICENSE`). The census results in `census/` and the
+report in `sentence_need/` are CC BY 4.0.
