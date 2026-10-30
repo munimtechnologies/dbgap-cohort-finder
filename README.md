@@ -85,7 +85,6 @@ adenocarcinoma + smoking variables + WGS. Two files work on that snapshot:
 $ python snapshot_survey.py --data data --out out          # downloads dbgap.tar.gz once
 $ python snapshot.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
     --values data/var_values.jsonl.gz ask "adults with lung adenocarcinoma, smoking variables and WGS"
-$ python snapshot.py ... run --needs needs.jsonl --out submission.jsonl --team-id <team>
 $ python snapshot.py ... devset -n 150 --out devset.json && python snapshot.py ... bench --devset devset.json --out bench.json
 ```
 
@@ -115,6 +114,29 @@ expected answer on the submission-example wording moves from 3rd to 2nd. Use
 `sentence_need.rank(index, sentence_need.parse_need(text), tier=0.6)`.
 Results, limits and the pre-registered predictions:
 [`sentence_need/`](sentence_need/README.md).
+
+### Writing a submission
+
+`spark_submit.py` writes a Task 2 submission with that ranker and checks it
+against the format in the Task 2 description: one UTF-8 JSON object per line,
+`metadata` with `team_id`, `submission_id`, `info_need_id` and the original
+`info_need`, and `results`, an ordered list of study accessions that must all
+be in the snapshot. `snapshot.py run` still works, but it uses `snapshot.py`'s
+own parser and ranking, not the best measured one.
+
+```
+$ python make_needs.py --needs official_needs.jsonl sentence_needs.jsonl --devset devset.json --out needs.jsonl
+$ python spark_submit.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
+    --values data/var_values.jsonl.gz run --needs needs.jsonl --out submission.jsonl \
+    --team-id <team> --submission-id <team>-run-01 --stats stats.json
+$ python spark_submit.py --studies out/studies.jsonl check --needs needs.jsonl --submission submission.jsonl -k 100
+```
+
+On the full snapshot (192 needs, 2 CPUs, 2026-10-30) it loaded in 16 s,
+ranked a need in 2.2 s on average (5.4 s at most) and peaked at 313 MB, with
+0 format problems. One need got 94 results instead of 100, because studies
+that match no word of a need are left out. Details and the pre-registered
+predictions (5 of 7 held): [`submission/`](submission/README.md).
 
 A second, independent label set comes from PhenX curators' links between
 PhenX measures and dbGaP studies: [`phenx_dev/`](phenx_dev/README.md). On it
@@ -269,6 +291,8 @@ no GPU and makes no network calls after the harvest.
   `devset` and `bench`.
 - `sentence_need.py` was written for the one sentence template SPARK has
   published. Other templates may still break the parse.
+- `spark_submit.py check` follows the one example record in the Task 2
+  description. NIH's later technical guidance may add rules.
 - Counts are study-wide. The tool can't yet tell how many of a study's 5,000
   subjects have the disease or the data type you asked about.
 - Consent matching reads the consent codes (for example `HMB-IRB-NPU`), not
@@ -303,7 +327,9 @@ and synthetic studies. They make no network calls.
   `official_needs.jsonl`, `sentence_needs.jsonl` and the 2026-10-30 report in
   `sentence_need/`). `sentence_need.py` 0.2.0 leaves the sentence template's
   words out of text scoring (`scaffold_check.py` and
-  `sentence_need/scaffold-report-2026-10-30.json`).
+  `sentence_need/scaffold-report-2026-10-30.json`). `spark_submit.py` 0.1.0
+  writes and checks a Task 2 submission with that ranker and reports time and
+  memory; `make_needs.py` builds a test needs file (`submission/`).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
@@ -316,4 +342,4 @@ Made by MV2 of Munim, Inc. The code and this README were made with AI agents
 working in his name. Issues and corrections are welcome.
 
 Apache-2.0 license (see `LICENSE`). The census results in `census/` and the
-reports in `sentence_need/` are CC BY 4.0.
+reports in `sentence_need/` and `submission/` are CC BY 4.0.

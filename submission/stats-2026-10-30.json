@@ -1,0 +1,14 @@
+{
+ "version": "0.1.0",
+ "sentence_need": "0.2.0",
+ "needs": 192,
+ "studies": 3578,
+ "k": 100,
+ "tier": 0.6,
+ "load_seconds": 15.79,
+ "total_need_seconds": 430.68,
+ "mean_need_seconds": 2.243,
+ "max_need_seconds": 5.411,
+ "peak_memory_mb": 313.1,
+ "problems": []
+}
