@@ -14,7 +14,9 @@ disease matches it.
 parse_need() starts from snapshot.parse_need and, only where the sentence says
 so, takes the topic from "X as the primary disease", reads "data include ..."
 lists as variable needs (an item's "or" alternatives count as one need, met by
-the best of them), and reads "whole genomic sequences" as WGS. Needs without
+the best of them), and reads "whole genomic sequences" as WGS. Since 0.2.0 the
+same sentences also keep their template words ("involving", "as the primary
+disease", "participant-level") out of the text-scoring tokens. Needs without
 those cues parse as before. rank() is snapshot.rank with those needs scored,
 optionally with tier_bench's primary-disease tiering. main() compares the old
 and new parsers on a silver dev set and on files of needs. CPU only, standard
@@ -31,7 +33,7 @@ import sys
 import cohort_finder as cf
 import snapshot as sn
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 EXAMPLE_STUDY = "phs001954.v2.p1"  # the expected answer in the Task 2 description
 TIER = 0.6  # tier_bench 0.1.0's pre-registered threshold: below it the disease is only mentioned
@@ -62,6 +64,13 @@ SENTENCE_DATA_TYPE_RULES = [(r"whole[- ]genom\w*\s+sequenc", "wgs"), (r"\bexomic
 # Words of a sentence-style need that never name a disease.
 FILLER = {"involving", "involve", "involved", "enrolled", "enrolling", "recruited", "whose", "having",
           "focused", "focusing"}
+# Template words of a sentence-style need, left out of its text-scoring tokens. "primary" and "disease"
+# go only where they frame the topic: "coronary artery disease as the primary disease" keeps the first.
+SCAFFOLD_RES = [
+    re.compile(r"\bas\s+(?:the|their|its)\s+(?:primary|main)\s+%s\b" % DISEASE_NOUN, re.I),
+    re.compile(r"\b(?:primary|main)\s+%s\s+(?:is|of)\b" % DISEASE_NOUN, re.I),
+    re.compile(r"\bparticipant[- ]level\b", re.I),
+    re.compile(r"\b(?:%s)\b" % "|".join(sorted(FILLER)), re.I)]
 
 
 # ---------------------------------------------------------------- parsing
@@ -84,6 +93,13 @@ def data_items(text):
             if alts:
                 out.append(alts)
     return out
+
+
+def search_text(text):
+    """The need without its sentence template words, for text scoring."""
+    for regex in SCAFFOLD_RES:
+        text = regex.sub(" ", text or "")
+    return text
 
 
 def type_tags(phrase):
@@ -117,7 +133,8 @@ def sentence_var_needs(text):
     return types, needs
 
 
-def parse_need(text):
+def parse_need(text, strip=True):
+    """strip: leave template words out of the text-scoring tokens of sentence-style needs (0.2.0)."""
     q = sn.parse_need(text)
     types, needs = sentence_var_needs(text)
     q["data_types"] = set(q["data_types"]) | cf._tags(text, SENTENCE_DATA_TYPE_RULES) | types
@@ -138,6 +155,8 @@ def parse_need(text):
         topic = [t for t in q["topic"] if t not in FILLER and t not in listed] or q["topic"]
     q["topic"] = topic
     q["primary_phrase"] = phrase
+    if strip and (phrase or data_items(text)):
+        q["tokens"] = cf.parse_query(search_text(text))["tokens"]
     return q
 
 
@@ -197,7 +216,7 @@ def rank(index, query, k=sn.K, tier=None):
 
 SYSTEMS = (("old_gated", sn.parse_need, None), ("new_gated", parse_need, None),
            ("old_tier06", sn.parse_need, TIER), ("new_tier06", parse_need, TIER))
-PARSERS = {"old": sn.parse_need, "new": parse_need}
+PARSERS = {"old": sn.parse_need, "new": parse_need}  # looked up when called, so a later module can swap them
 
 
 def position(ranked, accession):
@@ -209,6 +228,10 @@ def overlap(a, b, k=10):
     """Share of the top k that two rankings have in common."""
     a, b = a[:k], b[:k]
     return round(len(set(a) & set(b)) / float(max(len(a), len(b)) or 1), 4)
+
+
+def token_set(q):
+    return sorted(set(q.get("tokens") or []))
 
 
 def bench(index, queries, qrels, k=10):
@@ -226,8 +249,11 @@ def bench(index, queries, qrels, k=10):
         out[name]["vs_old"] = {"higher": sorted(q for q in per if per[q] > base[q] + 1e-9),
                                "lower": sorted(q for q in per if per[q] < base[q] - 1e-9),
                                "same": sum(1 for q in per if abs(per[q] - base[q]) <= 1e-9)}
+    old, new = PARSERS["old"], PARSERS["new"]
     out["parse_changed"] = sorted(q["id"] for q in queries
-                                  if summary(sn.parse_need(q["query"])) != summary(parse_need(q["query"])))
+                                  if summary(old(q["query"])) != summary(new(q["query"])))
+    out["tokens_changed"] = sorted(q["id"] for q in queries
+                                   if token_set(old(q["query"])) != token_set(new(q["query"])))
     out["questions"] = len(queries)
     return out
 
@@ -238,7 +264,10 @@ def compare_needs(index, needs, k=10):
     for need_id, text in needs:
         parses = {p: parse(text) for p, parse in PARSERS.items()}
         item = {"id": need_id, "need": text, "parse": {p: summary(q) for p, q in parses.items()},
-                "parse_changed": summary(parses["old"]) != summary(parses["new"]), "example_rank": {}, "top": {}}
+                "parse_changed": summary(parses["old"]) != summary(parses["new"]),
+                "tokens": {p: token_set(q) for p, q in parses.items()},
+                "example_rank": {}, "top": {}}
+        item["tokens_changed"] = item["tokens"]["old"] != item["tokens"]["new"]
         for name, _, tier in SYSTEMS:
             results = rank(index, parses[name.split("_")[0]], tier=tier)
             ranked = [r["accession"] for r in results]
@@ -273,7 +302,9 @@ def pair_overlaps(items, pairs, k=10):
         if short in by_id and sentence in by_id:
             out.append({"short": short, "sentence": sentence,
                         key: {name: overlap(by_id[short]["top"][name], by_id[sentence]["top"][name], k)
-                              for name, _, _ in SYSTEMS}})
+                              for name, _, _ in SYSTEMS},
+                        "same_tokens": {p: by_id[short]["tokens"][p] == by_id[sentence]["tokens"][p]
+                                        for p in PARSERS}})
     mean = {name: round(sum(p[key][name] for p in out) / len(out), 4) if out else None for name, _, _ in SYSTEMS}
     return out, mean
 
@@ -305,10 +336,14 @@ def main(argv=None):
             v = silver[name]["vs_old"]
             line += " (higher %d, lower %d, same %d)" % (len(v["higher"]), len(v["lower"]), v["same"])
         print(line)
-    print("silver parse changed: %d of %d" % (len(silver["parse_changed"]), silver["questions"]))
+    print("silver parse changed: %d of %d; tokens changed: %d" % (
+        len(silver["parse_changed"]), silver["questions"], len(silver["tokens_changed"])))
     for n in report["needs"]:
-        print("%s: parse changed %s; example rank %s" % (
-            n["id"], n["parse_changed"], " ".join("%s=%s" % kv for kv in sorted(n["example_rank"].items()))))
+        print("%s: parse changed %s; tokens changed %s; example rank %s" % (
+            n["id"], n["parse_changed"], n["tokens_changed"],
+            " ".join("%s=%s" % kv for kv in sorted(n["example_rank"].items()))))
+    for p in report["pairs"]:
+        print("pair %s/%s overlap@10 %s" % (p["short"], p["sentence"], json.dumps(p["overlap@10"], sort_keys=True)))
     print("pair mean overlap@10: %s" % json.dumps(report["pair_mean"], sort_keys=True))
     return 0
 

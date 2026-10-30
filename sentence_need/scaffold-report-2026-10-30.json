@@ -1,0 +1,8418 @@
+{
+ "version": "0.2.0",
+ "tier": 0.6,
+ "silver": {
+  "old_gated": {
+   "ndcg@10": 0.888,
+   "per_query": {
+    "dev001": 1.0,
+    "dev002": 0.6170963711982227,
+    "dev003": 0.6309297535714575,
+    "dev004": 1.0,
+    "dev005": 0.3065735963827292,
+    "dev006": 1.0,
+    "dev007": 1.0,
+    "dev008": 1.0,
+    "dev009": 0.6309297535714575,
+    "dev010": 1.0,
+    "dev011": 0.9197207891481876,
+    "dev012": 1.0,
+    "dev013": 0.38685280723454163,
+    "dev014": 1.0,
+    "dev015": 1.0,
+    "dev016": 1.0,
+    "dev017": 1.0,
+    "dev018": 1.0,
+    "dev019": 1.0,
+    "dev020": 1.0,
+    "dev021": 1.0,
+    "dev022": 0.6934264036172708,
+    "dev023": 0.8659013453423597,
+    "dev024": 1.0,
+    "dev025": 1.0,
+    "dev026": 0.5706417189553201,
+    "dev027": 1.0,
+    "dev028": 1.0,
+    "dev029": 1.0,
+    "dev030": 0.6131471927654584,
+    "dev031": 1.0,
+    "dev032": 1.0,
+    "dev033": 1.0,
+    "dev034": 1.0,
+    "dev035": 1.0,
+    "dev036": 1.0,
+    "dev037": 1.0,
+    "dev038": 1.0,
+    "dev039": 0.5,
+    "dev040": 1.0,
+    "dev041": 1.0,
+    "dev042": 0.38685280723454163,
+    "dev043": 1.0,
+    "dev044": 1.0,
+    "dev045": 1.0,
+    "dev046": 0.6509209298071326,
+    "dev047": 1.0,
+    "dev048": 0.8772153153380493,
+    "dev049": 1.0,
+    "dev050": 1.0,
+    "dev051": 1.0,
+    "dev052": 1.0,
+    "dev053": 1.0,
+    "dev054": 1.0,
+    "dev055": 1.0,
+    "dev056": 1.0,
+    "dev057": 1.0,
+    "dev058": 1.0,
+    "dev059": 1.0,
+    "dev060": 1.0,
+    "dev061": 1.0,
+    "dev062": 1.0,
+    "dev063": 1.0,
+    "dev064": 0.9363792118010481,
+    "dev065": 1.0,
+    "dev066": 1.0,
+    "dev067": 1.0,
+    "dev068": 1.0,
+    "dev069": 1.0,
+    "dev070": 0.0,
+    "dev071": 1.0,
+    "dev072": 0.9197207891481876,
+    "dev073": 1.0,
+    "dev074": 1.0,
+    "dev075": 0.6309297535714575,
+    "dev076": 1.0,
+    "dev077": 0.6309297535714575,
+    "dev078": 1.0,
+    "dev079": 0.11305340175787204,
+    "dev080": 1.0,
+    "dev081": 1.0,
+    "dev082": 1.0,
+    "dev083": 0.0,
+    "dev084": 1.0,
+    "dev085": 1.0,
+    "dev086": 1.0,
+    "dev087": 1.0,
+    "dev088": 1.0,
+    "dev089": 0.9197207891481876,
+    "dev090": 0.6934264036172708,
+    "dev091": 1.0,
+    "dev092": 1.0,
+    "dev093": 1.0,
+    "dev094": 0.0,
+    "dev095": 1.0,
+    "dev096": 1.0,
+    "dev097": 1.0,
+    "dev098": 1.0,
+    "dev099": 0.43067655807339306,
+    "dev100": 1.0,
+    "dev101": 1.0,
+    "dev102": 0.3333333333333333,
+    "dev103": 0.8332128630752801,
+    "dev104": 1.0,
+    "dev105": 1.0,
+    "dev106": 1.0,
+    "dev107": 1.0,
+    "dev108": 1.0,
+    "dev109": 1.0,
+    "dev110": 1.0,
+    "dev111": 1.0,
+    "dev112": 1.0,
+    "dev113": 1.0,
+    "dev114": 1.0,
+    "dev115": 1.0,
+    "dev116": 0.9828920819566879,
+    "dev117": 0.5,
+    "dev118": 0.6309297535714575,
+    "dev119": 0.3562071871080222,
+    "dev120": 1.0,
+    "dev121": 0.6309297535714575,
+    "dev122": 1.0,
+    "dev123": 1.0,
+    "dev124": 1.0,
+    "dev125": 0.6309297535714575,
+    "dev126": 1.0,
+    "dev127": 0.9782917460822231,
+    "dev128": 1.0,
+    "dev129": 1.0,
+    "dev130": 0.39780880120575696,
+    "dev131": 0.9197207891481876,
+    "dev132": 0.9683310355387568,
+    "dev133": 1.0,
+    "dev134": 1.0,
+    "dev135": 1.0,
+    "dev136": 0.9828920819566879,
+    "dev137": 1.0,
+    "dev138": 1.0,
+    "dev139": 1.0,
+    "dev140": 1.0,
+    "dev141": 1.0,
+    "dev142": 1.0,
+    "dev143": 1.0,
+    "dev144": 1.0,
+    "dev145": 1.0,
+    "dev146": 0.6309297535714575,
+    "dev147": 0.5,
+    "dev148": 0.0,
+    "dev149": 1.0,
+    "dev150": 1.0
+   }
+  },
+  "new_gated": {
+   "ndcg@10": 0.888,
+   "per_query": {
+    "dev001": 1.0,
+    "dev002": 0.6170963711982227,
+    "dev003": 0.6309297535714575,
+    "dev004": 1.0,
+    "dev005": 0.3065735963827292,
+    "dev006": 1.0,
+    "dev007": 1.0,
+    "dev008": 1.0,
+    "dev009": 0.6309297535714575,
+    "dev010": 1.0,
+    "dev011": 0.9197207891481876,
+    "dev012": 1.0,
+    "dev013": 0.38685280723454163,
+    "dev014": 1.0,
+    "dev015": 1.0,
+    "dev016": 1.0,
+    "dev017": 1.0,
+    "dev018": 1.0,
+    "dev019": 1.0,
+    "dev020": 1.0,
+    "dev021": 1.0,
+    "dev022": 0.6934264036172708,
+    "dev023": 0.8659013453423597,
+    "dev024": 1.0,
+    "dev025": 1.0,
+    "dev026": 0.5706417189553201,
+    "dev027": 1.0,
+    "dev028": 1.0,
+    "dev029": 1.0,
+    "dev030": 0.6131471927654584,
+    "dev031": 1.0,
+    "dev032": 1.0,
+    "dev033": 1.0,
+    "dev034": 1.0,
+    "dev035": 1.0,
+    "dev036": 1.0,
+    "dev037": 1.0,
+    "dev038": 1.0,
+    "dev039": 0.5,
+    "dev040": 1.0,
+    "dev041": 1.0,
+    "dev042": 0.38685280723454163,
+    "dev043": 1.0,
+    "dev044": 1.0,
+    "dev045": 1.0,
+    "dev046": 0.6509209298071326,
+    "dev047": 1.0,
+    "dev048": 0.8772153153380493,
+    "dev049": 1.0,
+    "dev050": 1.0,
+    "dev051": 1.0,
+    "dev052": 1.0,
+    "dev053": 1.0,
+    "dev054": 1.0,
+    "dev055": 1.0,
+    "dev056": 1.0,
+    "dev057": 1.0,
+    "dev058": 1.0,
+    "dev059": 1.0,
+    "dev060": 1.0,
+    "dev061": 1.0,
+    "dev062": 1.0,
+    "dev063": 1.0,
+    "dev064": 0.9363792118010481,
+    "dev065": 1.0,
+    "dev066": 1.0,
+    "dev067": 1.0,
+    "dev068": 1.0,
+    "dev069": 1.0,
+    "dev070": 0.0,
+    "dev071": 1.0,
+    "dev072": 0.9197207891481876,
+    "dev073": 1.0,
+    "dev074": 1.0,
+    "dev075": 0.6309297535714575,
+    "dev076": 1.0,
+    "dev077": 0.6309297535714575,
+    "dev078": 1.0,
+    "dev079": 0.11305340175787204,
+    "dev080": 1.0,
+    "dev081": 1.0,
+    "dev082": 1.0,
+    "dev083": 0.0,
+    "dev084": 1.0,
+    "dev085": 1.0,
+    "dev086": 1.0,
+    "dev087": 1.0,
+    "dev088": 1.0,
+    "dev089": 0.9197207891481876,
+    "dev090": 0.6934264036172708,
+    "dev091": 1.0,
+    "dev092": 1.0,
+    "dev093": 1.0,
+    "dev094": 0.0,
+    "dev095": 1.0,
+    "dev096": 1.0,
+    "dev097": 1.0,
+    "dev098": 1.0,
+    "dev099": 0.43067655807339306,
+    "dev100": 1.0,
+    "dev101": 1.0,
+    "dev102": 0.3333333333333333,
+    "dev103": 0.8332128630752801,
+    "dev104": 1.0,
+    "dev105": 1.0,
+    "dev106": 1.0,
+    "dev107": 1.0,
+    "dev108": 1.0,
+    "dev109": 1.0,
+    "dev110": 1.0,
+    "dev111": 1.0,
+    "dev112": 1.0,
+    "dev113": 1.0,
+    "dev114": 1.0,
+    "dev115": 1.0,
+    "dev116": 0.9828920819566879,
+    "dev117": 0.5,
+    "dev118": 0.6309297535714575,
+    "dev119": 0.3562071871080222,
+    "dev120": 1.0,
+    "dev121": 0.6309297535714575,
+    "dev122": 1.0,
+    "dev123": 1.0,
+    "dev124": 1.0,
+    "dev125": 0.6309297535714575,
+    "dev126": 1.0,
+    "dev127": 0.9782917460822231,
+    "dev128": 1.0,
+    "dev129": 1.0,
+    "dev130": 0.39780880120575696,
+    "dev131": 0.9197207891481876,
+    "dev132": 0.9683310355387568,
+    "dev133": 1.0,
+    "dev134": 1.0,
+    "dev135": 1.0,
+    "dev136": 0.9828920819566879,
+    "dev137": 1.0,
+    "dev138": 1.0,
+    "dev139": 1.0,
+    "dev140": 1.0,
+    "dev141": 1.0,
+    "dev142": 1.0,
+    "dev143": 1.0,
+    "dev144": 1.0,
+    "dev145": 1.0,
+    "dev146": 0.6309297535714575,
+    "dev147": 0.5,
+    "dev148": 0.0,
+    "dev149": 1.0,
+    "dev150": 1.0
+   },
+   "vs_old": {
+    "higher": [],
+    "lower": [],
+    "same": 150
+   }
+  },
+  "old_tier06": {
+   "ndcg@10": 0.8943,
+   "per_query": {
+    "dev001": 1.0,
+    "dev002": 0.6170963711982227,
+    "dev003": 0.6309297535714575,
+    "dev004": 1.0,
+    "dev005": 0.3065735963827292,
+    "dev006": 1.0,
+    "dev007": 1.0,
+    "dev008": 1.0,
+    "dev009": 0.6309297535714575,
+    "dev010": 1.0,
+    "dev011": 0.9197207891481876,
+    "dev012": 1.0,
+    "dev013": 0.38685280723454163,
+    "dev014": 1.0,
+    "dev015": 1.0,
+    "dev016": 1.0,
+    "dev017": 1.0,
+    "dev018": 1.0,
+    "dev019": 1.0,
+    "dev020": 1.0,
+    "dev021": 1.0,
+    "dev022": 0.6934264036172708,
+    "dev023": 0.8659013453423597,
+    "dev024": 1.0,
+    "dev025": 1.0,
+    "dev026": 0.5706417189553201,
+    "dev027": 1.0,
+    "dev028": 1.0,
+    "dev029": 1.0,
+    "dev030": 0.6131471927654584,
+    "dev031": 1.0,
+    "dev032": 1.0,
+    "dev033": 1.0,
+    "dev034": 1.0,
+    "dev035": 1.0,
+    "dev036": 1.0,
+    "dev037": 1.0,
+    "dev038": 1.0,
+    "dev039": 0.5,
+    "dev040": 1.0,
+    "dev041": 1.0,
+    "dev042": 0.38685280723454163,
+    "dev043": 1.0,
+    "dev044": 1.0,
+    "dev045": 1.0,
+    "dev046": 0.6509209298071326,
+    "dev047": 1.0,
+    "dev048": 0.8772153153380493,
+    "dev049": 1.0,
+    "dev050": 1.0,
+    "dev051": 1.0,
+    "dev052": 1.0,
+    "dev053": 1.0,
+    "dev054": 1.0,
+    "dev055": 1.0,
+    "dev056": 1.0,
+    "dev057": 1.0,
+    "dev058": 1.0,
+    "dev059": 1.0,
+    "dev060": 1.0,
+    "dev061": 1.0,
+    "dev062": 1.0,
+    "dev063": 1.0,
+    "dev064": 0.9363792118010481,
+    "dev065": 1.0,
+    "dev066": 1.0,
+    "dev067": 1.0,
+    "dev068": 1.0,
+    "dev069": 1.0,
+    "dev070": 0.0,
+    "dev071": 1.0,
+    "dev072": 0.9197207891481876,
+    "dev073": 1.0,
+    "dev074": 1.0,
+    "dev075": 0.6309297535714575,
+    "dev076": 1.0,
+    "dev077": 1.0,
+    "dev078": 1.0,
+    "dev079": 0.11305340175787204,
+    "dev080": 1.0,
+    "dev081": 1.0,
+    "dev082": 1.0,
+    "dev083": 0.0,
+    "dev084": 1.0,
+    "dev085": 1.0,
+    "dev086": 1.0,
+    "dev087": 1.0,
+    "dev088": 1.0,
+    "dev089": 0.9197207891481876,
+    "dev090": 0.6934264036172708,
+    "dev091": 1.0,
+    "dev092": 1.0,
+    "dev093": 1.0,
+    "dev094": 0.0,
+    "dev095": 1.0,
+    "dev096": 1.0,
+    "dev097": 1.0,
+    "dev098": 1.0,
+    "dev099": 0.5,
+    "dev100": 1.0,
+    "dev101": 1.0,
+    "dev102": 0.3333333333333333,
+    "dev103": 0.8332128630752801,
+    "dev104": 1.0,
+    "dev105": 1.0,
+    "dev106": 1.0,
+    "dev107": 1.0,
+    "dev108": 1.0,
+    "dev109": 1.0,
+    "dev110": 1.0,
+    "dev111": 1.0,
+    "dev112": 1.0,
+    "dev113": 1.0,
+    "dev114": 1.0,
+    "dev115": 1.0,
+    "dev116": 0.9828920819566879,
+    "dev117": 0.5,
+    "dev118": 0.6309297535714575,
+    "dev119": 0.3562071871080222,
+    "dev120": 1.0,
+    "dev121": 0.6309297535714575,
+    "dev122": 1.0,
+    "dev123": 1.0,
+    "dev124": 1.0,
+    "dev125": 0.6309297535714575,
+    "dev126": 1.0,
+    "dev127": 0.9782917460822231,
+    "dev128": 1.0,
+    "dev129": 1.0,
+    "dev130": 0.39780880120575696,
+    "dev131": 0.9197207891481876,
+    "dev132": 0.9683310355387568,
+    "dev133": 1.0,
+    "dev134": 1.0,
+    "dev135": 1.0,
+    "dev136": 0.9828920819566879,
+    "dev137": 1.0,
+    "dev138": 1.0,
+    "dev139": 1.0,
+    "dev140": 1.0,
+    "dev141": 1.0,
+    "dev142": 1.0,
+    "dev143": 1.0,
+    "dev144": 1.0,
+    "dev145": 1.0,
+    "dev146": 0.6309297535714575,
+    "dev147": 0.5,
+    "dev148": 0.5,
+    "dev149": 1.0,
+    "dev150": 1.0
+   }
+  },
+  "new_tier06": {
+   "ndcg@10": 0.8943,
+   "per_query": {
+    "dev001": 1.0,
+    "dev002": 0.6170963711982227,
+    "dev003": 0.6309297535714575,
+    "dev004": 1.0,
+    "dev005": 0.3065735963827292,
+    "dev006": 1.0,
+    "dev007": 1.0,
+    "dev008": 1.0,
+    "dev009": 0.6309297535714575,
+    "dev010": 1.0,
+    "dev011": 0.9197207891481876,
+    "dev012": 1.0,
+    "dev013": 0.38685280723454163,
+    "dev014": 1.0,
+    "dev015": 1.0,
+    "dev016": 1.0,
+    "dev017": 1.0,
+    "dev018": 1.0,
+    "dev019": 1.0,
+    "dev020": 1.0,
+    "dev021": 1.0,
+    "dev022": 0.6934264036172708,
+    "dev023": 0.8659013453423597,
+    "dev024": 1.0,
+    "dev025": 1.0,
+    "dev026": 0.5706417189553201,
+    "dev027": 1.0,
+    "dev028": 1.0,
+    "dev029": 1.0,
+    "dev030": 0.6131471927654584,
+    "dev031": 1.0,
+    "dev032": 1.0,
+    "dev033": 1.0,
+    "dev034": 1.0,
+    "dev035": 1.0,
+    "dev036": 1.0,
+    "dev037": 1.0,
+    "dev038": 1.0,
+    "dev039": 0.5,
+    "dev040": 1.0,
+    "dev041": 1.0,
+    "dev042": 0.38685280723454163,
+    "dev043": 1.0,
+    "dev044": 1.0,
+    "dev045": 1.0,
+    "dev046": 0.6509209298071326,
+    "dev047": 1.0,
+    "dev048": 0.8772153153380493,
+    "dev049": 1.0,
+    "dev050": 1.0,
+    "dev051": 1.0,
+    "dev052": 1.0,
+    "dev053": 1.0,
+    "dev054": 1.0,
+    "dev055": 1.0,
+    "dev056": 1.0,
+    "dev057": 1.0,
+    "dev058": 1.0,
+    "dev059": 1.0,
+    "dev060": 1.0,
+    "dev061": 1.0,
+    "dev062": 1.0,
+    "dev063": 1.0,
+    "dev064": 0.9363792118010481,
+    "dev065": 1.0,
+    "dev066": 1.0,
+    "dev067": 1.0,
+    "dev068": 1.0,
+    "dev069": 1.0,
+    "dev070": 0.0,
+    "dev071": 1.0,
+    "dev072": 0.9197207891481876,
+    "dev073": 1.0,
+    "dev074": 1.0,
+    "dev075": 0.6309297535714575,
+    "dev076": 1.0,
+    "dev077": 1.0,
+    "dev078": 1.0,
+    "dev079": 0.11305340175787204,
+    "dev080": 1.0,
+    "dev081": 1.0,
+    "dev082": 1.0,
+    "dev083": 0.0,
+    "dev084": 1.0,
+    "dev085": 1.0,
+    "dev086": 1.0,
+    "dev087": 1.0,
+    "dev088": 1.0,
+    "dev089": 0.9197207891481876,
+    "dev090": 0.6934264036172708,
+    "dev091": 1.0,
+    "dev092": 1.0,
+    "dev093": 1.0,
+    "dev094": 0.0,
+    "dev095": 1.0,
+    "dev096": 1.0,
+    "dev097": 1.0,
+    "dev098": 1.0,
+    "dev099": 0.5,
+    "dev100": 1.0,
+    "dev101": 1.0,
+    "dev102": 0.3333333333333333,
+    "dev103": 0.8332128630752801,
+    "dev104": 1.0,
+    "dev105": 1.0,
+    "dev106": 1.0,
+    "dev107": 1.0,
+    "dev108": 1.0,
+    "dev109": 1.0,
+    "dev110": 1.0,
+    "dev111": 1.0,
+    "dev112": 1.0,
+    "dev113": 1.0,
+    "dev114": 1.0,
+    "dev115": 1.0,
+    "dev116": 0.9828920819566879,
+    "dev117": 0.5,
+    "dev118": 0.6309297535714575,
+    "dev119": 0.3562071871080222,
+    "dev120": 1.0,
+    "dev121": 0.6309297535714575,
+    "dev122": 1.0,
+    "dev123": 1.0,
+    "dev124": 1.0,
+    "dev125": 0.6309297535714575,
+    "dev126": 1.0,
+    "dev127": 0.9782917460822231,
+    "dev128": 1.0,
+    "dev129": 1.0,
+    "dev130": 0.39780880120575696,
+    "dev131": 0.9197207891481876,
+    "dev132": 0.9683310355387568,
+    "dev133": 1.0,
+    "dev134": 1.0,
+    "dev135": 1.0,
+    "dev136": 0.9828920819566879,
+    "dev137": 1.0,
+    "dev138": 1.0,
+    "dev139": 1.0,
+    "dev140": 1.0,
+    "dev141": 1.0,
+    "dev142": 1.0,
+    "dev143": 1.0,
+    "dev144": 1.0,
+    "dev145": 1.0,
+    "dev146": 0.6309297535714575,
+    "dev147": 0.5,
+    "dev148": 0.5,
+    "dev149": 1.0,
+    "dev150": 1.0
+   },
+   "vs_old": {
+    "higher": [],
+    "lower": [],
+    "same": 150
+   }
+  },
+  "parse_changed": [],
+  "tokens_changed": [],
+  "questions": 150
+ },
+ "needs": [
+  {
+   "id": "ex1",
+   "need": "Adults with lung adenocarcinoma as the primary disease, with smoking variables and whole genome sequencing",
+   "parse": {
+    "old": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [
+      [
+       "smoking"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [
+      [
+       "smoking"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adenocarcinoma",
+     "adult",
+     "disease",
+     "genome",
+     "lung",
+     "primary",
+     "sequencing",
+     "smoking",
+     "variable",
+     "whole"
+    ],
+    "new": [
+     "adenocarcinoma",
+     "adult",
+     "genome",
+     "lung",
+     "sequencing",
+     "smoking",
+     "variable",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": 3,
+    "new_gated": 3,
+    "old_tier06": 2,
+    "new_tier06": 2
+   },
+   "top": {
+    "old_gated": [
+     "phs000488.v2.p1",
+     "phs000951.v6.p5",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs002992.v1.p1",
+     "phs000988.v6.p1",
+     "phs000956.v6.p1",
+     "phs001607.v4.p3",
+     "phs001143.v4.p1",
+     "phs001472.v3.p2"
+    ],
+    "new_gated": [
+     "phs000488.v2.p1",
+     "phs000951.v6.p5",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001143.v4.p1",
+     "phs001607.v4.p3",
+     "phs000988.v6.p1",
+     "phs001472.v3.p2"
+    ],
+    "old_tier06": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs002992.v1.p1",
+     "phs000988.v6.p1",
+     "phs000956.v6.p1",
+     "phs001607.v4.p3",
+     "phs001143.v4.p1",
+     "phs001472.v3.p2"
+    ],
+    "new_tier06": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001143.v4.p1",
+     "phs001607.v4.p3",
+     "phs000988.v6.p1",
+     "phs001472.v3.p2"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "title matches 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs000951.v6.p5",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 39-88 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "mentions only lung of 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs001954.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 32-85 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "primary disease matches 'lung adenocarcinoma'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "title matches 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs000951.v6.p5",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 39-88 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "mentions only lung of 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs001954.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 32-85 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "primary disease matches 'lung adenocarcinoma'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex2",
+   "need": "Studies of type 2 diabetes in African American adults with HbA1c measurements, consented for general research use",
+   "parse": {
+    "old": {
+     "topic": [
+      "type",
+      "diabetes"
+     ],
+     "var_terms": [
+      [
+       "hba1c"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    },
+    "new": {
+     "topic": [
+      "type",
+      "diabetes"
+     ],
+     "var_terms": [
+      [
+       "hba1c"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "a1c",
+     "adult",
+     "african",
+     "american",
+     "diabetes",
+     "general",
+     "glycated",
+     "hba1c",
+     "hemoglobin",
+     "measurement",
+     "research",
+     "type"
+    ],
+    "new": [
+     "a1c",
+     "adult",
+     "african",
+     "american",
+     "diabetes",
+     "general",
+     "glycated",
+     "hba1c",
+     "hemoglobin",
+     "measurement",
+     "research",
+     "type"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs000389.v1.p1",
+     "phs001099.v1.p1",
+     "phs002465.v2.p1",
+     "phs000143.v2.p1",
+     "phs002024.v1.p1",
+     "phs002501.v1.p1",
+     "phs002401.v1.p1",
+     "phs000888.v1.p1"
+    ],
+    "new_gated": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs000389.v1.p1",
+     "phs001099.v1.p1",
+     "phs002465.v2.p1",
+     "phs000143.v2.p1",
+     "phs002024.v1.p1",
+     "phs002501.v1.p1",
+     "phs002401.v1.p1",
+     "phs000888.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs000389.v1.p1",
+     "phs001099.v1.p1",
+     "phs002465.v2.p1",
+     "phs000143.v2.p1",
+     "phs002024.v1.p1",
+     "phs000888.v1.p1",
+     "phs000356.v2.p1",
+     "phs002453.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs000389.v1.p1",
+     "phs001099.v1.p1",
+     "phs002465.v2.p1",
+     "phs000143.v2.p1",
+     "phs002024.v1.p1",
+     "phs000888.v1.p1",
+     "phs000356.v2.p1",
+     "phs002453.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000433.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "4,349 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000984.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "132 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000389.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "description suggests a pediatric study (wanted aged 18+)",
+      "race/ethnicity not reported (Black/African American)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000433.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "4,349 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000984.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "132 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000389.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "description suggests a pediatric study (wanted aged 18+)",
+      "race/ethnicity not reported (Black/African American)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex3",
+   "need": "Children with asthma with exome sequencing and Hispanic participants",
+   "parse": {
+    "old": {
+     "topic": [
+      "asthma"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": [
+      "hispanic"
+     ]
+    },
+    "new": {
+     "topic": [
+      "asthma"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": [
+      "hispanic"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "asthma",
+     "children",
+     "exome",
+     "hispanic",
+     "sequencing"
+    ],
+    "new": [
+     "asthma",
+     "children",
+     "exome",
+     "hispanic",
+     "sequencing"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000422.v1.p1",
+     "phs003512.v1.p1",
+     "phs000185.v8.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001216.v1.p1"
+    ],
+    "new_gated": [
+     "phs000422.v1.p1",
+     "phs003512.v1.p1",
+     "phs000185.v8.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001216.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000422.v1.p1",
+     "phs000185.v8.p1",
+     "phs003512.v1.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001216.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000422.v1.p1",
+     "phs000185.v8.p1",
+     "phs003512.v1.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001216.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000422.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 6.6-61.8, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "primary disease matches 'asthma'"
+     ]
+    },
+    {
+     "accession": "phs003512.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 0-15 (wanted under 18)",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "mentions 'asthma', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 16.32-78.12, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "disease terms matches 'asthma'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000422.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 6.6-61.8, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "primary disease matches 'asthma'"
+     ]
+    },
+    {
+     "accession": "phs003512.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 0-15 (wanted under 18)",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "mentions 'asthma', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 16.32-78.12, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "disease terms matches 'asthma'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex4",
+   "need": "Women aged 40-70 with breast cancer and RNA-seq data",
+   "parse": {
+    "old": {
+     "topic": [
+      "breast",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": [
+      40,
+      70
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "breast",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": [
+      40,
+      70
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "aged",
+     "breast",
+     "cancer",
+     "rna",
+     "seq",
+     "women"
+    ],
+    "new": [
+     "aged",
+     "breast",
+     "cancer",
+     "rna",
+     "seq",
+     "women"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs004440.v1.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs001285.v2.p1",
+     "phs003535.v2.p1",
+     "phs003147.v1.p1",
+     "phs001050.v1.p1",
+     "phs000644.v1.p1",
+     "phs002505.v1.p1"
+    ],
+    "new_gated": [
+     "phs004440.v1.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs001285.v2.p1",
+     "phs003535.v2.p1",
+     "phs003147.v1.p1",
+     "phs001050.v1.p1",
+     "phs000644.v1.p1",
+     "phs002505.v1.p1"
+    ],
+    "old_tier06": [
+     "phs004440.v1.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs001285.v2.p1",
+     "phs003535.v2.p1",
+     "phs003147.v1.p1",
+     "phs001050.v1.p1",
+     "phs002505.v1.p1",
+     "phs001866.v1.p1"
+    ],
+    "new_tier06": [
+     "phs004440.v1.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs001285.v2.p1",
+     "phs003535.v2.p1",
+     "phs003147.v1.p1",
+     "phs001050.v1.p1",
+     "phs002505.v1.p1",
+     "phs001866.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs004440.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "388 women in shareable consent groups",
+      "participants aged 36.1-88.7, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs003275.v2.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "245 women in shareable consent groups",
+      "participants aged 18-73, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs003218.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "140 women in shareable consent groups",
+      "participant ages not reported (wanted aged 40-70)",
+      "disease terms matches 'breast cancer'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs004440.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "388 women in shareable consent groups",
+      "participants aged 36.1-88.7, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs003275.v2.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "245 women in shareable consent groups",
+      "participants aged 18-73, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs003218.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "140 women in shareable consent groups",
+      "participant ages not reported (wanted aged 40-70)",
+      "disease terms matches 'breast cancer'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex5",
+   "need": "Alzheimer disease in people 65 and older with APOE genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "alzheimer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "alzheimer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "alzheimer",
+     "apoe",
+     "disease",
+     "genotype",
+     "older"
+    ],
+    "new": [
+     "alzheimer",
+     "apoe",
+     "disease",
+     "genotype",
+     "older"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000168.v2.p2",
+     "phs000219.v1.p1",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs003530.v2.p1",
+     "phs000496.v1.p1"
+    ],
+    "new_gated": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000168.v2.p2",
+     "phs000219.v1.p1",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs003530.v2.p1",
+     "phs000496.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000168.v2.p2",
+     "phs000219.v1.p1",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs003530.v2.p1",
+     "phs000496.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000168.v2.p2",
+     "phs000219.v1.p1",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs003530.v2.p1",
+     "phs000496.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000378.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000572.v8.p4",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 29-89, partly aged 65+",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 16.32-78.12, partly aged 65+",
+      "disease terms matches 'alzheimer'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000378.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000572.v8.p4",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 29-89, partly aged 65+",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 16.32-78.12, partly aged 65+",
+      "disease terms matches 'alzheimer'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex6",
+   "need": "At least 1,000 participants with coronary artery disease, LDL cholesterol measured, and genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "coronary",
+      "artery"
+     ],
+     "var_terms": [
+      [
+       "ldl",
+       "cholesterol"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "coronary",
+      "artery"
+     ],
+     "var_terms": [
+      [
+       "ldl",
+       "cholesterol"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "artery",
+     "cholesterol",
+     "coronary",
+     "density",
+     "disease",
+     "genotype",
+     "ldl",
+     "lipoprotein",
+     "low",
+     "measured"
+    ],
+    "new": [
+     "artery",
+     "cholesterol",
+     "coronary",
+     "density",
+     "disease",
+     "genotype",
+     "ldl",
+     "lipoprotein",
+     "low",
+     "measured"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs001855.v1.p1",
+     "phs000313.v4.p2",
+     "phs000403.v3.p3",
+     "phs000402.v5.p2",
+     "phs000401.v18.p16",
+     "phs000398.v9.p3",
+     "phs000400.v6.p1",
+     "phs000399.v1.p2",
+     "phs001012.v1.p1",
+     "phs001412.v4.p1"
+    ],
+    "new_gated": [
+     "phs001855.v1.p1",
+     "phs000313.v4.p2",
+     "phs000403.v3.p3",
+     "phs000402.v5.p2",
+     "phs000401.v18.p16",
+     "phs000398.v9.p3",
+     "phs000400.v6.p1",
+     "phs000399.v1.p2",
+     "phs001012.v1.p1",
+     "phs001412.v4.p1"
+    ],
+    "old_tier06": [
+     "phs001855.v1.p1",
+     "phs001412.v4.p1",
+     "phs001238.v2.p1",
+     "phs001203.v5.p1",
+     "phs000286.v7.p2",
+     "phs000287.v7.p1",
+     "phs000200.v12.p3",
+     "phs000313.v4.p2",
+     "phs000403.v3.p3",
+     "phs000402.v5.p2"
+    ],
+    "new_tier06": [
+     "phs001855.v1.p1",
+     "phs001412.v4.p1",
+     "phs001238.v2.p1",
+     "phs001203.v5.p1",
+     "phs000286.v7.p2",
+     "phs000287.v7.p1",
+     "phs000200.v12.p3",
+     "phs000313.v4.p2",
+     "phs000403.v3.p3",
+     "phs000402.v5.p2"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs001855.v1.p1",
+     "fails": 0,
+     "why": [
+      "only 883 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms matches 'coronary artery'"
+     ]
+    },
+    {
+     "accession": "phs000313.v4.p2",
+     "fails": 0,
+     "why": [
+      "2,105 subjects (wanted at least 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions only coronary of 'coronary artery'"
+     ]
+    },
+    {
+     "accession": "phs000403.v3.p3",
+     "fails": 0,
+     "why": [
+      "only 404 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions 'coronary artery', but not as the primary disease"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs001855.v1.p1",
+     "fails": 0,
+     "why": [
+      "only 883 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms matches 'coronary artery'"
+     ]
+    },
+    {
+     "accession": "phs000313.v4.p2",
+     "fails": 0,
+     "why": [
+      "2,105 subjects (wanted at least 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions only coronary of 'coronary artery'"
+     ]
+    },
+    {
+     "accession": "phs000403.v3.p3",
+     "fails": 0,
+     "why": [
+      "only 404 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions 'coronary artery', but not as the primary disease"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex7",
+   "need": "Autism spectrum disorder in children with whole genome sequencing of families",
+   "parse": {
+    "old": {
+     "topic": [
+      "autism",
+      "spectrum",
+      "disorder"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "autism",
+      "spectrum",
+      "disorder"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "autism",
+     "children",
+     "disorder",
+     "family",
+     "genome",
+     "sequencing",
+     "spectrum",
+     "whole"
+    ],
+    "new": [
+     "autism",
+     "children",
+     "disorder",
+     "family",
+     "genome",
+     "sequencing",
+     "spectrum",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs002997.v1.p1",
+     "phs000988.v6.p1",
+     "phs000837.v1.p1",
+     "phs001071.v1.p1"
+    ],
+    "new_gated": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs002997.v1.p1",
+     "phs000988.v6.p1",
+     "phs000837.v1.p1",
+     "phs001071.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs002997.v1.p1",
+     "phs000988.v6.p1",
+     "phs000837.v1.p1",
+     "phs001071.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs002997.v1.p1",
+     "phs000988.v6.p1",
+     "phs000837.v1.p1",
+     "phs001071.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000337.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Control Set, Case Set, Parent-Offspring Trios",
+      "participants aged 7-17 (wanted under 18)",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs002698.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring Trios, Whole Genome Sequencing, Pedigree Whole Genome Sequencing, Affected Sib Pairs",
+      "participant ages not reported (wanted under 18)",
+      "primary disease matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs001089.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring",
+      "participants aged 2-87, partly under 18",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000337.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Control Set, Case Set, Parent-Offspring Trios",
+      "participants aged 7-17 (wanted under 18)",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs002698.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring Trios, Whole Genome Sequencing, Pedigree Whole Genome Sequencing, Affected Sib Pairs",
+      "participant ages not reported (wanted under 18)",
+      "primary disease matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs001089.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring",
+      "participants aged 2-87, partly under 18",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ex8",
+   "need": "Chronic kidney disease in Black adults with eGFR measurements",
+   "parse": {
+    "old": {
+     "topic": [
+      "chronic",
+      "kidney"
+     ],
+     "var_terms": [
+      [
+       "egfr"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    },
+    "new": {
+     "topic": [
+      "chronic",
+      "kidney"
+     ],
+     "var_terms": [
+      [
+       "egfr"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "black",
+     "chronic",
+     "disease",
+     "egfr",
+     "estimated",
+     "filtration",
+     "glomerular",
+     "kidney",
+     "measurement",
+     "rate"
+    ],
+    "new": [
+     "adult",
+     "black",
+     "chronic",
+     "disease",
+     "egfr",
+     "estimated",
+     "filtration",
+     "glomerular",
+     "kidney",
+     "measurement",
+     "rate"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs002719.v1.p1",
+     "phs004088.v2.p1",
+     "phs000524.v2.p2",
+     "phs004459.v1.p1",
+     "phs003709.v1.p1",
+     "phs000843.v2.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1"
+    ],
+    "new_gated": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs002719.v1.p1",
+     "phs004088.v2.p1",
+     "phs000524.v2.p2",
+     "phs004459.v1.p1",
+     "phs003709.v1.p1",
+     "phs000843.v2.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs004088.v2.p1",
+     "phs000524.v2.p2",
+     "phs003709.v1.p1",
+     "phs000843.v2.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1",
+     "phs000744.v5.p2",
+     "phs002719.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs004088.v2.p1",
+     "phs000524.v2.p2",
+     "phs003709.v1.p1",
+     "phs000843.v2.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1",
+     "phs000744.v5.p2",
+     "phs002719.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000844.v2.p1",
+     "fails": 0,
+     "why": [
+      "description suggests a pediatric study (wanted aged 18+)",
+      "dbGaP lists population: African American",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002389.v2.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 33-78 (wanted aged 18+)",
+      "only fewer than 11 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002719.v1.p1",
+     "fails": 0,
+     "why": [
+      "participant ages not reported (wanted aged 18+)",
+      "8,835 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "mentions only kidney of 'chronic kidney'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000844.v2.p1",
+     "fails": 0,
+     "why": [
+      "description suggests a pediatric study (wanted aged 18+)",
+      "dbGaP lists population: African American",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002389.v2.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 33-78 (wanted aged 18+)",
+      "only fewer than 11 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002719.v1.p1",
+     "fails": 0,
+     "why": [
+      "participant ages not reported (wanted aged 18+)",
+      "8,835 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "mentions only kidney of 'chronic kidney'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h01",
+   "need": "Heart attack survivors with genotype data and LDL cholesterol measurements",
+   "parse": {
+    "old": {
+     "topic": [
+      "heart",
+      "attack",
+      "survivor"
+     ],
+     "var_terms": [
+      [
+       "ldl",
+       "cholesterol"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "heart",
+      "attack",
+      "survivor"
+     ],
+     "var_terms": [
+      [
+       "ldl",
+       "cholesterol"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "attack",
+     "cholesterol",
+     "density",
+     "genotype",
+     "heart",
+     "ldl",
+     "lipoprotein",
+     "low",
+     "measurement",
+     "survivor"
+    ],
+    "new": [
+     "attack",
+     "cholesterol",
+     "density",
+     "genotype",
+     "heart",
+     "ldl",
+     "lipoprotein",
+     "low",
+     "measurement",
+     "survivor"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000403.v3.p3",
+     "phs000400.v6.p1",
+     "phs000402.v5.p2",
+     "phs000399.v1.p2",
+     "phs000401.v18.p16",
+     "phs000398.v9.p3",
+     "phs000587.v1.p1",
+     "phs000313.v4.p2",
+     "phs000557.v8.p3",
+     "phs001855.v1.p1"
+    ],
+    "new_gated": [
+     "phs000403.v3.p3",
+     "phs000400.v6.p1",
+     "phs000402.v5.p2",
+     "phs000399.v1.p2",
+     "phs000401.v18.p16",
+     "phs000398.v9.p3",
+     "phs000587.v1.p1",
+     "phs000313.v4.p2",
+     "phs000557.v8.p3",
+     "phs001855.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000403.v3.p3",
+     "phs000400.v6.p1",
+     "phs000402.v5.p2",
+     "phs000399.v1.p2",
+     "phs000401.v18.p16",
+     "phs000398.v9.p3",
+     "phs000557.v8.p3",
+     "phs000281.v8.p3",
+     "phs000090.v9.p3",
+     "phs000287.v7.p1"
+    ],
+    "new_tier06": [
+     "phs000403.v3.p3",
+     "phs000400.v6.p1",
+     "phs000402.v5.p2",
+     "phs000399.v1.p2",
+     "phs000401.v18.p16",
+     "phs000398.v9.p3",
+     "phs000557.v8.p3",
+     "phs000281.v8.p3",
+     "phs000090.v9.p3",
+     "phs000287.v7.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000403.v3.p3",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms match heart, attack of 'heart attack survivor'"
+     ]
+    },
+    {
+     "accession": "phs000400.v6.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms match heart, attack of 'heart attack survivor'"
+     ]
+    },
+    {
+     "accession": "phs000402.v5.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms match heart, attack of 'heart attack survivor'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000403.v3.p3",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms match heart, attack of 'heart attack survivor'"
+     ]
+    },
+    {
+     "accession": "phs000400.v6.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms match heart, attack of 'heart attack survivor'"
+     ]
+    },
+    {
+     "accession": "phs000402.v5.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms match heart, attack of 'heart attack survivor'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h02",
+   "need": "Adults with high blood pressure and whole genome sequencing, consented for general research use",
+   "parse": {
+    "old": {
+     "topic": [
+      "high",
+      "blood",
+      "pressure"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "high",
+      "blood",
+      "pressure"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "blood",
+     "general",
+     "genome",
+     "high",
+     "pressure",
+     "research",
+     "sequencing",
+     "whole"
+    ],
+    "new": [
+     "adult",
+     "blood",
+     "general",
+     "genome",
+     "high",
+     "pressure",
+     "research",
+     "sequencing",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs002230.v1.p1",
+     "phs001293.v4.p1",
+     "phs001143.v4.p1",
+     "phs002514.v1.p1",
+     "phs002015.v2.p1",
+     "phs003976.v1.p1",
+     "phs003694.v1.p1",
+     "phs001048.v5.p1",
+     "phs002918.v1.p1",
+     "phs001585.v4.p2"
+    ],
+    "new_gated": [
+     "phs002230.v1.p1",
+     "phs001293.v4.p1",
+     "phs001143.v4.p1",
+     "phs002514.v1.p1",
+     "phs002015.v2.p1",
+     "phs003976.v1.p1",
+     "phs003694.v1.p1",
+     "phs001048.v5.p1",
+     "phs002918.v1.p1",
+     "phs001585.v4.p2"
+    ],
+    "old_tier06": [
+     "phs002230.v1.p1",
+     "phs001293.v4.p1",
+     "phs001143.v4.p1",
+     "phs002514.v1.p1",
+     "phs002015.v2.p1",
+     "phs003976.v1.p1",
+     "phs003694.v1.p1",
+     "phs001048.v5.p1",
+     "phs002918.v1.p1",
+     "phs001585.v4.p2"
+    ],
+    "new_tier06": [
+     "phs002230.v1.p1",
+     "phs001293.v4.p1",
+     "phs001143.v4.p1",
+     "phs002514.v1.p1",
+     "phs002015.v2.p1",
+     "phs003976.v1.p1",
+     "phs003694.v1.p1",
+     "phs001048.v5.p1",
+     "phs002918.v1.p1",
+     "phs001585.v4.p2"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs002230.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "consent GRU-NPU fits (general research use)",
+      "participants aged 14-88, partly aged 18+",
+      "disease terms matches 'high blood pressure'"
+     ]
+    },
+    {
+     "accession": "phs001293.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "consent GRU-IRB fits (general research use)",
+      "participants aged 18-85 (wanted aged 18+)",
+      "disease terms matches 'high blood pressure'"
+     ]
+    },
+    {
+     "accession": "phs001143.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "consent GRU-IRB fits (general research use)",
+      "participants aged 1-88, partly aged 18+",
+      "mentions only high, blood of 'high blood pressure'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs002230.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "consent GRU-NPU fits (general research use)",
+      "participants aged 14-88, partly aged 18+",
+      "disease terms matches 'high blood pressure'"
+     ]
+    },
+    {
+     "accession": "phs001293.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "consent GRU-IRB fits (general research use)",
+      "participants aged 18-85 (wanted aged 18+)",
+      "disease terms matches 'high blood pressure'"
+     ]
+    },
+    {
+     "accession": "phs001143.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "consent GRU-IRB fits (general research use)",
+      "participants aged 1-88, partly aged 18+",
+      "mentions only high, blood of 'high blood pressure'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h03",
+   "need": "Sickle cell anemia in children with exome sequencing",
+   "parse": {
+    "old": {
+     "topic": [
+      "sickle",
+      "anemia"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "sickle",
+      "anemia"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "anemia",
+     "cell",
+     "children",
+     "exome",
+     "sequencing",
+     "sickle"
+    ],
+    "new": [
+     "anemia",
+     "cell",
+     "children",
+     "exome",
+     "sequencing",
+     "sickle"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000691.v2.p1",
+     "phs000474.v3.p2",
+     "phs002652.v1.p1",
+     "phs001481.v1.p1",
+     "phs001710.v2.p1",
+     "phs001820.v3.p1",
+     "phs001946.v2.p1",
+     "phs001719.v1.p1",
+     "phs002687.v1.p1",
+     "phs002470.v1.p1"
+    ],
+    "new_gated": [
+     "phs000691.v2.p1",
+     "phs000474.v3.p2",
+     "phs002652.v1.p1",
+     "phs001481.v1.p1",
+     "phs001710.v2.p1",
+     "phs001820.v3.p1",
+     "phs001946.v2.p1",
+     "phs001719.v1.p1",
+     "phs002687.v1.p1",
+     "phs002470.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000691.v2.p1",
+     "phs000474.v3.p2",
+     "phs002652.v1.p1",
+     "phs001481.v1.p1",
+     "phs001710.v2.p1",
+     "phs001820.v3.p1",
+     "phs001946.v2.p1",
+     "phs001719.v1.p1",
+     "phs002687.v1.p1",
+     "phs002470.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000691.v2.p1",
+     "phs000474.v3.p2",
+     "phs002652.v1.p1",
+     "phs001481.v1.p1",
+     "phs001710.v2.p1",
+     "phs001820.v3.p1",
+     "phs001946.v2.p1",
+     "phs001719.v1.p1",
+     "phs002687.v1.p1",
+     "phs002470.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000691.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participant ages not reported (wanted under 18)",
+      "primary disease matches 'sickle anemia'"
+     ]
+    },
+    {
+     "accession": "phs000474.v3.p2",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "description mentions children (wanted under 18)",
+      "mentions only anemia of 'sickle anemia'"
+     ]
+    },
+    {
+     "accession": "phs002652.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 4.67-33.08, partly under 18",
+      "mentions only anemia of 'sickle anemia'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000691.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participant ages not reported (wanted under 18)",
+      "primary disease matches 'sickle anemia'"
+     ]
+    },
+    {
+     "accession": "phs000474.v3.p2",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "description mentions children (wanted under 18)",
+      "mentions only anemia of 'sickle anemia'"
+     ]
+    },
+    {
+     "accession": "phs002652.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 4.67-33.08, partly under 18",
+      "mentions only anemia of 'sickle anemia'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h04",
+   "need": "Kidney cancer tumors with RNA-seq",
+   "parse": {
+    "old": {
+     "topic": [
+      "kidney",
+      "cancer",
+      "tumor"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "kidney",
+      "cancer",
+      "tumor"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "cancer",
+     "kidney",
+     "rna",
+     "seq",
+     "tumor"
+    ],
+    "new": [
+     "cancer",
+     "kidney",
+     "rna",
+     "seq",
+     "tumor"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs003618.v1.p1",
+     "phs001639.v1.p1",
+     "phs003710.v2.p1",
+     "phs001800.v2.p1",
+     "phs003079.v1.p1",
+     "phs001493.v3.p1",
+     "phs002065.v2.p1",
+     "phs000471.v23.p8",
+     "phs002083.v1.p1",
+     "phs000470.v23.p8"
+    ],
+    "new_gated": [
+     "phs003618.v1.p1",
+     "phs001639.v1.p1",
+     "phs003710.v2.p1",
+     "phs001800.v2.p1",
+     "phs003079.v1.p1",
+     "phs001493.v3.p1",
+     "phs002065.v2.p1",
+     "phs000471.v23.p8",
+     "phs002083.v1.p1",
+     "phs000470.v23.p8"
+    ],
+    "old_tier06": [
+     "phs003618.v1.p1",
+     "phs001639.v1.p1",
+     "phs003710.v2.p1",
+     "phs001800.v2.p1",
+     "phs003079.v1.p1",
+     "phs001493.v3.p1",
+     "phs002065.v2.p1",
+     "phs000471.v23.p8",
+     "phs002083.v1.p1",
+     "phs000470.v23.p8"
+    ],
+    "new_tier06": [
+     "phs003618.v1.p1",
+     "phs001639.v1.p1",
+     "phs003710.v2.p1",
+     "phs001800.v2.p1",
+     "phs003079.v1.p1",
+     "phs001493.v3.p1",
+     "phs002065.v2.p1",
+     "phs000471.v23.p8",
+     "phs002083.v1.p1",
+     "phs000470.v23.p8"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs003618.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'kidney cancer tumor'"
+     ]
+    },
+    {
+     "accession": "phs001639.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'kidney cancer tumor'"
+     ]
+    },
+    {
+     "accession": "phs003710.v2.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "disease terms matches 'kidney cancer tumor'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs003618.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'kidney cancer tumor'"
+     ]
+    },
+    {
+     "accession": "phs001639.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'kidney cancer tumor'"
+     ]
+    },
+    {
+     "accession": "phs003710.v2.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "disease terms matches 'kidney cancer tumor'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h05",
+   "need": "Bipolar disorder in adults with genotype arrays and medication history",
+   "parse": {
+    "old": {
+     "topic": [
+      "bipolar",
+      "disorder"
+     ],
+     "var_terms": [
+      [
+       "medication"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "bipolar",
+      "disorder"
+     ],
+     "var_terms": [
+      [
+       "medication"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "array",
+     "bipolar",
+     "disorder",
+     "genotype",
+     "history",
+     "medication"
+    ],
+    "new": [
+     "adult",
+     "array",
+     "bipolar",
+     "disorder",
+     "genotype",
+     "history",
+     "medication"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs002395.v1.p1",
+     "phs002424.v1.p1",
+     "phs000462.v2.p1",
+     "phs000021.v3.p2",
+     "phs000017.v3.p1",
+     "phs001031.v1.p1",
+     "phs000167.v1.p1",
+     "phs000252.v2.p1",
+     "phs000490.v1.p1",
+     "phs000102.v1.p1"
+    ],
+    "new_gated": [
+     "phs002395.v1.p1",
+     "phs002424.v1.p1",
+     "phs000462.v2.p1",
+     "phs000021.v3.p2",
+     "phs000017.v3.p1",
+     "phs001031.v1.p1",
+     "phs000167.v1.p1",
+     "phs000252.v2.p1",
+     "phs000490.v1.p1",
+     "phs000102.v1.p1"
+    ],
+    "old_tier06": [
+     "phs002395.v1.p1",
+     "phs000017.v3.p1",
+     "phs002424.v1.p1",
+     "phs000462.v2.p1",
+     "phs000021.v3.p2",
+     "phs001031.v1.p1",
+     "phs000167.v1.p1",
+     "phs000252.v2.p1",
+     "phs000490.v1.p1",
+     "phs000102.v1.p1"
+    ],
+    "new_tier06": [
+     "phs002395.v1.p1",
+     "phs000017.v3.p1",
+     "phs002424.v1.p1",
+     "phs000462.v2.p1",
+     "phs000021.v3.p2",
+     "phs001031.v1.p1",
+     "phs000167.v1.p1",
+     "phs000252.v2.p1",
+     "phs000490.v1.p1",
+     "phs000102.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs002395.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 23-79 (wanted aged 18+)",
+      "data dictionary has medication",
+      "disease terms matches 'bipolar disorder'"
+     ]
+    },
+    {
+     "accession": "phs002424.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-70 (wanted aged 18+)",
+      "data dictionary has medication",
+      "mentions 'bipolar disorder', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000462.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18.03-87.75 (wanted aged 18+)",
+      "data dictionary has medication",
+      "mentions only disorder of 'bipolar disorder'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs002395.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 23-79 (wanted aged 18+)",
+      "data dictionary has medication",
+      "disease terms matches 'bipolar disorder'"
+     ]
+    },
+    {
+     "accession": "phs002424.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-70 (wanted aged 18+)",
+      "data dictionary has medication",
+      "mentions 'bipolar disorder', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000462.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18.03-87.75 (wanted aged 18+)",
+      "data dictionary has medication",
+      "mentions only disorder of 'bipolar disorder'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h06",
+   "need": "Stroke in African American adults with whole genome sequencing",
+   "parse": {
+    "old": {
+     "topic": [
+      "stroke"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    },
+    "new": {
+     "topic": [
+      "stroke"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "african",
+     "american",
+     "genome",
+     "sequencing",
+     "stroke",
+     "whole"
+    ],
+    "new": [
+     "adult",
+     "african",
+     "american",
+     "genome",
+     "sequencing",
+     "stroke",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs001293.v4.p1",
+     "phs001395.v3.p2",
+     "phs000668.v7.p3",
+     "phs001368.v4.p2",
+     "phs000925.v1.p1",
+     "phs000667.v4.p1",
+     "phs000651.v15.p16",
+     "phs000974.v6.p5",
+     "phs002230.v1.p1",
+     "phs001237.v4.p2"
+    ],
+    "new_gated": [
+     "phs001293.v4.p1",
+     "phs001395.v3.p2",
+     "phs000668.v7.p3",
+     "phs001368.v4.p2",
+     "phs000925.v1.p1",
+     "phs000667.v4.p1",
+     "phs000651.v15.p16",
+     "phs000974.v6.p5",
+     "phs002230.v1.p1",
+     "phs001237.v4.p2"
+    ],
+    "old_tier06": [
+     "phs001293.v4.p1",
+     "phs001395.v3.p2",
+     "phs000668.v7.p3",
+     "phs001368.v4.p2",
+     "phs000925.v1.p1",
+     "phs000667.v4.p1",
+     "phs000651.v15.p16",
+     "phs000974.v6.p5",
+     "phs001237.v4.p2",
+     "phs000227.v5.p3"
+    ],
+    "new_tier06": [
+     "phs001293.v4.p1",
+     "phs001395.v3.p2",
+     "phs000668.v7.p3",
+     "phs001368.v4.p2",
+     "phs000925.v1.p1",
+     "phs000667.v4.p1",
+     "phs000651.v15.p16",
+     "phs000974.v6.p5",
+     "phs001237.v4.p2",
+     "phs000227.v5.p3"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs001293.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 18-85 (wanted aged 18+)",
+      "2,103 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'stroke'"
+     ]
+    },
+    {
+     "accession": "phs001395.v3.p2",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 17-82, partly aged 18+",
+      "dbGaP lists population: African American, African",
+      "disease terms matches 'stroke'"
+     ]
+    },
+    {
+     "accession": "phs000668.v7.p3",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participant ages not reported (wanted aged 18+)",
+      "3,564 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'stroke'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs001293.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 18-85 (wanted aged 18+)",
+      "2,103 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'stroke'"
+     ]
+    },
+    {
+     "accession": "phs001395.v3.p2",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 17-82, partly aged 18+",
+      "dbGaP lists population: African American, African",
+      "disease terms matches 'stroke'"
+     ]
+    },
+    {
+     "accession": "phs000668.v7.p3",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participant ages not reported (wanted aged 18+)",
+      "3,564 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'stroke'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h07",
+   "need": "Colorectal cancer with DNA methylation data",
+   "parse": {
+    "old": {
+     "topic": [
+      "colorectal",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "methylation"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "colorectal",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "methylation"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "cancer",
+     "colorectal",
+     "dna",
+     "methylation"
+    ],
+    "new": [
+     "cancer",
+     "colorectal",
+     "dna",
+     "methylation"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000385.v1.p1",
+     "phs000779.v1.p1",
+     "phs002037.v1.p1",
+     "phs001384.v1.p1",
+     "phs001699.v1.p1",
+     "phs002288.v1.p1",
+     "phs001286.v5.p2",
+     "phs003290.v1.p1",
+     "phs003287.v1.p1",
+     "phs001970.v1.p1"
+    ],
+    "new_gated": [
+     "phs000385.v1.p1",
+     "phs000779.v1.p1",
+     "phs002037.v1.p1",
+     "phs001384.v1.p1",
+     "phs001699.v1.p1",
+     "phs002288.v1.p1",
+     "phs001286.v5.p2",
+     "phs003290.v1.p1",
+     "phs003287.v1.p1",
+     "phs001970.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000385.v1.p1",
+     "phs000779.v1.p1",
+     "phs002037.v1.p1",
+     "phs001384.v1.p1",
+     "phs002288.v1.p1",
+     "phs001699.v1.p1",
+     "phs001286.v5.p2",
+     "phs003290.v1.p1",
+     "phs003287.v1.p1",
+     "phs001970.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000385.v1.p1",
+     "phs000779.v1.p1",
+     "phs002037.v1.p1",
+     "phs001384.v1.p1",
+     "phs002288.v1.p1",
+     "phs001699.v1.p1",
+     "phs001286.v5.p2",
+     "phs003290.v1.p1",
+     "phs003287.v1.p1",
+     "phs001970.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000385.v1.p1",
+     "fails": 0,
+     "why": [
+      "has methylation data",
+      "primary disease matches 'colorectal cancer'"
+     ]
+    },
+    {
+     "accession": "phs000779.v1.p1",
+     "fails": 0,
+     "why": [
+      "has methylation data",
+      "primary disease matches 'colorectal cancer'"
+     ]
+    },
+    {
+     "accession": "phs002037.v1.p1",
+     "fails": 0,
+     "why": [
+      "has methylation data",
+      "title matches 'colorectal cancer'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000385.v1.p1",
+     "fails": 0,
+     "why": [
+      "has methylation data",
+      "primary disease matches 'colorectal cancer'"
+     ]
+    },
+    {
+     "accession": "phs000779.v1.p1",
+     "fails": 0,
+     "why": [
+      "has methylation data",
+      "primary disease matches 'colorectal cancer'"
+     ]
+    },
+    {
+     "accession": "phs002037.v1.p1",
+     "fails": 0,
+     "why": [
+      "has methylation data",
+      "title matches 'colorectal cancer'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h08",
+   "need": "Crohn's disease in children with exome sequencing",
+   "parse": {
+    "old": {
+     "topic": [
+      "crohn",
+      "s"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "crohn",
+      "s"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "children",
+     "crohn",
+     "disease",
+     "exome",
+     "s",
+     "sequencing"
+    ],
+    "new": [
+     "children",
+     "crohn",
+     "disease",
+     "exome",
+     "s",
+     "sequencing"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs001076.v1.p1",
+     "phs001626.v1.p1",
+     "phs000861.v2.p1",
+     "phs002529.v3.p1",
+     "phs000908.v1.p1",
+     "phs001026.v3.p1",
+     "phs002095.v1.p1",
+     "phs001551.v1.p1",
+     "phs000543.v1.p1",
+     "phs002093.v1.p1"
+    ],
+    "new_gated": [
+     "phs001076.v1.p1",
+     "phs001626.v1.p1",
+     "phs000861.v2.p1",
+     "phs002529.v3.p1",
+     "phs000908.v1.p1",
+     "phs001026.v3.p1",
+     "phs002095.v1.p1",
+     "phs001551.v1.p1",
+     "phs000543.v1.p1",
+     "phs002093.v1.p1"
+    ],
+    "old_tier06": [
+     "phs001076.v1.p1",
+     "phs001626.v1.p1",
+     "phs000861.v2.p1",
+     "phs002529.v3.p1",
+     "phs000908.v1.p1",
+     "phs001026.v3.p1",
+     "phs002095.v1.p1",
+     "phs001551.v1.p1",
+     "phs000543.v1.p1",
+     "phs002093.v1.p1"
+    ],
+    "new_tier06": [
+     "phs001076.v1.p1",
+     "phs001626.v1.p1",
+     "phs000861.v2.p1",
+     "phs002529.v3.p1",
+     "phs000908.v1.p1",
+     "phs001026.v3.p1",
+     "phs002095.v1.p1",
+     "phs001551.v1.p1",
+     "phs000543.v1.p1",
+     "phs002093.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs001076.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "description mentions children (wanted under 18)",
+      "disease terms matches 'crohn s'"
+     ]
+    },
+    {
+     "accession": "phs001626.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 6-76, partly under 18",
+      "disease terms matches 'crohn s'"
+     ]
+    },
+    {
+     "accession": "phs000861.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 2-15 (wanted under 18)",
+      "mentions only s of 'crohn s'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs001076.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "description mentions children (wanted under 18)",
+      "disease terms matches 'crohn s'"
+     ]
+    },
+    {
+     "accession": "phs001626.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 6-76, partly under 18",
+      "disease terms matches 'crohn s'"
+     ]
+    },
+    {
+     "accession": "phs000861.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 2-15 (wanted under 18)",
+      "mentions only s of 'crohn s'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h09",
+   "need": "Parkinson's disease in people 50 and older with genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "parkinson",
+      "s"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      50,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "parkinson",
+      "s"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      50,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "disease",
+     "genotype",
+     "older",
+     "parkinson",
+     "s"
+    ],
+    "new": [
+     "disease",
+     "genotype",
+     "older",
+     "parkinson",
+     "s"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs004421.v1.p1",
+     "phs002328.v1.p1",
+     "phs001664.v1.p1",
+     "phs000918.v1.p1",
+     "phs001172.v1.p2",
+     "phs000196.v3.p1",
+     "phs003459.v1.p1",
+     "phs001103.v1.p2",
+     "phs001556.v1.p1",
+     "phs002495.v1.p1"
+    ],
+    "new_gated": [
+     "phs004421.v1.p1",
+     "phs002328.v1.p1",
+     "phs001664.v1.p1",
+     "phs000918.v1.p1",
+     "phs001172.v1.p2",
+     "phs000196.v3.p1",
+     "phs003459.v1.p1",
+     "phs001103.v1.p2",
+     "phs001556.v1.p1",
+     "phs002495.v1.p1"
+    ],
+    "old_tier06": [
+     "phs004421.v1.p1",
+     "phs002328.v1.p1",
+     "phs001664.v1.p1",
+     "phs000918.v1.p1",
+     "phs001172.v1.p2",
+     "phs000196.v3.p1",
+     "phs003459.v1.p1",
+     "phs001103.v1.p2",
+     "phs001556.v1.p1",
+     "phs002495.v1.p1"
+    ],
+    "new_tier06": [
+     "phs004421.v1.p1",
+     "phs002328.v1.p1",
+     "phs001664.v1.p1",
+     "phs000918.v1.p1",
+     "phs001172.v1.p2",
+     "phs000196.v3.p1",
+     "phs003459.v1.p1",
+     "phs001103.v1.p2",
+     "phs001556.v1.p1",
+     "phs002495.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs004421.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 52-89 (wanted aged 50+)",
+      "disease terms matches 'parkinson s'"
+     ]
+    },
+    {
+     "accession": "phs002328.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 42-86, partly aged 50+",
+      "disease terms matches 'parkinson s'"
+     ]
+    },
+    {
+     "accession": "phs001664.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 36-89, partly aged 50+",
+      "disease terms matches 'parkinson s'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs004421.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 52-89 (wanted aged 50+)",
+      "disease terms matches 'parkinson s'"
+     ]
+    },
+    {
+     "accession": "phs002328.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 42-86, partly aged 50+",
+      "disease terms matches 'parkinson s'"
+     ]
+    },
+    {
+     "accession": "phs001664.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 36-89, partly aged 50+",
+      "disease terms matches 'parkinson s'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h10",
+   "need": "Schizophrenia cases and controls with exome sequencing",
+   "parse": {
+    "old": {
+     "topic": [
+      "schizophrenia"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "schizophrenia"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "case",
+     "control",
+     "exome",
+     "schizophrenia",
+     "sequencing"
+    ],
+    "new": [
+     "case",
+     "control",
+     "exome",
+     "schizophrenia",
+     "sequencing"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000473.v2.p2",
+     "phs001196.v1.p1",
+     "phs000738.v1.p1",
+     "phs000687.v1.p1",
+     "phs002395.v1.p1",
+     "phs000959.v1.p1",
+     "phs001775.v1.p1",
+     "phs001122.v1.p1",
+     "phs003138.v1.p1",
+     "phs001968.v1.p1"
+    ],
+    "new_gated": [
+     "phs000473.v2.p2",
+     "phs001196.v1.p1",
+     "phs000738.v1.p1",
+     "phs000687.v1.p1",
+     "phs002395.v1.p1",
+     "phs000959.v1.p1",
+     "phs001775.v1.p1",
+     "phs001122.v1.p1",
+     "phs003138.v1.p1",
+     "phs001968.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000473.v2.p2",
+     "phs001196.v1.p1",
+     "phs000738.v1.p1",
+     "phs000687.v1.p1",
+     "phs002395.v1.p1",
+     "phs000959.v1.p1",
+     "phs001775.v1.p1",
+     "phs001122.v1.p1",
+     "phs003138.v1.p1",
+     "phs001968.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000473.v2.p2",
+     "phs001196.v1.p1",
+     "phs000738.v1.p1",
+     "phs000687.v1.p1",
+     "phs002395.v1.p1",
+     "phs000959.v1.p1",
+     "phs001775.v1.p1",
+     "phs001122.v1.p1",
+     "phs003138.v1.p1",
+     "phs001968.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000473.v2.p2",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "primary disease matches 'schizophrenia'"
+     ]
+    },
+    {
+     "accession": "phs001196.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "primary disease matches 'schizophrenia'"
+     ]
+    },
+    {
+     "accession": "phs000738.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "primary disease matches 'schizophrenia'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000473.v2.p2",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "primary disease matches 'schizophrenia'"
+     ]
+    },
+    {
+     "accession": "phs001196.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "primary disease matches 'schizophrenia'"
+     ]
+    },
+    {
+     "accession": "phs000738.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "primary disease matches 'schizophrenia'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h11",
+   "need": "Opioid use disorder with genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "opioid",
+      "disorder"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "opioid",
+      "disorder"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "disorder",
+     "genotype",
+     "opioid"
+    ],
+    "new": [
+     "disorder",
+     "genotype",
+     "opioid"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs003684.v1.p1",
+     "phs001266.v2.p1",
+     "phs001135.v2.p1",
+     "phs003260.v1.p1",
+     "phs001841.v1.p1",
+     "phs002876.v1.p1",
+     "phs001804.v1.p1",
+     "phs002105.v1.p1",
+     "phs001590.v2.p1",
+     "phs000952.v1.p1"
+    ],
+    "new_gated": [
+     "phs003684.v1.p1",
+     "phs001266.v2.p1",
+     "phs001135.v2.p1",
+     "phs003260.v1.p1",
+     "phs001841.v1.p1",
+     "phs002876.v1.p1",
+     "phs001804.v1.p1",
+     "phs002105.v1.p1",
+     "phs001590.v2.p1",
+     "phs000952.v1.p1"
+    ],
+    "old_tier06": [
+     "phs003684.v1.p1",
+     "phs001266.v2.p1",
+     "phs001135.v2.p1",
+     "phs003260.v1.p1",
+     "phs001841.v1.p1",
+     "phs002876.v1.p1",
+     "phs001804.v1.p1",
+     "phs002105.v1.p1",
+     "phs001590.v2.p1",
+     "phs000952.v1.p1"
+    ],
+    "new_tier06": [
+     "phs003684.v1.p1",
+     "phs001266.v2.p1",
+     "phs001135.v2.p1",
+     "phs003260.v1.p1",
+     "phs001841.v1.p1",
+     "phs002876.v1.p1",
+     "phs001804.v1.p1",
+     "phs002105.v1.p1",
+     "phs001590.v2.p1",
+     "phs000952.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs003684.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "primary disease matches 'opioid disorder'"
+     ]
+    },
+    {
+     "accession": "phs001266.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "primary disease matches 'opioid disorder'"
+     ]
+    },
+    {
+     "accession": "phs001135.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "primary disease matches 'opioid disorder'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs003684.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "primary disease matches 'opioid disorder'"
+     ]
+    },
+    {
+     "accession": "phs001266.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "primary disease matches 'opioid disorder'"
+     ]
+    },
+    {
+     "accession": "phs001135.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "primary disease matches 'opioid disorder'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h12",
+   "need": "Preterm birth in mothers and infants with whole genome sequencing",
+   "parse": {
+    "old": {
+     "topic": [
+      "preterm",
+      "birth"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "preterm",
+      "birth"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "birth",
+     "genome",
+     "infant",
+     "mother",
+     "preterm",
+     "sequencing",
+     "whole"
+    ],
+    "new": [
+     "birth",
+     "genome",
+     "infant",
+     "mother",
+     "preterm",
+     "sequencing",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000735.v1.p1",
+     "phs003431.v1.p1",
+     "phs001168.v2.p2",
+     "phs000247.v5.p3",
+     "phs002403.v1.p1",
+     "phs001442.v4.p3",
+     "phs000620.v1.p1",
+     "phs000244.v1.p1",
+     "phs002921.v2.p1",
+     "phs001089.v4.p1"
+    ],
+    "new_gated": [
+     "phs000735.v1.p1",
+     "phs003431.v1.p1",
+     "phs001168.v2.p2",
+     "phs000247.v5.p3",
+     "phs002403.v1.p1",
+     "phs001442.v4.p3",
+     "phs000620.v1.p1",
+     "phs000244.v1.p1",
+     "phs002921.v2.p1",
+     "phs001089.v4.p1"
+    ],
+    "old_tier06": [
+     "phs000735.v1.p1",
+     "phs003431.v1.p1",
+     "phs001168.v2.p2",
+     "phs000247.v5.p3",
+     "phs002403.v1.p1",
+     "phs001442.v4.p3",
+     "phs000620.v1.p1",
+     "phs000244.v1.p1",
+     "phs002921.v2.p1",
+     "phs001089.v4.p1"
+    ],
+    "new_tier06": [
+     "phs000735.v1.p1",
+     "phs003431.v1.p1",
+     "phs001168.v2.p2",
+     "phs000247.v5.p3",
+     "phs002403.v1.p1",
+     "phs001442.v4.p3",
+     "phs000620.v1.p1",
+     "phs000244.v1.p1",
+     "phs002921.v2.p1",
+     "phs001089.v4.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000735.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "sex counts not available (women)",
+      "participants aged 16-38, partly under 18",
+      "mentions 'preterm birth', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs003431.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "203 women in shareable consent groups",
+      "description mentions children (wanted under 18)",
+      "mentions only birth of 'preterm birth'"
+     ]
+    },
+    {
+     "accession": "phs001168.v2.p2",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "623 women in shareable consent groups",
+      "description mentions children (wanted under 18)",
+      "mentions only birth of 'preterm birth'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000735.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "sex counts not available (women)",
+      "participants aged 16-38, partly under 18",
+      "mentions 'preterm birth', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs003431.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "203 women in shareable consent groups",
+      "description mentions children (wanted under 18)",
+      "mentions only birth of 'preterm birth'"
+     ]
+    },
+    {
+     "accession": "phs001168.v2.p2",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "623 women in shareable consent groups",
+      "description mentions children (wanted under 18)",
+      "mentions only birth of 'preterm birth'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h13",
+   "need": "COVID-19 patients with RNA-seq",
+   "parse": {
+    "old": {
+     "topic": [
+      "covid"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "covid"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "covid",
+     "patient",
+     "rna",
+     "seq"
+    ],
+    "new": [
+     "covid",
+     "patient",
+     "rna",
+     "seq"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs002433.v1.p1",
+     "phs002258.v2.p1",
+     "phs003870.v1.p1",
+     "phs003246.v1.p1",
+     "phs002300.v2.p1",
+     "phs004281.v1.p1",
+     "phs002686.v3.p2",
+     "phs002655.v1.p1",
+     "phs003086.v1.p1",
+     "phs003859.v1.p1"
+    ],
+    "new_gated": [
+     "phs002433.v1.p1",
+     "phs002258.v2.p1",
+     "phs003870.v1.p1",
+     "phs003246.v1.p1",
+     "phs002300.v2.p1",
+     "phs004281.v1.p1",
+     "phs002686.v3.p2",
+     "phs002655.v1.p1",
+     "phs003086.v1.p1",
+     "phs003859.v1.p1"
+    ],
+    "old_tier06": [
+     "phs002433.v1.p1",
+     "phs002258.v2.p1",
+     "phs003870.v1.p1",
+     "phs003246.v1.p1",
+     "phs002300.v2.p1",
+     "phs004281.v1.p1",
+     "phs002686.v3.p2",
+     "phs002655.v1.p1",
+     "phs003086.v1.p1",
+     "phs002576.v1.p1"
+    ],
+    "new_tier06": [
+     "phs002433.v1.p1",
+     "phs002258.v2.p1",
+     "phs003870.v1.p1",
+     "phs003246.v1.p1",
+     "phs002300.v2.p1",
+     "phs004281.v1.p1",
+     "phs002686.v3.p2",
+     "phs002655.v1.p1",
+     "phs003086.v1.p1",
+     "phs002576.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs002433.v1.p1",
+     "fails": 0,
+     "why": [
+      "38 subjects (wanted at least 19)",
+      "has rnaseq data",
+      "primary disease matches 'covid'"
+     ]
+    },
+    {
+     "accession": "phs002258.v2.p1",
+     "fails": 0,
+     "why": [
+      "729 subjects (wanted at least 19)",
+      "has rnaseq data",
+      "primary disease matches 'covid'"
+     ]
+    },
+    {
+     "accession": "phs003870.v1.p1",
+     "fails": 0,
+     "why": [
+      "20 subjects (wanted at least 19)",
+      "has rnaseq data",
+      "primary disease matches 'covid'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs002433.v1.p1",
+     "fails": 0,
+     "why": [
+      "38 subjects (wanted at least 19)",
+      "has rnaseq data",
+      "primary disease matches 'covid'"
+     ]
+    },
+    {
+     "accession": "phs002258.v2.p1",
+     "fails": 0,
+     "why": [
+      "729 subjects (wanted at least 19)",
+      "has rnaseq data",
+      "primary disease matches 'covid'"
+     ]
+    },
+    {
+     "accession": "phs003870.v1.p1",
+     "fails": 0,
+     "why": [
+      "20 subjects (wanted at least 19)",
+      "has rnaseq data",
+      "primary disease matches 'covid'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h14",
+   "need": "HIV infection in adults with genotype data and viral load measurements",
+   "parse": {
+    "old": {
+     "topic": [
+      "infection",
+      "human",
+      "immunodeficiency",
+      "virus"
+     ],
+     "var_terms": [
+      [
+       "viral",
+       "load"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "infection",
+      "human",
+      "immunodeficiency",
+      "virus"
+     ],
+     "var_terms": [
+      [
+       "viral",
+       "load"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "genotype",
+     "hiv",
+     "human",
+     "immunodeficiency",
+     "infection",
+     "load",
+     "measurement",
+     "viral",
+     "virus"
+    ],
+    "new": [
+     "adult",
+     "genotype",
+     "hiv",
+     "human",
+     "immunodeficiency",
+     "infection",
+     "load",
+     "measurement",
+     "viral",
+     "virus"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs003897.v1.p1",
+     "phs002226.v1.p1",
+     "phs000454.v2.p2",
+     "phs002039.v1.p1",
+     "phs002579.v1.p1",
+     "phs003988.v1.p1",
+     "phs003808.v1.p1",
+     "phs000445.v1.p1",
+     "phs001564.v4.p1",
+     "phs003939.v1.p1"
+    ],
+    "new_gated": [
+     "phs003897.v1.p1",
+     "phs002226.v1.p1",
+     "phs000454.v2.p2",
+     "phs002039.v1.p1",
+     "phs002579.v1.p1",
+     "phs003988.v1.p1",
+     "phs003808.v1.p1",
+     "phs000445.v1.p1",
+     "phs001564.v4.p1",
+     "phs003939.v1.p1"
+    ],
+    "old_tier06": [
+     "phs003897.v1.p1",
+     "phs001564.v4.p1",
+     "phs002226.v1.p1",
+     "phs000454.v2.p2",
+     "phs002039.v1.p1",
+     "phs002579.v1.p1",
+     "phs003988.v1.p1",
+     "phs003808.v1.p1",
+     "phs000445.v1.p1",
+     "phs003939.v1.p1"
+    ],
+    "new_tier06": [
+     "phs003897.v1.p1",
+     "phs001564.v4.p1",
+     "phs002226.v1.p1",
+     "phs000454.v2.p2",
+     "phs002039.v1.p1",
+     "phs002579.v1.p1",
+     "phs003988.v1.p1",
+     "phs003808.v1.p1",
+     "phs000445.v1.p1",
+     "phs003939.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs003897.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 19-82 (wanted aged 18+)",
+      "data dictionary has viral load",
+      "disease terms matches 'infection human immunodeficiency virus'"
+     ]
+    },
+    {
+     "accession": "phs002226.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-69 (wanted aged 18+)",
+      "data dictionary has viral load",
+      "mentions 'infection human immunodeficiency virus', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000454.v2.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 16-79, partly aged 18+",
+      "data dictionary has viral load",
+      "mentions only infection, human, virus of 'infection human immunodeficiency virus'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs003897.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 19-82 (wanted aged 18+)",
+      "data dictionary has viral load",
+      "disease terms matches 'infection human immunodeficiency virus'"
+     ]
+    },
+    {
+     "accession": "phs002226.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-69 (wanted aged 18+)",
+      "data dictionary has viral load",
+      "mentions 'infection human immunodeficiency virus', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000454.v2.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 16-79, partly aged 18+",
+      "data dictionary has viral load",
+      "mentions only infection, human, virus of 'infection human immunodeficiency virus'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h15",
+   "need": "Breast cancer in women under 50 with whole exome sequencing",
+   "parse": {
+    "old": {
+     "topic": [
+      "breast",
+      "cancer",
+      "under"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      49
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "breast",
+      "cancer",
+      "under"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      49
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "breast",
+     "cancer",
+     "exome",
+     "sequencing",
+     "under",
+     "whole",
+     "women"
+    ],
+    "new": [
+     "breast",
+     "cancer",
+     "exome",
+     "sequencing",
+     "under",
+     "whole",
+     "women"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000480.v1.p1",
+     "phs001285.v2.p1",
+     "phs003962.v1.p1",
+     "phs003218.v1.p1",
+     "phs003822.v1.p1",
+     "phs001870.v2.p1",
+     "phs001017.v1.p1",
+     "phs003147.v1.p1",
+     "phs001685.v1.p1",
+     "phs001709.v2.p2"
+    ],
+    "new_gated": [
+     "phs000480.v1.p1",
+     "phs001285.v2.p1",
+     "phs003962.v1.p1",
+     "phs003218.v1.p1",
+     "phs003822.v1.p1",
+     "phs001870.v2.p1",
+     "phs001017.v1.p1",
+     "phs003147.v1.p1",
+     "phs001685.v1.p1",
+     "phs001709.v2.p2"
+    ],
+    "old_tier06": [
+     "phs000480.v1.p1",
+     "phs001285.v2.p1",
+     "phs003962.v1.p1",
+     "phs003218.v1.p1",
+     "phs003822.v1.p1",
+     "phs001870.v2.p1",
+     "phs001017.v1.p1",
+     "phs003147.v1.p1",
+     "phs001685.v1.p1",
+     "phs001709.v2.p2"
+    ],
+    "new_tier06": [
+     "phs000480.v1.p1",
+     "phs001285.v2.p1",
+     "phs003962.v1.p1",
+     "phs003218.v1.p1",
+     "phs003822.v1.p1",
+     "phs001870.v2.p1",
+     "phs001017.v1.p1",
+     "phs003147.v1.p1",
+     "phs001685.v1.p1",
+     "phs001709.v2.p2"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000480.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "247 women in shareable consent groups",
+      "participant ages not reported (wanted under 50)",
+      "disease terms match breast, cancer of 'breast cancer under'"
+     ]
+    },
+    {
+     "accession": "phs001285.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "106 women in shareable consent groups",
+      "participants aged 36-89, partly under 50",
+      "disease terms match breast, cancer of 'breast cancer under'"
+     ]
+    },
+    {
+     "accession": "phs003962.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "462 women in shareable consent groups",
+      "participants aged 25-84, partly under 50",
+      "disease terms match breast, cancer of 'breast cancer under'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000480.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "247 women in shareable consent groups",
+      "participant ages not reported (wanted under 50)",
+      "disease terms match breast, cancer of 'breast cancer under'"
+     ]
+    },
+    {
+     "accession": "phs001285.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "106 women in shareable consent groups",
+      "participants aged 36-89, partly under 50",
+      "disease terms match breast, cancer of 'breast cancer under'"
+     ]
+    },
+    {
+     "accession": "phs003962.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "462 women in shareable consent groups",
+      "participants aged 25-84, partly under 50",
+      "disease terms match breast, cancer of 'breast cancer under'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h16",
+   "need": "Glioblastoma with RNA-seq and survival data",
+   "parse": {
+    "old": {
+     "topic": [
+      "glioblastoma"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "glioblastoma"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "glioblastoma",
+     "rna",
+     "seq",
+     "survival"
+    ],
+    "new": [
+     "glioblastoma",
+     "rna",
+     "seq",
+     "survival"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs002270.v1.p1",
+     "phs003936.v1.p1",
+     "phs003614.v1.p1",
+     "phs003378.v2.p1",
+     "phs004571.v1.p1",
+     "phs000505.v2.p1",
+     "phs002034.v1.p1",
+     "phs003286.v2.p1",
+     "phs001663.v1.p1",
+     "phs004410.v1.p1"
+    ],
+    "new_gated": [
+     "phs002270.v1.p1",
+     "phs003936.v1.p1",
+     "phs003614.v1.p1",
+     "phs003378.v2.p1",
+     "phs004571.v1.p1",
+     "phs000505.v2.p1",
+     "phs002034.v1.p1",
+     "phs003286.v2.p1",
+     "phs001663.v1.p1",
+     "phs004410.v1.p1"
+    ],
+    "old_tier06": [
+     "phs002270.v1.p1",
+     "phs003936.v1.p1",
+     "phs003614.v1.p1",
+     "phs003378.v2.p1",
+     "phs004571.v1.p1",
+     "phs000505.v2.p1",
+     "phs002034.v1.p1",
+     "phs003286.v2.p1",
+     "phs001663.v1.p1",
+     "phs004410.v1.p1"
+    ],
+    "new_tier06": [
+     "phs002270.v1.p1",
+     "phs003936.v1.p1",
+     "phs003614.v1.p1",
+     "phs003378.v2.p1",
+     "phs004571.v1.p1",
+     "phs000505.v2.p1",
+     "phs002034.v1.p1",
+     "phs003286.v2.p1",
+     "phs001663.v1.p1",
+     "phs004410.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs002270.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'glioblastoma'"
+     ]
+    },
+    {
+     "accession": "phs003936.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'glioblastoma'"
+     ]
+    },
+    {
+     "accession": "phs003614.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'glioblastoma'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs002270.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'glioblastoma'"
+     ]
+    },
+    {
+     "accession": "phs003936.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'glioblastoma'"
+     ]
+    },
+    {
+     "accession": "phs003614.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "primary disease matches 'glioblastoma'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h17",
+   "need": "Atrial fibrillation in adults of European ancestry with genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "atrial",
+      "fibrillation"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "white"
+     ]
+    },
+    "new": {
+     "topic": [
+      "atrial",
+      "fibrillation"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "white"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "ancestry",
+     "atrial",
+     "european",
+     "fibrillation",
+     "genotype"
+    ],
+    "new": [
+     "adult",
+     "ancestry",
+     "atrial",
+     "european",
+     "fibrillation",
+     "genotype"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs001644.v3.p2",
+     "phs001435.v3.p1",
+     "phs001001.v1.p1",
+     "phs001933.v2.p1",
+     "phs001434.v3.p1",
+     "phs000708.v1.p1",
+     "phs001600.v3.p2",
+     "phs000820.v2.p1",
+     "phs001189.v5.p1",
+     "phs000997.v6.p3"
+    ],
+    "new_gated": [
+     "phs001644.v3.p2",
+     "phs001435.v3.p1",
+     "phs001001.v1.p1",
+     "phs001933.v2.p1",
+     "phs001434.v3.p1",
+     "phs000708.v1.p1",
+     "phs001600.v3.p2",
+     "phs000820.v2.p1",
+     "phs001189.v5.p1",
+     "phs000997.v6.p3"
+    ],
+    "old_tier06": [
+     "phs001644.v3.p2",
+     "phs001435.v3.p1",
+     "phs001001.v1.p1",
+     "phs001933.v2.p1",
+     "phs001434.v3.p1",
+     "phs000708.v1.p1",
+     "phs001600.v3.p2",
+     "phs000820.v2.p1",
+     "phs001189.v5.p1",
+     "phs000997.v6.p3"
+    ],
+    "new_tier06": [
+     "phs001644.v3.p2",
+     "phs001435.v3.p1",
+     "phs001001.v1.p1",
+     "phs001933.v2.p1",
+     "phs001434.v3.p1",
+     "phs000708.v1.p1",
+     "phs001600.v3.p2",
+     "phs000820.v2.p1",
+     "phs001189.v5.p1",
+     "phs000997.v6.p3"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs001644.v3.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-89 (wanted aged 18+)",
+      "2,552 White/European participants by reported race/ethnicity",
+      "disease terms matches 'atrial fibrillation'"
+     ]
+    },
+    {
+     "accession": "phs001435.v3.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-80 (wanted aged 18+)",
+      "120 White/European participants by reported race/ethnicity",
+      "primary disease matches 'atrial fibrillation'"
+     ]
+    },
+    {
+     "accession": "phs001001.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-82 (wanted aged 18+)",
+      "1,006 White/European participants by reported race/ethnicity",
+      "primary disease matches 'atrial fibrillation'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs001644.v3.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-89 (wanted aged 18+)",
+      "2,552 White/European participants by reported race/ethnicity",
+      "disease terms matches 'atrial fibrillation'"
+     ]
+    },
+    {
+     "accession": "phs001435.v3.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-80 (wanted aged 18+)",
+      "120 White/European participants by reported race/ethnicity",
+      "primary disease matches 'atrial fibrillation'"
+     ]
+    },
+    {
+     "accession": "phs001001.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 18-82 (wanted aged 18+)",
+      "1,006 White/European participants by reported race/ethnicity",
+      "primary disease matches 'atrial fibrillation'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h18",
+   "need": "Type 1 diabetes in children with genotype data and HbA1c measurements",
+   "parse": {
+    "old": {
+     "topic": [
+      "type",
+      "diabetes"
+     ],
+     "var_terms": [
+      [
+       "hba1c"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "type",
+      "diabetes"
+     ],
+     "var_terms": [
+      [
+       "hba1c"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "a1c",
+     "children",
+     "diabetes",
+     "genotype",
+     "glycated",
+     "hba1c",
+     "hemoglobin",
+     "measurement",
+     "type"
+    ],
+    "new": [
+     "a1c",
+     "children",
+     "diabetes",
+     "genotype",
+     "glycated",
+     "hba1c",
+     "hemoglobin",
+     "measurement",
+     "type"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000389.v1.p1",
+     "phs000984.v1.p1",
+     "phs000849.v2.p1",
+     "phs000433.v1.p1",
+     "phs001388.v2.p1",
+     "phs002703.v1.p1",
+     "phs000088.v1.p1",
+     "phs002465.v2.p1",
+     "phs000888.v1.p1",
+     "phs003350.v1.p1"
+    ],
+    "new_gated": [
+     "phs000389.v1.p1",
+     "phs000984.v1.p1",
+     "phs000849.v2.p1",
+     "phs000433.v1.p1",
+     "phs001388.v2.p1",
+     "phs002703.v1.p1",
+     "phs000088.v1.p1",
+     "phs002465.v2.p1",
+     "phs000888.v1.p1",
+     "phs003350.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000389.v1.p1",
+     "phs000984.v1.p1",
+     "phs000849.v2.p1",
+     "phs000433.v1.p1",
+     "phs001388.v2.p1",
+     "phs000088.v1.p1",
+     "phs002465.v2.p1",
+     "phs000888.v1.p1",
+     "phs003350.v1.p1",
+     "phs000380.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000389.v1.p1",
+     "phs000984.v1.p1",
+     "phs000849.v2.p1",
+     "phs000433.v1.p1",
+     "phs001388.v2.p1",
+     "phs000088.v1.p1",
+     "phs002465.v2.p1",
+     "phs000888.v1.p1",
+     "phs003350.v1.p1",
+     "phs000380.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000389.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "description mentions children (wanted under 18)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000984.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted under 18)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000849.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted under 18)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000389.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "description mentions children (wanted under 18)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000984.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted under 18)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000849.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted under 18)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h19",
+   "need": "Obesity in Hispanic adults with BMI measurements",
+   "parse": {
+    "old": {
+     "topic": [
+      "obesity"
+     ],
+     "var_terms": [
+      [
+       "bmi"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "hispanic"
+     ]
+    },
+    "new": {
+     "topic": [
+      "obesity"
+     ],
+     "var_terms": [
+      [
+       "bmi"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "hispanic"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "bmi",
+     "body",
+     "hispanic",
+     "index",
+     "mass",
+     "measurement",
+     "obesity"
+    ],
+    "new": [
+     "adult",
+     "bmi",
+     "body",
+     "hispanic",
+     "index",
+     "mass",
+     "measurement",
+     "obesity"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000616.v2.p2",
+     "phs001604.v3.p1",
+     "phs004472.v1.p1",
+     "phs001689.v1.p1",
+     "phs001584.v2.p2",
+     "phs000258.v2.p1",
+     "phs000169.v1.p1",
+     "phs000849.v2.p1",
+     "phs000888.v1.p1",
+     "phs000681.v2.p1"
+    ],
+    "new_gated": [
+     "phs000616.v2.p2",
+     "phs001604.v3.p1",
+     "phs004472.v1.p1",
+     "phs001689.v1.p1",
+     "phs001584.v2.p2",
+     "phs000258.v2.p1",
+     "phs000169.v1.p1",
+     "phs000849.v2.p1",
+     "phs000888.v1.p1",
+     "phs000681.v2.p1"
+    ],
+    "old_tier06": [
+     "phs000616.v2.p2",
+     "phs001604.v3.p1",
+     "phs004472.v1.p1",
+     "phs001689.v1.p1",
+     "phs001584.v2.p2",
+     "phs000258.v2.p1",
+     "phs000169.v1.p1",
+     "phs000849.v2.p1",
+     "phs000888.v1.p1",
+     "phs000914.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000616.v2.p2",
+     "phs001604.v3.p1",
+     "phs004472.v1.p1",
+     "phs001689.v1.p1",
+     "phs001584.v2.p2",
+     "phs000258.v2.p1",
+     "phs000169.v1.p1",
+     "phs000849.v2.p1",
+     "phs000888.v1.p1",
+     "phs000914.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000616.v2.p2",
+     "fails": 0,
+     "why": [
+      "participants aged 4-19.92, partly aged 18+",
+      "dbGaP lists population: Hispanic2",
+      "data dictionary has bmi",
+      "primary disease matches 'obesity'"
+     ]
+    },
+    {
+     "accession": "phs001604.v3.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 17.6-21.1, partly aged 18+",
+      "only 56 Hispanic/Latino participants by reported race/ethnicity",
+      "data dictionary has bmi",
+      "disease terms matches 'obesity'"
+     ]
+    },
+    {
+     "accession": "phs004472.v1.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 67-82 (wanted aged 18+)",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "data dictionary has bmi",
+      "primary disease matches 'obesity'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000616.v2.p2",
+     "fails": 0,
+     "why": [
+      "participants aged 4-19.92, partly aged 18+",
+      "dbGaP lists population: Hispanic2",
+      "data dictionary has bmi",
+      "primary disease matches 'obesity'"
+     ]
+    },
+    {
+     "accession": "phs001604.v3.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 17.6-21.1, partly aged 18+",
+      "only 56 Hispanic/Latino participants by reported race/ethnicity",
+      "data dictionary has bmi",
+      "disease terms matches 'obesity'"
+     ]
+    },
+    {
+     "accession": "phs004472.v1.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 67-82 (wanted aged 18+)",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "data dictionary has bmi",
+      "primary disease matches 'obesity'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h20",
+   "need": "Late-onset Alzheimer's in adults 65 and older with APOE genotype and cognitive test scores",
+   "parse": {
+    "old": {
+     "topic": [
+      "late",
+      "onset",
+      "alzheimer",
+      "s",
+      "apoe"
+     ],
+     "var_terms": [
+      [
+       "cognitive",
+       "test"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "late",
+      "onset",
+      "alzheimer",
+      "s",
+      "apoe"
+     ],
+     "var_terms": [
+      [
+       "cognitive",
+       "test"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "alzheimer",
+     "apoe",
+     "cognitive",
+     "genotype",
+     "late",
+     "older",
+     "onset",
+     "s",
+     "score",
+     "test"
+    ],
+    "new": [
+     "adult",
+     "alzheimer",
+     "apoe",
+     "cognitive",
+     "genotype",
+     "late",
+     "older",
+     "onset",
+     "s",
+     "score",
+     "test"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000378.v1.p1",
+     "phs000219.v1.p1",
+     "phs000372.v1.p1",
+     "phs000234.v2.p2",
+     "phs000397.v3.p3",
+     "phs000496.v1.p1",
+     "phs000168.v2.p2",
+     "phs000160.v1.p1",
+     "phs001664.v1.p1",
+     "phs000101.v5.p1"
+    ],
+    "new_gated": [
+     "phs000378.v1.p1",
+     "phs000219.v1.p1",
+     "phs000372.v1.p1",
+     "phs000234.v2.p2",
+     "phs000397.v3.p3",
+     "phs000496.v1.p1",
+     "phs000168.v2.p2",
+     "phs000160.v1.p1",
+     "phs001664.v1.p1",
+     "phs000101.v5.p1"
+    ],
+    "old_tier06": [
+     "phs000378.v1.p1",
+     "phs000219.v1.p1",
+     "phs000372.v1.p1",
+     "phs000234.v2.p2",
+     "phs000397.v3.p3",
+     "phs000496.v1.p1",
+     "phs000168.v2.p2",
+     "phs000160.v1.p1",
+     "phs000743.v4.p1",
+     "phs000888.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000378.v1.p1",
+     "phs000219.v1.p1",
+     "phs000372.v1.p1",
+     "phs000234.v2.p2",
+     "phs000397.v3.p3",
+     "phs000496.v1.p1",
+     "phs000168.v2.p2",
+     "phs000160.v1.p1",
+     "phs000743.v4.p1",
+     "phs000888.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000378.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "data dictionary has only cognitive of 'cognitive test'",
+      "disease terms match late, onset, alzheimer, s of 'late onset alzheimer s apoe'"
+     ]
+    },
+    {
+     "accession": "phs000219.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "data dictionary has cognitive test",
+      "disease terms match late, onset, alzheimer, s of 'late onset alzheimer s apoe'"
+     ]
+    },
+    {
+     "accession": "phs000372.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "data dictionary has only cognitive of 'cognitive test'",
+      "disease terms match late, onset, alzheimer, s of 'late onset alzheimer s apoe'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000378.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "data dictionary has only cognitive of 'cognitive test'",
+      "disease terms match late, onset, alzheimer, s of 'late onset alzheimer s apoe'"
+     ]
+    },
+    {
+     "accession": "phs000219.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "data dictionary has cognitive test",
+      "disease terms match late, onset, alzheimer, s of 'late onset alzheimer s apoe'"
+     ]
+    },
+    {
+     "accession": "phs000372.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "data dictionary has only cognitive of 'cognitive test'",
+      "disease terms match late, onset, alzheimer, s of 'late onset alzheimer s apoe'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h21",
+   "need": "Emphysema in smokers with lung function measurements and genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "emphysema",
+      "smoker"
+     ],
+     "var_terms": [
+      [
+       "lung",
+       "function"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "emphysema",
+      "smoker"
+     ],
+     "var_terms": [
+      [
+       "lung",
+       "function"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "emphysema",
+     "function",
+     "genotype",
+     "lung",
+     "measurement",
+     "smoker"
+    ],
+    "new": [
+     "emphysema",
+     "function",
+     "genotype",
+     "lung",
+     "measurement",
+     "smoker"
+    ]
+   },
+   "example_rank": {
+    "old_gated": 21,
+    "new_gated": 21,
+    "old_tier06": 21,
+    "new_tier06": 21
+   },
+   "top": {
+    "old_gated": [
+     "phs000179.v7.p2",
+     "phs001119.v1.p1",
+     "phs001927.v2.p2",
+     "phs000624.v1.p1",
+     "phs001252.v1.p1",
+     "phs000335.v3.p2",
+     "phs000951.v6.p5",
+     "phs000291.v2.p1",
+     "phs001273.v4.p2",
+     "phs000634.v1.p1"
+    ],
+    "new_gated": [
+     "phs000179.v7.p2",
+     "phs001119.v1.p1",
+     "phs001927.v2.p2",
+     "phs000624.v1.p1",
+     "phs001252.v1.p1",
+     "phs000335.v3.p2",
+     "phs000951.v6.p5",
+     "phs000291.v2.p1",
+     "phs001273.v4.p2",
+     "phs000634.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000179.v7.p2",
+     "phs001119.v1.p1",
+     "phs001927.v2.p2",
+     "phs000624.v1.p1",
+     "phs001252.v1.p1",
+     "phs000335.v3.p2",
+     "phs000951.v6.p5",
+     "phs000291.v2.p1",
+     "phs001273.v4.p2",
+     "phs000634.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000179.v7.p2",
+     "phs001119.v1.p1",
+     "phs001927.v2.p2",
+     "phs000624.v1.p1",
+     "phs001252.v1.p1",
+     "phs000335.v3.p2",
+     "phs000951.v6.p5",
+     "phs000291.v2.p1",
+     "phs001273.v4.p2",
+     "phs000634.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000179.v7.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has lung function",
+      "mentions 'emphysema smoker', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs001119.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has only lung of 'lung function'",
+      "mentions 'emphysema smoker', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs001927.v2.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has only lung of 'lung function'",
+      "mentions 'emphysema smoker', but not as the primary disease"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000179.v7.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has lung function",
+      "mentions 'emphysema smoker', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs001119.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has only lung of 'lung function'",
+      "mentions 'emphysema smoker', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs001927.v2.p2",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "data dictionary has only lung of 'lung function'",
+      "mentions 'emphysema smoker', but not as the primary disease"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h22",
+   "need": "Autism in children with whole genome sequencing of parent-child trios",
+   "parse": {
+    "old": {
+     "topic": [
+      "autism",
+      "parent"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "autism",
+      "parent"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "autism",
+     "child",
+     "children",
+     "genome",
+     "parent",
+     "sequencing",
+     "trio",
+     "whole"
+    ],
+    "new": [
+     "autism",
+     "child",
+     "children",
+     "genome",
+     "parent",
+     "sequencing",
+     "trio",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000337.v1.p1",
+     "phs002403.v1.p1",
+     "phs001089.v4.p1",
+     "phs001168.v2.p2",
+     "phs002698.v1.p1",
+     "phs000682.v1.p1",
+     "phs000831.v1.p1",
+     "phs000837.v1.p1",
+     "phs000988.v6.p1",
+     "phs000571.v7.p3"
+    ],
+    "new_gated": [
+     "phs000337.v1.p1",
+     "phs002403.v1.p1",
+     "phs001089.v4.p1",
+     "phs001168.v2.p2",
+     "phs002698.v1.p1",
+     "phs000682.v1.p1",
+     "phs000831.v1.p1",
+     "phs000837.v1.p1",
+     "phs000988.v6.p1",
+     "phs000571.v7.p3"
+    ],
+    "old_tier06": [
+     "phs000337.v1.p1",
+     "phs002403.v1.p1",
+     "phs001089.v4.p1",
+     "phs001168.v2.p2",
+     "phs002698.v1.p1",
+     "phs000682.v1.p1",
+     "phs000831.v1.p1",
+     "phs000837.v1.p1",
+     "phs000988.v6.p1",
+     "phs000571.v7.p3"
+    ],
+    "new_tier06": [
+     "phs000337.v1.p1",
+     "phs002403.v1.p1",
+     "phs001089.v4.p1",
+     "phs001168.v2.p2",
+     "phs002698.v1.p1",
+     "phs000682.v1.p1",
+     "phs000831.v1.p1",
+     "phs000837.v1.p1",
+     "phs000988.v6.p1",
+     "phs000571.v7.p3"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000337.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Control Set, Case Set, Parent-Offspring Trios",
+      "participants aged 7-17 (wanted under 18)",
+      "mentions 'autism parent', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs002403.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Whole Genome Sequencing, Copy Number Variation (CNV), Extended Pedigrees, RNA Sequencing, Transcriptome Analysis, Epigenetics, Individual-Level Genomic Data",
+      "description mentions children (wanted under 18)",
+      "mentions 'autism parent', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs001089.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring",
+      "participants aged 2-87, partly under 18",
+      "mentions 'autism parent', but not as the primary disease"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000337.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Control Set, Case Set, Parent-Offspring Trios",
+      "participants aged 7-17 (wanted under 18)",
+      "mentions 'autism parent', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs002403.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Whole Genome Sequencing, Copy Number Variation (CNV), Extended Pedigrees, RNA Sequencing, Transcriptome Analysis, Epigenetics, Individual-Level Genomic Data",
+      "description mentions children (wanted under 18)",
+      "mentions 'autism parent', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs001089.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring",
+      "participants aged 2-87, partly under 18",
+      "mentions 'autism parent', but not as the primary disease"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h23",
+   "need": "Prostate cancer in Black men with genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "prostate",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": [
+      "black"
+     ]
+    },
+    "new": {
+     "topic": [
+      "prostate",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": [
+      "black"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "black",
+     "cancer",
+     "genotype",
+     "men",
+     "prostate"
+    ],
+    "new": [
+     "black",
+     "cancer",
+     "genotype",
+     "men",
+     "prostate"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs002718.v1.p1",
+     "phs003731.v1.p1",
+     "phs003516.v1.p1",
+     "phs003745.v1.p1",
+     "phs001221.v1.p1",
+     "phs003116.v1.p1",
+     "phs000945.v1.p1",
+     "phs002939.v1.p1",
+     "phs002637.v1.p1",
+     "phs002056.v1.p1"
+    ],
+    "new_gated": [
+     "phs002718.v1.p1",
+     "phs003731.v1.p1",
+     "phs003516.v1.p1",
+     "phs003745.v1.p1",
+     "phs001221.v1.p1",
+     "phs003116.v1.p1",
+     "phs000945.v1.p1",
+     "phs002939.v1.p1",
+     "phs002637.v1.p1",
+     "phs002056.v1.p1"
+    ],
+    "old_tier06": [
+     "phs002718.v1.p1",
+     "phs003731.v1.p1",
+     "phs003516.v1.p1",
+     "phs003745.v1.p1",
+     "phs001221.v1.p1",
+     "phs003116.v1.p1",
+     "phs000945.v1.p1",
+     "phs002939.v1.p1",
+     "phs002637.v1.p1",
+     "phs002056.v1.p1"
+    ],
+    "new_tier06": [
+     "phs002718.v1.p1",
+     "phs003731.v1.p1",
+     "phs003516.v1.p1",
+     "phs003745.v1.p1",
+     "phs001221.v1.p1",
+     "phs003116.v1.p1",
+     "phs000945.v1.p1",
+     "phs002939.v1.p1",
+     "phs002637.v1.p1",
+     "phs002056.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs002718.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "4,728 men in shareable consent groups",
+      "4,728 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'prostate cancer'"
+     ]
+    },
+    {
+     "accession": "phs003731.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "only 77 men in shareable consent groups",
+      "only 38 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'prostate cancer'"
+     ]
+    },
+    {
+     "accession": "phs003516.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "151 men in shareable consent groups",
+      "only 76 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'prostate cancer'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs002718.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "4,728 men in shareable consent groups",
+      "4,728 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'prostate cancer'"
+     ]
+    },
+    {
+     "accession": "phs003731.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "only 77 men in shareable consent groups",
+      "only 38 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'prostate cancer'"
+     ]
+    },
+    {
+     "accession": "phs003516.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "151 men in shareable consent groups",
+      "only 76 Black/African American participants by reported race/ethnicity",
+      "disease terms matches 'prostate cancer'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "h24",
+   "need": "Age-related macular degeneration in older adults with genotype data",
+   "parse": {
+    "old": {
+     "topic": [
+      "related",
+      "macular",
+      "degeneration"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "related",
+      "macular",
+      "degeneration"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "age",
+     "degeneration",
+     "genotype",
+     "macular",
+     "older",
+     "related"
+    ],
+    "new": [
+     "adult",
+     "age",
+     "degeneration",
+     "genotype",
+     "macular",
+     "older",
+     "related"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs002015.v2.p1",
+     "phs000457.v1.p1",
+     "phs000788.v2.p3",
+     "phs001896.v1.p1",
+     "phs001039.v1.p1",
+     "phs001046.v1.p1",
+     "phs002393.v2.p1",
+     "phs000674.v3.p3",
+     "phs000684.v1.p1",
+     "phs000685.v1.p1"
+    ],
+    "new_gated": [
+     "phs002015.v2.p1",
+     "phs000457.v1.p1",
+     "phs000788.v2.p3",
+     "phs001896.v1.p1",
+     "phs001039.v1.p1",
+     "phs001046.v1.p1",
+     "phs002393.v2.p1",
+     "phs000674.v3.p3",
+     "phs000684.v1.p1",
+     "phs000685.v1.p1"
+    ],
+    "old_tier06": [
+     "phs002015.v2.p1",
+     "phs000457.v1.p1",
+     "phs000788.v2.p3",
+     "phs001896.v1.p1",
+     "phs001039.v1.p1",
+     "phs001046.v1.p1",
+     "phs002393.v2.p1",
+     "phs000674.v3.p3",
+     "phs000684.v1.p1",
+     "phs000685.v1.p1"
+    ],
+    "new_tier06": [
+     "phs002015.v2.p1",
+     "phs000457.v1.p1",
+     "phs000788.v2.p3",
+     "phs001896.v1.p1",
+     "phs001039.v1.p1",
+     "phs001046.v1.p1",
+     "phs002393.v2.p1",
+     "phs000674.v3.p3",
+     "phs000684.v1.p1",
+     "phs000685.v1.p1"
+    ]
+   },
+   "tokens_changed": false,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs002015.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 50.1-86.1, partly aged 65+",
+      "disease terms match macular, degeneration of 'related macular degeneration'"
+     ]
+    },
+    {
+     "accession": "phs000457.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "disease terms matches 'related macular degeneration'"
+     ]
+    },
+    {
+     "accession": "phs000788.v2.p3",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "disease terms matches 'related macular degeneration'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs002015.v2.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 50.1-86.1, partly aged 65+",
+      "disease terms match macular, degeneration of 'related macular degeneration'"
+     ]
+    },
+    {
+     "accession": "phs000457.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "disease terms matches 'related macular degeneration'"
+     ]
+    },
+    {
+     "accession": "phs000788.v2.p3",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "disease terms matches 'related macular degeneration'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "official-p1",
+   "need": "Find dbGaP studies involving adult participants with lung adenocarcinoma as the primary disease, where participant-level data include a history of smoking or smoking exposure and whole genomic sequences.",
+   "parse": {
+    "old": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [],
+     "var_alts": [
+      [
+       [
+        "smoking"
+       ],
+       [
+        "smoking",
+        "exposure"
+       ]
+      ]
+     ],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [],
+     "var_alts": [
+      [
+       [
+        "smoking"
+       ],
+       [
+        "smoking",
+        "exposure"
+       ]
+      ]
+     ],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adenocarcinoma",
+     "adult",
+     "disease",
+     "exposure",
+     "genomic",
+     "history",
+     "involving",
+     "level",
+     "lung",
+     "primary",
+     "sequence",
+     "smoking",
+     "whole"
+    ],
+    "new": [
+     "adenocarcinoma",
+     "adult",
+     "exposure",
+     "genomic",
+     "history",
+     "lung",
+     "sequence",
+     "smoking",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": 2,
+    "new_gated": 2,
+    "old_tier06": 2,
+    "new_tier06": 2
+   },
+   "top": {
+    "old_gated": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs000988.v6.p1",
+     "phs001143.v4.p1",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1"
+    ],
+    "new_gated": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs002992.v1.p1",
+     "phs001143.v4.p1",
+     "phs000988.v6.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1",
+     "phs000956.v6.p1"
+    ],
+    "old_tier06": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs000988.v6.p1",
+     "phs001143.v4.p1",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1"
+    ],
+    "new_tier06": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs002992.v1.p1",
+     "phs001143.v4.p1",
+     "phs000988.v6.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1",
+     "phs000956.v6.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "title matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs001954.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 32-85 (wanted aged 18+)",
+      "primary disease matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs003812.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participant ages not reported (wanted aged 18+)",
+      "disease terms matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "title matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs001954.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 32-85 (wanted aged 18+)",
+      "primary disease matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs003812.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participant ages not reported (wanted aged 18+)",
+      "disease terms matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "official-p5",
+   "need": "Find dbGaP studies involving adult participants with lung adenocarcinoma as the primary disease, where participant-level data include a history of smoking or smoking exposure and whole-genome sequencing data.",
+   "parse": {
+    "old": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [],
+     "var_alts": [
+      [
+       [
+        "smoking"
+       ],
+       [
+        "smoking",
+        "exposure"
+       ]
+      ]
+     ],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [],
+     "var_alts": [
+      [
+       [
+        "smoking"
+       ],
+       [
+        "smoking",
+        "exposure"
+       ]
+      ]
+     ],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adenocarcinoma",
+     "adult",
+     "disease",
+     "exposure",
+     "genome",
+     "history",
+     "involving",
+     "level",
+     "lung",
+     "primary",
+     "sequencing",
+     "smoking",
+     "whole"
+    ],
+    "new": [
+     "adenocarcinoma",
+     "adult",
+     "exposure",
+     "genome",
+     "history",
+     "lung",
+     "sequencing",
+     "smoking",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": 6,
+    "new_gated": 4,
+    "old_tier06": 3,
+    "new_tier06": 2
+   },
+   "top": {
+    "old_gated": [
+     "phs000488.v2.p1",
+     "phs000951.v6.p5",
+     "phs001143.v4.p1",
+     "phs003812.v1.p1",
+     "phs000988.v6.p1",
+     "phs001954.v2.p1",
+     "phs000956.v6.p1",
+     "phs002992.v1.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1"
+    ],
+    "new_gated": [
+     "phs000488.v2.p1",
+     "phs000951.v6.p5",
+     "phs001143.v4.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000956.v6.p1",
+     "phs002992.v1.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1",
+     "phs000988.v6.p1"
+    ],
+    "old_tier06": [
+     "phs000488.v2.p1",
+     "phs003812.v1.p1",
+     "phs001954.v2.p1",
+     "phs000951.v6.p5",
+     "phs001143.v4.p1",
+     "phs000988.v6.p1",
+     "phs000956.v6.p1",
+     "phs002992.v1.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1"
+    ],
+    "new_tier06": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs001143.v4.p1",
+     "phs000956.v6.p1",
+     "phs002992.v1.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1",
+     "phs000988.v6.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "title matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs000951.v6.p5",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 39-88 (wanted aged 18+)",
+      "mentions only lung of 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs001143.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 1-88, partly aged 18+",
+      "mentions only lung of 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "title matches 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs000951.v6.p5",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 39-88 (wanted aged 18+)",
+      "mentions only lung of 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    },
+    {
+     "accession": "phs001143.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 1-88, partly aged 18+",
+      "mentions only lung of 'lung adenocarcinoma'",
+      "data dictionary has smoking"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s1",
+   "need": "Find dbGaP studies involving adult participants with lung adenocarcinoma as the primary disease, where participant-level data include smoking variables and whole genome sequencing.",
+   "parse": {
+    "old": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [
+      [
+       "smoking"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "lung",
+      "adenocarcinoma"
+     ],
+     "var_terms": [
+      [
+       "smoking"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      18,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adenocarcinoma",
+     "adult",
+     "disease",
+     "genome",
+     "involving",
+     "level",
+     "lung",
+     "primary",
+     "sequencing",
+     "smoking",
+     "variable",
+     "whole"
+    ],
+    "new": [
+     "adenocarcinoma",
+     "adult",
+     "genome",
+     "lung",
+     "sequencing",
+     "smoking",
+     "variable",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": 4,
+    "new_gated": 3,
+    "old_tier06": 3,
+    "new_tier06": 2
+   },
+   "top": {
+    "old_gated": [
+     "phs000488.v2.p1",
+     "phs000951.v6.p5",
+     "phs003812.v1.p1",
+     "phs001954.v2.p1",
+     "phs000988.v6.p1",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001143.v4.p1",
+     "phs001607.v4.p3",
+     "phs001472.v3.p2"
+    ],
+    "new_gated": [
+     "phs000488.v2.p1",
+     "phs000951.v6.p5",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001143.v4.p1",
+     "phs001607.v4.p3",
+     "phs000988.v6.p1",
+     "phs001472.v3.p2"
+    ],
+    "old_tier06": [
+     "phs000488.v2.p1",
+     "phs003812.v1.p1",
+     "phs001954.v2.p1",
+     "phs000951.v6.p5",
+     "phs000988.v6.p1",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001143.v4.p1",
+     "phs001607.v4.p3",
+     "phs001472.v3.p2"
+    ],
+    "new_tier06": [
+     "phs000488.v2.p1",
+     "phs001954.v2.p1",
+     "phs003812.v1.p1",
+     "phs000951.v6.p5",
+     "phs002992.v1.p1",
+     "phs000956.v6.p1",
+     "phs001143.v4.p1",
+     "phs001607.v4.p3",
+     "phs000988.v6.p1",
+     "phs001472.v3.p2"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "title matches 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs000951.v6.p5",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 39-88 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "mentions only lung of 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs003812.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participant ages not reported (wanted aged 18+)",
+      "data dictionary has smoking",
+      "disease terms matches 'lung adenocarcinoma'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000488.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 36-87 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "title matches 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs000951.v6.p5",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 39-88 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "mentions only lung of 'lung adenocarcinoma'"
+     ]
+    },
+    {
+     "accession": "phs001954.v2.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "participants aged 32-85 (wanted aged 18+)",
+      "data dictionary has smoking",
+      "primary disease matches 'lung adenocarcinoma'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s2",
+   "need": "Find dbGaP studies involving African American adults with type 2 diabetes as the primary disease, where participant-level data include HbA1c measurements and consent allows general research use.",
+   "parse": {
+    "old": {
+     "topic": [
+      "type",
+      "diabetes"
+     ],
+     "var_terms": [
+      [
+       "hba1c"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    },
+    "new": {
+     "topic": [
+      "type",
+      "diabetes"
+     ],
+     "var_terms": [
+      [
+       "hba1c"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "a1c",
+     "adult",
+     "african",
+     "allow",
+     "american",
+     "diabetes",
+     "disease",
+     "general",
+     "glycated",
+     "hba1c",
+     "hemoglobin",
+     "involving",
+     "level",
+     "measurement",
+     "primary",
+     "research",
+     "type"
+    ],
+    "new": [
+     "a1c",
+     "adult",
+     "african",
+     "allow",
+     "american",
+     "diabetes",
+     "general",
+     "glycated",
+     "hba1c",
+     "hemoglobin",
+     "measurement",
+     "research",
+     "type"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs001099.v1.p1",
+     "phs000389.v1.p1",
+     "phs000143.v2.p1",
+     "phs002465.v2.p1",
+     "phs002024.v1.p1",
+     "phs002501.v1.p1",
+     "phs000888.v1.p1",
+     "phs002401.v1.p1"
+    ],
+    "new_gated": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs000389.v1.p1",
+     "phs001099.v1.p1",
+     "phs000143.v2.p1",
+     "phs002465.v2.p1",
+     "phs002024.v1.p1",
+     "phs002501.v1.p1",
+     "phs002401.v1.p1",
+     "phs000888.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs001099.v1.p1",
+     "phs000389.v1.p1",
+     "phs000143.v2.p1",
+     "phs002465.v2.p1",
+     "phs002024.v1.p1",
+     "phs000888.v1.p1",
+     "phs000356.v2.p1",
+     "phs002453.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000433.v1.p1",
+     "phs000984.v1.p1",
+     "phs000389.v1.p1",
+     "phs001099.v1.p1",
+     "phs000143.v2.p1",
+     "phs002465.v2.p1",
+     "phs002024.v1.p1",
+     "phs000888.v1.p1",
+     "phs000356.v2.p1",
+     "phs002453.v1.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000433.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "4,349 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000984.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "132 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs001099.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU-IRB fits (general research use)",
+      "participants aged 25-87 (wanted aged 18+)",
+      "description mentions Black/African American participants",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000433.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "4,349 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000984.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "participant ages not reported (wanted aged 18+)",
+      "132 Black/African American participants by reported race/ethnicity",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    },
+    {
+     "accession": "phs000389.v1.p1",
+     "fails": 0,
+     "why": [
+      "consent GRU fits (general research use)",
+      "description suggests a pediatric study (wanted aged 18+)",
+      "race/ethnicity not reported (Black/African American)",
+      "data dictionary has hba1c",
+      "primary disease matches 'type diabetes'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s3",
+   "need": "Find dbGaP studies involving Hispanic children with asthma as the primary disease, where participant-level data include exome sequencing.",
+   "parse": {
+    "old": {
+     "topic": [
+      "asthma"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": [
+      "hispanic"
+     ]
+    },
+    "new": {
+     "topic": [
+      "asthma"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wes"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": [
+      "hispanic"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "asthma",
+     "children",
+     "disease",
+     "exome",
+     "hispanic",
+     "involving",
+     "level",
+     "primary",
+     "sequencing"
+    ],
+    "new": [
+     "asthma",
+     "children",
+     "exome",
+     "hispanic",
+     "sequencing"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000422.v1.p1",
+     "phs003512.v1.p1",
+     "phs000185.v8.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs000988.v6.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1"
+    ],
+    "new_gated": [
+     "phs000422.v1.p1",
+     "phs003512.v1.p1",
+     "phs000185.v8.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001216.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000422.v1.p1",
+     "phs000185.v8.p1",
+     "phs003512.v1.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs000988.v6.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000422.v1.p1",
+     "phs000185.v8.p1",
+     "phs003512.v1.p1",
+     "phs001011.v2.p1",
+     "phs002921.v2.p1",
+     "phs001727.v3.p1",
+     "phs001812.v1.p1",
+     "phs001604.v3.p1",
+     "phs001602.v3.p1",
+     "phs001216.v1.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000422.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 6.6-61.8, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "primary disease matches 'asthma'"
+     ]
+    },
+    {
+     "accession": "phs003512.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 0-15 (wanted under 18)",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "mentions 'asthma', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 16.32-78.12, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "disease terms matches 'asthma'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000422.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 6.6-61.8, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "primary disease matches 'asthma'"
+     ]
+    },
+    {
+     "accession": "phs003512.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 0-15 (wanted under 18)",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "mentions 'asthma', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has wes data",
+      "participants aged 16.32-78.12, partly under 18",
+      "race/ethnicity not reported (Hispanic/Latino)",
+      "disease terms matches 'asthma'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s4",
+   "need": "Find dbGaP studies involving women aged 40-70 with breast cancer as the primary disease, where participant-level data include RNA-seq data.",
+   "parse": {
+    "old": {
+     "topic": [
+      "breast",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": [
+      40,
+      70
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "breast",
+      "cancer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "rnaseq"
+     ],
+     "age": [
+      40,
+      70
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "aged",
+     "breast",
+     "cancer",
+     "disease",
+     "involving",
+     "level",
+     "primary",
+     "rna",
+     "seq",
+     "women"
+    ],
+    "new": [
+     "aged",
+     "breast",
+     "cancer",
+     "rna",
+     "seq",
+     "women"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs004440.v1.p1",
+     "phs001285.v2.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs003535.v2.p1",
+     "phs001866.v1.p1",
+     "phs001050.v1.p1",
+     "phs003147.v1.p1",
+     "phs000472.v2.p1"
+    ],
+    "new_gated": [
+     "phs004440.v1.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs001285.v2.p1",
+     "phs003535.v2.p1",
+     "phs003147.v1.p1",
+     "phs001050.v1.p1",
+     "phs000644.v1.p1",
+     "phs002505.v1.p1"
+    ],
+    "old_tier06": [
+     "phs004440.v1.p1",
+     "phs001285.v2.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs003535.v2.p1",
+     "phs001866.v1.p1",
+     "phs001050.v1.p1",
+     "phs003147.v1.p1",
+     "phs000472.v2.p1"
+    ],
+    "new_tier06": [
+     "phs004440.v1.p1",
+     "phs003275.v2.p1",
+     "phs003218.v1.p1",
+     "phs001870.v2.p1",
+     "phs001285.v2.p1",
+     "phs003535.v2.p1",
+     "phs003147.v1.p1",
+     "phs001050.v1.p1",
+     "phs002505.v1.p1",
+     "phs001866.v1.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs004440.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "388 women in shareable consent groups",
+      "participants aged 36.1-88.7, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs001285.v2.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "106 women in shareable consent groups",
+      "participants aged 36-89, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs003275.v2.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "245 women in shareable consent groups",
+      "participants aged 18-73, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs004440.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "388 women in shareable consent groups",
+      "participants aged 36.1-88.7, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs003275.v2.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "245 women in shareable consent groups",
+      "participants aged 18-73, partly aged 40-70",
+      "primary disease matches 'breast cancer'"
+     ]
+    },
+    {
+     "accession": "phs003218.v1.p1",
+     "fails": 0,
+     "why": [
+      "has rnaseq data",
+      "140 women in shareable consent groups",
+      "participant ages not reported (wanted aged 40-70)",
+      "disease terms matches 'breast cancer'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s5",
+   "need": "Find dbGaP studies involving people 65 and older with Alzheimer disease as the primary disease, where participant-level data include APOE genotype data.",
+   "parse": {
+    "old": {
+     "topic": [
+      "alzheimer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "alzheimer"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": [
+      65,
+      null
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "alzheimer",
+     "apoe",
+     "disease",
+     "genotype",
+     "involving",
+     "level",
+     "older",
+     "primary"
+    ],
+    "new": [
+     "alzheimer",
+     "apoe",
+     "disease",
+     "genotype",
+     "older"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000219.v1.p1",
+     "phs000168.v2.p2",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs002558.v3.p16",
+     "phs003530.v2.p1"
+    ],
+    "new_gated": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000168.v2.p2",
+     "phs000219.v1.p1",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs003530.v2.p1",
+     "phs000496.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000219.v1.p1",
+     "phs000168.v2.p2",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs002558.v3.p16",
+     "phs003530.v2.p1"
+    ],
+    "new_tier06": [
+     "phs000378.v1.p1",
+     "phs000572.v8.p4",
+     "phs000185.v8.p1",
+     "phs000168.v2.p2",
+     "phs000219.v1.p1",
+     "phs002559.v3.p16",
+     "phs000372.v1.p1",
+     "phs000397.v3.p3",
+     "phs003530.v2.p1",
+     "phs000496.v1.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000378.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000572.v8.p4",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 29-89, partly aged 65+",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 16.32-78.12, partly aged 65+",
+      "disease terms matches 'alzheimer'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000378.v1.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participant ages not reported (wanted aged 65+)",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000572.v8.p4",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 29-89, partly aged 65+",
+      "primary disease matches 'alzheimer'"
+     ]
+    },
+    {
+     "accession": "phs000185.v8.p1",
+     "fails": 0,
+     "why": [
+      "has genotypes data",
+      "participants aged 16.32-78.12, partly aged 65+",
+      "disease terms matches 'alzheimer'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s6",
+   "need": "Find dbGaP studies involving at least 1,000 participants with coronary artery disease as the primary disease, where participant-level data include LDL cholesterol measurements and genotype data.",
+   "parse": {
+    "old": {
+     "topic": [
+      "coronary",
+      "artery"
+     ],
+     "var_terms": [
+      [
+       "ldl",
+       "cholesterol"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "coronary",
+      "artery"
+     ],
+     "var_terms": [
+      [
+       "ldl",
+       "cholesterol"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [
+      "genotypes"
+     ],
+     "age": null,
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "artery",
+     "cholesterol",
+     "coronary",
+     "density",
+     "disease",
+     "genotype",
+     "involving",
+     "ldl",
+     "level",
+     "lipoprotein",
+     "low",
+     "measurement",
+     "primary"
+    ],
+    "new": [
+     "artery",
+     "cholesterol",
+     "coronary",
+     "density",
+     "disease",
+     "genotype",
+     "ldl",
+     "lipoprotein",
+     "low",
+     "measurement"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs001855.v1.p1",
+     "phs000403.v3.p3",
+     "phs000402.v5.p2",
+     "phs000313.v4.p2",
+     "phs000398.v9.p3",
+     "phs000401.v18.p16",
+     "phs000400.v6.p1",
+     "phs000399.v1.p2",
+     "phs001238.v2.p1",
+     "phs001012.v1.p1"
+    ],
+    "new_gated": [
+     "phs001855.v1.p1",
+     "phs000403.v3.p3",
+     "phs000313.v4.p2",
+     "phs000402.v5.p2",
+     "phs000398.v9.p3",
+     "phs000401.v18.p16",
+     "phs000400.v6.p1",
+     "phs000399.v1.p2",
+     "phs001012.v1.p1",
+     "phs001412.v4.p1"
+    ],
+    "old_tier06": [
+     "phs001855.v1.p1",
+     "phs001238.v2.p1",
+     "phs001412.v4.p1",
+     "phs001203.v5.p1",
+     "phs000286.v7.p2",
+     "phs000287.v7.p1",
+     "phs000200.v12.p3",
+     "phs000403.v3.p3",
+     "phs000402.v5.p2",
+     "phs000313.v4.p2"
+    ],
+    "new_tier06": [
+     "phs001855.v1.p1",
+     "phs001412.v4.p1",
+     "phs001238.v2.p1",
+     "phs001203.v5.p1",
+     "phs000286.v7.p2",
+     "phs000287.v7.p1",
+     "phs000200.v12.p3",
+     "phs000403.v3.p3",
+     "phs000313.v4.p2",
+     "phs000402.v5.p2"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs001855.v1.p1",
+     "fails": 0,
+     "why": [
+      "only 883 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms matches 'coronary artery'"
+     ]
+    },
+    {
+     "accession": "phs000403.v3.p3",
+     "fails": 0,
+     "why": [
+      "only 404 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions 'coronary artery', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000402.v5.p2",
+     "fails": 0,
+     "why": [
+      "only 402 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions 'coronary artery', but not as the primary disease"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs001855.v1.p1",
+     "fails": 0,
+     "why": [
+      "only 883 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "disease terms matches 'coronary artery'"
+     ]
+    },
+    {
+     "accession": "phs000403.v3.p3",
+     "fails": 0,
+     "why": [
+      "only 404 subjects (wanted 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions 'coronary artery', but not as the primary disease"
+     ]
+    },
+    {
+     "accession": "phs000313.v4.p2",
+     "fails": 0,
+     "why": [
+      "2,105 subjects (wanted at least 1,000)",
+      "has genotypes data",
+      "data dictionary has ldl cholesterol",
+      "mentions only coronary of 'coronary artery'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s7",
+   "need": "Find dbGaP studies involving children with autism spectrum disorder as the primary disease, where participant-level data include whole genome sequencing of families.",
+   "parse": {
+    "old": {
+     "topic": [
+      "autism",
+      "spectrum",
+      "disorder"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    },
+    "new": {
+     "topic": [
+      "autism",
+      "spectrum",
+      "disorder"
+     ],
+     "var_terms": [],
+     "var_alts": [],
+     "data_types": [
+      "wgs"
+     ],
+     "age": [
+      0,
+      17
+     ],
+     "groups": []
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "autism",
+     "children",
+     "disease",
+     "disorder",
+     "family",
+     "genome",
+     "involving",
+     "level",
+     "primary",
+     "sequencing",
+     "spectrum",
+     "whole"
+    ],
+    "new": [
+     "autism",
+     "children",
+     "disorder",
+     "family",
+     "genome",
+     "sequencing",
+     "spectrum",
+     "whole"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs000988.v6.p1",
+     "phs002997.v1.p1",
+     "phs001491.v4.p1",
+     "phs000244.v1.p1"
+    ],
+    "new_gated": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs002997.v1.p1",
+     "phs000988.v6.p1",
+     "phs000837.v1.p1",
+     "phs001071.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs000988.v6.p1",
+     "phs002997.v1.p1",
+     "phs001491.v4.p1",
+     "phs000244.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000337.v1.p1",
+     "phs002698.v1.p1",
+     "phs001089.v4.p1",
+     "phs000682.v1.p1",
+     "phs001383.v1.p1",
+     "phs002403.v1.p1",
+     "phs002997.v1.p1",
+     "phs000988.v6.p1",
+     "phs000837.v1.p1",
+     "phs001071.v1.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000337.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Control Set, Case Set, Parent-Offspring Trios",
+      "participants aged 7-17 (wanted under 18)",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs002698.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring Trios, Whole Genome Sequencing, Pedigree Whole Genome Sequencing, Affected Sib Pairs",
+      "participant ages not reported (wanted under 18)",
+      "primary disease matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs001089.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring",
+      "participants aged 2-87, partly under 18",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000337.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Control Set, Case Set, Parent-Offspring Trios",
+      "participants aged 7-17 (wanted under 18)",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs002698.v1.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring Trios, Whole Genome Sequencing, Pedigree Whole Genome Sequencing, Affected Sib Pairs",
+      "participant ages not reported (wanted under 18)",
+      "primary disease matches 'autism spectrum disorder'"
+     ]
+    },
+    {
+     "accession": "phs001089.v4.p1",
+     "fails": 0,
+     "why": [
+      "has wgs data",
+      "design: Family/Twin/Trios, Family, Parent-Offspring",
+      "participants aged 2-87, partly under 18",
+      "disease terms matches 'autism spectrum disorder'"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s8",
+   "need": "Find dbGaP studies involving Black adults with chronic kidney disease as the primary disease, where participant-level data include eGFR measurements.",
+   "parse": {
+    "old": {
+     "topic": [
+      "chronic",
+      "kidney"
+     ],
+     "var_terms": [
+      [
+       "egfr"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    },
+    "new": {
+     "topic": [
+      "chronic",
+      "kidney"
+     ],
+     "var_terms": [
+      [
+       "egfr"
+      ]
+     ],
+     "var_alts": [],
+     "data_types": [],
+     "age": [
+      18,
+      null
+     ],
+     "groups": [
+      "black"
+     ]
+    }
+   },
+   "parse_changed": false,
+   "tokens": {
+    "old": [
+     "adult",
+     "black",
+     "chronic",
+     "disease",
+     "egfr",
+     "estimated",
+     "filtration",
+     "glomerular",
+     "involving",
+     "kidney",
+     "level",
+     "measurement",
+     "primary",
+     "rate"
+    ],
+    "new": [
+     "adult",
+     "black",
+     "chronic",
+     "disease",
+     "egfr",
+     "estimated",
+     "filtration",
+     "glomerular",
+     "kidney",
+     "measurement",
+     "rate"
+    ]
+   },
+   "example_rank": {
+    "old_gated": null,
+    "new_gated": null,
+    "old_tier06": null,
+    "new_tier06": null
+   },
+   "top": {
+    "old_gated": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs002719.v1.p1",
+     "phs004459.v1.p1",
+     "phs004088.v2.p1",
+     "phs000843.v2.p1",
+     "phs000524.v2.p2",
+     "phs003709.v1.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1"
+    ],
+    "new_gated": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs002719.v1.p1",
+     "phs004088.v2.p1",
+     "phs000524.v2.p2",
+     "phs004459.v1.p1",
+     "phs003709.v1.p1",
+     "phs000843.v2.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1"
+    ],
+    "old_tier06": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs004088.v2.p1",
+     "phs000843.v2.p1",
+     "phs000524.v2.p2",
+     "phs003709.v1.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1",
+     "phs000744.v5.p2",
+     "phs002719.v1.p1"
+    ],
+    "new_tier06": [
+     "phs000844.v2.p1",
+     "phs002389.v2.p1",
+     "phs004088.v2.p1",
+     "phs000524.v2.p2",
+     "phs003709.v1.p1",
+     "phs000843.v2.p1",
+     "phs000286.v7.p2",
+     "phs004045.v1.p1",
+     "phs000744.v5.p2",
+     "phs002719.v1.p1"
+    ]
+   },
+   "tokens_changed": true,
+   "top3_why_old_gated": [
+    {
+     "accession": "phs000844.v2.p1",
+     "fails": 0,
+     "why": [
+      "description suggests a pediatric study (wanted aged 18+)",
+      "dbGaP lists population: African American",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002389.v2.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 33-78 (wanted aged 18+)",
+      "only fewer than 11 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002719.v1.p1",
+     "fails": 0,
+     "why": [
+      "participant ages not reported (wanted aged 18+)",
+      "8,835 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "mentions only kidney of 'chronic kidney'"
+     ]
+    }
+   ],
+   "top3_why_new_gated": [
+    {
+     "accession": "phs000844.v2.p1",
+     "fails": 0,
+     "why": [
+      "description suggests a pediatric study (wanted aged 18+)",
+      "dbGaP lists population: African American",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002389.v2.p1",
+     "fails": 0,
+     "why": [
+      "participants aged 33-78 (wanted aged 18+)",
+      "only fewer than 11 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "disease terms matches 'chronic kidney'"
+     ]
+    },
+    {
+     "accession": "phs002719.v1.p1",
+     "fails": 0,
+     "why": [
+      "participant ages not reported (wanted aged 18+)",
+      "8,835 Black/African American participants by reported race/ethnicity",
+      "data dictionary has egfr",
+      "mentions only kidney of 'chronic kidney'"
+     ]
+    }
+   ]
+  }
+ ],
+ "pairs": [
+  {
+   "short": "ex1",
+   "sentence": "s1",
+   "overlap@10": {
+    "old_gated": 1.0,
+    "new_gated": 1.0,
+    "old_tier06": 1.0,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": true
+   }
+  },
+  {
+   "short": "ex2",
+   "sentence": "s2",
+   "overlap@10": {
+    "old_gated": 1.0,
+    "new_gated": 1.0,
+    "old_tier06": 1.0,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": false
+   }
+  },
+  {
+   "short": "ex3",
+   "sentence": "s3",
+   "overlap@10": {
+    "old_gated": 0.9,
+    "new_gated": 1.0,
+    "old_tier06": 0.9,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": true
+   }
+  },
+  {
+   "short": "ex4",
+   "sentence": "s4",
+   "overlap@10": {
+    "old_gated": 0.8,
+    "new_gated": 1.0,
+    "old_tier06": 0.9,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": true
+   }
+  },
+  {
+   "short": "ex5",
+   "sentence": "s5",
+   "overlap@10": {
+    "old_gated": 0.9,
+    "new_gated": 1.0,
+    "old_tier06": 0.9,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": true
+   }
+  },
+  {
+   "short": "ex6",
+   "sentence": "s6",
+   "overlap@10": {
+    "old_gated": 0.9,
+    "new_gated": 1.0,
+    "old_tier06": 1.0,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": false
+   }
+  },
+  {
+   "short": "ex7",
+   "sentence": "s7",
+   "overlap@10": {
+    "old_gated": 0.8,
+    "new_gated": 1.0,
+    "old_tier06": 0.8,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": true
+   }
+  },
+  {
+   "short": "ex8",
+   "sentence": "s8",
+   "overlap@10": {
+    "old_gated": 1.0,
+    "new_gated": 1.0,
+    "old_tier06": 1.0,
+    "new_tier06": 1.0
+   },
+   "same_tokens": {
+    "old": false,
+    "new": true
+   }
+  }
+ ],
+ "pair_mean": {
+  "old_gated": 0.9125,
+  "new_gated": 1.0,
+  "old_tier06": 0.9375,
+  "new_tier06": 1.0
+ }
+}

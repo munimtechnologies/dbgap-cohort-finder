@@ -107,7 +107,11 @@ the expected answer 37th on it, against 3rd on the short wording.
 `sentence_need.py` reads that template (the disease from "X as the primary
 disease", "data include ..." lists as variable needs, "whole genomic sequences"
 as WGS) and leaves every other need as it was. It moves the expected answer to
-2nd, with no change on 150 silver needs and 32 short needs. Use
+2nd, with no change on 150 silver needs and 32 short needs. Since 0.2.0 it
+also keeps the template's own words ("involving", "as the primary disease",
+"participant-level") out of the text search. Eight short needs reworded into
+the template now return exactly the same top 10 as their short forms, and the
+expected answer on the submission-example wording moves from 3rd to 2nd. Use
 `sentence_need.rank(index, sentence_need.parse_need(text), tier=0.6)`.
 Results, limits and the pre-registered predictions:
 [`sentence_need/`](sentence_need/README.md).
@@ -297,7 +301,9 @@ and synthetic studies. They make no network calls.
   and their scoring code (`phenx_dev.py`, `phenx_dev_v2.py`, `phenx_dev_v3.py`).
   Sentence-style needs and primary-disease tiering (`sentence_need.py`, with
   `official_needs.jsonl`, `sentence_needs.jsonl` and the 2026-10-30 report in
-  `sentence_need/`).
+  `sentence_need/`). `sentence_need.py` 0.2.0 leaves the sentence template's
+  words out of text scoring (`scaffold_check.py` and
+  `sentence_need/scaffold-report-2026-10-30.json`).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
@@ -310,4 +316,4 @@ Made by MV2 of Munim, Inc. The code and this README were made with AI agents
 working in his name. Issues and corrections are welcome.
 
 Apache-2.0 license (see `LICENSE`). The census results in `census/` and the
-report in `sentence_need/` are CC BY 4.0.
+reports in `sentence_need/` are CC BY 4.0.

@@ -18,6 +18,13 @@ SHORT = [LUNG_NEED, "adults with asthma", "Children with asthma with exome seque
          "Adults with asthma and smoking history", "COPD patients with BMI measured",
          "Studies of asthma including at least 100 African American participants",
          "At least 1,000 participants with coronary artery disease, LDL cholesterol measured, and genotype data"]
+# Short needs and their sentence rewrites that differ only by template words (sentence_needs.jsonl s4, s7).
+PAIRS = [("Women aged 40-70 with breast cancer and RNA-seq data",
+          "Find dbGaP studies involving women aged 40-70 with breast cancer as the primary disease, where "
+          "participant-level data include RNA-seq data."),
+         ("Autism spectrum disorder in children with whole genome sequencing of families",
+          "Find dbGaP studies involving children with autism spectrum disorder as the primary disease, where "
+          "participant-level data include whole genome sequencing of families.")]
 
 
 class ParseTest(unittest.TestCase):
@@ -68,6 +75,35 @@ class ParseTest(unittest.TestCase):
         self.assertEqual(sen.overlap([], []), 0.0)
 
 
+class TokenTest(unittest.TestCase):
+    def test_template_words_left_out(self):
+        template = set(cf.tokens("involving primary disease participant-level"))
+        for text in (OFFICIAL, OFFICIAL_P5):
+            tokens = set(sen.parse_need(text)["tokens"])
+            self.assertTrue(tokens.isdisjoint(template), sorted(tokens & template))
+            self.assertTrue({"lung", "adenocarcinoma"} <= tokens)
+            self.assertEqual(sen.parse_need(text, strip=False)["tokens"], sn.parse_need(text)["tokens"])
+
+    def test_disease_in_topic_kept(self):
+        q = sen.parse_need("Find dbGaP studies involving at least 1,000 participants with coronary artery disease "
+                           "as the primary disease, where participant-level data include LDL cholesterol "
+                           "measurements and genotype data.")
+        self.assertIn(cf.tokens("disease")[0], q["tokens"])
+        self.assertNotIn(cf.tokens("primary")[0], q["tokens"])
+
+    def test_short_tokens_unchanged(self):
+        # LUNG_NEED says "as the primary disease", so it is the one short need whose tokens change.
+        for text in SHORT[1:]:
+            self.assertEqual(sen.parse_need(text)["tokens"], sn.parse_need(text)["tokens"], text)
+        self.assertNotIn(cf.tokens("primary")[0], sen.parse_need(LUNG_NEED)["tokens"])
+
+    def test_pairs_same_tokens(self):
+        for short, sentence in PAIRS:
+            self.assertEqual(sen.token_set(sen.parse_need(short)), sen.token_set(sen.parse_need(sentence)))
+            self.assertNotEqual(sen.token_set(sen.parse_need(short)),
+                                sen.token_set(sen.parse_need(sentence, strip=False)))
+
+
 class RequirementTest(Corpus):
     def test_patch_is_noop_without_alternatives(self):
         self.assertIs(sn.requirements, sen.requirements)
@@ -87,8 +123,9 @@ class RequirementTest(Corpus):
 class RankTest(Corpus):
     def test_official_top(self):
         for tier in (None, sen.TIER):
-            ranked = [r["accession"] for r in sen.rank(self.index, sen.parse_need(OFFICIAL), tier=tier)]
-            self.assertEqual(ranked[0], "phs000100.v1.p1")
+            for strip in (True, False):
+                ranked = [r["accession"] for r in sen.rank(self.index, sen.parse_need(OFFICIAL, strip), tier=tier)]
+                self.assertEqual(ranked[0], "phs000100.v1.p1")
 
     def test_old_parse_matches_gated(self):
         q = sn.parse_need(LUNG_NEED)
@@ -109,11 +146,14 @@ class RankTest(Corpus):
             with open(out, encoding="utf-8") as f:
                 report = json.load(f)
         self.assertEqual(report["silver"]["questions"], len(queries))
+        self.assertEqual(report["silver"]["tokens_changed"], [])
         self.assertEqual([n["id"] for n in report["needs"]], ["ex1", "s1"])
         self.assertFalse(report["needs"][0]["parse_changed"])
         self.assertTrue(report["needs"][1]["parse_changed"])
+        self.assertTrue(report["needs"][1]["tokens_changed"])
         self.assertEqual(report["pairs"][0]["short"], "ex1")
         self.assertIn("new_gated", report["pairs"][0]["overlap@10"])
+        self.assertIn("same_tokens", report["pairs"][0])
 
 
 if __name__ == "__main__":
