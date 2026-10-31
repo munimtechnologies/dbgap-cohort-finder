@@ -50,12 +50,45 @@ short example needs (8), 24 hand-written needs and 150 silver needs from
 Both gates held as well: the 43 unit tests passed, and the needs file had
 192 needs, 150 of them silver.
 
+## Rebuilding to the same hashes (2026-10-31)
+
+NIH may ask for hashes of a system's software, indexes and data, and the
+artifacts must later match them. To test whether this pipeline rebuilds to the
+same bytes, it was built twice in one container (Python 3.12, 2 CPUs, 2 GB),
+from main at ed6620d and NLM's `dbgap.tar.gz`. Each build ran
+`snapshot_survey.py`, `snapshot.py devset -n 150`, `make_needs.py` and
+`spark_submit.py run` on the same 192 needs, the first with `PYTHONHASHSEED=1`
+and the second with `PYTHONHASHSEED=2`. `spark_manifest.py` recorded build A
+([`manifest-2026-10-31.json`](manifest-2026-10-31.json)) and checked build B
+against it ([`repro-2026-10-31.json`](repro-2026-10-31.json)).
+
+| | Prediction | Result |
+|---|---|---|
+| R1 | `out/studies.jsonl` byte-identical | held |
+| R2 | both `.gz` files equal in content, with bytes differing only in the gzip header time | held |
+| R3 | `submission.jsonl` byte-identical (192 needs) | held |
+| R4 | `devset.json` byte-identical | held |
+| R5 | `out/census.json` equal once parsed | held (also byte-identical) |
+| R6 | `out/age_candidates.jsonl` and `out/field_coverage.json` byte-identical | held |
+
+Both gates held: the 48 unit tests passed, and every step of both builds
+exited 0. Build A ranked a need in 2.62 s on average (5.70 s at most) and build
+B in 2.47 s (5.96 s); both peaked at 313 MB.
+
+Before the run, the census was flagged as a risk, because it counts
+`sample_use` values through a Python set and ties keep insertion order. It came
+out byte-identical in this pair of builds. One pair of seeds doesn't prove it
+always will.
+
 ## Limits
 
 - The format check follows the one example record in the Task 2 description.
   Any later guidance from NIH may add rules.
 - The times are from 2 shared CPUs, not from the hardware NIH will use.
-- This run measures format, time and memory only. It says nothing about NDCG
-  against the official expert judgments.
+- The rebuild test used one machine, one Python image and one copy of the
+  snapshot. It tests process-level determinism, not other platforms or Python
+  versions.
+- These runs measure format, time, memory and reproducibility only. They say
+  nothing about NDCG against the official expert judgments.
 
 CC BY 4.0.

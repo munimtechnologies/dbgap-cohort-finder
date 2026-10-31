@@ -1,0 +1,55 @@
+{
+ "manifest": "spark_manifest",
+ "version": "0.1.0",
+ "files": [
+  {
+   "path": "data/var_values.jsonl.gz",
+   "bytes": 2312708,
+   "sha256": "95c948ac7625b0a7920eb64661cfc2c1c650d8e89437b4dd051f47c84ec9f6aa",
+   "content_sha256": "c7d22bb3641a9022d8fca9acc046729074120f528ae589afa662c09d4f15b533",
+   "content_bytes": 30294818
+  },
+  {
+   "path": "data/variables.jsonl.gz",
+   "bytes": 10432048,
+   "sha256": "d0aee778f5547a7a0c27be56ef0331f64bc75884f949866ec1c0cea1df5a6f86",
+   "content_sha256": "0f375521dcc9c419d7a785a7047b66e21d3ad869e32abb109a634216fd5cc35b",
+   "content_bytes": 99642993
+  },
+  {
+   "path": "devset.json",
+   "bytes": 28790,
+   "sha256": "39fe10d9885739eecc8bc3c62d153919fd25c42aa0019f6243ae78c2ded5b694"
+  },
+  {
+   "path": "out/age_candidates.jsonl",
+   "bytes": 1397202,
+   "sha256": "501af683631d52982cca85dbfc8c17c99561843d75280b605f4fb156e9c0990c"
+  },
+  {
+   "path": "out/census.json",
+   "bytes": 5240,
+   "sha256": "a7e0bac20396772978e5487898390c711441cafed2c03431a2bbe7529612920e"
+  },
+  {
+   "path": "out/census.md",
+   "bytes": 3469,
+   "sha256": "06d51fb42d7f1e2506529d20f774bf5f0b3af5360370554b5b6fda17838a909a"
+  },
+  {
+   "path": "out/field_coverage.json",
+   "bytes": 14990,
+   "sha256": "2d31ee6c3dcbff8f2db4099d470e7f3238566ff5c41bae9f8f404868717f55b2"
+  },
+  {
+   "path": "out/studies.jsonl",
+   "bytes": 16254225,
+   "sha256": "0050c942e32fe7f1b2f95bf3c09611ad74f8de8e6f62253af5038738cf6d48e0"
+  },
+  {
+   "path": "submission.jsonl",
+   "bytes": 403741,
+   "sha256": "65c6d9e1fe35d2c1e5bdad1e4482d3b1ac9512bb0e5e095dbd1c47806b67523a"
+  }
+ ]
+}

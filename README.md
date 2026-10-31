@@ -138,6 +138,34 @@ ranked a need in 2.2 s on average (5.4 s at most) and peaked at 313 MB, with
 that match no word of a need are left out. Details and the pre-registered
 predictions (5 of 7 held): [`submission/`](submission/README.md).
 
+### Recording and checking hashes
+
+The Task 2 description says NIH may ask for "cryptographic hashes or other
+verifiable records" of software, indexes and data artifacts, and that these
+must later match the versions documented at the deadline. `spark_manifest.py`
+writes a SHA-256 manifest of a build and checks a rebuild against it:
+
+```
+$ python spark_manifest.py make --root . --out manifest.json out/studies.jsonl \
+    data/variables.jsonl.gz data/var_values.jsonl.gz submission.jsonl
+$ python spark_manifest.py verify --root rebuild --manifest manifest.json
+```
+
+The `.gz` files that `snapshot_survey.py` writes keep their write time in the
+gzip header. A rebuild therefore changes their file hash even when the content
+is the same. For those files the manifest also records the hash of the
+uncompressed content, and `verify` reports them as "same content". With
+`--strict`, "same content" counts as a mismatch.
+
+On 2026-10-31 the whole pipeline (survey, `devset -n 150`, a 192-need
+submission) was built twice from NLM's snapshot in one container, with
+`PYTHONHASHSEED` set to 1 and then 2. All nine outputs matched. Seven were
+byte-identical, including the 192-need submission. The two `.gz` files matched
+by content; their bytes differed only in the header time. All 6 pre-registered
+predictions held. This shows the build doesn't depend on Python's hash seed
+on one machine and one image. It doesn't test other platforms or Python
+versions. Hashes and the report: [`submission/`](submission/README.md).
+
 A second, independent label set comes from PhenX curators' links between
 PhenX measures and dbGaP studies: [`phenx_dev/`](phenx_dev/README.md). On it
 a question-blind popularity list beats this finder by a wide margin, so read
@@ -330,6 +358,9 @@ and synthetic studies. They make no network calls.
   `sentence_need/scaffold-report-2026-10-30.json`). `spark_submit.py` 0.1.0
   writes and checks a Task 2 submission with that ranker and reports time and
   memory; `make_needs.py` builds a test needs file (`submission/`).
+  `spark_manifest.py` 0.1.0 records SHA-256 hashes of a build (with content
+  hashes for `.gz` files) and checks a rebuild against them; two builds of the
+  full pipeline matched (`submission/repro-2026-10-31.json`).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,

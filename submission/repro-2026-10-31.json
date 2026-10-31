@@ -1,0 +1,140 @@
+{
+ "repro_check": "0.1.0",
+ "spark_manifest": "0.1.0",
+ "status_b_vs_a": {
+  "data/var_values.jsonl.gz": "same content",
+  "data/variables.jsonl.gz": "same content",
+  "devset.json": "same",
+  "out/age_candidates.jsonl": "same",
+  "out/census.json": "same",
+  "out/census.md": "same",
+  "out/field_coverage.json": "same",
+  "out/studies.jsonl": "same",
+  "submission.jsonl": "same"
+ },
+ "extra": {
+  "data/variables.jsonl.gz": {
+   "same_with_header_time_zeroed": true
+  },
+  "data/var_values.jsonl.gz": {
+   "same_with_header_time_zeroed": true
+  },
+  "out/census.json": {
+   "same_parsed_json": true
+  },
+  "out/field_coverage.json": {
+   "same_parsed_json": true
+  },
+  "devset.json": {
+   "same_parsed_json": true
+  }
+ },
+ "stats": {
+  "a": {
+   "version": "0.1.0",
+   "sentence_need": "0.2.0",
+   "needs": 192,
+   "studies": 3578,
+   "k": 100,
+   "tier": 0.6,
+   "load_seconds": 16.13,
+   "total_need_seconds": 502.92,
+   "mean_need_seconds": 2.619,
+   "max_need_seconds": 5.703,
+   "peak_memory_mb": 313.3
+  },
+  "b": {
+   "version": "0.1.0",
+   "sentence_need": "0.2.0",
+   "needs": 192,
+   "studies": 3578,
+   "k": 100,
+   "tier": 0.6,
+   "load_seconds": 14.93,
+   "total_need_seconds": 475.03,
+   "mean_need_seconds": 2.474,
+   "max_need_seconds": 5.959,
+   "peak_memory_mb": 313.0
+  }
+ },
+ "steps": [
+  {
+   "cmd": "snapshot_survey.py --tar",
+   "seed": 1,
+   "exit": 0,
+   "seconds": 293.5,
+   "tail": [
+    "[03:03:47] 500000 objects",
+    "objects: {'study': 3578, 'data_dict': 16062, 'var_summary': 16062, 'dataset': 16070, 'variable': 465853, 'genotype': 2122, 'document': 8079, 'analysis': 17277}; unreadable: 0"
+   ]
+  },
+  {
+   "cmd": "snapshot.py --studies",
+   "seed": 1,
+   "exit": 0,
+   "seconds": 7.7,
+   "tail": [
+    "150 silver needs, 275 relevant labels"
+   ]
+  },
+  {
+   "cmd": "make_needs.py --needs",
+   "seed": 1,
+   "exit": 0,
+   "seconds": 0.5,
+   "tail": [
+    "192 needs (150 silver)"
+   ]
+  },
+  {
+   "cmd": "spark_submit.py --studies",
+   "seed": 1,
+   "exit": 0,
+   "seconds": 520.7,
+   "tail": [
+    "{\"k\": 100, \"load_seconds\": 16.13, \"max_need_seconds\": 5.703, \"mean_need_seconds\": 2.619, \"needs\": 192, \"peak_memory_mb\": 313.3, \"sentence_need\": \"0.2.0\", \"studies\": 3578, \"tier\": 0.6, \"total_need_seconds\": 502.92, \"version\": \"0.1.0\"}",
+    "192 needs, 0 problems"
+   ]
+  },
+  {
+   "cmd": "snapshot_survey.py --tar",
+   "seed": 2,
+   "exit": 0,
+   "seconds": 282.0,
+   "tail": [
+    "[03:17:19] 500000 objects",
+    "objects: {'study': 3578, 'data_dict': 16062, 'var_summary': 16062, 'dataset': 16070, 'variable': 465853, 'genotype': 2122, 'document': 8079, 'analysis': 17277}; unreadable: 0"
+   ]
+  },
+  {
+   "cmd": "snapshot.py --studies",
+   "seed": 2,
+   "exit": 0,
+   "seconds": 10.0,
+   "tail": [
+    "150 silver needs, 275 relevant labels"
+   ]
+  },
+  {
+   "cmd": "spark_submit.py --studies",
+   "seed": 2,
+   "exit": 0,
+   "seconds": 490.9,
+   "tail": [
+    "{\"k\": 100, \"load_seconds\": 14.93, \"max_need_seconds\": 5.959, \"mean_need_seconds\": 2.474, \"needs\": 192, \"peak_memory_mb\": 313.0, \"sentence_need\": \"0.2.0\", \"studies\": 3578, \"tier\": 0.6, \"total_need_seconds\": 475.03, \"version\": \"0.1.0\"}",
+    "192 needs, 0 problems"
+   ]
+  }
+ ],
+ "sizes": {
+  "data/var_values.jsonl.gz": 2312708,
+  "data/variables.jsonl.gz": 10432048,
+  "devset.json": 28790,
+  "out/age_candidates.jsonl": 1397202,
+  "out/census.json": 5240,
+  "out/census.md": 3469,
+  "out/field_coverage.json": 14990,
+  "out/studies.jsonl": 16254225,
+  "submission.jsonl": 403741
+ }
+}
