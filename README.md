@@ -122,8 +122,17 @@ line, synonyms such as "WGS" and "aged 18 or older"). NDCG@10 falls from
 moves (at most 3 of 150 needs per wording). The loss comes from the text
 search, which still gets the words of constraints that are already parsed,
 and from "I'm", which leaves a stray "m" in every chat need's disease words. 4
-of 7 pre-registered predictions held. A fix is being tested. Details:
+of 7 pre-registered predictions held. Details:
 [`wording_check/`](wording_check/README.md).
+
+`wording_fix.py` takes contractions out and keeps the words of parsed
+constraints out of the text search. On the same 750 needs it scores 0.9190,
+0.9143, 0.9137, 0.9159 and 0.9159 (mean 0.9158, spread 0.0053, against 0.8596
+and 0.1161), runs about three times faster, and keeps the official example's
+expected study at 2nd. But 239 of its 750 lists hold fewer than 100 studies
+(10 for the current system), so by the rule written before the run it is not
+the default yet. A version that fills short lists is being tested. 8 of 9
+pre-registered predictions held. Details: [`wording_fix/`](wording_fix/README.md).
 
 **A local re-ranker (negative result).** `rerank_check.py` re-scored each
 need's top 30 with NCBI's open-weight MedCPT cross-encoder on CPU and fused it
@@ -371,7 +380,8 @@ system, use `Dockerfile.spark` (see above).
   ([`rerank/`](rerank/README.md)).
 - `sentence_need.py` was written for the one sentence template SPARK has
   published. Other wordings lose up to 0.12 NDCG@10 on the silver labels
-  ([`wording_check/`](wording_check/README.md)).
+  ([`wording_check/`](wording_check/README.md)); a measured fix is not the
+  default yet ([`wording_fix/`](wording_fix/README.md)).
 - `spark_submit.py check` follows the one example record in the Task 2
   description. NIH's later technical guidance may add rules.
 - Counts are study-wide. The tool can't yet tell how many of a study's 5,000
@@ -418,7 +428,8 @@ and synthetic studies. They make no network calls and need no model.
   Docker system, its manifest checks and a Python-level network block, measured
   in `submission/image-2026-10-31.json`. `wording_check.py` 0.1.0 and its
   report (`wording_check/`); `rerank_check.py` 0.1.0 and its report
-  (`rerank/`).
+  (`rerank/`). `wording_fix.py` 0.1.0 and its report (`wording_fix/`), not
+  yet the default.
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
@@ -431,5 +442,5 @@ Made by MV2 of Munim, Inc. The code and this README were made with AI agents
 working in his name. Issues and corrections are welcome.
 
 Apache-2.0 license (see `LICENSE`). The census results in `census/` and the
-reports in `sentence_need/`, `submission/`, `wording_check/` and `rerank/` are
-CC BY 4.0.
+reports in `sentence_need/`, `submission/`, `wording_check/`, `wording_fix/`
+and `rerank/` are CC BY 4.0.

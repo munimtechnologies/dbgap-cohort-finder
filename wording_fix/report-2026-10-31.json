@@ -1,0 +1,4929 @@
+{
+ "wording_fix": "0.1.0",
+ "wording_check": "0.1.0",
+ "sentence_need": "0.2.0",
+ "tier": 0.6,
+ "questions": 150,
+ "unparsed": [],
+ "load_seconds": 9.4,
+ "systems": {
+  "base": {
+   "variants": {
+    "v0_short": {
+     "ndcg@10": 0.8943,
+     "lower_than_v0": 0,
+     "higher_than_v0": 0,
+     "parse_differs": 0,
+     "topic_differs": 0,
+     "loss": 0,
+     "loss_from_parse_differs": 0,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.883
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 0.7539
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.9392
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7689
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.7122
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.9371
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9915
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.9311
+      }
+     },
+     "mean_seconds": 1.426
+    },
+    "v1_official": {
+     "ndcg@10": 0.8656,
+     "lower_than_v0": 18,
+     "higher_than_v0": 5,
+     "parse_differs": 3,
+     "topic_differs": 3,
+     "loss": 5.0779,
+     "loss_from_parse_differs": 0.0693,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.8353
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 0.7539
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.921
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7972
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.6789
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.8968
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9412
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.8859
+      }
+     },
+     "mean_seconds": 1.465
+    },
+    "v2_question": {
+     "ndcg@10": 0.8754,
+     "lower_than_v0": 24,
+     "higher_than_v0": 12,
+     "parse_differs": 3,
+     "topic_differs": 3,
+     "loss": 5.647,
+     "loss_from_parse_differs": 1.1131,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.8452
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 0.877
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.9253
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7689
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.7265
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.9186
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9489
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.8813
+      }
+     },
+     "mean_seconds": 1.703
+    },
+    "v3_chat": {
+     "ndcg@10": 0.7782,
+     "lower_than_v0": 56,
+     "higher_than_v0": 9,
+     "parse_differs": 2,
+     "topic_differs": 150,
+     "loss": 19.7278,
+     "loss_from_parse_differs": 0.5,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.74
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 0.877
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.8598
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.5737
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.6384
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.7728
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.8654
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.8952
+      }
+     },
+     "mean_seconds": 1.716
+    },
+    "v4_synonyms": {
+     "ndcg@10": 0.8846,
+     "lower_than_v0": 17,
+     "higher_than_v0": 17,
+     "parse_differs": 0,
+     "topic_differs": 4,
+     "loss": 4.8679,
+     "loss_from_parse_differs": 0,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.8238
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 0.8333
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.9507
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.6502
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.7122
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.8619
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.974
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.983
+      }
+     },
+     "mean_seconds": 2.379
+    }
+   },
+   "mean_over_variants": 0.8596,
+   "spread": 0.1161,
+   "top3_same_as_v0": {
+    "v0_short": 150,
+    "v1_official": 98,
+    "v2_question": 67,
+    "v3_chat": 30,
+    "v4_synonyms": 68
+   },
+   "short_lists": 10,
+   "seconds": 1303.9
+  },
+  "fix": {
+   "variants": {
+    "v0_short": {
+     "ndcg@10": 0.919,
+     "lower_than_v0": 0,
+     "higher_than_v0": 0,
+     "parse_differs": 0,
+     "topic_differs": 0,
+     "loss": 0,
+     "loss_from_parse_differs": 0,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.9502
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 1.0
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.971
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7852
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.7192
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.9404
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9993
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.9697
+      }
+     },
+     "mean_seconds": 0.538
+    },
+    "v1_official": {
+     "ndcg@10": 0.9143,
+     "lower_than_v0": 3,
+     "higher_than_v0": 0,
+     "parse_differs": 3,
+     "topic_differs": 3,
+     "loss": 0.7057,
+     "loss_from_parse_differs": 0.0693,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.9313
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 1.0
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.971
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7852
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.7128
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.9404
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9993
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.9697
+      }
+     },
+     "mean_seconds": 0.646
+    },
+    "v2_question": {
+     "ndcg@10": 0.9137,
+     "lower_than_v0": 2,
+     "higher_than_v0": 1,
+     "parse_differs": 3,
+     "topic_differs": 3,
+     "loss": 1.0693,
+     "loss_from_parse_differs": 1.0693,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.9502
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 1.0
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.971
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7852
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.729
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.9404
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9623
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.9697
+      }
+     },
+     "mean_seconds": 0.546
+    },
+    "v3_chat": {
+     "ndcg@10": 0.9159,
+     "lower_than_v0": 1,
+     "higher_than_v0": 1,
+     "parse_differs": 2,
+     "topic_differs": 0,
+     "loss": 0.5,
+     "loss_from_parse_differs": 0.5,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.9502
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 1.0
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.971
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7905
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.6954
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.9404
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9993
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.9697
+      }
+     },
+     "mean_seconds": 0.506
+    },
+    "v4_synonyms": {
+     "ndcg@10": 0.9159,
+     "lower_than_v0": 1,
+     "higher_than_v0": 1,
+     "parse_differs": 0,
+     "topic_differs": 4,
+     "loss": 0.5,
+     "loss_from_parse_differs": 0,
+     "by_constraint": {
+      "adults": {
+       "needs": 30,
+       "ndcg@10": 0.9502
+      },
+      "children": {
+       "needs": 3,
+       "ndcg@10": 0.8333
+      },
+      "gru": {
+       "needs": 55,
+       "ndcg@10": 0.971
+      },
+      "methylation": {
+       "needs": 8,
+       "ndcg@10": 0.7905
+      },
+      "race": {
+       "needs": 21,
+       "ndcg@10": 0.7192
+      },
+      "rnaseq": {
+       "needs": 30,
+       "ndcg@10": 0.9404
+      },
+      "wes": {
+       "needs": 27,
+       "ndcg@10": 0.9993
+      },
+      "wgs": {
+       "needs": 22,
+       "ndcg@10": 0.9697
+      }
+     },
+     "mean_seconds": 0.519
+    }
+   },
+   "mean_over_variants": 0.9158,
+   "spread": 0.0053,
+   "top3_same_as_v0": {
+    "v0_short": 150,
+    "v1_official": 139,
+    "v2_question": 146,
+    "v3_chat": 145,
+    "v4_synonyms": 144
+   },
+   "short_lists": 239,
+   "seconds": 413.7
+  }
+ },
+ "tokens_changed_by_fix": {
+  "v0_short": 134,
+  "v1_official": 135,
+  "v2_question": 150,
+  "v3_chat": 150,
+  "v4_synonyms": 132
+ },
+ "official": [
+  {
+   "id": "official-p1",
+   "base": 2,
+   "fix": 2
+  },
+  {
+   "id": "official-p5",
+   "base": 2,
+   "fix": 2
+  }
+ ],
+ "per_need": [
+  {
+   "id": "dev001",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev002",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6171,
+     "v1_official": 0.6171,
+     "v2_question": 0.6124,
+     "v3_chat": 0.7565,
+     "v4_synonyms": 0.6171
+    },
+    "fix": {
+     "v0_short": 0.6171,
+     "v1_official": 0.6171,
+     "v2_question": 0.6171,
+     "v3_chat": 0.6171,
+     "v4_synonyms": 0.6171
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev003",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6309,
+     "v1_official": 0.0,
+     "v2_question": 0.6309,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 0.3562,
+     "v1_official": 0.2891,
+     "v2_question": 0.6309,
+     "v3_chat": 0.3562,
+     "v4_synonyms": 0.3562
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": [
+     "involving"
+    ],
+    "v2_question": [
+     "enrolled"
+    ],
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev004",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev005",
+   "constraints": [
+    "gru",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.3066,
+     "v1_official": 0.0,
+     "v2_question": 0.2641,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.2641
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev006",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev007",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev008",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev009",
+   "constraints": [
+    "children"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 0.5
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": [
+     "premature",
+     "under"
+    ]
+   }
+  },
+  {
+   "id": "dev010",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev011",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9197,
+     "v1_official": 0.9197,
+     "v2_question": 0.6934,
+     "v3_chat": 0.6241,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 0.9197,
+     "v1_official": 0.9197,
+     "v2_question": 0.9197,
+     "v3_chat": 0.9197,
+     "v4_synonyms": 0.9197
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev012",
+   "constraints": [
+    "wes",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.6309,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev013",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.3869,
+     "v1_official": 0.3562,
+     "v2_question": 0.3562,
+     "v3_chat": 0.3869,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 0.0,
+     "v1_official": 0.0,
+     "v2_question": 0.0,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev014",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev015",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev016",
+   "constraints": [
+    "adults",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev017",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev018",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev019",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev020",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev021",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.906,
+     "v3_chat": 0.906,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev022",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6934,
+     "v1_official": 0.6934,
+     "v2_question": 0.9197,
+     "v3_chat": 0.6934,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev023",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.8659,
+     "v1_official": 0.8123,
+     "v2_question": 0.7259,
+     "v3_chat": 0.3661,
+     "v4_synonyms": 0.9456
+    },
+    "fix": {
+     "v0_short": 0.9818,
+     "v1_official": 0.9818,
+     "v2_question": 0.9818,
+     "v3_chat": 0.9818,
+     "v4_synonyms": 0.9818
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev024",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev025",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev026",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.5706,
+     "v1_official": 0.5013,
+     "v2_question": 0.5706,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev027",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev028",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev029",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.301,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev030",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6131,
+     "v1_official": 0.0,
+     "v2_question": 0.2184,
+     "v3_chat": 0.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev031",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev032",
+   "constraints": [
+    "race",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev033",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev034",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev035",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev036",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev037",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev038",
+   "constraints": [
+    "wes",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev039",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.5,
+     "v1_official": 0.5,
+     "v2_question": 1.0,
+     "v3_chat": 0.5,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 0.5,
+     "v1_official": 0.5,
+     "v2_question": 0.5,
+     "v3_chat": 0.5,
+     "v4_synonyms": 0.5
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev040",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev041",
+   "constraints": [
+    "adults",
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev042",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.3869,
+     "v1_official": 0.4218,
+     "v2_question": 0.6131,
+     "v3_chat": 0.1772,
+     "v4_synonyms": 0.6131
+    },
+    "fix": {
+     "v0_short": 0.1846,
+     "v1_official": 0.1846,
+     "v2_question": 0.1846,
+     "v3_chat": 0.1846,
+     "v4_synonyms": 0.1846
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev043",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev044",
+   "constraints": [
+    "adults",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev045",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev046",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6509,
+     "v1_official": 0.8772,
+     "v2_question": 0.6509,
+     "v3_chat": 0.4413,
+     "v4_synonyms": 0.5706
+    },
+    "fix": {
+     "v0_short": 0.6509,
+     "v1_official": 0.6509,
+     "v2_question": 0.6509,
+     "v3_chat": 0.6934,
+     "v4_synonyms": 0.6934
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev047",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.6934,
+     "v3_chat": 0.8772,
+     "v4_synonyms": 0.9197
+    },
+    "fix": {
+     "v0_short": 0.9197,
+     "v1_official": 0.9197,
+     "v2_question": 0.9197,
+     "v3_chat": 0.9197,
+     "v4_synonyms": 0.9197
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev048",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.8772,
+     "v1_official": 1.0,
+     "v2_question": 0.8772,
+     "v3_chat": 0.5706,
+     "v4_synonyms": 0.6934
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev049",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev050",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev051",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev052",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev053",
+   "constraints": [
+    "gru",
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev054",
+   "constraints": [
+    "wes",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev055",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev056",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev057",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.5,
+     "v2_question": 1.0,
+     "v3_chat": 0.4307,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev058",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev059",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev060",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev061",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev062",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev063",
+   "constraints": [
+    "rnaseq",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev064",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9364,
+     "v1_official": 0.8669,
+     "v2_question": 0.9266,
+     "v3_chat": 0.7818,
+     "v4_synonyms": 0.7264
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev065",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev066",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6934,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev067",
+   "constraints": [
+    "children"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.6309,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": [
+     "atopic",
+     "dermatitis",
+     "under"
+    ]
+   }
+  },
+  {
+   "id": "dev068",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.9829,
+     "v2_question": 1.0,
+     "v3_chat": 0.9829,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev069",
+   "constraints": [
+    "adults",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.4307,
+     "v2_question": 0.6309,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.0
+    },
+    "fix": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.6309
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev070",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.0,
+     "v1_official": 0.0,
+     "v2_question": 0.0,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.0
+    },
+    "fix": {
+     "v0_short": 0.0,
+     "v1_official": 0.0,
+     "v2_question": 0.0,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": [
+     "involving",
+     "profile"
+    ],
+    "v2_question": [
+     "enrolled"
+    ],
+    "v3_chat": null,
+    "v4_synonyms": [
+     "epigenome",
+     "wide"
+    ]
+   }
+  },
+  {
+   "id": "dev071",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev072",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9197,
+     "v1_official": 0.9197,
+     "v2_question": 1.0,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.9197
+    },
+    "fix": {
+     "v0_short": 0.3956,
+     "v1_official": 0.3956,
+     "v2_question": 0.3956,
+     "v3_chat": 0.3956,
+     "v4_synonyms": 0.3956
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev073",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.8175,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev074",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev075",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev076",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev077",
+   "constraints": [
+    "gru",
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev078",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.8503,
+     "v3_chat": 0.4825,
+     "v4_synonyms": 0.9197
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev079",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.1131,
+     "v1_official": 0.1131,
+     "v2_question": 0.2001,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.1131
+    },
+    "fix": {
+     "v0_short": 0.1131,
+     "v1_official": 0.1131,
+     "v2_question": 0.1131,
+     "v3_chat": 0.1131,
+     "v4_synonyms": 0.1131
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev080",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.9059,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev081",
+   "constraints": [
+    "rnaseq",
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev082",
+   "constraints": [
+    "wes",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.6309,
+     "v2_question": 1.0,
+     "v3_chat": 0.5,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev083",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.0,
+     "v1_official": 0.0,
+     "v2_question": 0.2184,
+     "v3_chat": 0.2184,
+     "v4_synonyms": 0.0
+    },
+    "fix": {
+     "v0_short": 0.0,
+     "v1_official": 0.0,
+     "v2_question": 0.0,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev084",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev085",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev086",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.4362,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev087",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev088",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev089",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9197,
+     "v1_official": 0.9197,
+     "v2_question": 0.9197,
+     "v3_chat": 0.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev090",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6934,
+     "v1_official": 0.6934,
+     "v2_question": 0.6934,
+     "v3_chat": 0.5706,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev091",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev092",
+   "constraints": [
+    "adults",
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev093",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.906,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev094",
+   "constraints": [
+    "race",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.0,
+     "v1_official": 0.0,
+     "v2_question": 0.0,
+     "v3_chat": 0.2044,
+     "v4_synonyms": 0.0
+    },
+    "fix": {
+     "v0_short": 0.4228,
+     "v1_official": 0.4228,
+     "v2_question": 0.4228,
+     "v3_chat": 0.4228,
+     "v4_synonyms": 0.4228
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev095",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev096",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.5,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev097",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.9197,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev098",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev099",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.5,
+     "v1_official": 0.5,
+     "v2_question": 0.5,
+     "v3_chat": 0.5,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 0.5,
+     "v1_official": 0.5,
+     "v2_question": 0.5,
+     "v3_chat": 0.5,
+     "v4_synonyms": 0.5
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev100",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev101",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev102",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.3333,
+     "v1_official": 0.0,
+     "v2_question": 0.0,
+     "v3_chat": 0.301,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 0.3333,
+     "v1_official": 0.3333,
+     "v2_question": 0.3333,
+     "v3_chat": 0.3333,
+     "v4_synonyms": 0.3333
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev103",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.8332,
+     "v1_official": 0.8332,
+     "v2_question": 0.7598,
+     "v3_chat": 0.7031,
+     "v4_synonyms": 0.8332
+    },
+    "fix": {
+     "v0_short": 0.8332,
+     "v1_official": 0.8332,
+     "v2_question": 0.8332,
+     "v3_chat": 0.8332,
+     "v4_synonyms": 0.8332
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev104",
+   "constraints": [
+    "adults",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev105",
+   "constraints": [
+    "wgs",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev106",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev107",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev108",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.0,
+     "v3_chat": 0.5,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": [
+     "enrolled"
+    ],
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev109",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev110",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev111",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.9052,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev112",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev113",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 0.6309,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev114",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev115",
+   "constraints": [
+    "gru",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.9197,
+     "v3_chat": 0.8772,
+     "v4_synonyms": 0.9197
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev116",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9829,
+     "v1_official": 0.9829,
+     "v2_question": 0.9829,
+     "v3_chat": 0.5757,
+     "v4_synonyms": 0.9829
+    },
+    "fix": {
+     "v0_short": 0.9829,
+     "v1_official": 0.9829,
+     "v2_question": 0.9829,
+     "v3_chat": 0.9829,
+     "v4_synonyms": 0.9829
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev117",
+   "constraints": [
+    "race",
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.5,
+     "v1_official": 0.4307,
+     "v2_question": 0.3869,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 0.5,
+     "v1_official": 0.4307,
+     "v2_question": 0.4307,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.5
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev118",
+   "constraints": [
+    "children"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6309,
+     "v1_official": 1.0,
+     "v2_question": 0.6309,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": [
+     "hemimegalencephaly",
+     "under"
+    ]
+   }
+  },
+  {
+   "id": "dev119",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.3562,
+     "v1_official": 0.3562,
+     "v2_question": 0.6309,
+     "v3_chat": 0.0,
+     "v4_synonyms": 0.4307
+    },
+    "fix": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.6309
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev120",
+   "constraints": [
+    "wes",
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev121",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6309,
+     "v1_official": 0.3869,
+     "v2_question": 0.5,
+     "v3_chat": 0.3333,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 0.4307,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev122",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev123",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev124",
+   "constraints": [
+    "race",
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev125",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 0.3869,
+     "v3_chat": 0.5,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.6309
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev126",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev127",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9783,
+     "v1_official": 0.9783,
+     "v2_question": 0.9918,
+     "v3_chat": 0.6973,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev128",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev129",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev130",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.3978,
+     "v1_official": 0.3978,
+     "v2_question": 0.0,
+     "v3_chat": 0.6509,
+     "v4_synonyms": 0.5706
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev131",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9197,
+     "v1_official": 0.9197,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev132",
+   "constraints": [
+    "wgs",
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9683,
+     "v1_official": 0.9888,
+     "v2_question": 0.9683,
+     "v3_chat": 0.9453,
+     "v4_synonyms": 0.9951
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev133",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.5,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev134",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev135",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.3869,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev136",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.9829,
+     "v1_official": 0.9829,
+     "v2_question": 0.6534,
+     "v3_chat": 0.7606,
+     "v4_synonyms": 0.9709
+    },
+    "fix": {
+     "v0_short": 0.9829,
+     "v1_official": 0.9829,
+     "v2_question": 0.9829,
+     "v3_chat": 0.9829,
+     "v4_synonyms": 0.9829
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev137",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": [
+     "associated",
+     "malignancy",
+     "myeloid"
+    ],
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev138",
+   "constraints": [
+    "adults",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.4307,
+     "v4_synonyms": 0.3155
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev139",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev140",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev141",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev142",
+   "constraints": [
+    "gru",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev143",
+   "constraints": [
+    "wes",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev144",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev145",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.9675,
+     "v4_synonyms": 1.0
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev146",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.6309
+    },
+    "fix": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.6309
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev147",
+   "constraints": [
+    "methylation",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.5,
+     "v1_official": 0.5,
+     "v2_question": 0.5,
+     "v3_chat": 1.0,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev148",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 0.5,
+     "v1_official": 0.5,
+     "v2_question": 0.4307,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 0.5,
+     "v1_official": 0.5,
+     "v2_question": 0.5,
+     "v3_chat": 0.5,
+     "v4_synonyms": 0.5
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev149",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6934,
+     "v4_synonyms": 0.6934
+    },
+    "fix": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 1.0,
+     "v4_synonyms": 1.0
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  },
+  {
+   "id": "dev150",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "base": {
+     "v0_short": 1.0,
+     "v1_official": 1.0,
+     "v2_question": 1.0,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.5
+    },
+    "fix": {
+     "v0_short": 0.6309,
+     "v1_official": 0.6309,
+     "v2_question": 0.6309,
+     "v3_chat": 0.6309,
+     "v4_synonyms": 0.6309
+    }
+   },
+   "topic_fix": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": null,
+    "v4_synonyms": null
+   }
+  }
+ ],
+ "note": "Silver labels are circular; this measures wording sensitivity, not the official score."
+}
