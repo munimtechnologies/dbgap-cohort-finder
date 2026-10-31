@@ -1,0 +1,108 @@
+{
+ "image_check": "0.1.0",
+ "spark_system": "0.1.0",
+ "python": "3.12.15",
+ "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+ "steps": [
+  {
+   "step": "build",
+   "exit": 0,
+   "seconds": 195.4,
+   "children_peak_mb_so_far": 859.7,
+   "tail": [
+    "[05:35:33] 500000 objects",
+    "objects: {'study': 3578, 'data_dict': 16062, 'var_summary': 16062, 'dataset': 16070, 'variable': 465853, 'genotype': 2122, 'document': 8079, 'analysis': 17277}; unreadable: 0",
+    "3 index files, 7 code files"
+   ]
+  },
+  {
+   "step": "verify",
+   "exit": 0,
+   "seconds": 0.6,
+   "children_peak_mb_so_far": 859.7,
+   "tail": [
+    "code spark_submit.py: same",
+    "code spark_system.py: same",
+    "10 files, 0 not matching"
+   ]
+  },
+  {
+   "step": "devset",
+   "exit": 0,
+   "seconds": 5.2,
+   "children_peak_mb_so_far": 859.7,
+   "tail": [
+    "150 silver needs, 275 relevant labels"
+   ]
+  },
+  {
+   "step": "needs",
+   "exit": 0,
+   "seconds": 0.4,
+   "children_peak_mb_so_far": 859.7,
+   "tail": [
+    "192 needs (150 silver)"
+   ]
+  },
+  {
+   "step": "run",
+   "exit": 0,
+   "seconds": 315.6,
+   "children_peak_mb_so_far": 859.7,
+   "tail": [
+    "{\"k\": 100, \"load_seconds\": 10.63, \"max_need_seconds\": 2.763, \"mean_need_seconds\": 1.584, \"needs\": 192, \"peak_memory_mb\": 313.4, \"sentence_need\": \"0.2.0\", \"studies\": 3578, \"tier\": 0.6, \"total_need_seconds\": 304.22, \"version\": \"0.1.0\"}",
+    "192 needs, 0 problems"
+   ]
+  },
+  {
+   "step": "check",
+   "exit": 0,
+   "seconds": 0.7,
+   "children_peak_mb_so_far": 859.7,
+   "tail": [
+    "192 needs, 0 problems"
+   ]
+  },
+  {
+   "step": "verify-strict",
+   "exit": 0,
+   "seconds": 0.8,
+   "children_peak_mb_so_far": 859.7,
+   "tail": [
+    "code spark_submit.py: same",
+    "code spark_system.py: same",
+    "10 files, 0 not matching"
+   ]
+  }
+ ],
+ "image_index_bytes": {
+  "out/studies.jsonl": 16254225,
+  "data/variables.jsonl.gz": 10432048,
+  "data/var_values.jsonl.gz": 2312708,
+  "MANIFEST.json": 1945
+ },
+ "image_index_total_bytes": 29000926,
+ "image_code_bytes": 158154,
+ "build_folder_total_bytes": 30635280,
+ "outputs": {
+  "manifest": "spark_manifest",
+  "version": "0.1.0",
+  "files": [
+   {
+    "path": "devset.json",
+    "bytes": 28790,
+    "sha256": "39fe10d9885739eecc8bc3c62d153919fd25c42aa0019f6243ae78c2ded5b694"
+   },
+   {
+    "path": "needs.jsonl",
+    "bytes": 23196,
+    "sha256": "b802023d70e2cd22414d16b91e002fe8f73bb7b9cf26746ec4f789a3a62fb638"
+   },
+   {
+    "path": "submission.jsonl",
+    "bytes": 403741,
+    "sha256": "65c6d9e1fe35d2c1e5bdad1e4482d3b1ac9512bb0e5e095dbd1c47806b67523a"
+   }
+  ]
+ }
+}

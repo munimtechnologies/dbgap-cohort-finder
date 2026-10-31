@@ -80,14 +80,39 @@ Before the run, the census was flagged as a risk, because it counts
 out byte-identical in this pair of builds. One pair of seeds doesn't prove it
 always will.
 
+## The Docker system's commands (2026-10-31)
+
+`Dockerfile.spark` builds the index at image build time and keeps only the
+code and four index files. Its commands were run in a `python:3.12-slim`
+container (2 CPUs, 2 GB, `PYTHONHASHSEED=0`), on a different machine from the
+rebuild test above: `spark_system.py build`, `verify`, the same 192 needs,
+`run` under `noegress.py`, `check -k 100` and `verify --strict`. The image
+itself was not built with `docker build`.
+[`image-2026-10-31.json`](image-2026-10-31.json) has each step's exit code,
+time and memory and the sizes. [`image-manifest-2026-10-31.json`](image-manifest-2026-10-31.json)
+is the image's own manifest.
+
+| | Prediction | Result |
+|---|---|---|
+| I1 | 3 index and 7 code files in the manifest; both checks "10 files, 0 not matching" | held |
+| I2 | `run`: 192 needs, 0 problems; 0 network attempts | held |
+| I3 | `check -k 100`: 192 needs, 0 problems | held |
+| I4 | 3,578 studies; 1.5-3.5 s per need on average, <= 10 s at most; load <= 60 s; <= 600 MB | held (1.58 s, 2.76 s, 10.6 s, 313 MB) |
+| I5 | top 10 of the 11 lung and sentence needs equal the 2026-10-30 run; one need with 94 results | held |
+| I6 | build peak <= 1,500 MB | held (860 MB) |
+| I7 | `studies.jsonl`, both `.gz` contents and `submission.jsonl` hash the same as build A above | held |
+
+Both gates held: the 54 unit tests passed, and all seven steps exited 0. The
+image would hold a 29 MB index and 158 KB of code.
+
 ## Limits
 
 - The format check follows the one example record in the Task 2 description.
   Any later guidance from NIH may add rules.
 - The times are from 2 shared CPUs, not from the hardware NIH will use.
-- The rebuild test used one machine, one Python image and one copy of the
-  snapshot. It tests process-level determinism, not other platforms or Python
-  versions.
+- The rebuild tests used two machines, two Python 3.12 images and one copy of
+  the snapshot. They test process-level determinism, not other platforms or
+  Python versions.
 - These runs measure format, time, memory and reproducibility only. They say
   nothing about NDCG against the official expert judgments.
 

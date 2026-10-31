@@ -1,0 +1,32 @@
+# MV2's system for NLM's SPARK dbGaP Task 2 (Munim, Inc.). Apache-2.0 license.
+# Made by MV2 of Munim, Inc. with AI agents.
+#
+# Build: put NLM's snapshot dbgap.tar.gz (about 1.5 GB, linked from the challenge page) next to this file, then
+#   docker build -f Dockerfile.spark -t munim-spark-dbgap .
+# The index is built once here, at image build time, with its SHA-256 manifest in /index/MANIFEST.json.
+# Run with no network:
+#   docker run --rm --network none -v "$PWD/io:/io" munim-spark-dbgap run --needs /io/needs.jsonl \
+#       --out /io/submission.jsonl --team-id <team> --submission-id <team>-run-01 --stats /io/stats.json
+#   docker run --rm --network none munim-spark-dbgap verify --strict
+# The snapshot tarball stays in the build stage; the final image holds only the code and the index.
+
+FROM python:3.12-slim AS build
+ENV PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1
+WORKDIR /app
+COPY cohort_finder.py snapshot.py snapshot_survey.py sentence_need.py spark_submit.py spark_manifest.py spark_system.py ./
+COPY dbgap.tar.gz /tmp/dbgap.tar.gz
+RUN python spark_system.py build --tar /tmp/dbgap.tar.gz --index /index
+
+FROM python:3.12-slim
+LABEL org.opencontainers.image.source="https://github.com/munimtechnologies/dbgap-cohort-finder" \
+      org.opencontainers.image.description="MV2's SPARK dbGaP Task 2 system: rank dbGaP studies for information needs" \
+      org.opencontainers.image.licenses="Apache-2.0"
+ENV PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1 SPARK_INDEX=/index
+WORKDIR /app
+COPY --from=build /app /app
+COPY --from=build /index/MANIFEST.json /index/MANIFEST.json
+COPY --from=build /index/out/studies.jsonl /index/out/studies.jsonl
+COPY --from=build /index/data/variables.jsonl.gz /index/data/variables.jsonl.gz
+COPY --from=build /index/data/var_values.jsonl.gz /index/data/var_values.jsonl.gz
+ENTRYPOINT ["python", "/app/spark_system.py"]
+CMD ["--help"]

@@ -1,0 +1,10641 @@
+{
+ "wording_check": "0.1.0",
+ "spark_submit": "0.1.0",
+ "sentence_need": "0.2.0",
+ "tier": 0.6,
+ "questions": 150,
+ "measured": 150,
+ "unparsed": [],
+ "load_seconds": 11.22,
+ "variants": {
+  "v0_short": {
+   "ndcg@10": 0.8943,
+   "lower_than_v0": 0,
+   "higher_than_v0": 0,
+   "parse_differs": 0,
+   "topic_differs": 0,
+   "loss": 0,
+   "loss_from_parse_differs": 0,
+   "by_constraint": {
+    "adults": {
+     "needs": 30,
+     "ndcg@10": 0.883
+    },
+    "children": {
+     "needs": 3,
+     "ndcg@10": 0.7539
+    },
+    "gru": {
+     "needs": 55,
+     "ndcg@10": 0.9392
+    },
+    "methylation": {
+     "needs": 8,
+     "ndcg@10": 0.7689
+    },
+    "race": {
+     "needs": 21,
+     "ndcg@10": 0.7122
+    },
+    "rnaseq": {
+     "needs": 30,
+     "ndcg@10": 0.9371
+    },
+    "wes": {
+     "needs": 27,
+     "ndcg@10": 0.9915
+    },
+    "wgs": {
+     "needs": 22,
+     "ndcg@10": 0.9311
+    }
+   },
+   "mean_seconds": 1.205
+  },
+  "v1_official": {
+   "ndcg@10": 0.8656,
+   "lower_than_v0": 18,
+   "higher_than_v0": 5,
+   "parse_differs": 3,
+   "topic_differs": 3,
+   "loss": 5.0779,
+   "loss_from_parse_differs": 0.0693,
+   "by_constraint": {
+    "adults": {
+     "needs": 30,
+     "ndcg@10": 0.8353
+    },
+    "children": {
+     "needs": 3,
+     "ndcg@10": 0.7539
+    },
+    "gru": {
+     "needs": 55,
+     "ndcg@10": 0.921
+    },
+    "methylation": {
+     "needs": 8,
+     "ndcg@10": 0.7972
+    },
+    "race": {
+     "needs": 21,
+     "ndcg@10": 0.6789
+    },
+    "rnaseq": {
+     "needs": 30,
+     "ndcg@10": 0.8968
+    },
+    "wes": {
+     "needs": 27,
+     "ndcg@10": 0.9412
+    },
+    "wgs": {
+     "needs": 22,
+     "ndcg@10": 0.8859
+    }
+   },
+   "mean_seconds": 1.28
+  },
+  "v2_question": {
+   "ndcg@10": 0.8754,
+   "lower_than_v0": 24,
+   "higher_than_v0": 12,
+   "parse_differs": 3,
+   "topic_differs": 3,
+   "loss": 5.647,
+   "loss_from_parse_differs": 1.1131,
+   "by_constraint": {
+    "adults": {
+     "needs": 30,
+     "ndcg@10": 0.8452
+    },
+    "children": {
+     "needs": 3,
+     "ndcg@10": 0.877
+    },
+    "gru": {
+     "needs": 55,
+     "ndcg@10": 0.9253
+    },
+    "methylation": {
+     "needs": 8,
+     "ndcg@10": 0.7689
+    },
+    "race": {
+     "needs": 21,
+     "ndcg@10": 0.7265
+    },
+    "rnaseq": {
+     "needs": 30,
+     "ndcg@10": 0.9186
+    },
+    "wes": {
+     "needs": 27,
+     "ndcg@10": 0.9489
+    },
+    "wgs": {
+     "needs": 22,
+     "ndcg@10": 0.8813
+    }
+   },
+   "mean_seconds": 1.465
+  },
+  "v3_chat": {
+   "ndcg@10": 0.7782,
+   "lower_than_v0": 56,
+   "higher_than_v0": 9,
+   "parse_differs": 2,
+   "topic_differs": 150,
+   "loss": 19.7278,
+   "loss_from_parse_differs": 0.5,
+   "by_constraint": {
+    "adults": {
+     "needs": 30,
+     "ndcg@10": 0.74
+    },
+    "children": {
+     "needs": 3,
+     "ndcg@10": 0.877
+    },
+    "gru": {
+     "needs": 55,
+     "ndcg@10": 0.8598
+    },
+    "methylation": {
+     "needs": 8,
+     "ndcg@10": 0.5737
+    },
+    "race": {
+     "needs": 21,
+     "ndcg@10": 0.6384
+    },
+    "rnaseq": {
+     "needs": 30,
+     "ndcg@10": 0.7728
+    },
+    "wes": {
+     "needs": 27,
+     "ndcg@10": 0.8654
+    },
+    "wgs": {
+     "needs": 22,
+     "ndcg@10": 0.8952
+    }
+   },
+   "mean_seconds": 1.465
+  },
+  "v4_synonyms": {
+   "ndcg@10": 0.8846,
+   "lower_than_v0": 17,
+   "higher_than_v0": 17,
+   "parse_differs": 0,
+   "topic_differs": 4,
+   "loss": 4.8679,
+   "loss_from_parse_differs": 0,
+   "by_constraint": {
+    "adults": {
+     "needs": 30,
+     "ndcg@10": 0.8238
+    },
+    "children": {
+     "needs": 3,
+     "ndcg@10": 0.8333
+    },
+    "gru": {
+     "needs": 55,
+     "ndcg@10": 0.9507
+    },
+    "methylation": {
+     "needs": 8,
+     "ndcg@10": 0.6502
+    },
+    "race": {
+     "needs": 21,
+     "ndcg@10": 0.7122
+    },
+    "rnaseq": {
+     "needs": 30,
+     "ndcg@10": 0.8619
+    },
+    "wes": {
+     "needs": 27,
+     "ndcg@10": 0.974
+    },
+    "wgs": {
+     "needs": 22,
+     "ndcg@10": 0.983
+    }
+   },
+   "mean_seconds": 0.772
+  }
+ },
+ "per_need": [
+  {
+   "id": "dev001",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.11,
+    "v1_official": 1.279,
+    "v2_question": 1.407,
+    "v3_chat": 1.824,
+    "v4_synonyms": 1.164
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "allergy",
+     "immunology",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002966.v1.p1",
+     "phs001703.v5.p1",
+     "phs003841.v1.p1"
+    ],
+    "v1_official": [
+     "phs002966.v1.p1",
+     "phs001703.v5.p1",
+     "phs003841.v1.p1"
+    ],
+    "v2_question": [
+     "phs002966.v1.p1",
+     "phs001703.v5.p1",
+     "phs002048.v2.p1"
+    ],
+    "v3_chat": [
+     "phs002966.v1.p1",
+     "phs001703.v5.p1",
+     "phs003841.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002966.v1.p1",
+     "phs003841.v1.p1",
+     "phs002048.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "allergy",
+    "immunology"
+   ]
+  },
+  {
+   "id": "dev002",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.6171,
+    "v1_official": 0.6171,
+    "v2_question": 0.6124,
+    "v3_chat": 0.7565,
+    "v4_synonyms": 0.6171
+   },
+   "seconds": {
+    "v0_short": 0.065,
+    "v1_official": 0.082,
+    "v2_question": 0.875,
+    "v3_chat": 1.364,
+    "v4_synonyms": 0.085
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "alcoholism",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002140.v1.p1",
+     "phs000125.v1.p1",
+     "phs000976.v3.p1"
+    ],
+    "v1_official": [
+     "phs002140.v1.p1",
+     "phs000125.v1.p1",
+     "phs000976.v3.p1"
+    ],
+    "v2_question": [
+     "phs002140.v1.p1",
+     "phs000125.v1.p1",
+     "phs000976.v3.p1"
+    ],
+    "v3_chat": [
+     "phs000125.v1.p1",
+     "phs002140.v1.p1",
+     "phs000976.v3.p1"
+    ],
+    "v4_synonyms": [
+     "phs002140.v1.p1",
+     "phs000125.v1.p1",
+     "phs000976.v3.p1"
+    ]
+   },
+   "topic_v0": [
+    "alcoholism"
+   ]
+  },
+  {
+   "id": "dev003",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.6309,
+    "v1_official": 0.0,
+    "v2_question": 0.6309,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 0.129,
+    "v1_official": 0.99,
+    "v2_question": 1.496,
+    "v3_chat": 1.984,
+    "v4_synonyms": 0.153
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": [
+     "involving"
+    ],
+    "v2_question": [
+     "enrolled"
+    ],
+    "v3_chat": [
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001360.v1.p1",
+     "phs000499.v5.p2",
+     "phs000945.v1.p1"
+    ],
+    "v1_official": [
+     "phs001401.v2.p1",
+     "phs001238.v2.p1",
+     "phs003770.v1.p1"
+    ],
+    "v2_question": [
+     "phs000954.v5.p2",
+     "phs000499.v5.p2",
+     "phs003740.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001210.v1.p1",
+     "phs003593.v2.p1",
+     "phs000746.v3.p3"
+    ],
+    "v4_synonyms": [
+     "phs001360.v1.p1",
+     "phs000499.v5.p2",
+     "phs000945.v1.p1"
+    ]
+   },
+   "topic_v0": []
+  },
+  {
+   "id": "dev004",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 2.898,
+    "v1_official": 2.859,
+    "v2_question": 2.707,
+    "v3_chat": 2.694,
+    "v4_synonyms": 2.603
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "covid",
+     "inflammatory",
+     "m",
+     "multisystem",
+     "related"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002770.v1.p1",
+     "phs002245.v1.p1",
+     "phs002945.v1.p1"
+    ],
+    "v1_official": [
+     "phs002770.v1.p1",
+     "phs002245.v1.p1",
+     "phs002945.v1.p1"
+    ],
+    "v2_question": [
+     "phs002770.v1.p1",
+     "phs002245.v1.p1",
+     "phs002945.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002770.v1.p1",
+     "phs002245.v1.p1",
+     "phs002945.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002770.v1.p1",
+     "phs002245.v1.p1",
+     "phs002945.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "covid",
+    "inflammatory",
+    "multisystem",
+    "related"
+   ]
+  },
+  {
+   "id": "dev005",
+   "constraints": [
+    "gru",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 0.3066,
+    "v1_official": 0.0,
+    "v2_question": 0.2641,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.2641
+   },
+   "seconds": {
+    "v0_short": 2.138,
+    "v1_official": 2.056,
+    "v2_question": 2.087,
+    "v3_chat": 2.05,
+    "v4_synonyms": 1.876
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "analysis",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003749.v1.p1",
+     "phs003445.v1.p1",
+     "phs002315.v1.p1"
+    ],
+    "v1_official": [
+     "phs003445.v1.p1",
+     "phs003749.v1.p1",
+     "phs002449.v1.p1"
+    ],
+    "v2_question": [
+     "phs001750.v1.p1",
+     "phs003749.v1.p1",
+     "phs003445.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001205.v1.p1",
+     "phs004285.v1.p1",
+     "phs003229.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000835.v7.p1",
+     "phs000836.v7.p1",
+     "phs000834.v7.p1"
+    ]
+   },
+   "topic_v0": [
+    "analysis"
+   ]
+  },
+  {
+   "id": "dev006",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 2.012,
+    "v1_official": 1.801,
+    "v2_question": 2.054,
+    "v3_chat": 1.388,
+    "v4_synonyms": 0.449
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "diabetic",
+     "m",
+     "retinopathy"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002501.v1.p1",
+     "phs001003.v4.p1",
+     "phs001272.v2.p1"
+    ],
+    "v1_official": [
+     "phs002501.v1.p1",
+     "phs001003.v4.p1",
+     "phs001272.v2.p1"
+    ],
+    "v2_question": [
+     "phs002501.v1.p1",
+     "phs001272.v2.p1",
+     "phs001003.v4.p1"
+    ],
+    "v3_chat": [
+     "phs002501.v1.p1",
+     "phs001003.v4.p1",
+     "phs001272.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs002501.v1.p1",
+     "phs001003.v4.p1",
+     "phs001272.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "diabetic",
+    "retinopathy"
+   ]
+  },
+  {
+   "id": "dev007",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.264,
+    "v1_official": 1.244,
+    "v2_question": 1.54,
+    "v3_chat": 1.27,
+    "v4_synonyms": 0.063
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cleft",
+     "m",
+     "orofacial"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002626.v1.p1",
+     "phs003893.v1.p1",
+     "phs001997.v1.p1"
+    ],
+    "v1_official": [
+     "phs002626.v1.p1",
+     "phs003893.v1.p1",
+     "phs001997.v1.p1"
+    ],
+    "v2_question": [
+     "phs002626.v1.p1",
+     "phs003893.v1.p1",
+     "phs001997.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002626.v1.p1",
+     "phs003893.v1.p1",
+     "phs000455.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002626.v1.p1",
+     "phs003893.v1.p1",
+     "phs001997.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "cleft",
+    "orofacial"
+   ]
+  },
+  {
+   "id": "dev008",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.79,
+    "v1_official": 1.609,
+    "v2_question": 1.901,
+    "v3_chat": 1.557,
+    "v4_synonyms": 0.31
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "focal",
+     "glomerulosclerosis",
+     "m",
+     "segmental"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000777.v1.p1",
+     "phs002128.v1.p1",
+     "phs000539.v1.p1"
+    ],
+    "v1_official": [
+     "phs000777.v1.p1",
+     "phs002128.v1.p1",
+     "phs001489.v4.p2"
+    ],
+    "v2_question": [
+     "phs000777.v1.p1",
+     "phs002128.v1.p1",
+     "phs000539.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000777.v1.p1",
+     "phs001558.v2.p1",
+     "phs001489.v4.p2"
+    ],
+    "v4_synonyms": [
+     "phs000777.v1.p1",
+     "phs001489.v4.p2",
+     "phs001558.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "focal",
+    "glomerulosclerosis",
+    "segmental"
+   ]
+  },
+  {
+   "id": "dev009",
+   "constraints": [
+    "children"
+   ],
+   "ndcg": {
+    "v0_short": 0.6309,
+    "v1_official": 0.6309,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 0.487,
+    "v1_official": 2.449,
+    "v2_question": 1.234,
+    "v3_chat": 1.811,
+    "v4_synonyms": 0.531
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "premature"
+    ],
+    "v4_synonyms": [
+     "premature",
+     "under"
+    ]
+   },
+   "top3": {
+    "v0_short": [
+     "phs001347.v3.p2",
+     "phs001297.v1.p1",
+     "phs000353.v1.p1"
+    ],
+    "v1_official": [
+     "phs000332.v3.p2",
+     "phs001297.v1.p1",
+     "phs000353.v1.p1"
+    ],
+    "v2_question": [
+     "phs001297.v1.p1",
+     "phs000103.v1.p1",
+     "phs001347.v3.p2"
+    ],
+    "v3_chat": [
+     "phs001523.v2.p1",
+     "phs001297.v1.p1",
+     "phs001055.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002075.v1.p1",
+     "phs001523.v2.p1",
+     "phs001297.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "premature"
+   ]
+  },
+  {
+   "id": "dev010",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 2.121,
+    "v1_official": 1.635,
+    "v2_question": 2.096,
+    "v3_chat": 1.688,
+    "v4_synonyms": 0.948
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "development",
+     "growth",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000825.v1.p1",
+     "phs000731.v2.p1",
+     "phs001272.v2.p1"
+    ],
+    "v1_official": [
+     "phs000825.v1.p1",
+     "phs000731.v2.p1",
+     "phs001272.v2.p1"
+    ],
+    "v2_question": [
+     "phs000825.v1.p1",
+     "phs000731.v2.p1",
+     "phs001272.v2.p1"
+    ],
+    "v3_chat": [
+     "phs000825.v1.p1",
+     "phs001178.v1.p1",
+     "phs000731.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs000825.v1.p1",
+     "phs000731.v2.p1",
+     "phs001272.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "development",
+    "growth"
+   ]
+  },
+  {
+   "id": "dev011",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.9197,
+    "v1_official": 0.9197,
+    "v2_question": 0.6934,
+    "v3_chat": 0.6241,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.591,
+    "v1_official": 0.572,
+    "v2_question": 1.224,
+    "v3_chat": 1.587,
+    "v4_synonyms": 0.366
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "metaplasia"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002566.v1.p1",
+     "phs001761.v1.p1",
+     "phs003648.v1.p1"
+    ],
+    "v1_official": [
+     "phs002566.v1.p1",
+     "phs001761.v1.p1",
+     "phs003648.v1.p1"
+    ],
+    "v2_question": [
+     "phs001761.v1.p1",
+     "phs003648.v1.p1",
+     "phs002566.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001912.v1.p1",
+     "phs002566.v1.p1",
+     "phs001761.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002566.v1.p1",
+     "phs003648.v1.p1",
+     "phs001761.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "metaplasia"
+   ]
+  },
+  {
+   "id": "dev012",
+   "constraints": [
+    "wes",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.6309,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 2.397,
+    "v1_official": 2.379,
+    "v2_question": 2.778,
+    "v3_chat": 2.683,
+    "v4_synonyms": 2.276
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "parkinson"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001103.v1.p2",
+     "phs000908.v1.p1",
+     "phs000376.v1.p1"
+    ],
+    "v1_official": [
+     "phs000908.v1.p1",
+     "phs001103.v1.p2",
+     "phs000376.v1.p1"
+    ],
+    "v2_question": [
+     "phs001103.v1.p2",
+     "phs000908.v1.p1",
+     "phs000376.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000908.v1.p1",
+     "phs001103.v1.p2",
+     "phs000376.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001103.v1.p2",
+     "phs000376.v1.p1",
+     "phs002010.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "parkinson"
+   ]
+  },
+  {
+   "id": "dev013",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 0.3869,
+    "v1_official": 0.3562,
+    "v2_question": 0.3562,
+    "v3_chat": 0.3869,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 2.373,
+    "v1_official": 2.463,
+    "v2_question": 2.301,
+    "v3_chat": 2.296,
+    "v4_synonyms": 1.968
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "abnormality",
+     "congenital",
+     "hereditary",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002362.v1.p1",
+     "phs003470.v1.p1",
+     "phs004602.v1.p1"
+    ],
+    "v1_official": [
+     "phs003470.v1.p1",
+     "phs004642.v1.p1",
+     "phs004602.v1.p1"
+    ],
+    "v2_question": [
+     "phs002362.v1.p1",
+     "phs002110.v1.p1",
+     "phs003470.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002362.v1.p1",
+     "phs003470.v1.p1",
+     "phs004642.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002362.v1.p1",
+     "phs003470.v1.p1",
+     "phs000564.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "abnormality",
+    "congenital",
+    "hereditary"
+   ]
+  },
+  {
+   "id": "dev014",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.514,
+    "v1_official": 0.541,
+    "v2_question": 1.035,
+    "v3_chat": 1.502,
+    "v4_synonyms": 0.352
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "meningioma"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000552.v2.p1",
+     "phs003707.v2.p1",
+     "phs003268.v1.p1"
+    ],
+    "v1_official": [
+     "phs000552.v2.p1",
+     "phs003707.v2.p1",
+     "phs003268.v1.p1"
+    ],
+    "v2_question": [
+     "phs000552.v2.p1",
+     "phs003707.v2.p1",
+     "phs003268.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000552.v2.p1",
+     "phs000937.v1.p1",
+     "phs003707.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs000552.v2.p1",
+     "phs003707.v2.p1",
+     "phs003268.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "meningioma"
+   ]
+  },
+  {
+   "id": "dev015",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.913,
+    "v1_official": 1.13,
+    "v2_question": 1.268,
+    "v3_chat": 1.463,
+    "v4_synonyms": 1.041
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "ptld"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002794.v2.p1",
+     "phs002795.v1.p1",
+     "phs002793.v2.p1"
+    ],
+    "v1_official": [
+     "phs002794.v2.p1",
+     "phs002795.v1.p1",
+     "phs002793.v2.p1"
+    ],
+    "v2_question": [
+     "phs002794.v2.p1",
+     "phs002795.v1.p1",
+     "phs002793.v2.p1"
+    ],
+    "v3_chat": [
+     "phs002794.v2.p1",
+     "phs002795.v1.p1",
+     "phs003545.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002794.v2.p1",
+     "phs002795.v1.p1",
+     "phs002793.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "ptld"
+   ]
+  },
+  {
+   "id": "dev016",
+   "constraints": [
+    "adults",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.703,
+    "v1_official": 1.716,
+    "v2_question": 2.073,
+    "v3_chat": 1.517,
+    "v4_synonyms": 0.5
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "gastrointestinal",
+     "m",
+     "microbiome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002235.v1.p1",
+     "phs000896.v1.p1",
+     "phs002343.v1.p1"
+    ],
+    "v1_official": [
+     "phs002235.v1.p1",
+     "phs000896.v1.p1",
+     "phs002343.v1.p1"
+    ],
+    "v2_question": [
+     "phs002235.v1.p1",
+     "phs000896.v1.p1",
+     "phs004716.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002235.v1.p1",
+     "phs000896.v1.p1",
+     "phs002199.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002235.v1.p1",
+     "phs001626.v1.p1",
+     "phs000896.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "gastrointestinal",
+    "microbiome"
+   ]
+  },
+  {
+   "id": "dev017",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.416,
+    "v1_official": 0.427,
+    "v2_question": 0.954,
+    "v3_chat": 1.307,
+    "v4_synonyms": 0.416
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cerebellar",
+     "hypoplasia",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001267.v1.p1",
+     "phs001822.v1.p1",
+     "phs002590.v2.p1"
+    ],
+    "v1_official": [
+     "phs001267.v1.p1",
+     "phs001822.v1.p1",
+     "phs002590.v2.p1"
+    ],
+    "v2_question": [
+     "phs001267.v1.p1",
+     "phs001822.v1.p1",
+     "phs002590.v2.p1"
+    ],
+    "v3_chat": [
+     "phs001267.v1.p1",
+     "phs001822.v1.p1",
+     "phs002590.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs001267.v1.p1",
+     "phs001822.v1.p1",
+     "phs002590.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "cerebellar",
+    "hypoplasia"
+   ]
+  },
+  {
+   "id": "dev018",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.88,
+    "v1_official": 1.294,
+    "v2_question": 1.308,
+    "v3_chat": 1.508,
+    "v4_synonyms": 1.196
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cryptorchidism",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001275.v1.p1",
+     "phs000986.v1.p1",
+     "phs001349.v2.p1"
+    ],
+    "v1_official": [
+     "phs001275.v1.p1",
+     "phs000986.v1.p1",
+     "phs001349.v2.p1"
+    ],
+    "v2_question": [
+     "phs001275.v1.p1",
+     "phs000986.v1.p1",
+     "phs003475.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001275.v1.p1",
+     "phs004285.v1.p1",
+     "phs002388.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001275.v1.p1",
+     "phs000986.v1.p1",
+     "phs001349.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "cryptorchidism"
+   ]
+  },
+  {
+   "id": "dev019",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.153,
+    "v1_official": 0.856,
+    "v2_question": 1.358,
+    "v3_chat": 1.34,
+    "v4_synonyms": 0.26
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "alopecia",
+     "areata",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002632.v1.p1",
+     "phs003919.v1.p1",
+     "phs000586.v1.p1"
+    ],
+    "v1_official": [
+     "phs002632.v1.p1",
+     "phs003919.v1.p1",
+     "phs000586.v1.p1"
+    ],
+    "v2_question": [
+     "phs002632.v1.p1",
+     "phs003919.v1.p1",
+     "phs000586.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002632.v1.p1",
+     "phs003919.v1.p1",
+     "phs003632.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002632.v1.p1",
+     "phs003919.v1.p1",
+     "phs000586.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "alopecia",
+    "areata"
+   ]
+  },
+  {
+   "id": "dev020",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.6309,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.346,
+    "v1_official": 0.364,
+    "v2_question": 0.947,
+    "v3_chat": 1.358,
+    "v4_synonyms": 0.351
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "leiomyoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001409.v1.p1",
+     "phs002513.v1.p1",
+     "phs003381.v1.p1"
+    ],
+    "v1_official": [
+     "phs001409.v1.p1",
+     "phs002513.v1.p1",
+     "phs003381.v1.p1"
+    ],
+    "v2_question": [
+     "phs002513.v1.p1",
+     "phs001409.v1.p1",
+     "phs003381.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002513.v1.p1",
+     "phs001409.v1.p1",
+     "phs001210.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001409.v1.p1",
+     "phs002513.v1.p1",
+     "phs003381.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "leiomyoma"
+   ]
+  },
+  {
+   "id": "dev021",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.906,
+    "v3_chat": 0.906,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.765,
+    "v1_official": 1.668,
+    "v2_question": 1.856,
+    "v3_chat": 2.037,
+    "v4_synonyms": 1.606
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "adverse",
+     "drug",
+     "effect",
+     "m",
+     "reaction",
+     "related",
+     "side"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001484.v1.p1",
+     "phs002088.v2.p1",
+     "phs003344.v1.p1"
+    ],
+    "v1_official": [
+     "phs001484.v1.p1",
+     "phs002088.v2.p1",
+     "phs003344.v1.p1"
+    ],
+    "v2_question": [
+     "phs002088.v2.p1",
+     "phs001480.v1.p1",
+     "phs001484.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001484.v1.p1",
+     "phs001480.v1.p1",
+     "phs003344.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001484.v1.p1",
+     "phs002088.v2.p1",
+     "phs003344.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "adverse",
+    "drug",
+    "effect",
+    "reaction",
+    "related",
+    "side"
+   ]
+  },
+  {
+   "id": "dev022",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.6934,
+    "v1_official": 0.6934,
+    "v2_question": 0.9197,
+    "v3_chat": 0.6934,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.054,
+    "v1_official": 1.048,
+    "v2_question": 1.394,
+    "v3_chat": 1.79,
+    "v4_synonyms": 1.018
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "disorder",
+     "m",
+     "myeloproliferative"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002185.v2.p1",
+     "phs002121.v1.p1",
+     "phs002308.v1.p1"
+    ],
+    "v1_official": [
+     "phs002185.v2.p1",
+     "phs002121.v1.p1",
+     "phs002308.v1.p1"
+    ],
+    "v2_question": [
+     "phs002308.v1.p1",
+     "phs002185.v2.p1",
+     "phs002121.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002185.v2.p1",
+     "phs002121.v1.p1",
+     "phs002308.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002121.v1.p1",
+     "phs002308.v1.p1",
+     "phs002185.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "disorder",
+    "myeloproliferative"
+   ]
+  },
+  {
+   "id": "dev023",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 0.8659,
+    "v1_official": 0.8123,
+    "v2_question": 0.7259,
+    "v3_chat": 0.3661,
+    "v4_synonyms": 0.9456
+   },
+   "seconds": {
+    "v0_short": 0.995,
+    "v1_official": 0.828,
+    "v2_question": 1.458,
+    "v3_chat": 1.354,
+    "v4_synonyms": 0.293
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "immunotherapy",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001427.v2.p1",
+     "phs004529.v1.p1",
+     "phs001469.v1.p1"
+    ],
+    "v1_official": [
+     "phs001427.v2.p1",
+     "phs001469.v1.p1",
+     "phs004529.v1.p1"
+    ],
+    "v2_question": [
+     "phs002270.v1.p1",
+     "phs001427.v2.p1",
+     "phs001469.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002270.v1.p1",
+     "phs000452.v5.p2",
+     "phs002388.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002323.v2.p1",
+     "phs001427.v2.p1",
+     "phs001469.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "immunotherapy"
+   ]
+  },
+  {
+   "id": "dev024",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.414,
+    "v1_official": 1.282,
+    "v2_question": 1.655,
+    "v3_chat": 1.597,
+    "v4_synonyms": 0.822
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cycle",
+     "disorder",
+     "inborn",
+     "m",
+     "urea"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000776.v1.p1",
+     "phs002095.v1.p1",
+     "phs002632.v1.p1"
+    ],
+    "v1_official": [
+     "phs000776.v1.p1",
+     "phs002095.v1.p1",
+     "phs002632.v1.p1"
+    ],
+    "v2_question": [
+     "phs000776.v1.p1",
+     "phs002095.v1.p1",
+     "phs001272.v2.p1"
+    ],
+    "v3_chat": [
+     "phs000776.v1.p1",
+     "phs002095.v1.p1",
+     "phs002632.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000776.v1.p1",
+     "phs002095.v1.p1",
+     "phs000339.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "cycle",
+    "disorder",
+    "inborn",
+    "urea"
+   ]
+  },
+  {
+   "id": "dev025",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.36,
+    "v1_official": 1.457,
+    "v2_question": 1.566,
+    "v3_chat": 1.302,
+    "v4_synonyms": 0.64
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "andersen",
+     "m",
+     "syndrome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001289.v1.p1",
+     "phs001316.v1.p1",
+     "phs003123.v1.p1"
+    ],
+    "v1_official": [
+     "phs001289.v1.p1",
+     "phs001316.v1.p1",
+     "phs003123.v1.p1"
+    ],
+    "v2_question": [
+     "phs001289.v1.p1",
+     "phs001316.v1.p1",
+     "phs001288.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001289.v1.p1",
+     "phs001316.v1.p1",
+     "phs000455.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001289.v1.p1",
+     "phs001316.v1.p1",
+     "phs003123.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "andersen",
+    "syndrome"
+   ]
+  },
+  {
+   "id": "dev026",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 0.5706,
+    "v1_official": 0.5013,
+    "v2_question": 0.5706,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.683,
+    "v1_official": 1.578,
+    "v2_question": 1.761,
+    "v3_chat": 1.487,
+    "v4_synonyms": 1.049
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "genetic",
+     "m",
+     "variation"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001325.v6.p1",
+     "phs003554.v1.p1",
+     "phs003793.v1.p1"
+    ],
+    "v1_official": [
+     "phs001325.v6.p1",
+     "phs003554.v1.p1",
+     "phs004464.v1.p1"
+    ],
+    "v2_question": [
+     "phs001325.v6.p1",
+     "phs003554.v1.p1",
+     "phs003793.v1.p1"
+    ],
+    "v3_chat": [
+     "phs004339.v1.p1",
+     "phs003793.v1.p1",
+     "phs003694.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003793.v1.p1",
+     "phs004339.v1.p1",
+     "phs004464.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "genetic",
+    "variation"
+   ]
+  },
+  {
+   "id": "dev027",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.365,
+    "v1_official": 0.389,
+    "v2_question": 0.923,
+    "v3_chat": 1.244,
+    "v4_synonyms": 0.386
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "epigenomic",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003194.v1.p1",
+     "phs000724.v12.p16",
+     "phs001990.v1.p1"
+    ],
+    "v1_official": [
+     "phs003194.v1.p1",
+     "phs000724.v12.p16",
+     "phs001990.v1.p1"
+    ],
+    "v2_question": [
+     "phs003194.v1.p1",
+     "phs003959.v1.p1",
+     "phs000724.v12.p16"
+    ],
+    "v3_chat": [
+     "phs003194.v1.p1",
+     "phs003863.v1.p1",
+     "phs000724.v12.p16"
+    ],
+    "v4_synonyms": [
+     "phs003194.v1.p1",
+     "phs000724.v12.p16",
+     "phs001990.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "epigenomic"
+   ]
+  },
+  {
+   "id": "dev028",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.982,
+    "v1_official": 0.832,
+    "v2_question": 1.477,
+    "v3_chat": 1.525,
+    "v4_synonyms": 0.283
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "aureus",
+     "m",
+     "staphylococcus"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001505.v1.p1",
+     "phs001441.v1.p1",
+     "phs003724.v1.p1"
+    ],
+    "v1_official": [
+     "phs001505.v1.p1",
+     "phs001441.v1.p1",
+     "phs001710.v2.p1"
+    ],
+    "v2_question": [
+     "phs001505.v1.p1",
+     "phs001441.v1.p1",
+     "phs003724.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001505.v1.p1",
+     "phs003632.v1.p1",
+     "phs000467.v23.p8"
+    ],
+    "v4_synonyms": [
+     "phs001505.v1.p1",
+     "phs001441.v1.p1",
+     "phs003724.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "aureus",
+    "staphylococcus"
+   ]
+  },
+  {
+   "id": "dev029",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.301,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.136,
+    "v1_official": 1.145,
+    "v2_question": 1.473,
+    "v3_chat": 1.165,
+    "v4_synonyms": 0.065
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "chromatin",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001438.v1.p1",
+     "phs001958.v1.p1",
+     "phs003068.v1.p1"
+    ],
+    "v1_official": [
+     "phs001438.v1.p1",
+     "phs001958.v1.p1",
+     "phs003068.v1.p1"
+    ],
+    "v2_question": [
+     "phs001438.v1.p1",
+     "phs001958.v1.p1",
+     "phs003068.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000021.v3.p2",
+     "phs000019.v1.p1",
+     "phs001187.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001438.v1.p1",
+     "phs003068.v1.p1",
+     "phs001190.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "chromatin"
+   ]
+  },
+  {
+   "id": "dev030",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 0.6131,
+    "v1_official": 0.0,
+    "v2_question": 0.2184,
+    "v3_chat": 0.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.33,
+    "v1_official": 1.072,
+    "v2_question": 1.569,
+    "v3_chat": 1.431,
+    "v4_synonyms": 0.605
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "mutation"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003716.v1.p1",
+     "phs003781.v1.p1",
+     "phs000348.v2.p1"
+    ],
+    "v1_official": [
+     "phs000369.v1.p1",
+     "phs000348.v2.p1",
+     "phs002615.v1.p1"
+    ],
+    "v2_question": [
+     "phs002411.v1.p1",
+     "phs000720.v5.p2",
+     "phs000419.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003781.v1.p1",
+     "phs000748.v7.p4",
+     "phs004425.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003716.v1.p1",
+     "phs001956.v1.p1",
+     "phs000348.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "mutation"
+   ]
+  },
+  {
+   "id": "dev031",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.13,
+    "v1_official": 1.099,
+    "v2_question": 1.313,
+    "v3_chat": 1.056,
+    "v4_synonyms": 0.109
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "degeneration",
+     "m",
+     "macular"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001896.v1.p1",
+     "phs001039.v1.p1",
+     "phs000182.v3.p1"
+    ],
+    "v1_official": [
+     "phs001896.v1.p1",
+     "phs001039.v1.p1",
+     "phs000182.v3.p1"
+    ],
+    "v2_question": [
+     "phs002015.v2.p1",
+     "phs001896.v1.p1",
+     "phs001039.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001039.v1.p1",
+     "phs001896.v1.p1",
+     "phs000684.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001896.v1.p1",
+     "phs001039.v1.p1",
+     "phs001361.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "degeneration",
+    "macular"
+   ]
+  },
+  {
+   "id": "dev032",
+   "constraints": [
+    "race",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.268,
+    "v1_official": 1.242,
+    "v2_question": 1.54,
+    "v3_chat": 1.277,
+    "v4_synonyms": 0.101
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "prematurity",
+     "retinopathy"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002020.v1.p1",
+     "phs002047.v1.p1",
+     "phs000103.v1.p1"
+    ],
+    "v1_official": [
+     "phs002020.v1.p1",
+     "phs002047.v1.p1",
+     "phs000103.v1.p1"
+    ],
+    "v2_question": [
+     "phs002020.v1.p1",
+     "phs002047.v1.p1",
+     "phs000103.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002020.v1.p1",
+     "phs002047.v1.p1",
+     "phs000103.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002020.v1.p1",
+     "phs002047.v1.p1",
+     "phs002501.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "prematurity",
+    "retinopathy"
+   ]
+  },
+  {
+   "id": "dev033",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.104,
+    "v1_official": 1.141,
+    "v2_question": 1.34,
+    "v3_chat": 1.005,
+    "v4_synonyms": 0.008
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "mucopolysaccharidose"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001576.v2.p2",
+     "phs001328.v1.p1",
+     "phs000630.v1.p1"
+    ],
+    "v1_official": [
+     "phs001576.v2.p2",
+     "phs001328.v1.p1",
+     "phs000630.v1.p1"
+    ],
+    "v2_question": [
+     "phs001576.v2.p2",
+     "phs001328.v1.p1",
+     "phs001288.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001576.v2.p2",
+     "phs001328.v1.p1",
+     "phs000021.v3.p2"
+    ],
+    "v4_synonyms": [
+     "phs001576.v2.p2",
+     "phs001328.v1.p1",
+     "phs000017.v3.p1"
+    ]
+   },
+   "topic_v0": [
+    "mucopolysaccharidose"
+   ]
+  },
+  {
+   "id": "dev034",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.285,
+    "v1_official": 1.49,
+    "v2_question": 1.409,
+    "v3_chat": 1.569,
+    "v4_synonyms": 1.188
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "intestinal",
+     "m",
+     "neoplasm"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001772.v3.p2",
+     "phs003141.v1.p1",
+     "phs001936.v1.p1"
+    ],
+    "v1_official": [
+     "phs001772.v3.p2",
+     "phs003141.v1.p1",
+     "phs001936.v1.p1"
+    ],
+    "v2_question": [
+     "phs001772.v3.p2",
+     "phs003141.v1.p1",
+     "phs003648.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001772.v3.p2",
+     "phs003141.v1.p1",
+     "phs002764.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001772.v3.p2",
+     "phs003141.v1.p1",
+     "phs001936.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "intestinal",
+    "neoplasm"
+   ]
+  },
+  {
+   "id": "dev035",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.514,
+    "v1_official": 1.602,
+    "v2_question": 1.691,
+    "v3_chat": 1.434,
+    "v4_synonyms": 1.029
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "atresia",
+     "biliary",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003458.v1.p1",
+     "phs001246.v1.p1",
+     "phs003610.v1.p1"
+    ],
+    "v1_official": [
+     "phs003458.v1.p1",
+     "phs001246.v1.p1",
+     "phs003610.v1.p1"
+    ],
+    "v2_question": [
+     "phs003458.v1.p1",
+     "phs001246.v1.p1",
+     "phs003610.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003458.v1.p1",
+     "phs002207.v2.p1",
+     "phs001246.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003458.v1.p1",
+     "phs001246.v1.p1",
+     "phs003610.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "atresia",
+    "biliary"
+   ]
+  },
+  {
+   "id": "dev036",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.0,
+    "v1_official": 0.831,
+    "v2_question": 1.326,
+    "v3_chat": 1.443,
+    "v4_synonyms": 0.278
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "dystonia",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001733.v1.p1",
+     "phs000707.v2.p1",
+     "phs000546.v1.p1"
+    ],
+    "v1_official": [
+     "phs001733.v1.p1",
+     "phs000707.v2.p1",
+     "phs000660.v1.p1"
+    ],
+    "v2_question": [
+     "phs001733.v1.p1",
+     "phs000707.v2.p1",
+     "phs000546.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001733.v1.p1",
+     "phs000707.v2.p1",
+     "phs000660.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001733.v1.p1",
+     "phs000707.v2.p1",
+     "phs000660.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "dystonia"
+   ]
+  },
+  {
+   "id": "dev037",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.067,
+    "v1_official": 1.191,
+    "v2_question": 1.237,
+    "v3_chat": 1.417,
+    "v4_synonyms": 0.954
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "retina"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001151.v1.p1",
+     "phs000352.v1.p1",
+     "phs001272.v2.p1"
+    ],
+    "v1_official": [
+     "phs001151.v1.p1",
+     "phs000352.v1.p1",
+     "phs001272.v2.p1"
+    ],
+    "v2_question": [
+     "phs001151.v1.p1",
+     "phs000352.v1.p1",
+     "phs001272.v2.p1"
+    ],
+    "v3_chat": [
+     "phs001151.v1.p1",
+     "phs000352.v1.p1",
+     "phs000989.v7.p1"
+    ],
+    "v4_synonyms": [
+     "phs001151.v1.p1",
+     "phs000352.v1.p1",
+     "phs001272.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "retina"
+   ]
+  },
+  {
+   "id": "dev038",
+   "constraints": [
+    "wes",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.549,
+    "v1_official": 1.459,
+    "v2_question": 1.672,
+    "v3_chat": 1.366,
+    "v4_synonyms": 0.434
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "carcinoma",
+     "hepatocellular",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000627.v1.p1",
+     "phs001199.v2.p1",
+     "phs000509.v1.p1"
+    ],
+    "v1_official": [
+     "phs000627.v1.p1",
+     "phs001199.v2.p1",
+     "phs000782.v1.p1"
+    ],
+    "v2_question": [
+     "phs000627.v1.p1",
+     "phs001199.v2.p1",
+     "phs000509.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000627.v1.p1",
+     "phs001199.v2.p1",
+     "phs000782.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000509.v1.p1",
+     "phs000782.v1.p1",
+     "phs000627.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "carcinoma",
+    "hepatocellular"
+   ]
+  },
+  {
+   "id": "dev039",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.5,
+    "v1_official": 0.5,
+    "v2_question": 1.0,
+    "v3_chat": 0.5,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 0.435,
+    "v1_official": 0.514,
+    "v2_question": 1.079,
+    "v3_chat": 1.464,
+    "v4_synonyms": 0.445
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "c",
+     "hepatitis",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002310.v1.p1",
+     "phs000248.v1.p1",
+     "phs000430.v1.p1"
+    ],
+    "v1_official": [
+     "phs002310.v1.p1",
+     "phs000248.v1.p1",
+     "phs000430.v1.p1"
+    ],
+    "v2_question": [
+     "phs000430.v1.p1",
+     "phs002310.v1.p1",
+     "phs000248.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002310.v1.p1",
+     "phs000248.v1.p1",
+     "phs000430.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002310.v1.p1",
+     "phs000248.v1.p1",
+     "phs000430.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "c",
+    "hepatitis"
+   ]
+  },
+  {
+   "id": "dev040",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.263,
+    "v1_official": 1.237,
+    "v2_question": 1.374,
+    "v3_chat": 1.318,
+    "v4_synonyms": 0.602
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "distress",
+     "m",
+     "respiratory",
+     "syndrome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs004492.v1.p1",
+     "phs003714.v1.p1",
+     "phs003783.v1.p1"
+    ],
+    "v1_official": [
+     "phs004492.v1.p1",
+     "phs003714.v1.p1",
+     "phs003783.v1.p1"
+    ],
+    "v2_question": [
+     "phs004492.v1.p1",
+     "phs004032.v1.p1",
+     "phs003783.v1.p1"
+    ],
+    "v3_chat": [
+     "phs004492.v1.p1",
+     "phs003714.v1.p1",
+     "phs003783.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs004492.v1.p1",
+     "phs003714.v1.p1",
+     "phs003783.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "distress",
+    "respiratory",
+    "syndrome"
+   ]
+  },
+  {
+   "id": "dev041",
+   "constraints": [
+    "adults",
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.709,
+    "v1_official": 1.621,
+    "v2_question": 1.945,
+    "v3_chat": 1.786,
+    "v4_synonyms": 0.72
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "reference",
+     "value"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000424.v11.p2",
+     "phs000400.v6.p1",
+     "phs000403.v3.p3"
+    ],
+    "v1_official": [
+     "phs000424.v11.p2",
+     "phs002683.v1.p1",
+     "phs000399.v1.p2"
+    ],
+    "v2_question": [
+     "phs000424.v11.p2",
+     "phs003435.v1.p1",
+     "phs000616.v2.p2"
+    ],
+    "v3_chat": [
+     "phs000424.v11.p2",
+     "phs000400.v6.p1",
+     "phs000572.v8.p4"
+    ],
+    "v4_synonyms": [
+     "phs000424.v11.p2",
+     "phs002803.v1.p1",
+     "phs000870.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "reference",
+    "value"
+   ]
+  },
+  {
+   "id": "dev042",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 0.3869,
+    "v1_official": 0.4218,
+    "v2_question": 0.6131,
+    "v3_chat": 0.1772,
+    "v4_synonyms": 0.6131
+   },
+   "seconds": {
+    "v0_short": 1.259,
+    "v1_official": 1.331,
+    "v2_question": 1.425,
+    "v3_chat": 1.593,
+    "v4_synonyms": 1.299
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "carcinoma",
+     "m",
+     "small"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002295.v1.p1",
+     "phs003628.v1.p1",
+     "phs002327.v1.p1"
+    ],
+    "v1_official": [
+     "phs002295.v1.p1",
+     "phs003113.v1.p1",
+     "phs002176.v2.p1"
+    ],
+    "v2_question": [
+     "phs003628.v1.p1",
+     "phs002327.v1.p1",
+     "phs002260.v2.p1"
+    ],
+    "v3_chat": [
+     "phs003416.v1.p1",
+     "phs002541.v1.p1",
+     "phs003113.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003628.v1.p1",
+     "phs003689.v1.p1",
+     "phs003416.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "carcinoma",
+    "small"
+   ]
+  },
+  {
+   "id": "dev043",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.772,
+    "v1_official": 0.795,
+    "v2_question": 1.244,
+    "v3_chat": 1.483,
+    "v4_synonyms": 0.789
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "ovary",
+     "polycystic",
+     "syndrome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000368.v1.p1",
+     "phs004025.v1.p1",
+     "phs004088.v2.p1"
+    ],
+    "v1_official": [
+     "phs000368.v1.p1",
+     "phs004025.v1.p1",
+     "phs004088.v2.p1"
+    ],
+    "v2_question": [
+     "phs000368.v1.p1",
+     "phs004025.v1.p1",
+     "phs004088.v2.p1"
+    ],
+    "v3_chat": [
+     "phs000368.v1.p1",
+     "phs004025.v1.p1",
+     "phs004088.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs000368.v1.p1",
+     "phs004025.v1.p1",
+     "phs004088.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "ovary",
+    "polycystic",
+    "syndrome"
+   ]
+  },
+  {
+   "id": "dev044",
+   "constraints": [
+    "adults",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.303,
+    "v1_official": 1.548,
+    "v2_question": 1.631,
+    "v3_chat": 1.861,
+    "v4_synonyms": 1.493
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "osteoarthritis"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003581.v2.p1",
+     "phs002771.v1.p1",
+     "phs003417.v2.p1"
+    ],
+    "v1_official": [
+     "phs003581.v2.p1",
+     "phs002771.v1.p1",
+     "phs003417.v2.p1"
+    ],
+    "v2_question": [
+     "phs003581.v2.p1",
+     "phs002771.v1.p1",
+     "phs003417.v2.p1"
+    ],
+    "v3_chat": [
+     "phs003581.v2.p1",
+     "phs002771.v1.p1",
+     "phs003417.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs003581.v2.p1",
+     "phs002771.v1.p1",
+     "phs004112.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "osteoarthritis"
+   ]
+  },
+  {
+   "id": "dev045",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.062,
+    "v1_official": 0.893,
+    "v2_question": 1.381,
+    "v3_chat": 1.334,
+    "v4_synonyms": 0.286
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "dystrophy",
+     "endothelial",
+     "fuch",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001834.v1.p1",
+     "phs000392.v1.p1",
+     "phs001046.v1.p1"
+    ],
+    "v1_official": [
+     "phs001834.v1.p1",
+     "phs000392.v1.p1",
+     "phs000722.v3.p2"
+    ],
+    "v2_question": [
+     "phs001834.v1.p1",
+     "phs000392.v1.p1",
+     "phs000722.v3.p2"
+    ],
+    "v3_chat": [
+     "phs001834.v1.p1",
+     "phs000392.v1.p1",
+     "phs001046.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001834.v1.p1",
+     "phs000392.v1.p1",
+     "phs000655.v3.p1"
+    ]
+   },
+   "topic_v0": [
+    "dystrophy",
+    "endothelial",
+    "fuch"
+   ]
+  },
+  {
+   "id": "dev046",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "v0_short": 0.6509,
+    "v1_official": 0.8772,
+    "v2_question": 0.6509,
+    "v3_chat": 0.4413,
+    "v4_synonyms": 0.5706
+   },
+   "seconds": {
+    "v0_short": 0.825,
+    "v1_official": 0.931,
+    "v2_question": 1.138,
+    "v3_chat": 1.278,
+    "v4_synonyms": 0.506
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "adenocarcinoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001169.v2.p1",
+     "phs001752.v2.p1",
+     "phs001573.v1.p1"
+    ],
+    "v1_official": [
+     "phs001752.v2.p1",
+     "phs001169.v2.p1",
+     "phs001573.v1.p1"
+    ],
+    "v2_question": [
+     "phs001169.v2.p1",
+     "phs001752.v2.p1",
+     "phs001573.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001169.v2.p1",
+     "phs001921.v1.p1",
+     "phs001573.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001573.v1.p1",
+     "phs001169.v2.p1",
+     "phs001752.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "adenocarcinoma"
+   ]
+  },
+  {
+   "id": "dev047",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.6934,
+    "v3_chat": 0.8772,
+    "v4_synonyms": 0.9197
+   },
+   "seconds": {
+    "v0_short": 1.448,
+    "v1_official": 1.48,
+    "v2_question": 1.714,
+    "v3_chat": 1.453,
+    "v4_synonyms": 0.342
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "vasculitis"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001715.v1.p1",
+     "phs001382.v1.p1",
+     "phs001712.v1.p1"
+    ],
+    "v1_official": [
+     "phs001715.v1.p1",
+     "phs001382.v1.p1",
+     "phs001712.v1.p1"
+    ],
+    "v2_question": [
+     "phs001712.v1.p1",
+     "phs001382.v1.p1",
+     "phs001715.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001715.v1.p1",
+     "phs001712.v1.p1",
+     "phs000588.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001382.v1.p1",
+     "phs001712.v1.p1",
+     "phs001715.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "vasculitis"
+   ]
+  },
+  {
+   "id": "dev048",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.8772,
+    "v1_official": 1.0,
+    "v2_question": 0.8772,
+    "v3_chat": 0.5706,
+    "v4_synonyms": 0.6934
+   },
+   "seconds": {
+    "v0_short": 1.092,
+    "v1_official": 2.081,
+    "v2_question": 1.665,
+    "v3_chat": 1.948,
+    "v4_synonyms": 1.362
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "depressive",
+     "disorder",
+     "m",
+     "major"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000020.v2.p1",
+     "phs001631.v1.p1",
+     "phs000486.v1.p1"
+    ],
+    "v1_official": [
+     "phs000020.v2.p1",
+     "phs000670.v1.p1",
+     "phs002395.v1.p1"
+    ],
+    "v2_question": [
+     "phs000020.v2.p1",
+     "phs001631.v1.p1",
+     "phs000486.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000486.v1.p1",
+     "phs001631.v1.p1",
+     "phs000020.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs001631.v1.p1",
+     "phs000020.v2.p1",
+     "phs000670.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "depressive",
+    "disorder",
+    "major"
+   ]
+  },
+  {
+   "id": "dev049",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 1.308,
+    "v1_official": 1.291,
+    "v2_question": 1.445,
+    "v3_chat": 1.757,
+    "v4_synonyms": 0.95
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "lung",
+     "m",
+     "neoplasm"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002992.v1.p1",
+     "phs000239.v2.p1",
+     "phs003416.v1.p1"
+    ],
+    "v1_official": [
+     "phs002992.v1.p1",
+     "phs000239.v2.p1",
+     "phs003416.v1.p1"
+    ],
+    "v2_question": [
+     "phs002992.v1.p1",
+     "phs000239.v2.p1",
+     "phs003416.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002992.v1.p1",
+     "phs000239.v2.p1",
+     "phs003416.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000239.v2.p1",
+     "phs002992.v1.p1",
+     "phs003416.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "lung",
+    "neoplasm"
+   ]
+  },
+  {
+   "id": "dev050",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.262,
+    "v1_official": 1.48,
+    "v2_question": 1.446,
+    "v3_chat": 1.117,
+    "v4_synonyms": 0.171
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "biology",
+     "computational",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001224.v1.p1",
+     "phs003166.v1.p1",
+     "phs003195.v1.p1"
+    ],
+    "v1_official": [
+     "phs001224.v1.p1",
+     "phs003166.v1.p1",
+     "phs003195.v1.p1"
+    ],
+    "v2_question": [
+     "phs001224.v1.p1",
+     "phs003166.v1.p1",
+     "phs003195.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001224.v1.p1",
+     "phs003195.v1.p1",
+     "phs000199.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001224.v1.p1",
+     "phs003195.v1.p1",
+     "phs003166.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "biology",
+    "computational"
+   ]
+  },
+  {
+   "id": "dev051",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.119,
+    "v1_official": 1.17,
+    "v2_question": 1.472,
+    "v3_chat": 1.455,
+    "v4_synonyms": 0.567
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cutaneous",
+     "m",
+     "malignant",
+     "melanoma"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001177.v2.p1",
+     "phs000823.v1.p1",
+     "phs000785.v1.p1"
+    ],
+    "v1_official": [
+     "phs001177.v2.p1",
+     "phs000823.v1.p1",
+     "phs000785.v1.p1"
+    ],
+    "v2_question": [
+     "phs001177.v2.p1",
+     "phs000823.v1.p1",
+     "phs000785.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001177.v2.p1",
+     "phs000785.v1.p1",
+     "phs000823.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001177.v2.p1",
+     "phs000823.v1.p1",
+     "phs003919.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "cutaneous",
+    "malignant",
+    "melanoma"
+   ]
+  },
+  {
+   "id": "dev052",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.646,
+    "v1_official": 1.618,
+    "v2_question": 2.235,
+    "v3_chat": 1.607,
+    "v4_synonyms": 0.869
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "syndrome",
+     "tourette"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000415.v1.p1",
+     "phs003328.v1.p1",
+     "phs000339.v2.p1"
+    ],
+    "v1_official": [
+     "phs000415.v1.p1",
+     "phs000987.v1.p1",
+     "phs001246.v1.p1"
+    ],
+    "v2_question": [
+     "phs000415.v1.p1",
+     "phs000987.v1.p1",
+     "phs000290.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000415.v1.p1",
+     "phs000455.v1.p1",
+     "phs003348.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000415.v1.p1",
+     "phs003475.v1.p1",
+     "phs003348.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "syndrome",
+    "tourette"
+   ]
+  },
+  {
+   "id": "dev053",
+   "constraints": [
+    "gru",
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.936,
+    "v1_official": 1.997,
+    "v2_question": 1.908,
+    "v3_chat": 1.81,
+    "v4_synonyms": 1.661
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "crohn",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001571.v1.p1",
+     "phs001076.v1.p1",
+     "phs003881.v1.p1"
+    ],
+    "v1_official": [
+     "phs001571.v1.p1",
+     "phs001076.v1.p1",
+     "phs003881.v1.p1"
+    ],
+    "v2_question": [
+     "phs001571.v1.p1",
+     "phs001626.v1.p1",
+     "phs001076.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001571.v1.p1",
+     "phs001210.v1.p1",
+     "phs000019.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001571.v1.p1",
+     "phs003881.v1.p1",
+     "phs003156.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "crohn"
+   ]
+  },
+  {
+   "id": "dev054",
+   "constraints": [
+    "wes",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.453,
+    "v1_official": 1.449,
+    "v2_question": 1.652,
+    "v3_chat": 1.384,
+    "v4_synonyms": 0.293
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cystic",
+     "fibrosis",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000254.v2.p1",
+     "phs000518.v1.p1",
+     "phs002764.v1.p1"
+    ],
+    "v1_official": [
+     "phs000254.v2.p1",
+     "phs002764.v1.p1",
+     "phs000518.v1.p1"
+    ],
+    "v2_question": [
+     "phs000254.v2.p1",
+     "phs000518.v1.p1",
+     "phs002764.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000254.v2.p1",
+     "phs002764.v1.p1",
+     "phs000518.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000254.v2.p1",
+     "phs000518.v1.p1",
+     "phs002764.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "cystic",
+    "fibrosis"
+   ]
+  },
+  {
+   "id": "dev055",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.497,
+    "v1_official": 1.651,
+    "v2_question": 1.699,
+    "v3_chat": 1.544,
+    "v4_synonyms": 1.027
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "ameloblastoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000739.v1.p1",
+     "phs002753.v1.p1",
+     "phs003486.v1.p1"
+    ],
+    "v1_official": [
+     "phs000739.v1.p1",
+     "phs002753.v1.p1",
+     "phs003486.v1.p1"
+    ],
+    "v2_question": [
+     "phs000739.v1.p1",
+     "phs002753.v1.p1",
+     "phs003628.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000739.v1.p1",
+     "phs004285.v1.p1",
+     "phs002388.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000739.v1.p1",
+     "phs002753.v1.p1",
+     "phs000868.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "ameloblastoma"
+   ]
+  },
+  {
+   "id": "dev056",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.69,
+    "v1_official": 1.406,
+    "v2_question": 1.707,
+    "v3_chat": 1.419,
+    "v4_synonyms": 0.906
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "9p",
+     "chromosome",
+     "deletion",
+     "m",
+     "syndrome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002054.v1.p1",
+     "phs002621.v2.p1",
+     "phs002036.v1.p1"
+    ],
+    "v1_official": [
+     "phs002054.v1.p1",
+     "phs002036.v1.p1",
+     "phs002621.v2.p1"
+    ],
+    "v2_question": [
+     "phs002054.v1.p1",
+     "phs002621.v2.p1",
+     "phs002036.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002054.v1.p1",
+     "phs002036.v1.p1",
+     "phs002621.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs002054.v1.p1",
+     "phs002036.v1.p1",
+     "phs002621.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "9p",
+    "chromosome",
+    "deletion",
+    "syndrome"
+   ]
+  },
+  {
+   "id": "dev057",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.5,
+    "v2_question": 1.0,
+    "v3_chat": 0.4307,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.456,
+    "v1_official": 1.414,
+    "v2_question": 2.157,
+    "v3_chat": 1.813,
+    "v4_synonyms": 0.598
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "abnormality",
+     "congenital",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000288.v2.p2",
+     "phs001089.v4.p1",
+     "phs001814.v1.p1"
+    ],
+    "v1_official": [
+     "phs001814.v1.p1",
+     "phs003475.v1.p1",
+     "phs000288.v2.p2"
+    ],
+    "v2_question": [
+     "phs000288.v2.p2",
+     "phs001272.v2.p1",
+     "phs003475.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003475.v1.p1",
+     "phs001814.v1.p1",
+     "phs001089.v4.p1"
+    ],
+    "v4_synonyms": [
+     "phs000288.v2.p2",
+     "phs001814.v1.p1",
+     "phs003475.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "abnormality",
+    "congenital"
+   ]
+  },
+  {
+   "id": "dev058",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.422,
+    "v1_official": 1.201,
+    "v2_question": 1.353,
+    "v3_chat": 1.024,
+    "v4_synonyms": 0.037
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "hypersensitivity",
+     "m",
+     "peanut"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003071.v1.p1",
+     "phs003109.v1.p1",
+     "phs001124.v1.p1"
+    ],
+    "v1_official": [
+     "phs003071.v1.p1",
+     "phs003109.v1.p1",
+     "phs001124.v1.p1"
+    ],
+    "v2_question": [
+     "phs003071.v1.p1",
+     "phs003109.v1.p1",
+     "phs000981.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003071.v1.p1",
+     "phs003109.v1.p1",
+     "phs001124.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003071.v1.p1",
+     "phs003109.v1.p1",
+     "phs001124.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "hypersensitivity",
+    "peanut"
+   ]
+  },
+  {
+   "id": "dev059",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.519,
+    "v1_official": 0.517,
+    "v2_question": 1.035,
+    "v3_chat": 1.478,
+    "v4_synonyms": 0.366
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "ataxia",
+     "m",
+     "spinocerebellar"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003759.v1.p1",
+     "phs001332.v2.p1",
+     "phs000382.v3.p1"
+    ],
+    "v1_official": [
+     "phs003759.v1.p1",
+     "phs001332.v2.p1",
+     "phs000382.v3.p1"
+    ],
+    "v2_question": [
+     "phs003759.v1.p1",
+     "phs001332.v2.p1",
+     "phs000564.v2.p1"
+    ],
+    "v3_chat": [
+     "phs003759.v1.p1",
+     "phs001332.v2.p1",
+     "phs000382.v3.p1"
+    ],
+    "v4_synonyms": [
+     "phs003759.v1.p1",
+     "phs001332.v2.p1",
+     "phs000382.v3.p1"
+    ]
+   },
+   "topic_v0": [
+    "ataxia",
+    "spinocerebellar"
+   ]
+  },
+  {
+   "id": "dev060",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.6309,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.877,
+    "v1_official": 1.08,
+    "v2_question": 1.238,
+    "v3_chat": 1.37,
+    "v4_synonyms": 0.973
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "hepatoblastoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001433.v1.p1",
+     "phs002614.v3.p1",
+     "phs002435.v1.p1"
+    ],
+    "v1_official": [
+     "phs001433.v1.p1",
+     "phs002614.v3.p1",
+     "phs002435.v1.p1"
+    ],
+    "v2_question": [
+     "phs002614.v3.p1",
+     "phs001433.v1.p1",
+     "phs000384.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002614.v3.p1",
+     "phs001433.v1.p1",
+     "phs002435.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001433.v1.p1",
+     "phs002614.v3.p1",
+     "phs002435.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "hepatoblastoma"
+   ]
+  },
+  {
+   "id": "dev061",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.707,
+    "v1_official": 1.602,
+    "v2_question": 1.822,
+    "v3_chat": 1.454,
+    "v4_synonyms": 0.897
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "hypereosinophilic",
+     "m",
+     "syndrome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003180.v1.p1",
+     "phs002514.v1.p1",
+     "phs002698.v1.p1"
+    ],
+    "v1_official": [
+     "phs003180.v1.p1",
+     "phs002514.v1.p1",
+     "phs000244.v1.p1"
+    ],
+    "v2_question": [
+     "phs003180.v1.p1",
+     "phs002514.v1.p1",
+     "phs002652.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003180.v1.p1",
+     "phs001178.v1.p1",
+     "phs000740.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003180.v1.p1",
+     "phs003261.v1.p1",
+     "phs000773.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "hypereosinophilic",
+    "syndrome"
+   ]
+  },
+  {
+   "id": "dev062",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.694,
+    "v1_official": 1.572,
+    "v2_question": 1.793,
+    "v3_chat": 1.447,
+    "v4_synonyms": 0.885
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "enteropancreatic",
+     "gastro",
+     "m",
+     "neuroendocrine",
+     "tumor"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs004469.v1.p1",
+     "phs003486.v1.p1",
+     "phs003689.v1.p1"
+    ],
+    "v1_official": [
+     "phs004469.v1.p1",
+     "phs002342.v1.p1",
+     "phs003486.v1.p1"
+    ],
+    "v2_question": [
+     "phs004469.v1.p1",
+     "phs003486.v1.p1",
+     "phs000579.v1.p1"
+    ],
+    "v3_chat": [
+     "phs004469.v1.p1",
+     "phs003485.v1.p1",
+     "phs003570.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs004469.v1.p1",
+     "phs003485.v1.p1",
+     "phs002342.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "enteropancreatic",
+    "gastro",
+    "neuroendocrine",
+    "tumor"
+   ]
+  },
+  {
+   "id": "dev063",
+   "constraints": [
+    "rnaseq",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.4,
+    "v1_official": 1.828,
+    "v2_question": 1.782,
+    "v3_chat": 1.921,
+    "v4_synonyms": 1.409
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "falciparum",
+     "m",
+     "plasmodium"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002422.v1.p1",
+     "phs002423.v1.p1",
+     "phs001346.v1.p1"
+    ],
+    "v1_official": [
+     "phs002422.v1.p1",
+     "phs002423.v1.p1",
+     "phs001346.v1.p1"
+    ],
+    "v2_question": [
+     "phs002422.v1.p1",
+     "phs002423.v1.p1",
+     "phs001346.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002422.v1.p1",
+     "phs002423.v1.p1",
+     "phs001346.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002422.v1.p1",
+     "phs002423.v1.p1",
+     "phs001346.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "falciparum",
+    "plasmodium"
+   ]
+  },
+  {
+   "id": "dev064",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 0.9364,
+    "v1_official": 0.8669,
+    "v2_question": 0.9266,
+    "v3_chat": 0.7818,
+    "v4_synonyms": 0.7264
+   },
+   "seconds": {
+    "v0_short": 0.962,
+    "v1_official": 0.805,
+    "v2_question": 1.302,
+    "v3_chat": 1.304,
+    "v4_synonyms": 0.247
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "glioblastoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003000.v1.p1",
+     "phs002270.v1.p1",
+     "phs003614.v1.p1"
+    ],
+    "v1_official": [
+     "phs003286.v2.p1",
+     "phs003000.v1.p1",
+     "phs002270.v1.p1"
+    ],
+    "v2_question": [
+     "phs002270.v1.p1",
+     "phs003614.v1.p1",
+     "phs001519.v2.p1"
+    ],
+    "v3_chat": [
+     "phs002270.v1.p1",
+     "phs003286.v2.p1",
+     "phs001460.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs003614.v1.p1",
+     "phs001519.v2.p1",
+     "phs002612.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "glioblastoma"
+   ]
+  },
+  {
+   "id": "dev065",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.951,
+    "v1_official": 0.936,
+    "v2_question": 1.304,
+    "v3_chat": 1.618,
+    "v4_synonyms": 0.841
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "gallbladder",
+     "m",
+     "neoplasm"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001385.v1.p1",
+     "phs001404.v1.p1",
+     "phs000200.v12.p3"
+    ],
+    "v1_official": [
+     "phs001385.v1.p1",
+     "phs001404.v1.p1",
+     "phs000200.v12.p3"
+    ],
+    "v2_question": [
+     "phs001385.v1.p1",
+     "phs001404.v1.p1",
+     "phs000200.v12.p3"
+    ],
+    "v3_chat": [
+     "phs001385.v1.p1",
+     "phs001404.v1.p1",
+     "phs000200.v12.p3"
+    ],
+    "v4_synonyms": [
+     "phs001385.v1.p1",
+     "phs001404.v1.p1",
+     "phs000200.v12.p3"
+    ]
+   },
+   "topic_v0": [
+    "gallbladder",
+    "neoplasm"
+   ]
+  },
+  {
+   "id": "dev066",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6934,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.784,
+    "v1_official": 2.028,
+    "v2_question": 1.84,
+    "v3_chat": 2.111,
+    "v4_synonyms": 2.424
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "alcoholic",
+     "fatty",
+     "liver",
+     "m",
+     "non"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs004044.v1.p1",
+     "phs001930.v1.p1",
+     "phs003112.v1.p1"
+    ],
+    "v1_official": [
+     "phs004044.v1.p1",
+     "phs001930.v1.p1",
+     "phs003112.v1.p1"
+    ],
+    "v2_question": [
+     "phs001930.v1.p1",
+     "phs004044.v1.p1",
+     "phs003112.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003112.v1.p1",
+     "phs004044.v1.p1",
+     "phs001930.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs004044.v1.p1",
+     "phs001930.v1.p1",
+     "phs003112.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "alcoholic",
+    "fatty",
+    "liver",
+    "non"
+   ]
+  },
+  {
+   "id": "dev067",
+   "constraints": [
+    "children"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.6309,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.449,
+    "v1_official": 2.215,
+    "v2_question": 1.091,
+    "v3_chat": 1.271,
+    "v4_synonyms": 0.3
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "atopic",
+     "dermatitis",
+     "m"
+    ],
+    "v4_synonyms": [
+     "atopic",
+     "dermatitis",
+     "under"
+    ]
+   },
+   "top3": {
+    "v0_short": [
+     "phs003489.v1.p1",
+     "phs004337.v1.p1",
+     "phs000266.v4.p1"
+    ],
+    "v1_official": [
+     "phs004337.v1.p1",
+     "phs003489.v1.p1",
+     "phs000490.v1.p1"
+    ],
+    "v2_question": [
+     "phs003489.v1.p1",
+     "phs004337.v1.p1",
+     "phs000490.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003489.v1.p1",
+     "phs004337.v1.p1",
+     "phs000266.v4.p1"
+    ],
+    "v4_synonyms": [
+     "phs003489.v1.p1",
+     "phs004337.v1.p1",
+     "phs000266.v4.p1"
+    ]
+   },
+   "topic_v0": [
+    "atopic",
+    "dermatitis"
+   ]
+  },
+  {
+   "id": "dev068",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.9829,
+    "v2_question": 1.0,
+    "v3_chat": 0.9829,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.0,
+    "v1_official": 0.9,
+    "v2_question": 1.325,
+    "v3_chat": 1.45,
+    "v4_synonyms": 0.327
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "melanoma",
+     "uveal"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001370.v1.p1",
+     "phs001835.v1.p1",
+     "phs001421.v1.p1"
+    ],
+    "v1_official": [
+     "phs001370.v1.p1",
+     "phs001835.v1.p1",
+     "phs001421.v1.p1"
+    ],
+    "v2_question": [
+     "phs001421.v1.p1",
+     "phs001370.v1.p1",
+     "phs001835.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001370.v1.p1",
+     "phs001421.v1.p1",
+     "phs001835.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001370.v1.p1",
+     "phs001835.v1.p1",
+     "phs001421.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "melanoma",
+    "uveal"
+   ]
+  },
+  {
+   "id": "dev069",
+   "constraints": [
+    "adults",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.4307,
+    "v2_question": 0.6309,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.0
+   },
+   "seconds": {
+    "v0_short": 1.463,
+    "v1_official": 1.605,
+    "v2_question": 1.613,
+    "v3_chat": 1.898,
+    "v4_synonyms": 1.401
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "heart",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002204.v1.p1",
+     "phs001612.v3.p3",
+     "phs000462.v2.p1"
+    ],
+    "v1_official": [
+     "phs000462.v2.p1",
+     "phs003541.v1.p1",
+     "phs001612.v3.p3"
+    ],
+    "v2_question": [
+     "phs003413.v1.p1",
+     "phs002204.v1.p1",
+     "phs001612.v3.p3"
+    ],
+    "v3_chat": [
+     "phs004459.v1.p1",
+     "phs003754.v1.p1",
+     "phs002207.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs003413.v1.p1",
+     "phs001679.v1.p1",
+     "phs003541.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "heart"
+   ]
+  },
+  {
+   "id": "dev070",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "v0_short": 0.0,
+    "v1_official": 0.0,
+    "v2_question": 0.0,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.0
+   },
+   "seconds": {
+    "v0_short": 0.017,
+    "v1_official": 0.921,
+    "v2_question": 1.158,
+    "v3_chat": 1.282,
+    "v4_synonyms": 0.508
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": [
+     "involving",
+     "profile"
+    ],
+    "v2_question": [
+     "enrolled"
+    ],
+    "v3_chat": [
+     "m"
+    ],
+    "v4_synonyms": [
+     "epigenome",
+     "wide"
+    ]
+   },
+   "top3": {
+    "v0_short": [
+     "phs003976.v1.p1",
+     "phs003790.v1.p1",
+     "phs001726.v3.p1"
+    ],
+    "v1_official": [
+     "phs003790.v1.p1",
+     "phs003976.v1.p1",
+     "phs001726.v3.p1"
+    ],
+    "v2_question": [
+     "phs001237.v4.p2",
+     "phs000988.v6.p1",
+     "phs000951.v6.p5"
+    ],
+    "v3_chat": [
+     "phs003976.v1.p1",
+     "phs003790.v1.p1",
+     "phs001237.v4.p2"
+    ],
+    "v4_synonyms": [
+     "phs001416.v4.p1",
+     "phs000988.v6.p1",
+     "phs000951.v6.p5"
+    ]
+   },
+   "topic_v0": []
+  },
+  {
+   "id": "dev071",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.325,
+    "v1_official": 1.059,
+    "v2_question": 1.538,
+    "v3_chat": 1.175,
+    "v4_synonyms": 0.357
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "neuroblastoma"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000467.v23.p8",
+     "phs003111.v1.p1",
+     "phs000469.v23.p8"
+    ],
+    "v1_official": [
+     "phs000467.v23.p8",
+     "phs003111.v1.p1",
+     "phs000469.v23.p8"
+    ],
+    "v2_question": [
+     "phs000467.v23.p8",
+     "phs003111.v1.p1",
+     "phs000469.v23.p8"
+    ],
+    "v3_chat": [
+     "phs000467.v23.p8",
+     "phs003111.v1.p1",
+     "phs000469.v23.p8"
+    ],
+    "v4_synonyms": [
+     "phs000467.v23.p8",
+     "phs003111.v1.p1",
+     "phs000469.v23.p8"
+    ]
+   },
+   "topic_v0": [
+    "neuroblastoma"
+   ]
+  },
+  {
+   "id": "dev072",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 0.9197,
+    "v1_official": 0.9197,
+    "v2_question": 1.0,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.9197
+   },
+   "seconds": {
+    "v0_short": 1.164,
+    "v1_official": 1.212,
+    "v2_question": 1.366,
+    "v3_chat": 1.589,
+    "v4_synonyms": 1.244
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "analysis",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003642.v1.p1",
+     "phs004321.v1.p1",
+     "phs002856.v1.p1"
+    ],
+    "v1_official": [
+     "phs003642.v1.p1",
+     "phs004321.v1.p1",
+     "phs002856.v1.p1"
+    ],
+    "v2_question": [
+     "phs002856.v1.p1",
+     "phs003642.v1.p1",
+     "phs004321.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000643.v12.p1",
+     "phs003943.v1.p1",
+     "phs003754.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002856.v1.p1",
+     "phs002289.v2.p1",
+     "phs003642.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "analysis"
+   ]
+  },
+  {
+   "id": "dev073",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.8175,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.656,
+    "v1_official": 1.592,
+    "v2_question": 1.642,
+    "v3_chat": 1.563,
+    "v4_synonyms": 1.034
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "gene",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002969.v1.p1",
+     "phs003649.v1.p1",
+     "phs000870.v1.p1"
+    ],
+    "v1_official": [
+     "phs002969.v1.p1",
+     "phs003649.v1.p1",
+     "phs000870.v1.p1"
+    ],
+    "v2_question": [
+     "phs002969.v1.p1",
+     "phs003649.v1.p1",
+     "phs000870.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002969.v1.p1",
+     "phs004457.v1.p1",
+     "phs000369.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002969.v1.p1",
+     "phs003649.v1.p1",
+     "phs000870.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "gene"
+   ]
+  },
+  {
+   "id": "dev074",
+   "constraints": [
+    "wgs",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.325,
+    "v1_official": 1.303,
+    "v2_question": 1.49,
+    "v3_chat": 1.367,
+    "v4_synonyms": 0.959
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "copy",
+     "m",
+     "variation"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002450.v2.p1",
+     "phs002403.v1.p1",
+     "phs004102.v1.p1"
+    ],
+    "v1_official": [
+     "phs002450.v2.p1",
+     "phs002403.v1.p1",
+     "phs001325.v6.p1"
+    ],
+    "v2_question": [
+     "phs002450.v2.p1",
+     "phs002403.v1.p1",
+     "phs001325.v6.p1"
+    ],
+    "v3_chat": [
+     "phs002450.v2.p1",
+     "phs002403.v1.p1",
+     "phs003121.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs002450.v2.p1",
+     "phs002403.v1.p1",
+     "phs003121.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "copy",
+    "variation"
+   ]
+  },
+  {
+   "id": "dev075",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.6309,
+    "v1_official": 0.6309,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.393,
+    "v1_official": 0.392,
+    "v2_question": 0.795,
+    "v3_chat": 1.117,
+    "v4_synonyms": 0.276
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cardiomyopathy",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002382.v1.p1",
+     "phs000958.v1.p1",
+     "phs002038.v1.p1"
+    ],
+    "v1_official": [
+     "phs002382.v1.p1",
+     "phs000958.v1.p1",
+     "phs002038.v1.p1"
+    ],
+    "v2_question": [
+     "phs000958.v1.p1",
+     "phs002382.v1.p1",
+     "phs002038.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000711.v7.p2",
+     "phs000958.v1.p1",
+     "phs003680.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000958.v1.p1",
+     "phs001539.v4.p1",
+     "phs002382.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "cardiomyopathy"
+   ]
+  },
+  {
+   "id": "dev076",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.808,
+    "v1_official": 0.798,
+    "v2_question": 0.98,
+    "v3_chat": 0.779,
+    "v4_synonyms": 0.008
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "craniopharyngioma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000861.v2.p1",
+     "phs000725.v2.p1",
+     "phs000696.v1.p1"
+    ],
+    "v1_official": [
+     "phs000861.v2.p1",
+     "phs000725.v2.p1",
+     "phs000696.v1.p1"
+    ],
+    "v2_question": [
+     "phs000861.v2.p1",
+     "phs000725.v2.p1",
+     "phs000696.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000861.v2.p1",
+     "phs000725.v2.p1",
+     "phs000021.v3.p2"
+    ],
+    "v4_synonyms": [
+     "phs000861.v2.p1",
+     "phs000725.v2.p1",
+     "phs000696.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "craniopharyngioma"
+   ]
+  },
+  {
+   "id": "dev077",
+   "constraints": [
+    "gru",
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.507,
+    "v1_official": 1.801,
+    "v2_question": 1.819,
+    "v3_chat": 1.599,
+    "v4_synonyms": 1.544
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "genetic",
+     "m",
+     "predisposition"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002820.v1.p1",
+     "phs001363.v1.p1",
+     "phs000211.v1.p1"
+    ],
+    "v1_official": [
+     "phs002820.v1.p1",
+     "phs001363.v1.p1",
+     "phs000211.v1.p1"
+    ],
+    "v2_question": [
+     "phs002820.v1.p1",
+     "phs001363.v1.p1",
+     "phs001143.v4.p1"
+    ],
+    "v3_chat": [
+     "phs001363.v1.p1",
+     "phs002820.v1.p1",
+     "phs000019.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002820.v1.p1",
+     "phs001363.v1.p1",
+     "phs002716.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "genetic",
+    "predisposition"
+   ]
+  },
+  {
+   "id": "dev078",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.8503,
+    "v3_chat": 0.4825,
+    "v4_synonyms": 0.9197
+   },
+   "seconds": {
+    "v0_short": 0.794,
+    "v1_official": 0.789,
+    "v2_question": 1.038,
+    "v3_chat": 1.321,
+    "v4_synonyms": 0.68
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "neoplasm",
+     "stomach"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001818.v5.p1",
+     "phs003422.v1.p1",
+     "phs003706.v1.p1"
+    ],
+    "v1_official": [
+     "phs001818.v5.p1",
+     "phs003422.v1.p1",
+     "phs003706.v1.p1"
+    ],
+    "v2_question": [
+     "phs001818.v5.p1",
+     "phs003648.v1.p1",
+     "phs002566.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002566.v1.p1",
+     "phs003706.v1.p1",
+     "phs001003.v4.p1"
+    ],
+    "v4_synonyms": [
+     "phs003422.v1.p1",
+     "phs002566.v1.p1",
+     "phs001818.v5.p1"
+    ]
+   },
+   "topic_v0": [
+    "neoplasm",
+    "stomach"
+   ]
+  },
+  {
+   "id": "dev079",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.1131,
+    "v1_official": 0.1131,
+    "v2_question": 0.2001,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.1131
+   },
+   "seconds": {
+    "v0_short": 0.314,
+    "v1_official": 0.318,
+    "v2_question": 0.728,
+    "v3_chat": 1.106,
+    "v4_synonyms": 0.342
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "hypertension",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002716.v1.p1",
+     "phs000964.v6.p2",
+     "phs001401.v2.p1"
+    ],
+    "v1_official": [
+     "phs002716.v1.p1",
+     "phs000964.v6.p2",
+     "phs001401.v2.p1"
+    ],
+    "v2_question": [
+     "phs000954.v5.p2",
+     "phs002716.v1.p1",
+     "phs001401.v2.p1"
+    ],
+    "v3_chat": [
+     "phs000964.v6.p2",
+     "phs000954.v5.p2",
+     "phs002716.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002716.v1.p1",
+     "phs000964.v6.p2",
+     "phs001401.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "hypertension"
+   ]
+  },
+  {
+   "id": "dev080",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.9059,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.762,
+    "v1_official": 0.756,
+    "v2_question": 1.029,
+    "v3_chat": 1.249,
+    "v4_synonyms": 0.687
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "colonic",
+     "m",
+     "neoplasm"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003338.v1.p1",
+     "phs003671.v1.p1",
+     "phs002748.v1.p1"
+    ],
+    "v1_official": [
+     "phs003338.v1.p1",
+     "phs003671.v1.p1",
+     "phs002748.v1.p1"
+    ],
+    "v2_question": [
+     "phs003338.v1.p1",
+     "phs003671.v1.p1",
+     "phs002748.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003671.v1.p1",
+     "phs003338.v1.p1",
+     "phs003255.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002748.v1.p1",
+     "phs003338.v1.p1",
+     "phs003671.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "colonic",
+    "neoplasm"
+   ]
+  },
+  {
+   "id": "dev081",
+   "constraints": [
+    "rnaseq",
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.334,
+    "v1_official": 1.385,
+    "v2_question": 1.347,
+    "v3_chat": 1.345,
+    "v4_synonyms": 1.179
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "b",
+     "chronic",
+     "leukemia",
+     "lymphocytic",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001431.v2.p1",
+     "phs000435.v4.p1",
+     "phs000879.v2.p1"
+    ],
+    "v1_official": [
+     "phs000435.v4.p1",
+     "phs001431.v2.p1",
+     "phs001181.v1.p1"
+    ],
+    "v2_question": [
+     "phs001431.v2.p1",
+     "phs000435.v4.p1",
+     "phs000879.v2.p1"
+    ],
+    "v3_chat": [
+     "phs000435.v4.p1",
+     "phs000879.v2.p1",
+     "phs001181.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001181.v1.p1",
+     "phs000435.v4.p1",
+     "phs002458.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "b",
+    "chronic",
+    "leukemia",
+    "lymphocytic"
+   ]
+  },
+  {
+   "id": "dev082",
+   "constraints": [
+    "wes",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.6309,
+    "v2_question": 1.0,
+    "v3_chat": 0.5,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 1.432,
+    "v1_official": 1.432,
+    "v2_question": 1.735,
+    "v3_chat": 1.589,
+    "v4_synonyms": 1.166
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cutaneous",
+     "lymphoma",
+     "m",
+     "t"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001969.v1.p1",
+     "phs001877.v1.p1",
+     "phs000994.v1.p1"
+    ],
+    "v1_official": [
+     "phs001877.v1.p1",
+     "phs001969.v1.p1",
+     "phs000994.v1.p1"
+    ],
+    "v2_question": [
+     "phs001969.v1.p1",
+     "phs001877.v1.p1",
+     "phs000994.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001877.v1.p1",
+     "phs000994.v1.p1",
+     "phs001969.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001877.v1.p1",
+     "phs001969.v1.p1",
+     "phs003158.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "cutaneous",
+    "lymphoma",
+    "t"
+   ]
+  },
+  {
+   "id": "dev083",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.0,
+    "v1_official": 0.0,
+    "v2_question": 0.2184,
+    "v3_chat": 0.2184,
+    "v4_synonyms": 0.0
+   },
+   "seconds": {
+    "v0_short": 1.403,
+    "v1_official": 1.47,
+    "v2_question": 1.518,
+    "v3_chat": 1.668,
+    "v4_synonyms": 1.448
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "chronic",
+     "m",
+     "obstructive",
+     "pulmonary"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000810.v2.p2",
+     "phs000880.v2.p2",
+     "phs001644.v3.p2"
+    ],
+    "v1_official": [
+     "phs001644.v3.p2",
+     "phs000810.v2.p2",
+     "phs000880.v2.p2"
+    ],
+    "v2_question": [
+     "phs001644.v3.p2",
+     "phs001395.v3.p2",
+     "phs000810.v2.p2"
+    ],
+    "v3_chat": [
+     "phs000810.v2.p2",
+     "phs000880.v2.p2",
+     "phs001644.v3.p2"
+    ],
+    "v4_synonyms": [
+     "phs000810.v2.p2",
+     "phs000880.v2.p2",
+     "phs001644.v3.p2"
+    ]
+   },
+   "topic_v0": [
+    "chronic",
+    "obstructive",
+    "pulmonary"
+   ]
+  },
+  {
+   "id": "dev084",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.899,
+    "v1_official": 1.433,
+    "v2_question": 1.042,
+    "v3_chat": 0.867,
+    "v4_synonyms": 0.159
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "juvenile",
+     "leukemia",
+     "m",
+     "myelomonocytic"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002504.v3.p2",
+     "phs003490.v1.p1",
+     "phs004601.v1.p1"
+    ],
+    "v1_official": [
+     "phs002504.v3.p2",
+     "phs003490.v1.p1",
+     "phs004601.v1.p1"
+    ],
+    "v2_question": [
+     "phs002504.v3.p2",
+     "phs003490.v1.p1",
+     "phs004601.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002504.v3.p2",
+     "phs003490.v1.p1",
+     "phs003979.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002504.v3.p2",
+     "phs003490.v1.p1",
+     "phs004601.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "juvenile",
+    "leukemia",
+    "myelomonocytic"
+   ]
+  },
+  {
+   "id": "dev085",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.445,
+    "v1_official": 1.418,
+    "v2_question": 1.458,
+    "v3_chat": 1.412,
+    "v4_synonyms": 1.218
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "autoinflammatory",
+     "hereditary",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001860.v1.p1",
+     "phs000823.v1.p1",
+     "phs000371.v2.p1"
+    ],
+    "v1_official": [
+     "phs001860.v1.p1",
+     "phs000823.v1.p1",
+     "phs003348.v1.p1"
+    ],
+    "v2_question": [
+     "phs001860.v1.p1",
+     "phs000371.v2.p1",
+     "phs000350.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001860.v1.p1",
+     "phs003348.v1.p1",
+     "phs001080.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs001860.v1.p1",
+     "phs003348.v1.p1",
+     "phs001080.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "autoinflammatory",
+    "hereditary"
+   ]
+  },
+  {
+   "id": "dev086",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.4362,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.177,
+    "v1_official": 1.162,
+    "v2_question": 1.274,
+    "v3_chat": 1.193,
+    "v4_synonyms": 0.907
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "communication",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs004215.v1.p1",
+     "phs004213.v1.p1",
+     "phs004214.v1.p1"
+    ],
+    "v1_official": [
+     "phs004215.v1.p1",
+     "phs004213.v1.p1",
+     "phs004214.v1.p1"
+    ],
+    "v2_question": [
+     "phs004215.v1.p1",
+     "phs004213.v1.p1",
+     "phs004214.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000021.v3.p2",
+     "phs001363.v1.p1",
+     "phs000019.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs004212.v1.p1",
+     "phs004207.v1.p1",
+     "phs004208.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "communication"
+   ]
+  },
+  {
+   "id": "dev087",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.005,
+    "v1_official": 0.925,
+    "v2_question": 1.261,
+    "v3_chat": 1.702,
+    "v4_synonyms": 0.699
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "compulsive",
+     "disorder",
+     "m",
+     "obsessive"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001929.v1.p1",
+     "phs001423.v4.p2",
+     "phs000813.v1.p1"
+    ],
+    "v1_official": [
+     "phs001929.v1.p1",
+     "phs001423.v4.p2",
+     "phs000813.v1.p1"
+    ],
+    "v2_question": [
+     "phs001929.v1.p1",
+     "phs001423.v4.p2",
+     "phs000813.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001423.v4.p2",
+     "phs001929.v1.p1",
+     "phs000813.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001929.v1.p1",
+     "phs001423.v4.p2",
+     "phs000813.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "compulsive",
+    "disorder",
+    "obsessive"
+   ]
+  },
+  {
+   "id": "dev088",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.297,
+    "v1_official": 1.24,
+    "v2_question": 1.766,
+    "v3_chat": 1.307,
+    "v4_synonyms": 0.328
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "aneurysm",
+     "intracranial",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003072.v1.p1",
+     "phs000636.v1.p1",
+     "phs000293.v1.p1"
+    ],
+    "v1_official": [
+     "phs003072.v1.p1",
+     "phs000636.v1.p1",
+     "phs000293.v1.p1"
+    ],
+    "v2_question": [
+     "phs003072.v1.p1",
+     "phs000636.v1.p1",
+     "phs000293.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003072.v1.p1",
+     "phs000636.v1.p1",
+     "phs000293.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003072.v1.p1",
+     "phs000636.v1.p1",
+     "phs000293.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "aneurysm",
+    "intracranial"
+   ]
+  },
+  {
+   "id": "dev089",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 0.9197,
+    "v1_official": 0.9197,
+    "v2_question": 0.9197,
+    "v3_chat": 0.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.215,
+    "v1_official": 1.176,
+    "v2_question": 1.22,
+    "v3_chat": 1.102,
+    "v4_synonyms": 0.662
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "line",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000268.v1.p1",
+     "phs001163.v2.p1",
+     "phs003399.v1.p1"
+    ],
+    "v1_official": [
+     "phs000268.v1.p1",
+     "phs001163.v2.p1",
+     "phs003399.v1.p1"
+    ],
+    "v2_question": [
+     "phs000268.v1.p1",
+     "phs001163.v2.p1",
+     "phs003399.v1.p1"
+    ],
+    "v3_chat": [
+     "phs004268.v1.p1",
+     "phs000021.v3.p2",
+     "phs002764.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000268.v1.p1",
+     "phs003399.v1.p1",
+     "phs002421.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "line"
+   ]
+  },
+  {
+   "id": "dev090",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 0.6934,
+    "v1_official": 0.6934,
+    "v2_question": 0.6934,
+    "v3_chat": 0.5706,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.859,
+    "v1_official": 1.35,
+    "v2_question": 1.029,
+    "v3_chat": 0.831,
+    "v4_synonyms": 0.162
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "scleroderma",
+     "systemic"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000290.v1.p1",
+     "phs002902.v1.p1",
+     "phs004454.v1.p1"
+    ],
+    "v1_official": [
+     "phs000290.v1.p1",
+     "phs002902.v1.p1",
+     "phs004454.v1.p1"
+    ],
+    "v2_question": [
+     "phs000290.v1.p1",
+     "phs002902.v1.p1",
+     "phs004454.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000290.v1.p1",
+     "phs003700.v1.p1",
+     "phs002902.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002902.v1.p1",
+     "phs004454.v1.p1",
+     "phs000290.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "scleroderma",
+    "systemic"
+   ]
+  },
+  {
+   "id": "dev091",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.366,
+    "v1_official": 0.365,
+    "v2_question": 0.765,
+    "v3_chat": 1.082,
+    "v4_synonyms": 0.258
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "lymphangioleiomyomatosis",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000605.v1.p1",
+     "phs003108.v1.p1",
+     "phs001784.v1.p1"
+    ],
+    "v1_official": [
+     "phs000605.v1.p1",
+     "phs003108.v1.p1",
+     "phs001784.v1.p1"
+    ],
+    "v2_question": [
+     "phs000605.v1.p1",
+     "phs003108.v1.p1",
+     "phs001521.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000605.v1.p1",
+     "phs003108.v1.p1",
+     "phs003841.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000605.v1.p1",
+     "phs003108.v1.p1",
+     "phs004472.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "lymphangioleiomyomatosis"
+   ]
+  },
+  {
+   "id": "dev092",
+   "constraints": [
+    "adults",
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.3,
+    "v1_official": 1.101,
+    "v2_question": 1.476,
+    "v3_chat": 1.216,
+    "v4_synonyms": 0.546
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "glioma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003976.v1.p1",
+     "phs001054.v1.p1",
+     "phs000614.v1.p1"
+    ],
+    "v1_official": [
+     "phs003976.v1.p1",
+     "phs001054.v1.p1",
+     "phs000614.v1.p1"
+    ],
+    "v2_question": [
+     "phs003976.v1.p1",
+     "phs001054.v1.p1",
+     "phs000614.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003976.v1.p1",
+     "phs003378.v2.p1",
+     "phs000614.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003976.v1.p1",
+     "phs001054.v1.p1",
+     "phs002250.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "glioma"
+   ]
+  },
+  {
+   "id": "dev093",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.906,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.969,
+    "v1_official": 1.01,
+    "v2_question": 1.127,
+    "v3_chat": 0.954,
+    "v4_synonyms": 0.367
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "esophageal",
+     "m",
+     "neoplasm"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000869.v1.p1",
+     "phs001214.v1.p1",
+     "phs004237.v1.p1"
+    ],
+    "v1_official": [
+     "phs000869.v1.p1",
+     "phs001214.v1.p1",
+     "phs004237.v1.p1"
+    ],
+    "v2_question": [
+     "phs000869.v1.p1",
+     "phs001214.v1.p1",
+     "phs004237.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000869.v1.p1",
+     "phs001003.v4.p1",
+     "phs001214.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001214.v1.p1",
+     "phs000869.v1.p1",
+     "phs004237.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "esophageal",
+    "neoplasm"
+   ]
+  },
+  {
+   "id": "dev094",
+   "constraints": [
+    "race",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.0,
+    "v1_official": 0.0,
+    "v2_question": 0.0,
+    "v3_chat": 0.2044,
+    "v4_synonyms": 0.0
+   },
+   "seconds": {
+    "v0_short": 0.555,
+    "v1_official": 0.551,
+    "v2_question": 0.933,
+    "v3_chat": 1.23,
+    "v4_synonyms": 0.465
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "insulin",
+     "m",
+     "resistance"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000810.v2.p2",
+     "phs000388.v1.p1",
+     "phs001395.v3.p2"
+    ],
+    "v1_official": [
+     "phs000810.v2.p2",
+     "phs000388.v1.p1",
+     "phs001395.v3.p2"
+    ],
+    "v2_question": [
+     "phs000810.v2.p2",
+     "phs001395.v3.p2",
+     "phs000388.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000810.v2.p2",
+     "phs001395.v3.p2",
+     "phs000388.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000810.v2.p2",
+     "phs000880.v2.p2",
+     "phs000388.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "insulin",
+    "resistance"
+   ]
+  },
+  {
+   "id": "dev095",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.839,
+    "v1_official": 0.838,
+    "v2_question": 0.987,
+    "v3_chat": 0.806,
+    "v4_synonyms": 0.03
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "dependence",
+     "heroin",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001559.v1.p1",
+     "phs001213.v2.p1",
+     "phs002724.v1.p1"
+    ],
+    "v1_official": [
+     "phs001559.v1.p1",
+     "phs001213.v2.p1",
+     "phs002724.v1.p1"
+    ],
+    "v2_question": [
+     "phs001559.v1.p1",
+     "phs001213.v2.p1",
+     "phs002724.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001559.v1.p1",
+     "phs001213.v2.p1",
+     "phs002724.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001559.v1.p1",
+     "phs001213.v2.p1",
+     "phs002724.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "dependence",
+    "heroin"
+   ]
+  },
+  {
+   "id": "dev096",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.5,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.663,
+    "v1_official": 0.85,
+    "v2_question": 0.93,
+    "v3_chat": 1.1,
+    "v4_synonyms": 0.749
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "pneumonia"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002300.v2.p1",
+     "phs004443.v1.p1",
+     "phs003053.v1.p1"
+    ],
+    "v1_official": [
+     "phs002300.v2.p1",
+     "phs004443.v1.p1",
+     "phs003053.v1.p1"
+    ],
+    "v2_question": [
+     "phs002300.v2.p1",
+     "phs004443.v1.p1",
+     "phs003053.v1.p1"
+    ],
+    "v3_chat": [
+     "phs004408.v1.p1",
+     "phs003053.v1.p1",
+     "phs002300.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs002300.v2.p1",
+     "phs004443.v1.p1",
+     "phs004408.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "pneumonia"
+   ]
+  },
+  {
+   "id": "dev097",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.9197,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.973,
+    "v1_official": 1.147,
+    "v2_question": 1.238,
+    "v3_chat": 1.454,
+    "v4_synonyms": 1.071
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "drug",
+     "m",
+     "neoplasm",
+     "resistance"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003188.v1.p1",
+     "phs003479.v1.p1",
+     "phs003851.v1.p1"
+    ],
+    "v1_official": [
+     "phs003188.v1.p1",
+     "phs003479.v1.p1",
+     "phs003851.v1.p1"
+    ],
+    "v2_question": [
+     "phs003188.v1.p1",
+     "phs003479.v1.p1",
+     "phs000748.v7.p4"
+    ],
+    "v3_chat": [
+     "phs003188.v1.p1",
+     "phs003851.v1.p1",
+     "phs003479.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003188.v1.p1",
+     "phs003479.v1.p1",
+     "phs002291.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "drug",
+    "neoplasm",
+    "resistance"
+   ]
+  },
+  {
+   "id": "dev098",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.138,
+    "v1_official": 0.988,
+    "v2_question": 1.247,
+    "v3_chat": 1.267,
+    "v4_synonyms": 0.832
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "acute",
+     "injury",
+     "lung",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000334.v1.p1",
+     "phs003486.v1.p1",
+     "phs000632.v1.p1"
+    ],
+    "v1_official": [
+     "phs000334.v1.p1",
+     "phs003486.v1.p1",
+     "phs000632.v1.p1"
+    ],
+    "v2_question": [
+     "phs000334.v1.p1",
+     "phs003486.v1.p1",
+     "phs003093.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000334.v1.p1",
+     "phs003486.v1.p1",
+     "phs000347.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000334.v1.p1",
+     "phs003486.v1.p1",
+     "phs000632.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "acute",
+    "injury",
+    "lung"
+   ]
+  },
+  {
+   "id": "dev099",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 0.5,
+    "v1_official": 0.5,
+    "v2_question": 0.5,
+    "v3_chat": 0.5,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 0.933,
+    "v1_official": 0.914,
+    "v2_question": 1.098,
+    "v3_chat": 0.895,
+    "v4_synonyms": 0.177
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "complication",
+     "m",
+     "pregnancy"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002808.v1.p1",
+     "phs002367.v2.p1",
+     "phs004117.v1.p1"
+    ],
+    "v1_official": [
+     "phs002808.v1.p1",
+     "phs002367.v2.p1",
+     "phs004117.v1.p1"
+    ],
+    "v2_question": [
+     "phs002808.v1.p1",
+     "phs002367.v2.p1",
+     "phs004117.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002808.v1.p1",
+     "phs002367.v2.p1",
+     "phs004117.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002808.v1.p1",
+     "phs002367.v2.p1",
+     "phs004117.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "complication",
+    "pregnancy"
+   ]
+  },
+  {
+   "id": "dev100",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.272,
+    "v1_official": 1.211,
+    "v2_question": 1.719,
+    "v3_chat": 1.112,
+    "v4_synonyms": 0.362
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "alpha",
+     "antitrypsin",
+     "deficiency",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002471.v1.p1",
+     "phs003459.v1.p1",
+     "phs003036.v1.p1"
+    ],
+    "v1_official": [
+     "phs002471.v1.p1",
+     "phs003459.v1.p1",
+     "phs000244.v1.p1"
+    ],
+    "v2_question": [
+     "phs002471.v1.p1",
+     "phs003459.v1.p1",
+     "phs003251.v2.p1"
+    ],
+    "v3_chat": [
+     "phs002471.v1.p1",
+     "phs003459.v1.p1",
+     "phs003760.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002471.v1.p1",
+     "phs003459.v1.p1",
+     "phs003760.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "alpha",
+    "antitrypsin",
+    "deficiency"
+   ]
+  },
+  {
+   "id": "dev101",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.778,
+    "v1_official": 0.937,
+    "v2_question": 0.995,
+    "v3_chat": 1.174,
+    "v4_synonyms": 0.843
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "carcinoma",
+     "intraductal",
+     "m",
+     "noninfiltrating"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002225.v3.p1",
+     "phs002443.v1.p1",
+     "phs002045.v1.p1"
+    ],
+    "v1_official": [
+     "phs002225.v3.p1",
+     "phs002443.v1.p1",
+     "phs002045.v1.p1"
+    ],
+    "v2_question": [
+     "phs002225.v3.p1",
+     "phs002443.v1.p1",
+     "phs002045.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002225.v3.p1",
+     "phs002443.v1.p1",
+     "phs004497.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002225.v3.p1",
+     "phs002443.v1.p1",
+     "phs002045.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "carcinoma",
+    "intraductal",
+    "noninfiltrating"
+   ]
+  },
+  {
+   "id": "dev102",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 0.3333,
+    "v1_official": 0.0,
+    "v2_question": 0.0,
+    "v3_chat": 0.301,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 1.088,
+    "v1_official": 1.09,
+    "v2_question": 1.201,
+    "v3_chat": 1.146,
+    "v4_synonyms": 0.657
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "genetic",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003793.v1.p1",
+     "phs003216.v1.p1",
+     "phs004339.v1.p1"
+    ],
+    "v1_official": [
+     "phs003166.v1.p1",
+     "phs004464.v1.p1",
+     "phs001325.v6.p1"
+    ],
+    "v2_question": [
+     "phs003216.v1.p1",
+     "phs002597.v2.p1",
+     "phs001143.v4.p1"
+    ],
+    "v3_chat": [
+     "phs001872.v2.p2",
+     "phs001363.v1.p1",
+     "phs001040.v6.p1"
+    ],
+    "v4_synonyms": [
+     "phs002094.v1.p1",
+     "phs003694.v1.p1",
+     "phs003166.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "genetic"
+   ]
+  },
+  {
+   "id": "dev103",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.8332,
+    "v1_official": 0.8332,
+    "v2_question": 0.7598,
+    "v3_chat": 0.7031,
+    "v4_synonyms": 0.8332
+   },
+   "seconds": {
+    "v0_short": 0.45,
+    "v1_official": 0.439,
+    "v2_question": 0.819,
+    "v3_chat": 1.113,
+    "v4_synonyms": 0.47
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "colorectal",
+     "m",
+     "neoplasm"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002813.v1.p1",
+     "phs003464.v1.p1",
+     "phs001903.v1.p1"
+    ],
+    "v1_official": [
+     "phs002813.v1.p1",
+     "phs003464.v1.p1",
+     "phs001903.v1.p1"
+    ],
+    "v2_question": [
+     "phs002813.v1.p1",
+     "phs003464.v1.p1",
+     "phs002733.v2.p2"
+    ],
+    "v3_chat": [
+     "phs002813.v1.p1",
+     "phs003464.v1.p1",
+     "phs001415.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002813.v1.p1",
+     "phs003464.v1.p1",
+     "phs001903.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "colorectal",
+    "neoplasm"
+   ]
+  },
+  {
+   "id": "dev104",
+   "constraints": [
+    "adults",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 1.172,
+    "v1_official": 1.205,
+    "v2_question": 1.416,
+    "v3_chat": 1.114,
+    "v4_synonyms": 0.267
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "hypercholesterolemia",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000481.v3.p2",
+     "phs004559.v1.p1",
+     "phs003551.v1.p1"
+    ],
+    "v1_official": [
+     "phs000481.v3.p2",
+     "phs004559.v1.p1",
+     "phs003551.v1.p1"
+    ],
+    "v2_question": [
+     "phs000481.v3.p2",
+     "phs004559.v1.p1",
+     "phs003551.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000481.v3.p2",
+     "phs003551.v1.p1",
+     "phs003562.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs004021.v1.p1",
+     "phs000481.v3.p2",
+     "phs004559.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "hypercholesterolemia"
+   ]
+  },
+  {
+   "id": "dev105",
+   "constraints": [
+    "wgs",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.554,
+    "v1_official": 1.369,
+    "v2_question": 1.688,
+    "v3_chat": 1.423,
+    "v4_synonyms": 0.859
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "acute",
+     "leukemia",
+     "m",
+     "myeloid"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001027.v4.p1",
+     "phs000414.v1.p1",
+     "phs000465.v23.p8"
+    ],
+    "v1_official": [
+     "phs001027.v4.p1",
+     "phs000159.v16.p5",
+     "phs000465.v23.p8"
+    ],
+    "v2_question": [
+     "phs001027.v4.p1",
+     "phs001847.v1.p1",
+     "phs000414.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001027.v4.p1",
+     "phs000159.v16.p5",
+     "phs001847.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001027.v4.p1",
+     "phs000159.v16.p5",
+     "phs000414.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "acute",
+    "leukemia",
+    "myeloid"
+   ]
+  },
+  {
+   "id": "dev106",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.178,
+    "v1_official": 1.269,
+    "v2_question": 1.376,
+    "v3_chat": 1.193,
+    "v4_synonyms": 0.776
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "epidermis",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003766.v1.p1",
+     "phs003767.v1.p1",
+     "phs004223.v1.p1"
+    ],
+    "v1_official": [
+     "phs004223.v1.p1",
+     "phs003766.v1.p1",
+     "phs003767.v1.p1"
+    ],
+    "v2_question": [
+     "phs003766.v1.p1",
+     "phs003767.v1.p1",
+     "phs004223.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003766.v1.p1",
+     "phs003767.v1.p1",
+     "phs004223.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs004223.v1.p1",
+     "phs003767.v1.p1",
+     "phs003766.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "epidermis"
+   ]
+  },
+  {
+   "id": "dev107",
+   "constraints": [
+    "gru",
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.4,
+    "v1_official": 1.245,
+    "v2_question": 1.402,
+    "v3_chat": 1.222,
+    "v4_synonyms": 0.634
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "heterotaxy",
+     "m",
+     "syndrome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001691.v1.p1",
+     "phs001814.v1.p1",
+     "phs000415.v1.p1"
+    ],
+    "v1_official": [
+     "phs001691.v1.p1",
+     "phs001814.v1.p1",
+     "phs000987.v1.p1"
+    ],
+    "v2_question": [
+     "phs001691.v1.p1",
+     "phs001814.v1.p1",
+     "phs000987.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001691.v1.p1",
+     "phs001814.v1.p1",
+     "phs000455.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001691.v1.p1",
+     "phs001814.v1.p1",
+     "phs003475.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "heterotaxy",
+    "syndrome"
+   ]
+  },
+  {
+   "id": "dev108",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.0,
+    "v3_chat": 0.5,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.26,
+    "v1_official": 1.31,
+    "v2_question": 1.363,
+    "v3_chat": 1.402,
+    "v4_synonyms": 1.182
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [
+     "var_terms"
+    ],
+    "v2_question": [
+     "var_terms"
+    ],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": [
+     "enrolled"
+    ],
+    "v3_chat": [
+     "electronic",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001011.v2.p1",
+     "phs000927.v1.p1",
+     "phs001026.v3.p1"
+    ],
+    "v1_official": [
+     "phs001011.v2.p1",
+     "phs002522.v1.p1",
+     "phs003453.v1.p1"
+    ],
+    "v2_question": [
+     "phs004519.v1.p1",
+     "phs001883.v1.p1",
+     "phs000234.v2.p2"
+    ],
+    "v3_chat": [
+     "phs001026.v3.p1",
+     "phs000927.v1.p1",
+     "phs001011.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs001011.v2.p1",
+     "phs000927.v1.p1",
+     "phs001026.v3.p1"
+    ]
+   },
+   "topic_v0": [
+    "electronic"
+   ]
+  },
+  {
+   "id": "dev109",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.393,
+    "v1_official": 1.135,
+    "v2_question": 1.796,
+    "v3_chat": 1.317,
+    "v4_synonyms": 0.409
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "acne",
+     "m",
+     "vulgaris"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001655.v1.p1",
+     "phs000856.v1.p1",
+     "phs000263.v1.p1"
+    ],
+    "v1_official": [
+     "phs001655.v1.p1",
+     "phs000856.v1.p1",
+     "phs000263.v1.p1"
+    ],
+    "v2_question": [
+     "phs001655.v1.p1",
+     "phs000856.v1.p1",
+     "phs000263.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001655.v1.p1",
+     "phs000856.v1.p1",
+     "phs001872.v2.p2"
+    ],
+    "v4_synonyms": [
+     "phs001655.v1.p1",
+     "phs000856.v1.p1",
+     "phs000263.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "acne",
+    "vulgaris"
+   ]
+  },
+  {
+   "id": "dev110",
+   "constraints": [
+    "rnaseq",
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.846,
+    "v1_official": 1.8,
+    "v2_question": 1.535,
+    "v3_chat": 1.114,
+    "v4_synonyms": 0.807
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "medulloblastoma"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000409.v1.p1",
+     "phs001437.v2.p1",
+     "phs003446.v1.p1"
+    ],
+    "v1_official": [
+     "phs000409.v1.p1",
+     "phs001437.v2.p1",
+     "phs003446.v1.p1"
+    ],
+    "v2_question": [
+     "phs000409.v1.p1",
+     "phs001437.v2.p1",
+     "phs003160.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001437.v2.p1",
+     "phs000409.v1.p1",
+     "phs004285.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000409.v1.p1",
+     "phs001437.v2.p1",
+     "phs003446.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "medulloblastoma"
+   ]
+  },
+  {
+   "id": "dev111",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.9052,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.278,
+    "v1_official": 1.667,
+    "v2_question": 1.335,
+    "v3_chat": 1.403,
+    "v4_synonyms": 0.944
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "anemia",
+     "m",
+     "sickle"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000691.v2.p1",
+     "phs003748.v1.p1",
+     "phs004203.v1.p1"
+    ],
+    "v1_official": [
+     "phs004203.v1.p1",
+     "phs001468.v3.p1",
+     "phs000691.v2.p1"
+    ],
+    "v2_question": [
+     "phs002362.v1.p1",
+     "phs004203.v1.p1",
+     "phs003529.v3.p2"
+    ],
+    "v3_chat": [
+     "phs001468.v3.p1",
+     "phs003529.v3.p2",
+     "phs000366.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002362.v1.p1",
+     "phs002348.v1.p1",
+     "phs000366.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "anemia",
+    "sickle"
+   ]
+  },
+  {
+   "id": "dev112",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.827,
+    "v1_official": 2.705,
+    "v2_question": 0.962,
+    "v3_chat": 1.142,
+    "v4_synonyms": 0.793
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "abdominal",
+     "fat",
+     "m",
+     "subcutaneous"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003387.v2.p1",
+     "phs003385.v2.p1",
+     "phs002766.v1.p1"
+    ],
+    "v1_official": [
+     "phs003387.v2.p1",
+     "phs003385.v2.p1",
+     "phs002766.v1.p1"
+    ],
+    "v2_question": [
+     "phs003387.v2.p1",
+     "phs003385.v2.p1",
+     "phs002766.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003387.v2.p1",
+     "phs003385.v2.p1",
+     "phs001203.v5.p1"
+    ],
+    "v4_synonyms": [
+     "phs003387.v2.p1",
+     "phs003385.v2.p1",
+     "phs002766.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "abdominal",
+    "fat",
+    "subcutaneous"
+   ]
+  },
+  {
+   "id": "dev113",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 0.6309,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 0.692,
+    "v1_official": 0.854,
+    "v2_question": 0.934,
+    "v3_chat": 1.105,
+    "v4_synonyms": 0.757
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "sarcoma",
+     "synovial"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003898.v1.p1",
+     "phs002762.v1.p1",
+     "phs001052.v3.p1"
+    ],
+    "v1_official": [
+     "phs002762.v1.p1",
+     "phs003898.v1.p1",
+     "phs001052.v3.p1"
+    ],
+    "v2_question": [
+     "phs003898.v1.p1",
+     "phs002762.v1.p1",
+     "phs001052.v3.p1"
+    ],
+    "v3_chat": [
+     "phs002762.v1.p1",
+     "phs003898.v1.p1",
+     "phs001052.v3.p1"
+    ],
+    "v4_synonyms": [
+     "phs002762.v1.p1",
+     "phs003898.v1.p1",
+     "phs001928.v2.p2"
+    ]
+   },
+   "topic_v0": [
+    "sarcoma",
+    "synovial"
+   ]
+  },
+  {
+   "id": "dev114",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.21,
+    "v1_official": 1.794,
+    "v2_question": 1.423,
+    "v3_chat": 1.101,
+    "v4_synonyms": 0.295
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "bacterial",
+     "m",
+     "vaginosis"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002211.v3.p1",
+     "phs002329.v1.p1",
+     "phs001909.v1.p1"
+    ],
+    "v1_official": [
+     "phs002211.v3.p1",
+     "phs002329.v1.p1",
+     "phs001909.v1.p1"
+    ],
+    "v2_question": [
+     "phs002211.v3.p1",
+     "phs002329.v1.p1",
+     "phs001909.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002211.v3.p1",
+     "phs002329.v1.p1",
+     "phs001909.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002211.v3.p1",
+     "phs002329.v1.p1",
+     "phs001909.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "bacterial",
+    "vaginosis"
+   ]
+  },
+  {
+   "id": "dev115",
+   "constraints": [
+    "gru",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.9197,
+    "v3_chat": 0.8772,
+    "v4_synonyms": 0.9197
+   },
+   "seconds": {
+    "v0_short": 1.132,
+    "v1_official": 1.188,
+    "v2_question": 1.318,
+    "v3_chat": 1.243,
+    "v4_synonyms": 0.907
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "vaccine"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002508.v1.p1",
+     "phs002361.v2.p1",
+     "phs001451.v5.p1"
+    ],
+    "v1_official": [
+     "phs002508.v1.p1",
+     "phs002361.v2.p1",
+     "phs003970.v1.p1"
+    ],
+    "v2_question": [
+     "phs002508.v1.p1",
+     "phs003970.v1.p1",
+     "phs002361.v2.p1"
+    ],
+    "v3_chat": [
+     "phs002508.v1.p1",
+     "phs004285.v1.p1",
+     "phs002388.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002508.v1.p1",
+     "phs001451.v5.p1",
+     "phs002361.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "vaccine"
+   ]
+  },
+  {
+   "id": "dev116",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 0.9829,
+    "v1_official": 0.9829,
+    "v2_question": 0.9829,
+    "v3_chat": 0.5757,
+    "v4_synonyms": 0.9829
+   },
+   "seconds": {
+    "v0_short": 1.107,
+    "v1_official": 1.117,
+    "v2_question": 1.464,
+    "v3_chat": 1.021,
+    "v4_synonyms": 0.037
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "pharmacogenetic"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs004058.v2.p1",
+     "phs004069.v2.p1",
+     "phs003454.v1.p1"
+    ],
+    "v1_official": [
+     "phs004058.v2.p1",
+     "phs004069.v2.p1",
+     "phs003454.v1.p1"
+    ],
+    "v2_question": [
+     "phs003454.v1.p1",
+     "phs004058.v2.p1",
+     "phs004069.v2.p1"
+    ],
+    "v3_chat": [
+     "phs000481.v3.p2",
+     "phs000187.v1.p1",
+     "phs000021.v3.p2"
+    ],
+    "v4_synonyms": [
+     "phs004058.v2.p1",
+     "phs004069.v2.p1",
+     "phs003454.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "pharmacogenetic"
+   ]
+  },
+  {
+   "id": "dev117",
+   "constraints": [
+    "race",
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.5,
+    "v1_official": 0.4307,
+    "v2_question": 0.3869,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 0.555,
+    "v1_official": 0.464,
+    "v2_question": 0.923,
+    "v3_chat": 1.315,
+    "v4_synonyms": 0.515
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [
+     "groups"
+    ],
+    "v2_question": [
+     "groups"
+    ],
+    "v3_chat": [
+     "groups"
+    ],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "birth",
+     "m",
+     "premature"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000353.v1.p1",
+     "phs000332.v3.p2",
+     "phs000714.v1.p1"
+    ],
+    "v1_official": [
+     "phs000353.v1.p1",
+     "phs001739.v1.p1",
+     "phs000332.v3.p2"
+    ],
+    "v2_question": [
+     "phs000353.v1.p1",
+     "phs001739.v1.p1",
+     "phs000332.v3.p2"
+    ],
+    "v3_chat": [
+     "phs001297.v1.p1",
+     "phs001347.v3.p2",
+     "phs004117.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000353.v1.p1",
+     "phs000332.v3.p2",
+     "phs000714.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "birth",
+    "premature"
+   ]
+  },
+  {
+   "id": "dev118",
+   "constraints": [
+    "children"
+   ],
+   "ndcg": {
+    "v0_short": 0.6309,
+    "v1_official": 1.0,
+    "v2_question": 0.6309,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.371,
+    "v1_official": 0.259,
+    "v2_question": 0.938,
+    "v3_chat": 1.254,
+    "v4_synonyms": 0.264
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "hemimegalencephaly",
+     "m"
+    ],
+    "v4_synonyms": [
+     "hemimegalencephaly",
+     "under"
+    ]
+   },
+   "top3": {
+    "v0_short": [
+     "phs002615.v1.p1",
+     "phs002156.v1.p1",
+     "phs002128.v1.p1"
+    ],
+    "v1_official": [
+     "phs002156.v1.p1",
+     "phs002615.v1.p1",
+     "phs002128.v1.p1"
+    ],
+    "v2_question": [
+     "phs002615.v1.p1",
+     "phs002156.v1.p1",
+     "phs002128.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002156.v1.p1",
+     "phs002615.v1.p1",
+     "phs002172.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002156.v1.p1",
+     "phs002615.v1.p1",
+     "phs004124.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "hemimegalencephaly"
+   ]
+  },
+  {
+   "id": "dev119",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.3562,
+    "v1_official": 0.3562,
+    "v2_question": 0.6309,
+    "v3_chat": 0.0,
+    "v4_synonyms": 0.4307
+   },
+   "seconds": {
+    "v0_short": 0.613,
+    "v1_official": 0.687,
+    "v2_question": 1.171,
+    "v3_chat": 1.587,
+    "v4_synonyms": 0.403
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "sarcoma"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003897.v1.p1",
+     "phs003503.v1.p1",
+     "phs001982.v1.p1"
+    ],
+    "v1_official": [
+     "phs003897.v1.p1",
+     "phs003503.v1.p1",
+     "phs001982.v1.p1"
+    ],
+    "v2_question": [
+     "phs003897.v1.p1",
+     "phs003921.v2.p1",
+     "phs002552.v2.p1"
+    ],
+    "v3_chat": [
+     "phs001219.v1.p1",
+     "phs003897.v1.p1",
+     "phs003503.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003785.v1.p1",
+     "phs003800.v2.p1",
+     "phs003897.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "sarcoma"
+   ]
+  },
+  {
+   "id": "dev120",
+   "constraints": [
+    "wes",
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.218,
+    "v1_official": 0.991,
+    "v2_question": 1.425,
+    "v3_chat": 1.406,
+    "v4_synonyms": 0.543
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "cholangiocarcinoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001593.v1.p1",
+     "phs001003.v4.p1",
+     "phs001830.v1.p1"
+    ],
+    "v1_official": [
+     "phs001593.v1.p1",
+     "phs001003.v4.p1",
+     "phs001830.v1.p1"
+    ],
+    "v2_question": [
+     "phs001593.v1.p1",
+     "phs001003.v4.p1",
+     "phs001830.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001593.v1.p1",
+     "phs001003.v4.p1",
+     "phs000467.v23.p8"
+    ],
+    "v4_synonyms": [
+     "phs001593.v1.p1",
+     "phs001003.v4.p1",
+     "phs001830.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "cholangiocarcinoma"
+   ]
+  },
+  {
+   "id": "dev121",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.6309,
+    "v1_official": 0.3869,
+    "v2_question": 0.5,
+    "v3_chat": 0.3333,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 1.437,
+    "v1_official": 2.173,
+    "v2_question": 1.678,
+    "v3_chat": 1.895,
+    "v4_synonyms": 1.357
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "b",
+     "lymphoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003023.v1.p1",
+     "phs000939.v2.p1",
+     "phs000450.v6.p1"
+    ],
+    "v1_official": [
+     "phs000435.v4.p1",
+     "phs000450.v6.p1",
+     "phs004233.v1.p1"
+    ],
+    "v2_question": [
+     "phs002552.v2.p1",
+     "phs003023.v1.p1",
+     "phs000939.v2.p1"
+    ],
+    "v3_chat": [
+     "phs003042.v1.p1",
+     "phs003023.v1.p1",
+     "phs000435.v4.p1"
+    ],
+    "v4_synonyms": [
+     "phs001431.v2.p1",
+     "phs000939.v2.p1",
+     "phs000450.v6.p1"
+    ]
+   },
+   "topic_v0": [
+    "b",
+    "lymphoma"
+   ]
+  },
+  {
+   "id": "dev122",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.535,
+    "v1_official": 1.424,
+    "v2_question": 1.666,
+    "v3_chat": 1.391,
+    "v4_synonyms": 0.719
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "chromosome",
+     "fragile",
+     "m",
+     "site"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003121.v2.p1",
+     "phs002066.v2.p1",
+     "phs001261.v1.p1"
+    ],
+    "v1_official": [
+     "phs002066.v2.p1",
+     "phs003121.v2.p1",
+     "phs001261.v1.p1"
+    ],
+    "v2_question": [
+     "phs003121.v2.p1",
+     "phs002066.v2.p1",
+     "phs001261.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003121.v2.p1",
+     "phs002066.v2.p1",
+     "phs000845.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003121.v2.p1",
+     "phs002066.v2.p1",
+     "phs001261.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "chromosome",
+    "fragile",
+    "site"
+   ]
+  },
+  {
+   "id": "dev123",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.734,
+    "v1_official": 1.913,
+    "v2_question": 1.7,
+    "v3_chat": 1.737,
+    "v4_synonyms": 1.549
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "coronary",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001747.v1.p1",
+     "phs000343.v4.p1",
+     "phs001335.v2.p3"
+    ],
+    "v1_official": [
+     "phs001747.v1.p1",
+     "phs000343.v4.p1",
+     "phs001335.v2.p3"
+    ],
+    "v2_question": [
+     "phs001747.v1.p1",
+     "phs000343.v4.p1",
+     "phs001335.v2.p3"
+    ],
+    "v3_chat": [
+     "phs000343.v4.p1",
+     "phs001747.v1.p1",
+     "phs003194.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001747.v1.p1",
+     "phs000343.v4.p1",
+     "phs001335.v2.p3"
+    ]
+   },
+   "topic_v0": [
+    "coronary"
+   ]
+  },
+  {
+   "id": "dev124",
+   "constraints": [
+    "race",
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.956,
+    "v1_official": 1.693,
+    "v2_question": 1.762,
+    "v3_chat": 1.971,
+    "v4_synonyms": 1.989
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [
+     "groups"
+    ],
+    "v2_question": [
+     "groups"
+    ],
+    "v3_chat": [
+     "groups"
+    ],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "nervous",
+     "peripheral",
+     "system"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001428.v1.p1",
+     "phs003201.v1.p1",
+     "phs000675.v4.p3"
+    ],
+    "v1_official": [
+     "phs001428.v1.p1",
+     "phs003201.v1.p1",
+     "phs000675.v4.p3"
+    ],
+    "v2_question": [
+     "phs001428.v1.p1",
+     "phs001480.v1.p1",
+     "phs002060.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001428.v1.p1",
+     "phs000675.v4.p3",
+     "phs003201.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001428.v1.p1",
+     "phs003201.v1.p1",
+     "phs000675.v4.p3"
+    ]
+   },
+   "topic_v0": [
+    "nervous",
+    "peripheral",
+    "system"
+   ]
+  },
+  {
+   "id": "dev125",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.6309,
+    "v1_official": 0.6309,
+    "v2_question": 0.3869,
+    "v3_chat": 0.5,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 0.107,
+    "v1_official": 0.111,
+    "v2_question": 0.726,
+    "v3_chat": 1.206,
+    "v4_synonyms": 0.106
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "depression",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001590.v2.p1",
+     "phs001826.v1.p1",
+     "phs000020.v2.p1"
+    ],
+    "v1_official": [
+     "phs001590.v2.p1",
+     "phs001826.v1.p1",
+     "phs000020.v2.p1"
+    ],
+    "v2_question": [
+     "phs002858.v1.p1",
+     "phs001590.v2.p1",
+     "phs003791.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000486.v1.p1",
+     "phs001625.v1.p1",
+     "phs001826.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001590.v2.p1",
+     "phs001826.v1.p1",
+     "phs000020.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "depression"
+   ]
+  },
+  {
+   "id": "dev126",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.748,
+    "v1_official": 1.827,
+    "v2_question": 1.886,
+    "v3_chat": 2.157,
+    "v4_synonyms": 1.568
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "charcot",
+     "m",
+     "marie",
+     "tooth"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001553.v1.p1",
+     "phs001295.v2.p1",
+     "phs001419.v1.p1"
+    ],
+    "v1_official": [
+     "phs001553.v1.p1",
+     "phs001295.v2.p1",
+     "phs001419.v1.p1"
+    ],
+    "v2_question": [
+     "phs001553.v1.p1",
+     "phs001295.v2.p1",
+     "phs001419.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001419.v1.p1",
+     "phs001553.v1.p1",
+     "phs001295.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs001419.v1.p1",
+     "phs001295.v2.p1",
+     "phs001553.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "charcot",
+    "marie",
+    "tooth"
+   ]
+  },
+  {
+   "id": "dev127",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 0.9783,
+    "v1_official": 0.9783,
+    "v2_question": 0.9918,
+    "v3_chat": 0.6973,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.093,
+    "v1_official": 1.061,
+    "v2_question": 1.279,
+    "v3_chat": 1.026,
+    "v4_synonyms": 0.013
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "osteosarcoma"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001714.v1.p1",
+     "phs000734.v1.p1",
+     "phs003209.v1.p1"
+    ],
+    "v1_official": [
+     "phs001714.v1.p1",
+     "phs000734.v1.p1",
+     "phs003209.v1.p1"
+    ],
+    "v2_question": [
+     "phs004431.v1.p1",
+     "phs003569.v1.p1",
+     "phs003455.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001437.v2.p1",
+     "phs003842.v1.p1",
+     "phs000734.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000734.v1.p1",
+     "phs001714.v1.p1",
+     "phs001495.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "osteosarcoma"
+   ]
+  },
+  {
+   "id": "dev128",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.344,
+    "v1_official": 0.375,
+    "v2_question": 0.905,
+    "v3_chat": 1.288,
+    "v4_synonyms": 0.349
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "glaucoma",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001673.v1.p1",
+     "phs001053.v1.p1",
+     "phs000238.v1.p1"
+    ],
+    "v1_official": [
+     "phs001673.v1.p1",
+     "phs001053.v1.p1",
+     "phs000238.v1.p1"
+    ],
+    "v2_question": [
+     "phs001673.v1.p1",
+     "phs001053.v1.p1",
+     "phs000238.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001673.v1.p1",
+     "phs000238.v1.p1",
+     "phs001053.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001673.v1.p1",
+     "phs001053.v1.p1",
+     "phs000238.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "glaucoma"
+   ]
+  },
+  {
+   "id": "dev129",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 0.6309,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.298,
+    "v1_official": 1.171,
+    "v2_question": 1.587,
+    "v3_chat": 1.31,
+    "v4_synonyms": 0.461
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "schizophrenia"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001020.v2.p1",
+     "phs000837.v1.p1",
+     "phs002450.v2.p1"
+    ],
+    "v1_official": [
+     "phs001020.v2.p1",
+     "phs002450.v2.p1",
+     "phs002403.v1.p1"
+    ],
+    "v2_question": [
+     "phs000837.v1.p1",
+     "phs001020.v2.p1",
+     "phs002450.v2.p1"
+    ],
+    "v3_chat": [
+     "phs001625.v1.p1",
+     "phs001020.v2.p1",
+     "phs000837.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001020.v2.p1",
+     "phs000837.v1.p1",
+     "phs002450.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "schizophrenia"
+   ]
+  },
+  {
+   "id": "dev130",
+   "constraints": [
+    "gru",
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.3978,
+    "v1_official": 0.3978,
+    "v2_question": 0.0,
+    "v3_chat": 0.6509,
+    "v4_synonyms": 0.5706
+   },
+   "seconds": {
+    "v0_short": 1.923,
+    "v1_official": 1.812,
+    "v2_question": 2.176,
+    "v3_chat": 2.177,
+    "v4_synonyms": 1.018
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "brain",
+     "m",
+     "neoplasm"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001820.v3.p1",
+     "phs002517.v5.p3",
+     "phs001920.v1.p1"
+    ],
+    "v1_official": [
+     "phs001820.v3.p1",
+     "phs002517.v5.p3",
+     "phs001920.v1.p1"
+    ],
+    "v2_question": [
+     "phs001820.v3.p1",
+     "phs001683.v2.p1",
+     "phs004615.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003865.v1.p1",
+     "phs003009.v2.p1",
+     "phs001437.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs003165.v1.p1",
+     "phs002517.v5.p3",
+     "phs003673.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "brain",
+    "neoplasm"
+   ]
+  },
+  {
+   "id": "dev131",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 0.9197,
+    "v1_official": 0.9197,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.402,
+    "v1_official": 1.702,
+    "v2_question": 1.9,
+    "v3_chat": 1.808,
+    "v4_synonyms": 0.878
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "bone",
+     "disorder",
+     "failure",
+     "m",
+     "marrow"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001481.v1.p1",
+     "phs004602.v1.p1",
+     "phs003269.v1.p1"
+    ],
+    "v1_official": [
+     "phs001481.v1.p1",
+     "phs004602.v1.p1",
+     "phs003269.v1.p1"
+    ],
+    "v2_question": [
+     "phs003269.v1.p1",
+     "phs001481.v1.p1",
+     "phs004602.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001481.v1.p1",
+     "phs003269.v1.p1",
+     "phs004602.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003269.v1.p1",
+     "phs001481.v1.p1",
+     "phs004602.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "bone",
+    "disorder",
+    "failure",
+    "marrow"
+   ]
+  },
+  {
+   "id": "dev132",
+   "constraints": [
+    "wgs",
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 0.9683,
+    "v1_official": 0.9888,
+    "v2_question": 0.9683,
+    "v3_chat": 0.9453,
+    "v4_synonyms": 0.9951
+   },
+   "seconds": {
+    "v0_short": 1.477,
+    "v1_official": 1.159,
+    "v2_question": 1.502,
+    "v3_chat": 1.448,
+    "v4_synonyms": 0.554
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "melanoma"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003451.v2.p1",
+     "phs000452.v5.p2",
+     "phs001036.v1.p1"
+    ],
+    "v1_official": [
+     "phs001036.v1.p1",
+     "phs003451.v2.p1",
+     "phs001241.v1.p1"
+    ],
+    "v2_question": [
+     "phs001036.v1.p1",
+     "phs003451.v2.p1",
+     "phs000452.v5.p2"
+    ],
+    "v3_chat": [
+     "phs000452.v5.p2",
+     "phs003451.v2.p1",
+     "phs003097.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003451.v2.p1",
+     "phs000452.v5.p2",
+     "phs001241.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "melanoma"
+   ]
+  },
+  {
+   "id": "dev133",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.5,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 0.943,
+    "v1_official": 0.934,
+    "v2_question": 1.133,
+    "v3_chat": 1.269,
+    "v4_synonyms": 0.506
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "hiv",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003204.v2.p1",
+     "phs003194.v1.p1",
+     "phs001717.v1.p1"
+    ],
+    "v1_official": [
+     "phs003204.v2.p1",
+     "phs003194.v1.p1",
+     "phs001717.v1.p1"
+    ],
+    "v2_question": [
+     "phs003204.v2.p1",
+     "phs001717.v1.p1",
+     "phs003194.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003194.v1.p1",
+     "phs001995.v3.p1",
+     "phs003204.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs003204.v2.p1",
+     "phs000731.v2.p1",
+     "phs003194.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "hiv"
+   ]
+  },
+  {
+   "id": "dev134",
+   "constraints": [
+    "gru",
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.616,
+    "v1_official": 1.596,
+    "v2_question": 2.081,
+    "v3_chat": 1.35,
+    "v4_synonyms": 0.465
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "spermatozoa"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001887.v1.p1",
+     "phs004354.v1.p1",
+     "phs001585.v4.p2"
+    ],
+    "v1_official": [
+     "phs001887.v1.p1",
+     "phs004354.v1.p1",
+     "phs003166.v1.p1"
+    ],
+    "v2_question": [
+     "phs001887.v1.p1",
+     "phs004354.v1.p1",
+     "phs001143.v4.p1"
+    ],
+    "v3_chat": [
+     "phs001887.v1.p1",
+     "phs001872.v2.p2",
+     "phs001363.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001887.v1.p1",
+     "phs004354.v1.p1",
+     "phs000958.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "spermatozoa"
+   ]
+  },
+  {
+   "id": "dev135",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.3869,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.756,
+    "v1_official": 1.471,
+    "v2_question": 1.562,
+    "v3_chat": 1.582,
+    "v4_synonyms": 1.186
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "group",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001717.v1.p1",
+     "phs003392.v1.p1",
+     "phs002024.v1.p1"
+    ],
+    "v1_official": [
+     "phs001717.v1.p1",
+     "phs002024.v1.p1",
+     "phs003660.v1.p1"
+    ],
+    "v2_question": [
+     "phs001717.v1.p1",
+     "phs003707.v2.p1",
+     "phs001497.v2.p1"
+    ],
+    "v3_chat": [
+     "phs001995.v3.p1",
+     "phs002451.v1.p1",
+     "phs003194.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001717.v1.p1",
+     "phs000791.v2.p1",
+     "phs000731.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "group"
+   ]
+  },
+  {
+   "id": "dev136",
+   "constraints": [
+    "adults"
+   ],
+   "ndcg": {
+    "v0_short": 0.9829,
+    "v1_official": 0.9829,
+    "v2_question": 0.6534,
+    "v3_chat": 0.7606,
+    "v4_synonyms": 0.9709
+   },
+   "seconds": {
+    "v0_short": 0.531,
+    "v1_official": 1.988,
+    "v2_question": 1.149,
+    "v3_chat": 1.535,
+    "v4_synonyms": 0.386
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "arthritis",
+     "m",
+     "rheumatoid"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001457.v1.p1",
+     "phs003633.v1.p1",
+     "phs003417.v2.p1"
+    ],
+    "v1_official": [
+     "phs001457.v1.p1",
+     "phs003633.v1.p1",
+     "phs003417.v2.p1"
+    ],
+    "v2_question": [
+     "phs002771.v1.p1",
+     "phs004226.v1.p1",
+     "phs001457.v1.p1"
+    ],
+    "v3_chat": [
+     "phs002771.v1.p1",
+     "phs001457.v1.p1",
+     "phs003633.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001457.v1.p1",
+     "phs003633.v1.p1",
+     "phs003417.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "arthritis",
+    "rheumatoid"
+   ]
+  },
+  {
+   "id": "dev137",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.628,
+    "v1_official": 1.741,
+    "v2_question": 1.867,
+    "v3_chat": 2.035,
+    "v4_synonyms": 1.849
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": [
+     "associated",
+     "malignancy",
+     "myeloid"
+    ],
+    "v2_question": null,
+    "v3_chat": [
+     "associated",
+     "disorder",
+     "familial",
+     "m",
+     "malignancy",
+     "myeloid",
+     "platelet"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003075.v1.p1",
+     "phs002599.v1.p1",
+     "phs000159.v16.p5"
+    ],
+    "v1_official": [
+     "phs003075.v1.p1",
+     "phs002599.v1.p1",
+     "phs000159.v16.p5"
+    ],
+    "v2_question": [
+     "phs003075.v1.p1",
+     "phs002599.v1.p1",
+     "phs000159.v16.p5"
+    ],
+    "v3_chat": [
+     "phs003075.v1.p1",
+     "phs002599.v1.p1",
+     "phs000159.v16.p5"
+    ],
+    "v4_synonyms": [
+     "phs003075.v1.p1",
+     "phs002599.v1.p1",
+     "phs000159.v16.p5"
+    ]
+   },
+   "topic_v0": [
+    "associated",
+    "disorder",
+    "familial",
+    "malignancy",
+    "myeloid",
+    "platelet"
+   ]
+  },
+  {
+   "id": "dev138",
+   "constraints": [
+    "adults",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.4307,
+    "v4_synonyms": 0.3155
+   },
+   "seconds": {
+    "v0_short": 1.822,
+    "v1_official": 2.0,
+    "v2_question": 2.001,
+    "v3_chat": 2.046,
+    "v4_synonyms": 1.646
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "neuroendocrine",
+     "tumor"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001910.v1.p1",
+     "phs001666.v1.p1",
+     "phs002327.v1.p1"
+    ],
+    "v1_official": [
+     "phs001910.v1.p1",
+     "phs002176.v2.p1",
+     "phs003102.v1.p1"
+    ],
+    "v2_question": [
+     "phs001910.v1.p1",
+     "phs002327.v1.p1",
+     "phs001666.v1.p1"
+    ],
+    "v3_chat": [
+     "phs004200.v1.p1",
+     "phs002327.v1.p1",
+     "phs002070.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002327.v1.p1",
+     "phs003689.v1.p1",
+     "phs001366.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "neuroendocrine",
+    "tumor"
+   ]
+  },
+  {
+   "id": "dev139",
+   "constraints": [
+    "gru"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.2,
+    "v1_official": 1.283,
+    "v2_question": 1.399,
+    "v3_chat": 1.276,
+    "v4_synonyms": 0.296
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "breast",
+     "density",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000975.v1.p1",
+     "phs000395.v1.p1",
+     "phs000604.v1.p1"
+    ],
+    "v1_official": [
+     "phs000975.v1.p1",
+     "phs000395.v1.p1",
+     "phs000604.v1.p1"
+    ],
+    "v2_question": [
+     "phs000975.v1.p1",
+     "phs000604.v1.p1",
+     "phs000395.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000975.v1.p1",
+     "phs000395.v1.p1",
+     "phs000604.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000975.v1.p1",
+     "phs000395.v1.p1",
+     "phs000604.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "breast",
+    "density"
+   ]
+  },
+  {
+   "id": "dev140",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.151,
+    "v1_official": 0.952,
+    "v2_question": 1.415,
+    "v3_chat": 1.391,
+    "v4_synonyms": 0.332
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "anemia",
+     "fanconi",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002652.v1.p1",
+     "phs003966.v1.p1",
+     "phs001481.v1.p1"
+    ],
+    "v1_official": [
+     "phs002652.v1.p1",
+     "phs003966.v1.p1",
+     "phs001481.v1.p1"
+    ],
+    "v2_question": [
+     "phs002652.v1.p1",
+     "phs003966.v1.p1",
+     "phs001481.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003966.v1.p1",
+     "phs002652.v1.p1",
+     "phs001481.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002652.v1.p1",
+     "phs003966.v1.p1",
+     "phs001481.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "anemia",
+    "fanconi"
+   ]
+  },
+  {
+   "id": "dev141",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 2.086,
+    "v1_official": 1.935,
+    "v2_question": 2.115,
+    "v3_chat": 2.11,
+    "v4_synonyms": 1.811
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "graft",
+     "host",
+     "m",
+     "vs"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001918.v2.p1",
+     "phs002185.v2.p1",
+     "phs001331.v2.p1"
+    ],
+    "v1_official": [
+     "phs001918.v2.p1",
+     "phs002185.v2.p1",
+     "phs001331.v2.p1"
+    ],
+    "v2_question": [
+     "phs001918.v2.p1",
+     "phs002185.v2.p1",
+     "phs004704.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001918.v2.p1",
+     "phs002185.v2.p1",
+     "phs001331.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs001918.v2.p1",
+     "phs002185.v2.p1",
+     "phs001331.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "graft",
+    "host",
+    "vs"
+   ]
+  },
+  {
+   "id": "dev142",
+   "constraints": [
+    "gru",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.615,
+    "v1_official": 1.764,
+    "v2_question": 1.756,
+    "v3_chat": 1.675,
+    "v4_synonyms": 1.395
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "congenital",
+     "disorder",
+     "glycosylation",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs003313.v1.p1",
+     "phs002450.v2.p1",
+     "phs002403.v1.p1"
+    ],
+    "v1_official": [
+     "phs003313.v1.p1",
+     "phs002450.v2.p1",
+     "phs002403.v1.p1"
+    ],
+    "v2_question": [
+     "phs003313.v1.p1",
+     "phs001272.v2.p1",
+     "phs002732.v1.p1"
+    ],
+    "v3_chat": [
+     "phs003313.v1.p1",
+     "phs001845.v1.p1",
+     "phs003208.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003313.v1.p1",
+     "phs002450.v2.p1",
+     "phs002403.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "congenital",
+    "disorder",
+    "glycosylation"
+   ]
+  },
+  {
+   "id": "dev143",
+   "constraints": [
+    "wes",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.258,
+    "v1_official": 1.341,
+    "v2_question": 1.49,
+    "v3_chat": 1.715,
+    "v4_synonyms": 1.197
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "neurofibromatosis"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001993.v1.p1",
+     "phs003835.v1.p1",
+     "phs000792.v1.p1"
+    ],
+    "v1_official": [
+     "phs001993.v1.p1",
+     "phs003835.v1.p1",
+     "phs000792.v1.p1"
+    ],
+    "v2_question": [
+     "phs001993.v1.p1",
+     "phs003835.v1.p1",
+     "phs000792.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001993.v1.p1",
+     "phs003835.v1.p1",
+     "phs004285.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001993.v1.p1",
+     "phs003835.v1.p1",
+     "phs000792.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "neurofibromatosis"
+   ]
+  },
+  {
+   "id": "dev144",
+   "constraints": [
+    "wgs"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 1.0,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.699,
+    "v1_official": 1.289,
+    "v2_question": 1.617,
+    "v3_chat": 1.338,
+    "v4_synonyms": 0.607
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "fibrosis",
+     "idiopathic",
+     "m",
+     "pulmonary"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs001607.v4.p3",
+     "phs003521.v1.p1",
+     "phs001402.v4.p1"
+    ],
+    "v1_official": [
+     "phs003521.v1.p1",
+     "phs001607.v4.p3",
+     "phs001402.v4.p1"
+    ],
+    "v2_question": [
+     "phs001607.v4.p3",
+     "phs003521.v1.p1",
+     "phs001402.v4.p1"
+    ],
+    "v3_chat": [
+     "phs001607.v4.p3",
+     "phs003521.v1.p1",
+     "phs001402.v4.p1"
+    ],
+    "v4_synonyms": [
+     "phs001607.v4.p3",
+     "phs003521.v1.p1",
+     "phs001402.v4.p1"
+    ]
+   },
+   "topic_v0": [
+    "fibrosis",
+    "idiopathic",
+    "pulmonary"
+   ]
+  },
+  {
+   "id": "dev145",
+   "constraints": [
+    "wes"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.9675,
+    "v4_synonyms": 1.0
+   },
+   "seconds": {
+    "v0_short": 1.491,
+    "v1_official": 1.586,
+    "v2_question": 1.684,
+    "v3_chat": 1.63,
+    "v4_synonyms": 0.866
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "sezary",
+     "syndrome"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000994.v1.p1",
+     "phs000859.v2.p1",
+     "phs003158.v1.p1"
+    ],
+    "v1_official": [
+     "phs000859.v2.p1",
+     "phs000994.v1.p1",
+     "phs003158.v1.p1"
+    ],
+    "v2_question": [
+     "phs000994.v1.p1",
+     "phs000859.v2.p1",
+     "phs003158.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000994.v1.p1",
+     "phs000859.v2.p1",
+     "phs000913.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs003158.v1.p1",
+     "phs000994.v1.p1",
+     "phs000859.v2.p1"
+    ]
+   },
+   "topic_v0": [
+    "sezary",
+    "syndrome"
+   ]
+  },
+  {
+   "id": "dev146",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.6309,
+    "v1_official": 0.6309,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 0.6309
+   },
+   "seconds": {
+    "v0_short": 1.854,
+    "v1_official": 1.914,
+    "v2_question": 1.998,
+    "v3_chat": 2.096,
+    "v4_synonyms": 1.905
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "huntington",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000371.v2.p1",
+     "phs000222.v6.p2",
+     "phs001065.v1.p1"
+    ],
+    "v1_official": [
+     "phs000371.v2.p1",
+     "phs000222.v6.p2",
+     "phs001065.v1.p1"
+    ],
+    "v2_question": [
+     "phs000222.v6.p2",
+     "phs000371.v2.p1",
+     "phs001065.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000371.v2.p1",
+     "phs000222.v6.p2",
+     "phs001065.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000371.v2.p1",
+     "phs000222.v6.p2",
+     "phs001065.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "huntington"
+   ]
+  },
+  {
+   "id": "dev147",
+   "constraints": [
+    "methylation",
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 0.5,
+    "v1_official": 0.5,
+    "v2_question": 0.5,
+    "v3_chat": 1.0,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 1.509,
+    "v1_official": 1.654,
+    "v2_question": 1.554,
+    "v3_chat": 1.82,
+    "v4_synonyms": 1.507
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "leukemia",
+     "lymphoid",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000435.v4.p1",
+     "phs001431.v2.p1",
+     "phs001473.v2.p2"
+    ],
+    "v1_official": [
+     "phs000435.v4.p1",
+     "phs001431.v2.p1",
+     "phs001473.v2.p2"
+    ],
+    "v2_question": [
+     "phs000435.v4.p1",
+     "phs001431.v2.p1",
+     "phs001473.v2.p2"
+    ],
+    "v3_chat": [
+     "phs001473.v2.p2",
+     "phs000435.v4.p1",
+     "phs001431.v2.p1"
+    ],
+    "v4_synonyms": [
+     "phs001431.v2.p1",
+     "phs000435.v4.p1",
+     "phs001473.v2.p2"
+    ]
+   },
+   "topic_v0": [
+    "leukemia",
+    "lymphoid"
+   ]
+  },
+  {
+   "id": "dev148",
+   "constraints": [
+    "race"
+   ],
+   "ndcg": {
+    "v0_short": 0.5,
+    "v1_official": 0.5,
+    "v2_question": 0.4307,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 1.33,
+    "v1_official": 1.363,
+    "v2_question": 1.702,
+    "v3_chat": 1.869,
+    "v4_synonyms": 1.325
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "group",
+     "m",
+     "population"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs000750.v1.p1",
+     "phs002654.v1.p1",
+     "phs002417.v1.p1"
+    ],
+    "v1_official": [
+     "phs000750.v1.p1",
+     "phs002654.v1.p1",
+     "phs002417.v1.p1"
+    ],
+    "v2_question": [
+     "phs000750.v1.p1",
+     "phs000662.v1.p1",
+     "phs002654.v1.p1"
+    ],
+    "v3_chat": [
+     "phs000750.v1.p1",
+     "phs002417.v1.p1",
+     "phs002654.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs000750.v1.p1",
+     "phs002654.v1.p1",
+     "phs002417.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "group",
+    "population"
+   ]
+  },
+  {
+   "id": "dev149",
+   "constraints": [
+    "rnaseq"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6934,
+    "v4_synonyms": 0.6934
+   },
+   "seconds": {
+    "v0_short": 1.973,
+    "v1_official": 1.826,
+    "v2_question": 1.804,
+    "v3_chat": 1.876,
+    "v4_synonyms": 1.955
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "lyme",
+     "m"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002795.v1.p1",
+     "phs003314.v1.p1",
+     "phs002794.v2.p1"
+    ],
+    "v1_official": [
+     "phs002795.v1.p1",
+     "phs003314.v1.p1",
+     "phs002794.v2.p1"
+    ],
+    "v2_question": [
+     "phs002795.v1.p1",
+     "phs003314.v1.p1",
+     "phs002794.v2.p1"
+    ],
+    "v3_chat": [
+     "phs002794.v2.p1",
+     "phs002795.v1.p1",
+     "phs003314.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs002794.v2.p1",
+     "phs002795.v1.p1",
+     "phs003314.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "lyme"
+   ]
+  },
+  {
+   "id": "dev150",
+   "constraints": [
+    "methylation"
+   ],
+   "ndcg": {
+    "v0_short": 1.0,
+    "v1_official": 1.0,
+    "v2_question": 1.0,
+    "v3_chat": 0.6309,
+    "v4_synonyms": 0.5
+   },
+   "seconds": {
+    "v0_short": 0.978,
+    "v1_official": 1.158,
+    "v2_question": 1.302,
+    "v3_chat": 1.225,
+    "v4_synonyms": 0.441
+   },
+   "parse_diff": {
+    "v0_short": [],
+    "v1_official": [],
+    "v2_question": [],
+    "v3_chat": [],
+    "v4_synonyms": []
+   },
+   "topic_diff": {
+    "v0_short": null,
+    "v1_official": null,
+    "v2_question": null,
+    "v3_chat": [
+     "m",
+     "obesity"
+    ],
+    "v4_synonyms": null
+   },
+   "top3": {
+    "v0_short": [
+     "phs002754.v1.p1",
+     "phs001498.v3.p2",
+     "phs001812.v1.p1"
+    ],
+    "v1_official": [
+     "phs002754.v1.p1",
+     "phs001498.v3.p2",
+     "phs001812.v1.p1"
+    ],
+    "v2_question": [
+     "phs002754.v1.p1",
+     "phs001498.v3.p2",
+     "phs001812.v1.p1"
+    ],
+    "v3_chat": [
+     "phs001498.v3.p2",
+     "phs002754.v1.p1",
+     "phs001812.v1.p1"
+    ],
+    "v4_synonyms": [
+     "phs001498.v3.p2",
+     "phs001812.v1.p1",
+     "phs002754.v1.p1"
+    ]
+   },
+   "topic_v0": [
+    "obesity"
+   ]
+  }
+ ],
+ "note": "Silver labels are circular; this measures wording sensitivity, not the official score."
+}

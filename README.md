@@ -115,6 +115,23 @@ expected answer on the submission-example wording moves from 3rd to 2nd. Use
 Results, limits and the pre-registered predictions:
 [`sentence_need/`](sentence_need/README.md).
 
+**Other wordings.** `wording_check.py` rewrites the 150 silver needs four more
+ways with the disease unchanged (the official template, a question, a chat
+line, synonyms such as "WGS" and "aged 18 or older"). NDCG@10 falls from
+0.8943 to 0.8656, 0.8754, 0.7782 and 0.8846. The structured parse hardly
+moves (at most 3 of 150 needs per wording). The loss comes from the text
+search, which still gets the words of constraints that are already parsed,
+and from "I'm", which leaves a stray "m" in every chat need's disease words. 4
+of 7 pre-registered predictions held. A fix is being tested. Details:
+[`wording_check/`](wording_check/README.md).
+
+**A local re-ranker (negative result).** `rerank_check.py` re-scored each
+need's top 30 with NCBI's open-weight MedCPT cross-encoder on CPU and fused it
+with the rule score. No weight beat the rules on 150 silver needs (0.8943 at
+w = 0, 0.8928 at 0.25, 0.8178 with the cross-encoder alone), and it took about
+20 s per need against 1.4 s. The rules stay the default. 5 of 6 pre-registered
+predictions held. Details: [`rerank/`](rerank/README.md).
+
 ### Writing a submission
 
 `spark_submit.py` writes a Task 2 submission with that ranker and checks it
@@ -165,6 +182,41 @@ by content; their bytes differed only in the header time. All 6 pre-registered
 predictions held. This shows the build doesn't depend on Python's hash seed
 on one machine and one image. It doesn't test other platforms or Python
 versions. Hashes and the report: [`submission/`](submission/README.md).
+
+### Docker system for SPARK Task 2
+
+The Task 2 description asks for "a Docker-based system" that NIH can
+reproduce and run "in a completely isolated environment with all external
+network calls blocked", with an estimate of the compute and storage it needs.
+`Dockerfile.spark` builds one in two stages on `python:3.12-slim`. The build
+stage indexes NLM's `dbgap.tar.gz` with `spark_system.py build` and writes
+`/index/MANIFEST.json`, the SHA-256 hashes of the index and of the seven code
+files. The final image keeps only the code and four index files, not the
+snapshot tarball.
+
+```
+$ docker build -f Dockerfile.spark -t munim-spark-dbgap .     # with dbgap.tar.gz next to the Dockerfile
+$ docker run --rm --network none -v "$PWD/io:/io" munim-spark-dbgap run --needs /io/needs.jsonl \
+    --out /io/submission.jsonl --team-id <team> --submission-id <team>-run-01 --stats /io/stats.json
+$ docker run --rm --network none munim-spark-dbgap verify --strict
+```
+
+`noegress.py` runs a Python script with socket connects, sends and name
+lookups refused and counted. Use it where `--network none` isn't available.
+
+On 2026-10-31 the image's commands were run in a `python:3.12-slim`
+container with 2 CPUs on the full snapshot. The build took 195 s and peaked
+at 860 MB. A 192-need submission under `noegress.py` took 316 s: 1.6 s per
+need on average, 2.8 s at most, 313 MB. It made 0 network attempts and had 0
+format problems, and both manifest checks matched all 10 files. The index the
+image holds is 29 MB; the code is 158 KB. The index and the submission were
+byte-identical to the earlier builds made in `python:3.12` on another machine
+with other hash seeds (the `.gz` files by content). All 7 pre-registered
+predictions held. Limits: `docker build` itself has not been run yet, so the
+Dockerfile's syntax and `COPY` steps are untested. `noegress.py` blocks only
+Python-level calls; `--network none` is the real guarantee. Report and
+hashes: `submission/image-2026-10-31.json` and
+`submission/image-manifest-2026-10-31.json`.
 
 A second, independent label set comes from PhenX curators' links between
 PhenX measures and dbGaP studies: [`phenx_dev/`](phenx_dev/README.md). On it
@@ -308,17 +360,18 @@ $ docker run --rm -v "$PWD:/data" -w /data dbgap-cohort-finder search "COPD with
 ```
 
 The image is `python:3.12-slim` plus one file. Ranking runs on a CPU, needs
-no GPU and makes no network calls after the harvest.
+no GPU and makes no network calls after the harvest. For the SPARK Task 2
+system, use `Dockerfile.spark` (see above).
 
 ## Limitations
 
 - These are rules and BM25, not a language model. Paraphrases the rules don't
-  cover ("genome-scale") fall back to text matching. A re-ranking step with a
-  local open-weight model (SPARK allows no hosted model APIs at run time) is
-  the planned next layer. It will be measured against this baseline with
-  `devset` and `bench`.
+  cover ("genome-scale") fall back to text matching. One local open-weight
+  re-ranker (MedCPT) has been measured and did not help on the silver labels
+  ([`rerank/`](rerank/README.md)).
 - `sentence_need.py` was written for the one sentence template SPARK has
-  published. Other templates may still break the parse.
+  published. Other wordings lose up to 0.12 NDCG@10 on the silver labels
+  ([`wording_check/`](wording_check/README.md)).
 - `spark_submit.py check` follows the one example record in the Task 2
   description. NIH's later technical guidance may add rules.
 - Counts are study-wide. The tool can't yet tell how many of a study's 5,000
@@ -341,7 +394,7 @@ python -m unittest -v
 The tests use fixtures shaped like the real FHIR record and the real data
 dictionary files for phs001218 (GeneSTAR), a synthetic snapshot archive shaped
 like the real `var_summary.xml` and `data_dict.xml` files of phs000001 (AREDS),
-and synthetic studies. They make no network calls.
+and synthetic studies. They make no network calls and need no model.
 
 ## Changes
 
@@ -361,6 +414,11 @@ and synthetic studies. They make no network calls.
   `spark_manifest.py` 0.1.0 records SHA-256 hashes of a build (with content
   hashes for `.gz` files) and checks a rebuild against them; two builds of the
   full pipeline matched (`submission/repro-2026-10-31.json`).
+  `Dockerfile.spark`, `spark_system.py` 0.1.0 and `noegress.py`: the Task 2
+  Docker system, its manifest checks and a Python-level network block, measured
+  in `submission/image-2026-10-31.json`. `wording_check.py` 0.1.0 and its
+  report (`wording_check/`); `rerank_check.py` 0.1.0 and its report
+  (`rerank/`).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
@@ -373,4 +431,5 @@ Made by MV2 of Munim, Inc. The code and this README were made with AI agents
 working in his name. Issues and corrections are welcome.
 
 Apache-2.0 license (see `LICENSE`). The census results in `census/` and the
-reports in `sentence_need/` and `submission/` are CC BY 4.0.
+reports in `sentence_need/`, `submission/`, `wording_check/` and `rerank/` are
+CC BY 4.0.
