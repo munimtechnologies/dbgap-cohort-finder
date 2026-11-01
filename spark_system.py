@@ -11,10 +11,11 @@ run/check through to spark_submit.py with the image's index filled in.
     python spark_system.py build --tar dbgap.tar.gz --index /index    (at image build time)
     python spark_system.py verify [--index /index] [--strict]
     python spark_system.py run --needs needs.jsonl --out submission.jsonl --team-id <team> \
-        --submission-id <team>-run-01 [--stats stats.json]
+        --submission-id <team>-run-01 [--stats stats.json] [--system pad|base]
     python spark_system.py check --needs needs.jsonl --submission submission.jsonl -k 100
 
-The index folder defaults to $SPARK_INDEX, then /index.
+The index folder defaults to $SPARK_INDEX, then /index. Since 0.2.0 the code
+manifest also covers wording_fix.py, which spark_submit 0.2.0's default ranker uses.
 
 Made by MV2 of Munim, Inc. with AI agents. Apache-2.0 license.
 """
@@ -27,11 +28,11 @@ import sys
 
 import spark_manifest as sm
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 APP = os.path.dirname(os.path.abspath(__file__))
 INDEX_FILES = ["out/studies.jsonl", "data/variables.jsonl.gz", "data/var_values.jsonl.gz"]
-CODE_FILES = ["cohort_finder.py", "snapshot.py", "snapshot_survey.py", "sentence_need.py",
+CODE_FILES = ["cohort_finder.py", "snapshot.py", "snapshot_survey.py", "sentence_need.py", "wording_fix.py",
               "spark_submit.py", "spark_manifest.py", "spark_system.py"]
 MANIFEST = "MANIFEST.json"
 

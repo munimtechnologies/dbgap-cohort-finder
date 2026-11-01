@@ -1,0 +1,628 @@
+{
+ "image_check": "0.2.0",
+ "spark_system": "0.2.0",
+ "python": "3.12.15",
+ "platform": "Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+ "steps": [
+  {
+   "step": "build",
+   "exit": 0,
+   "seconds": 189.3,
+   "children_peak_mb_so_far": 848.0,
+   "tail": [
+    "[14:01:42] 500000 objects",
+    "objects: {'study': 3578, 'data_dict': 16062, 'var_summary': 16062, 'dataset': 16070, 'variable': 465853, 'genotype': 2122, 'document': 8079, 'analysis': 17277}; unreadable: 0",
+    "3 index files, 8 code files"
+   ]
+  },
+  {
+   "step": "verify",
+   "exit": 0,
+   "seconds": 1.0,
+   "children_peak_mb_so_far": 848.0,
+   "tail": [
+    "code spark_system.py: same",
+    "code wording_fix.py: same",
+    "11 files, 0 not matching"
+   ]
+  },
+  {
+   "step": "devset",
+   "exit": 0,
+   "seconds": 7.9,
+   "children_peak_mb_so_far": 848.0,
+   "tail": [
+    "150 silver needs, 275 relevant labels"
+   ]
+  },
+  {
+   "step": "needs",
+   "exit": 0,
+   "seconds": 0.5,
+   "children_peak_mb_so_far": 848.0,
+   "tail": [
+    "192 needs (150 silver)"
+   ]
+  },
+  {
+   "step": "run",
+   "exit": 0,
+   "seconds": 251.6,
+   "children_peak_mb_so_far": 848.0,
+   "tail": [
+    "{\"k\": 100, \"load_seconds\": 12.41, \"max_need_seconds\": 3.252, \"mean_need_seconds\": 1.242, \"needs\": 192, \"peak_memory_mb\": 313.7, \"sentence_need\": \"0.2.0\", \"studies\": 3578, \"system\": \"pad\", \"tier\": 0.6, \"total_need_seconds\": 238.48, \"version\": \"0.2.0\", \"wording_fix\": \"0.1.0\"}",
+    "192 needs, 0 problems"
+   ]
+  },
+  {
+   "step": "check",
+   "exit": 0,
+   "seconds": 0.4,
+   "children_peak_mb_so_far": 848.0,
+   "tail": [
+    "192 needs, 0 problems"
+   ]
+  },
+  {
+   "step": "verify-strict",
+   "exit": 0,
+   "seconds": 0.8,
+   "children_peak_mb_so_far": 848.0,
+   "tail": [
+    "code spark_system.py: same",
+    "code wording_fix.py: same",
+    "11 files, 0 not matching"
+   ]
+  }
+ ],
+ "scores": {
+  "silver_needs": 150,
+  "needs": 192,
+  "short_lists": [
+   "silver-dev002"
+  ],
+  "min_length": 94,
+  "silver_ndcg@10": 0.919,
+  "silver_ndcg@100": 0.9259,
+  "official_rank": {
+   "official-p1": 2,
+   "official-p5": 2
+  },
+  "top10": {
+   "ex1": [
+    "phs000488.v2.p1",
+    "phs001954.v2.p1",
+    "phs003812.v1.p1",
+    "phs002992.v1.p1",
+    "phs000951.v6.p5",
+    "phs001472.v3.p2",
+    "phs001607.v4.p3",
+    "phs001143.v4.p1",
+    "phs003994.v1.p1",
+    "phs001040.v6.p1"
+   ],
+   "ex2": [
+    "phs000433.v1.p1",
+    "phs000984.v1.p1",
+    "phs000389.v1.p1",
+    "phs001099.v1.p1",
+    "phs000143.v2.p1",
+    "phs002024.v1.p1",
+    "phs002465.v2.p1",
+    "phs000888.v1.p1",
+    "phs000356.v2.p1",
+    "phs002453.v1.p1"
+   ],
+   "ex3": [
+    "phs000422.v1.p1",
+    "phs000185.v8.p1",
+    "phs003512.v1.p1",
+    "phs001011.v2.p1",
+    "phs001727.v3.p1",
+    "phs002921.v2.p1",
+    "phs001812.v1.p1",
+    "phs001395.v3.p2",
+    "phs001602.v3.p1",
+    "phs001604.v3.p1"
+   ],
+   "ex4": [
+    "phs004440.v1.p1",
+    "phs003275.v2.p1",
+    "phs001870.v2.p1",
+    "phs003218.v1.p1",
+    "phs003535.v2.p1",
+    "phs001285.v2.p1",
+    "phs001863.v1.p1",
+    "phs003147.v1.p1",
+    "phs001050.v1.p1",
+    "phs000472.v2.p1"
+   ],
+   "ex5": [
+    "phs000378.v1.p1",
+    "phs000572.v8.p4",
+    "phs000168.v2.p2",
+    "phs000185.v8.p1",
+    "phs000397.v3.p3",
+    "phs003530.v2.p1",
+    "phs000496.v1.p1",
+    "phs002558.v3.p16",
+    "phs000483.v1.p1",
+    "phs000372.v1.p1"
+   ],
+   "ex6": [
+    "phs001855.v1.p1",
+    "phs001412.v4.p1",
+    "phs001238.v2.p1",
+    "phs001203.v5.p1",
+    "phs000286.v7.p2",
+    "phs000200.v12.p3",
+    "phs000287.v7.p1",
+    "phs000403.v3.p3",
+    "phs000313.v4.p2",
+    "phs000402.v5.p2"
+   ],
+   "ex7": [
+    "phs002698.v1.p1",
+    "phs000337.v1.p1",
+    "phs000682.v1.p1",
+    "phs001089.v4.p1",
+    "phs001383.v1.p1",
+    "phs002403.v1.p1",
+    "phs001491.v4.p1",
+    "phs000620.v1.p1",
+    "phs000966.v3.p2",
+    "phs001071.v1.p1"
+   ],
+   "ex8": [
+    "phs000844.v2.p1",
+    "phs002389.v2.p1",
+    "phs000524.v2.p2",
+    "phs004088.v2.p1",
+    "phs003709.v1.p1",
+    "phs000843.v2.p1",
+    "phs000286.v7.p2",
+    "phs004045.v1.p1",
+    "phs000744.v5.p2",
+    "phs002719.v1.p1"
+   ],
+   "h01": [
+    "phs000403.v3.p3",
+    "phs000400.v6.p1",
+    "phs000402.v5.p2",
+    "phs000399.v1.p2",
+    "phs000401.v18.p16",
+    "phs000398.v9.p3",
+    "phs000557.v8.p3",
+    "phs000281.v8.p3",
+    "phs000090.v9.p3",
+    "phs000287.v7.p1"
+   ],
+   "h02": [
+    "phs001293.v4.p1",
+    "phs002230.v1.p1",
+    "phs002088.v2.p1",
+    "phs003694.v1.p1",
+    "phs004102.v1.p1",
+    "phs001872.v2.p2",
+    "phs001048.v5.p1",
+    "phs001143.v4.p1",
+    "phs002015.v2.p1",
+    "phs000579.v1.p1"
+   ],
+   "h03": [
+    "phs000691.v2.p1",
+    "phs000474.v3.p2",
+    "phs002652.v1.p1",
+    "phs001481.v1.p1",
+    "phs001710.v2.p1",
+    "phs001946.v2.p1",
+    "phs001820.v3.p1",
+    "phs001719.v1.p1",
+    "phs002687.v1.p1",
+    "phs002362.v1.p1"
+   ],
+   "h04": [
+    "phs003618.v1.p1",
+    "phs001639.v1.p1",
+    "phs003079.v1.p1",
+    "phs002083.v1.p1",
+    "phs001493.v3.p1",
+    "phs002065.v2.p1",
+    "phs001800.v2.p1",
+    "phs003922.v1.p1",
+    "phs003710.v2.p1",
+    "phs001052.v3.p1"
+   ],
+   "h05": [
+    "phs002395.v1.p1",
+    "phs000017.v3.p1",
+    "phs002424.v1.p1",
+    "phs000021.v3.p2",
+    "phs000167.v1.p1",
+    "phs001031.v1.p1",
+    "phs000102.v1.p1",
+    "phs000546.v1.p1",
+    "phs000670.v1.p1",
+    "phs000850.v1.p1"
+   ],
+   "h06": [
+    "phs001293.v4.p1",
+    "phs000925.v1.p1",
+    "phs001368.v4.p2",
+    "phs001395.v3.p2",
+    "phs000668.v7.p3",
+    "phs001237.v4.p2",
+    "phs000227.v5.p3",
+    "phs000667.v4.p1",
+    "phs000555.v2.p2",
+    "phs001569.v1.p1"
+   ],
+   "h07": [
+    "phs000385.v1.p1",
+    "phs000779.v1.p1",
+    "phs001384.v1.p1",
+    "phs002037.v1.p1",
+    "phs002288.v1.p1",
+    "phs001699.v1.p1",
+    "phs001286.v5.p2",
+    "phs003287.v1.p1",
+    "phs002622.v1.p1",
+    "phs002688.v1.p1"
+   ],
+   "h08": [
+    "phs001076.v1.p1",
+    "phs001626.v1.p1",
+    "phs000908.v1.p1",
+    "phs000861.v2.p1",
+    "phs001357.v1.p1",
+    "phs002529.v3.p1",
+    "phs003435.v1.p1",
+    "phs001011.v2.p1",
+    "phs000994.v1.p1",
+    "phs001052.v3.p1"
+   ],
+   "h09": [
+    "phs004421.v1.p1",
+    "phs001103.v1.p2",
+    "phs002328.v1.p1",
+    "phs001556.v1.p1",
+    "phs001664.v1.p1",
+    "phs000918.v1.p1",
+    "phs001172.v1.p2",
+    "phs002495.v1.p1",
+    "phs002400.v1.p1",
+    "phs001004.v1.p1"
+   ],
+   "h10": [
+    "phs000473.v2.p2",
+    "phs000959.v1.p1",
+    "phs001196.v1.p1",
+    "phs002395.v1.p1",
+    "phs000687.v1.p1",
+    "phs000738.v1.p1",
+    "phs001775.v1.p1",
+    "phs001122.v1.p1",
+    "phs000448.v1.p1",
+    "phs003138.v1.p1"
+   ],
+   "h11": [
+    "phs003684.v1.p1",
+    "phs001135.v2.p1",
+    "phs001266.v2.p1",
+    "phs003260.v1.p1",
+    "phs001841.v1.p1",
+    "phs002876.v1.p1",
+    "phs001804.v1.p1",
+    "phs002105.v1.p1",
+    "phs000952.v1.p1",
+    "phs003988.v1.p1"
+   ],
+   "h12": [
+    "phs000735.v1.p1",
+    "phs003431.v1.p1",
+    "phs002403.v1.p1",
+    "phs001442.v4.p3",
+    "phs000247.v5.p3",
+    "phs001168.v2.p2",
+    "phs001089.v4.p1",
+    "phs000244.v1.p1",
+    "phs001272.v2.p1",
+    "phs001247.v1.p1"
+   ],
+   "h13": [
+    "phs002433.v1.p1",
+    "phs003870.v1.p1",
+    "phs002258.v2.p1",
+    "phs003246.v1.p1",
+    "phs002300.v2.p1",
+    "phs002686.v3.p2",
+    "phs004281.v1.p1",
+    "phs003086.v1.p1",
+    "phs002655.v1.p1",
+    "phs002576.v1.p1"
+   ],
+   "h14": [
+    "phs003897.v1.p1",
+    "phs001564.v4.p1",
+    "phs002226.v1.p1",
+    "phs000454.v2.p2",
+    "phs003988.v1.p1",
+    "phs002039.v1.p1",
+    "phs002579.v1.p1",
+    "phs003808.v1.p1",
+    "phs000445.v1.p1",
+    "phs003939.v1.p1"
+   ],
+   "h15": [
+    "phs000480.v1.p1",
+    "phs001285.v2.p1",
+    "phs003962.v1.p1",
+    "phs003822.v1.p1",
+    "phs003218.v1.p1",
+    "phs001017.v1.p1",
+    "phs000147.v3.p1",
+    "phs001870.v2.p1",
+    "phs001709.v2.p2",
+    "phs003147.v1.p1"
+   ],
+   "h16": [
+    "phs002270.v1.p1",
+    "phs003614.v1.p1",
+    "phs003936.v1.p1",
+    "phs004571.v1.p1",
+    "phs003378.v2.p1",
+    "phs002034.v1.p1",
+    "phs000505.v2.p1",
+    "phs001079.v2.p1",
+    "phs001460.v2.p1",
+    "phs001663.v1.p1"
+   ],
+   "h17": [
+    "phs001644.v3.p2",
+    "phs001435.v3.p1",
+    "phs000708.v1.p1",
+    "phs001600.v3.p2",
+    "phs001001.v1.p1",
+    "phs000820.v2.p1",
+    "phs001189.v5.p1",
+    "phs000997.v6.p3",
+    "phs001040.v6.p1",
+    "phs001601.v3.p2"
+   ],
+   "h18": [
+    "phs000389.v1.p1",
+    "phs000984.v1.p1",
+    "phs000849.v2.p1",
+    "phs000433.v1.p1",
+    "phs001388.v2.p1",
+    "phs000088.v1.p1",
+    "phs002465.v2.p1",
+    "phs003350.v1.p1",
+    "phs000380.v1.p1",
+    "phs000408.v1.p1"
+   ],
+   "h19": [
+    "phs001604.v3.p1",
+    "phs000616.v2.p2",
+    "phs004472.v1.p1",
+    "phs001689.v1.p1",
+    "phs000258.v2.p1",
+    "phs001584.v2.p2",
+    "phs000169.v1.p1",
+    "phs001498.v3.p2",
+    "phs000888.v1.p1",
+    "phs000914.v1.p1"
+   ],
+   "h20": [
+    "phs000378.v1.p1",
+    "phs000234.v2.p2",
+    "phs000219.v1.p1",
+    "phs000372.v1.p1",
+    "phs000397.v3.p3",
+    "phs000496.v1.p1",
+    "phs000168.v2.p2",
+    "phs000160.v1.p1",
+    "phs000743.v4.p1",
+    "phs000888.v1.p1"
+   ],
+   "h21": [
+    "phs001119.v1.p1",
+    "phs000179.v7.p2",
+    "phs001927.v2.p2",
+    "phs000624.v1.p1",
+    "phs001252.v1.p1",
+    "phs000335.v3.p2",
+    "phs001273.v4.p2",
+    "phs000951.v6.p5",
+    "phs000291.v2.p1",
+    "phs000634.v1.p1"
+   ],
+   "h22": [
+    "phs000337.v1.p1",
+    "phs001089.v4.p1",
+    "phs002403.v1.p1",
+    "phs002698.v1.p1",
+    "phs000682.v1.p1",
+    "phs001383.v1.p1",
+    "phs001168.v2.p2",
+    "phs000837.v1.p1",
+    "phs003793.v1.p1",
+    "phs001217.v3.p1"
+   ],
+   "h23": [
+    "phs002718.v1.p1",
+    "phs003116.v1.p1",
+    "phs000945.v1.p1",
+    "phs003731.v1.p1",
+    "phs002939.v1.p1",
+    "phs002637.v1.p1",
+    "phs002056.v1.p1",
+    "phs001813.v4.p1",
+    "phs001002.v1.p1",
+    "phs003745.v1.p1"
+   ],
+   "h24": [
+    "phs002015.v2.p1",
+    "phs001046.v1.p1",
+    "phs001896.v1.p1",
+    "phs001039.v1.p1",
+    "phs002393.v2.p1",
+    "phs000457.v1.p1",
+    "phs000684.v1.p1",
+    "phs000685.v1.p1",
+    "phs001379.v1.p1",
+    "phs000182.v3.p1"
+   ],
+   "official-p1": [
+    "phs000488.v2.p1",
+    "phs001954.v2.p1",
+    "phs003812.v1.p1",
+    "phs000951.v6.p5",
+    "phs001143.v4.p1",
+    "phs002992.v1.p1",
+    "phs001472.v3.p2",
+    "phs001607.v4.p3",
+    "phs001040.v6.p1",
+    "phs003994.v1.p1"
+   ],
+   "official-p5": [
+    "phs000488.v2.p1",
+    "phs001954.v2.p1",
+    "phs003812.v1.p1",
+    "phs000951.v6.p5",
+    "phs001143.v4.p1",
+    "phs002992.v1.p1",
+    "phs001472.v3.p2",
+    "phs001607.v4.p3",
+    "phs001040.v6.p1",
+    "phs003994.v1.p1"
+   ],
+   "s1": [
+    "phs000488.v2.p1",
+    "phs001954.v2.p1",
+    "phs003812.v1.p1",
+    "phs002992.v1.p1",
+    "phs000951.v6.p5",
+    "phs001472.v3.p2",
+    "phs001607.v4.p3",
+    "phs001143.v4.p1",
+    "phs003994.v1.p1",
+    "phs001040.v6.p1"
+   ],
+   "s2": [
+    "phs000433.v1.p1",
+    "phs000984.v1.p1",
+    "phs000389.v1.p1",
+    "phs001099.v1.p1",
+    "phs000143.v2.p1",
+    "phs002024.v1.p1",
+    "phs002465.v2.p1",
+    "phs000888.v1.p1",
+    "phs000356.v2.p1",
+    "phs002453.v1.p1"
+   ],
+   "s3": [
+    "phs000422.v1.p1",
+    "phs000185.v8.p1",
+    "phs003512.v1.p1",
+    "phs001011.v2.p1",
+    "phs001727.v3.p1",
+    "phs002921.v2.p1",
+    "phs001812.v1.p1",
+    "phs001395.v3.p2",
+    "phs001602.v3.p1",
+    "phs001604.v3.p1"
+   ],
+   "s4": [
+    "phs004440.v1.p1",
+    "phs003275.v2.p1",
+    "phs001870.v2.p1",
+    "phs003218.v1.p1",
+    "phs003535.v2.p1",
+    "phs001285.v2.p1",
+    "phs001863.v1.p1",
+    "phs003147.v1.p1",
+    "phs001050.v1.p1",
+    "phs000472.v2.p1"
+   ],
+   "s5": [
+    "phs000378.v1.p1",
+    "phs000572.v8.p4",
+    "phs000168.v2.p2",
+    "phs000185.v8.p1",
+    "phs000397.v3.p3",
+    "phs003530.v2.p1",
+    "phs000496.v1.p1",
+    "phs002558.v3.p16",
+    "phs000483.v1.p1",
+    "phs000372.v1.p1"
+   ],
+   "s6": [
+    "phs001855.v1.p1",
+    "phs001412.v4.p1",
+    "phs001238.v2.p1",
+    "phs001203.v5.p1",
+    "phs000286.v7.p2",
+    "phs000287.v7.p1",
+    "phs000200.v12.p3",
+    "phs000403.v3.p3",
+    "phs000313.v4.p2",
+    "phs000402.v5.p2"
+   ],
+   "s7": [
+    "phs002698.v1.p1",
+    "phs000337.v1.p1",
+    "phs000682.v1.p1",
+    "phs001089.v4.p1",
+    "phs001383.v1.p1",
+    "phs002403.v1.p1",
+    "phs001491.v4.p1",
+    "phs000620.v1.p1",
+    "phs000966.v3.p2",
+    "phs001071.v1.p1"
+   ],
+   "s8": [
+    "phs000844.v2.p1",
+    "phs002389.v2.p1",
+    "phs000524.v2.p2",
+    "phs004088.v2.p1",
+    "phs003709.v1.p1",
+    "phs000843.v2.p1",
+    "phs000286.v7.p2",
+    "phs004045.v1.p1",
+    "phs000744.v5.p2",
+    "phs002719.v1.p1"
+   ]
+  }
+ },
+ "image_index_bytes": {
+  "out/studies.jsonl": 16254225,
+  "data/variables.jsonl.gz": 10432048,
+  "data/var_values.jsonl.gz": 2312708,
+  "MANIFEST.json": 2087
+ },
+ "image_index_total_bytes": 29001068,
+ "image_code_bytes": 168523,
+ "build_folder_total_bytes": 30635422,
+ "outputs": {
+  "manifest": "spark_manifest",
+  "version": "0.1.0",
+  "files": [
+   {
+    "path": "devset.json",
+    "bytes": 28790,
+    "sha256": "39fe10d9885739eecc8bc3c62d153919fd25c42aa0019f6243ae78c2ded5b694"
+   },
+   {
+    "path": "needs.jsonl",
+    "bytes": 23196,
+    "sha256": "b802023d70e2cd22414d16b91e002fe8f73bb7b9cf26746ec4f789a3a62fb638"
+   },
+   {
+    "path": "submission.jsonl",
+    "bytes": 403708,
+    "sha256": "e86561bde1e7acbc45df7b0d816d48da83dff9c6fc585e8bd49aa8b81bd88115"
+   }
+  ]
+ }
+}

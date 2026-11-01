@@ -2,14 +2,22 @@
 """spark_submit: write and check a SPARK dbGaP Task 2 submission with the current best ranker.
 
 `snapshot.py run` writes the Task 2 JSONL format, but with snapshot.py's own
-parser and ranking. The best system measured so far is sentence_need.rank with
-sentence_need.parse_need and primary-disease tiering at 0.6. This file runs that
-system over a file of information needs and checks the result against the
-format in the Task 2 description ("dbGaP-Task2-Description-and-Evaluation.pdf",
-pages 4-5): one UTF-8 JSON object per line, "metadata" with team_id,
-submission_id, info_need_id and info_need (the original text), and "results",
-an ordered list of study accessions. It also reports the time and memory used,
-which SPARK's Phase 2 judges.
+parser and ranking. This file runs MV2's best measured system over a file of
+information needs and checks the result against the format in the Task 2
+description ("dbGaP-Task2-Description-and-Evaluation.pdf", pages 4-5): one
+UTF-8 JSON object per line, "metadata" with team_id, submission_id,
+info_need_id and info_need (the original text), and "results", an ordered list
+of study accessions. It also reports the time and memory used, which SPARK's
+Phase 2 judges.
+
+Systems (--system):
+    pad   (default since 0.2.0) wording_fix's list (constraint words kept out of
+          the text search), then base's results not already in it, up to k.
+          On 150 silver needs written five ways it scored mean NDCG@10 0.9158 and
+          NDCG@100 0.9233 against base's 0.8596 and 0.8743, with the official
+          example at rank 2 (wording-pad-v1, 9 of 9 pre-registered predictions).
+    base  (the 0.1.0 default) sentence_need.rank with sentence_need.parse_need
+          and primary-disease tiering at 0.6. answer() is this system.
 
     python spark_submit.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
         --values data/var_values.jsonl.gz run --needs needs.jsonl --out submission.jsonl \
@@ -28,11 +36,14 @@ import time
 import cohort_finder as cf
 import sentence_need as sen
 import snapshot as sn
+import wording_fix as wf
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 ACCESSION_RE = re.compile(r"^phs\d{6}\.v\d+\.p\d+$")
 METADATA_KEYS = ("team_id", "submission_id", "info_need_id", "info_need")
+SYSTEMS = ("pad", "base")
+SYSTEM = "pad"
 
 
 def peak_memory_mb():
@@ -46,16 +57,43 @@ def peak_memory_mb():
 
 
 def answer(index, text, k=sn.K, tier=sen.TIER):
-    """Ranked accessions for one need: sentence_need's parse and rank, with tiering."""
+    """Ranked accessions for one need with the base system: sentence_need's parse and rank, with tiering."""
     return [r["accession"] for r in sen.rank(index, sen.parse_need(text), k=k, tier=tier)]
 
 
-def run(index, needs, team_id, submission_id, k=sn.K, tier=sen.TIER):
+def pad(first, second, k=sn.K):
+    """first's list, then second's entries not already in it, up to k."""
+    out = list(first[:k])
+    seen = set(out)
+    for acc in second:
+        if len(out) >= k:
+            break
+        if acc not in seen:
+            out.append(acc)
+            seen.add(acc)
+    return out
+
+
+def padded_answer(index, text, k=sn.K, tier=sen.TIER):
+    """Ranked accessions for one need with the pad system: wording_fix's list filled from answer()'s.
+
+    Base is only run when the fix's list is short, which gives the same list as always running it."""
+    first = wf.answer(index, text, k=k, tier=tier)
+    if len(first) >= k:
+        return first[:k]
+    return pad(first, answer(index, text, k, tier), k)
+
+
+ANSWERS = {"pad": padded_answer, "base": answer}
+
+
+def run(index, needs, team_id, submission_id, k=sn.K, tier=sen.TIER, system=SYSTEM):
     """(submission lines, seconds per need) for a list of (info_need_id, info_need)."""
+    ranker = ANSWERS[system]
     lines, seconds = [], []
     for need_id, text in needs:
         start = time.perf_counter()
-        accessions = answer(index, text, k, tier)
+        accessions = ranker(index, text, k, tier)
         seconds.append(time.perf_counter() - start)
         lines.append(sn.submission_line(team_id, submission_id, need_id, text,
                                         [{"accession": a} for a in accessions]))
@@ -146,6 +184,8 @@ def main(argv=None):
     p.add_argument("--submission-id", default="munim-run-01")
     p.add_argument("-k", type=int, default=sn.K)
     p.add_argument("--tier", type=float, default=sen.TIER, help="0 turns primary-disease tiering off")
+    p.add_argument("--system", choices=SYSTEMS, default=SYSTEM,
+                   help="pad (default): wording_fix's list filled from base's; base: the 0.1.0 system")
     p.add_argument("--stats", help="write timing, memory and check results here as JSON")
     p = sub.add_parser("check", help="check an existing submission")
     p.add_argument("--needs", required=True)
@@ -164,12 +204,13 @@ def main(argv=None):
     start = time.perf_counter()
     index = cf.Index(sn.load(args.studies, args.variables, args.values))
     load_seconds = time.perf_counter() - start
-    lines, seconds = run(index, needs, args.team_id, args.submission_id, args.k, args.tier or None)
+    lines, seconds = run(index, needs, args.team_id, args.submission_id, args.k, args.tier or None, args.system)
     with open(args.out, "w", encoding="utf-8", newline="\n") as f:
         for line in lines:
             f.write(line + "\n")
     problems = check(read_lines(args.out), needs, {s["accession"] for s in index.studies}, args.k)
-    stats = {"version": __version__, "sentence_need": sen.__version__, "needs": len(needs),
+    stats = {"version": __version__, "system": args.system, "sentence_need": sen.__version__,
+             "wording_fix": wf.__version__, "needs": len(needs),
              "studies": len(index.studies), "k": args.k, "tier": args.tier or None,
              "load_seconds": round(load_seconds, 2), "total_need_seconds": round(sum(seconds), 2),
              "mean_need_seconds": round(sum(seconds) / len(seconds), 3) if seconds else None,

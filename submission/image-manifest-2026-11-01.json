@@ -1,0 +1,76 @@
+{
+ "spark_system": "0.2.0",
+ "pythonhashseed": "0",
+ "python": "3.12.15",
+ "index": {
+  "manifest": "spark_manifest",
+  "version": "0.1.0",
+  "files": [
+   {
+    "path": "data/var_values.jsonl.gz",
+    "bytes": 2312708,
+    "sha256": "fecd6eb90b6825b20b7e4d6b07137d23ec6d83f8933d7f8f3645f6628b2e4f84",
+    "content_sha256": "c7d22bb3641a9022d8fca9acc046729074120f528ae589afa662c09d4f15b533",
+    "content_bytes": 30294818
+   },
+   {
+    "path": "data/variables.jsonl.gz",
+    "bytes": 10432048,
+    "sha256": "4297cb3d8ee8ed091a45bde6af4881dccc475ec245ca60885c6c2a8c0926c58c",
+    "content_sha256": "0f375521dcc9c419d7a785a7047b66e21d3ad869e32abb109a634216fd5cc35b",
+    "content_bytes": 99642993
+   },
+   {
+    "path": "out/studies.jsonl",
+    "bytes": 16254225,
+    "sha256": "0050c942e32fe7f1b2f95bf3c09611ad74f8de8e6f62253af5038738cf6d48e0"
+   }
+  ]
+ },
+ "code": {
+  "manifest": "spark_manifest",
+  "version": "0.1.0",
+  "files": [
+   {
+    "path": "cohort_finder.py",
+    "bytes": 61237,
+    "sha256": "b04796b416a11b7b8537e19a69ffb76b8bad6b0bc44d6e546125758ccd8ed65b"
+   },
+   {
+    "path": "sentence_need.py",
+    "bytes": 15695,
+    "sha256": "6f06d0d5d015f748d49013a3cc8ffbb06fd70f8b10be2826aef37e96974e3cb3"
+   },
+   {
+    "path": "snapshot.py",
+    "bytes": 29892,
+    "sha256": "7938b6114c705c258021e6cc8571eef00fb2d5dcb2fb9aa798b1ec609dce7943"
+   },
+   {
+    "path": "snapshot_survey.py",
+    "bytes": 33100,
+    "sha256": "7c117a0e6e3aa80e97fa01912a98807bcc1173cc2d0121ead7f14be8b9d1b4f4"
+   },
+   {
+    "path": "spark_manifest.py",
+    "bytes": 4698,
+    "sha256": "5fdc28875d19e5d3158a119c6a150b8004117546ea53e642b8437fce4c5e0b69"
+   },
+   {
+    "path": "spark_submit.py",
+    "bytes": 10352,
+    "sha256": "5c775a168b6fe2864560ce982af6fd33e44fbdaf818aba26d75ef4ac616b4401"
+   },
+   {
+    "path": "spark_system.py",
+    "bytes": 4953,
+    "sha256": "15c54139b695c8856694663c598fcbe9548f0937bc36938bf74a7fa7eeacbfb8"
+   },
+   {
+    "path": "wording_fix.py",
+    "bytes": 8596,
+    "sha256": "9d27fca3f5db1ac44258120cb98a2f98e13c6d34d5381e6002075df16d764258"
+   }
+  ]
+ }
+}

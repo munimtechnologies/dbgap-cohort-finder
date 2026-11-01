@@ -13,7 +13,7 @@
 FROM python:3.12-slim AS build
 ENV PYTHONHASHSEED=0 PYTHONDONTWRITEBYTECODE=1
 WORKDIR /app
-COPY cohort_finder.py snapshot.py snapshot_survey.py sentence_need.py spark_submit.py spark_manifest.py spark_system.py ./
+COPY cohort_finder.py snapshot.py snapshot_survey.py sentence_need.py wording_fix.py spark_submit.py spark_manifest.py spark_system.py ./
 COPY dbgap.tar.gz /tmp/dbgap.tar.gz
 RUN python spark_system.py build --tar /tmp/dbgap.tar.gz --index /index
 

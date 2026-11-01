@@ -1,4 +1,5 @@
-# Tests for spark_submit.py (needs cohort_finder.py, snapshot.py, sentence_need.py and test_snapshot.py next to it).
+# Tests for spark_submit.py (needs cohort_finder.py, snapshot.py, sentence_need.py, wording_fix.py and
+# test_snapshot.py next to it).
 # Made by MV2 of Munim, Inc. with AI agents. Apache-2.0 license.
 import json
 import os
@@ -7,6 +8,7 @@ import unittest
 
 import sentence_need as sen
 import spark_submit as ss
+import wording_fix as wf
 from test_snapshot import LUNG_NEED, Corpus
 
 OFFICIAL = ("Find dbGaP studies involving adult participants with lung adenocarcinoma as the primary disease, "
@@ -56,12 +58,39 @@ class CheckTest(unittest.TestCase):
         self.assertTrue(any("more than 1" in p for p in problems))
 
 
+class PadTest(unittest.TestCase):
+    def test_pad(self):
+        self.assertEqual(ss.pad(["a", "b"], ["b", "c", "a", "d"], k=10), ["a", "b", "c", "d"])
+        self.assertEqual(ss.pad(["a", "b"], ["c", "d", "e"], k=3), ["a", "b", "c"])
+        self.assertEqual(ss.pad(["a", "b", "c", "d"], ["e"], k=3), ["a", "b", "c"])
+        self.assertEqual(ss.pad([], ["a"], k=5), ["a"])
+        self.assertEqual(ss.pad(["a"], [], k=5), ["a"])
+        self.assertEqual(ss.SYSTEM, "pad")
+
+
 class RunTest(Corpus):
     def test_same_as_sentence_need(self):
         for text in (OFFICIAL, LUNG_NEED):
             expected = [r["accession"] for r in sen.rank(self.index, sen.parse_need(text), tier=sen.TIER)]
             self.assertEqual(ss.answer(self.index, text), expected)
         self.assertEqual(ss.answer(self.index, OFFICIAL)[0], "phs000100.v1.p1")
+
+    def test_padded_answer(self):
+        for text in (OFFICIAL, LUNG_NEED, "adults with asthma"):
+            for k in (2, 100):
+                first = wf.answer(self.index, text, k=k)
+                base = ss.answer(self.index, text, k=k)
+                expected = (first + [a for a in base if a not in first])[:k]
+                self.assertEqual(ss.padded_answer(self.index, text, k=k), expected, (text, k))
+        self.assertEqual(ss.padded_answer(self.index, OFFICIAL)[0], "phs000100.v1.p1")
+
+    def test_run_systems(self):
+        lines, _ = ss.run(self.index, NEEDS, "team-001", "team-001-run-01")
+        for line, (_, text) in zip(lines, NEEDS):
+            self.assertEqual(json.loads(line)["results"], ss.padded_answer(self.index, text))
+        lines, _ = ss.run(self.index, NEEDS, "team-001", "team-001-run-01", system="base")
+        for line, (_, text) in zip(lines, NEEDS):
+            self.assertEqual(json.loads(line)["results"], ss.answer(self.index, text))
 
     def test_run_lines_pass_check(self):
         lines, seconds = ss.run(self.index, NEEDS, "team-001", "team-001-run-01")
@@ -85,6 +114,7 @@ class RunTest(Corpus):
             self.assertEqual(report["needs"], 3)
             self.assertEqual(report["problems"], [])
             self.assertEqual(report["tier"], sen.TIER)
+            self.assertEqual(report["system"], "pad")
             with open(out, encoding="utf-8") as f:
                 rows = [json.loads(line) for line in f]
             self.assertTrue(all(len(r["results"]) <= 3 for r in rows))
