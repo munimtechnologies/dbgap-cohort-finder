@@ -1,5 +1,5 @@
-# Tests for spark_system.py (needs cohort_finder.py, snapshot.py, sentence_need.py, wording_fix.py,
-# spark_submit.py, spark_manifest.py and test_snapshot.py next to it).
+# Tests for spark_system.py (needs abbrev_fix.py, cohort_finder.py, snapshot.py, sentence_need.py,
+# wording_fix.py, spark_submit.py, spark_manifest.py and test_snapshot.py next to it).
 # Made by MV2 of Munim, Inc. with AI agents. Apache-2.0 license.
 import io
 import json
@@ -81,7 +81,8 @@ class SystemTest(Corpus):
 
     def test_code_files_cover_the_ranker(self):
         # Every local module the default ranker imports must be hashed into the manifest.
-        for name in ("cohort_finder.py", "snapshot.py", "sentence_need.py", "wording_fix.py", "spark_submit.py"):
+        for name in ("cohort_finder.py", "snapshot.py", "sentence_need.py", "wording_fix.py", "abbrev_fix.py",
+                     "spark_submit.py"):
             self.assertIn(name, sy.CODE_FILES)
         self.assertEqual(len(sy.CODE_FILES), len(set(sy.CODE_FILES)))
 

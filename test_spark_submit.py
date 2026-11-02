@@ -1,12 +1,14 @@
-# Tests for spark_submit.py (needs cohort_finder.py, snapshot.py, sentence_need.py, wording_fix.py and
-# test_snapshot.py next to it).
+# Tests for spark_submit.py (needs abbrev_fix.py, cohort_finder.py, snapshot.py, sentence_need.py,
+# wording_fix.py and test_snapshot.py next to it).
 # Made by MV2 of Munim, Inc. with AI agents. Apache-2.0 license.
 import json
 import os
 import tempfile
 import unittest
 
+import abbrev_fix as af
 import sentence_need as sen
+import snapshot as sn
 import spark_submit as ss
 import wording_fix as wf
 from test_snapshot import LUNG_NEED, Corpus
@@ -15,6 +17,8 @@ OFFICIAL = ("Find dbGaP studies involving adult participants with lung adenocarc
             "where participant-level data include a history of smoking or smoking exposure and whole genomic "
             "sequences.")
 NEEDS = [("dbT2_1", OFFICIAL), ("ex1", LUNG_NEED), ("q3", "adults with asthma")]
+ABBREV_NEEDS = ("HIV studies with genotype data", "adults with COPD and whole genome sequencing",
+                "SCLC tumors with RNA-seq data")
 
 
 def record(need_id="dbT2_1", need=OFFICIAL, results=("phs000100.v1.p1",), **meta):
@@ -65,7 +69,10 @@ class PadTest(unittest.TestCase):
         self.assertEqual(ss.pad(["a", "b", "c", "d"], ["e"], k=3), ["a", "b", "c"])
         self.assertEqual(ss.pad([], ["a"], k=5), ["a"])
         self.assertEqual(ss.pad(["a"], [], k=5), ["a"])
-        self.assertEqual(ss.SYSTEM, "pad")
+
+    def test_default_system(self):
+        self.assertEqual(ss.SYSTEM, "abbrev")
+        self.assertEqual(set(ss.ANSWERS), set(ss.SYSTEMS))
 
 
 class RunTest(Corpus):
@@ -84,8 +91,25 @@ class RunTest(Corpus):
                 self.assertEqual(ss.padded_answer(self.index, text, k=k), expected, (text, k))
         self.assertEqual(ss.padded_answer(self.index, OFFICIAL)[0], "phs000100.v1.p1")
 
+    def test_abbrev_answer_is_pad_without_abbreviations(self):
+        for text in (OFFICIAL, LUNG_NEED, "adults with asthma"):
+            self.assertEqual(af.disease_abbreviations(text, af.index_definitions(self.index)), [], text)
+            for k in (2, 100):
+                self.assertEqual(ss.abbrev_answer(self.index, text, k=k), ss.padded_answer(self.index, text, k=k))
+
+    def test_abbrev_answer_matches_abbrev_fix(self):
+        original = sn.disease_requirement
+        for text in ABBREV_NEEDS:
+            for k in (2, 100):
+                self.assertEqual(ss.abbrev_answer(self.index, text, k=k), af.answer(self.index, text, k=k),
+                                 (text, k))
+        self.assertIs(sn.disease_requirement, original)
+
     def test_run_systems(self):
         lines, _ = ss.run(self.index, NEEDS, "team-001", "team-001-run-01")
+        for line, (_, text) in zip(lines, NEEDS):
+            self.assertEqual(json.loads(line)["results"], ss.abbrev_answer(self.index, text))
+        lines, _ = ss.run(self.index, NEEDS, "team-001", "team-001-run-01", system="pad")
         for line, (_, text) in zip(lines, NEEDS):
             self.assertEqual(json.loads(line)["results"], ss.padded_answer(self.index, text))
         lines, _ = ss.run(self.index, NEEDS, "team-001", "team-001-run-01", system="base")
@@ -114,7 +138,8 @@ class RunTest(Corpus):
             self.assertEqual(report["needs"], 3)
             self.assertEqual(report["problems"], [])
             self.assertEqual(report["tier"], sen.TIER)
-            self.assertEqual(report["system"], "pad")
+            self.assertEqual(report["system"], "abbrev")
+            self.assertEqual(report["abbrev_fix"], af.__version__)
             with open(out, encoding="utf-8") as f:
                 rows = [json.loads(line) for line in f]
             self.assertTrue(all(len(r["results"]) <= 3 for r in rows))

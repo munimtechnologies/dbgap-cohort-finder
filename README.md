@@ -142,8 +142,9 @@ same as the earlier system. The official example's study stays 2nd, and a need
 takes 1.1 to 1.8 s on average (4.5 s at most). All 9 pre-registered predictions
 held. On these silver labels the padding added no measurable relevance (its
 NDCG@100 equals the fix's to four decimals); it keeps lists full for whatever
-depth NLM scores. Details: [`wording_pad/`](wording_pad/README.md). **Since
-`spark_submit.py` 0.2.0 this padded system is the default** (see below).
+depth NLM scores. Details: [`wording_pad/`](wording_pad/README.md). This padded
+system was the `spark_submit.py` default in 0.2.0; since 0.3.0 the default adds
+`abbrev_fix.py` on top of it (see below).
 
 **Disease names.** `disease_check.py` keeps the framing fixed and renames only
 the disease: headings turned around ("hepatocellular carcinoma"), everyday or
@@ -164,9 +165,8 @@ as written, whichever fits best. On the 39 abbreviation rows, NDCG@10 rose
 from 0.7622 to 0.8698 (0.7615 to 0.9038 for the 26 the table lacks). No need
 with the disease as stored changed, none of the 750 reworded needs set it
 off, and the official example's study stays 2nd. All 11 pre-registered
-predictions held; the gain is in-sample. It is set to become the default in
-`spark_submit.py` 0.3.0 once that version passes its own Docker-image and hash
-check. Details: [`abbrev_fix/`](abbrev_fix/README.md).
+predictions held; the gain is in-sample. **Since `spark_submit.py` 0.3.0 it
+is the default** (see below). Details: [`abbrev_fix/`](abbrev_fix/README.md).
 
 **A local re-ranker (negative result).** `rerank_check.py` re-scored each
 need's top 30 with NCBI's open-weight MedCPT cross-encoder on CPU and fused it
@@ -181,28 +181,35 @@ predictions held. Details: [`rerank/`](rerank/README.md).
 in the Task 2 description: one UTF-8 JSON object per line, `metadata` with
 `team_id`, `submission_id`, `info_need_id` and the original `info_need`, and
 `results`, an ordered list of study accessions that must all be in the
-snapshot. `--system pad` (the default since 0.2.0) answers with `wording_pad`'s
-ranking: the fix's list, filled up to 100 with the earlier system's results.
-`--system base` gives the 0.1.0 answer (`sentence_need` 0.2.0, tier 0.6).
-`snapshot.py run` still works, but it uses `snapshot.py`'s own parser and
-ranking, not the best measured one.
+snapshot. `--system abbrev` (the default since 0.3.0) is the padded ranking
+with `abbrev_fix`'s disease-abbreviation handling: for a need with no disease
+abbreviation it gives the same answer as `--system pad`. `--system pad` (the
+0.2.0 default) answers with `wording_pad`'s ranking: the fix's list, filled up
+to 100 with the earlier system's results. `--system base` gives the 0.1.0
+answer (`sentence_need` 0.2.0, tier 0.6). `snapshot.py run` still works, but
+it uses `snapshot.py`'s own parser and ranking, not the best measured one.
 
 ```
 $ python make_needs.py --needs official_needs.jsonl sentence_needs.jsonl --devset devset.json --out needs.jsonl
 $ python spark_submit.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
     --values data/var_values.jsonl.gz run --needs needs.jsonl --out submission.jsonl \
-    --team-id <team> --submission-id <team>-run-01 --stats stats.json [--system pad|base]
+    --team-id <team> --submission-id <team>-run-01 --stats stats.json [--system abbrev|pad|base]
 $ python spark_submit.py --studies out/studies.jsonl check --needs needs.jsonl --submission submission.jsonl -k 100
 ```
 
-With the padded default, on the full snapshot (192 needs, 2 CPUs,
-2026-11-01) it loaded in 12 s, ranked a need in 1.24 s on average (3.25 s at
+With the `abbrev` default, on the full snapshot (192 needs, 2 CPUs,
+2026-11-02) it loaded in 8 s, ranked a need in 0.81 s on average (3.83 s at
 most) and peaked at 314 MB, with 0 format problems. One need got 94 results
 instead of 100, because studies that match no word of a need are left out.
 On the 150 silver needs in that file it scored NDCG@10 0.919 and NDCG@100
-0.9259, and the official example's expected study was 2nd in both of its
-wordings. The 0.1.0 measurements and pre-registered predictions (5 of 7
-held): [`submission/`](submission/README.md).
+0.9259, the same as the padded system (no silver need uses an abbreviation),
+and the official example's expected study was 2nd in both of its wordings.
+`abbrev_fix` acted on 3 of the 42 other needs: "COVID-19" (long form mined
+from the snapshot: "coronavirus disease 2019"), "HIV" and "APOE". Only the
+COVID-19 and HIV needs got a different top 10. "APOE" is a gene, not a
+disease; no long form was found for it, so it changed nothing, and a later
+version will skip gene symbols. The 0.1.0 measurements and pre-registered
+predictions (5 of 7 held): [`submission/`](submission/README.md).
 
 ### Recording and checking hashes
 
@@ -239,9 +246,10 @@ reproduce and run "in a completely isolated environment with all external
 network calls blocked", with an estimate of the compute and storage it needs.
 `Dockerfile.spark` builds one in two stages on `python:3.12-slim`. The build
 stage indexes NLM's `dbgap.tar.gz` with `spark_system.py build` and writes
-`/index/MANIFEST.json`, the SHA-256 hashes of the index and of the eight code
-files (`wording_fix.py` joined them in `spark_system.py` 0.2.0). The final
-image keeps only the code and four index files, not the snapshot tarball.
+`/index/MANIFEST.json`, the SHA-256 hashes of the index and of the nine code
+files (`wording_fix.py` joined them in `spark_system.py` 0.2.0 and
+`abbrev_fix.py` in 0.3.0). The final image keeps only the code and four index
+files, not the snapshot tarball.
 
 ```
 $ docker build -f Dockerfile.spark -t munim-spark-dbgap .     # with dbgap.tar.gz next to the Dockerfile
@@ -250,24 +258,27 @@ $ docker run --rm --network none -v "$PWD/io:/io" munim-spark-dbgap run --needs 
 $ docker run --rm --network none munim-spark-dbgap verify --strict
 ```
 
-`run` passes `--system pad|base` through to `spark_submit.py`; the default is
-`pad`. `noegress.py` runs a Python script with socket connects, sends and name
-lookups refused and counted. Use it where `--network none` isn't available.
+`run` passes `--system abbrev|pad|base` through to `spark_submit.py`; the
+default is `abbrev`. `noegress.py` runs a Python script with socket connects,
+sends and name lookups refused and counted. Use it where `--network none`
+isn't available.
 
-On 2026-11-01 the image's commands, with the padded default, were run in a
+On 2026-11-02 the image's commands, with the `abbrev` default, were run in a
 `python:3.12-slim` container with 2 CPUs on the full snapshot. The build took
-189 s and the job peaked at 860 MB. A 192-need submission under `noegress.py`
-took 252 s (1.24 s per need on average, 3.25 s at most, 314 MB). It made 0
+261 s and the job peaked at 860 MB. A 192-need submission under `noegress.py`
+took 164 s (0.81 s per need on average, 3.83 s at most, 314 MB). It made 0
 network attempts and had 0 format problems, and both manifest checks matched
-all 11 files. The index hashes (`studies.jsonl`, and the `.gz` files by
-content) equal those of the 2026-10-31 image check. All 8 pre-registered
-predictions held. Report and hashes: `submission/image-2026-11-01.json` and
-`submission/image-manifest-2026-11-01.json`. The 2026-10-31 check of the
-0.1.0 system (7 of 7 held) is in `submission/image-2026-10-31.json` and
-`submission/image-manifest-2026-10-31.json`. Limits: `docker build` itself
-has not been run yet, so the Dockerfile's syntax and `COPY` steps are
-untested. `noegress.py` blocks only Python-level calls; `--network none` is
-the real guarantee.
+all 12 files. The index hashes (`studies.jsonl`, and the `.gz` files by
+content) equal those of the 2026-11-01 image check, and of the 42 needs that
+are not silver, only the two whose disease abbreviation was expanded got a
+different top 10. All 10 pre-registered predictions held. Report and hashes:
+`submission/image-2026-11-02.json` and
+`submission/image-manifest-2026-11-02.json`. The earlier checks are in
+`submission/image-2026-11-01.json` (padded 0.2.0 system, 8 of 8 held) and
+`submission/image-2026-10-31.json` (0.1.0 system, 7 of 7 held), each with its
+manifest. Limits: `docker build` itself has not been run yet, so the
+Dockerfile's syntax and `COPY` steps are untested. `noegress.py` blocks only
+Python-level calls; `--network none` is the real guarantee.
 
 A second, independent label set comes from PhenX curators' links between
 PhenX measures and dbGaP studies: [`phenx_dev/`](phenx_dev/README.md). On it
@@ -423,13 +434,15 @@ system, use `Dockerfile.spark` (see above).
 - `sentence_need.py` was written for the one sentence template SPARK has
   published. Other wordings cost the earlier system up to 0.12 NDCG@10 on the
   silver labels ([`wording_check/`](wording_check/README.md)); the padded
-  default narrows that spread to 0.0053 ([`wording_pad/`](wording_pad/README.md)).
-- Disease abbreviations the study records don't carry ("SCLC", "AATD") lose
-  the disease in the current default, and the abbreviation table's expansion
+  ranking narrows that spread to 0.0053 ([`wording_pad/`](wording_pad/README.md)).
+- Disease abbreviations the study records don't carry ("SCLC", "AATD") lost
+  the disease in the 0.2.0 default, and the abbreviation table's expansion
   of "HIV" and "CAD" can miss studies that store the short form or a shorter
-  name ([`disease_check/`](disease_check/README.md)). `abbrev_fix.py`
-  recovers about 70% of that loss on the silver rows; "HES" (never defined in
-  the snapshot) and "SCLC" (stored as "carcinoma, small cell") still fail
+  name ([`disease_check/`](disease_check/README.md)). `abbrev_fix.py`, the
+  default since `spark_submit.py` 0.3.0, recovers about 70% of that loss on
+  the silver rows; "HES" (never defined in the snapshot) and "SCLC" (stored as
+  "carcinoma, small cell") still fail, and it also reacts to gene symbols such
+  as "APOE" (harmless so far, since none was defined as a disease)
   ([`abbrev_fix/`](abbrev_fix/README.md)).
 - `spark_submit.py check` follows the one example record in the Task 2
   description. NIH's later technical guidance may add rules.
@@ -485,7 +498,11 @@ and synthetic studies. They make no network calls and need no model.
   held on 2026-11-01). `disease_check.py` 0.1.0 and its report
   (`disease_check/`). `abbrev_fix.py` 0.1.0, `abbrev_check.py` 0.1.0 and their
   report (`abbrev_fix/`): disease abbreviations (11 of 11 pre-registered
-  predictions held on 2026-11-01).
+  predictions held on 2026-11-01). `spark_submit.py` 0.3.0 and
+  `spark_system.py` 0.3.0: `abbrev` is the default (`--system
+  abbrev|pad|base`), and `abbrev_fix.py` is in the Docker image and its
+  manifest (10 of 10 pre-registered predictions held on 2026-11-02,
+  `submission/image-2026-11-02.json`).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,

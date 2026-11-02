@@ -11,7 +11,17 @@ of study accessions. It also reports the time and memory used, which SPARK's
 Phase 2 judges.
 
 Systems (--system):
-    pad   (default since 0.2.0) wording_fix's list (constraint words kept out of
+    abbrev (default since 0.3.0) pad, except that a need naming its disease by an
+          abbreviation is handled by abbrev_fix: unknown short forms are replaced
+          by the long form mined from the snapshot's own "long form (SHORT)"
+          definitions, and a study's disease fit is the best over the parsed
+          topic, the short form itself and the need as written. Needs without a
+          disease abbreviation get exactly pad's list. On disease_check's 574
+          rows it raised the 39 abbreviation rows from NDCG@10 0.7622 to 0.8698
+          and changed no other row except "HIV infection" (upward), with the
+          official example at rank 2 (abbrev-fix-v1, 11 of 11 pre-registered
+          predictions).
+    pad   (the 0.2.0 default) wording_fix's list (constraint words kept out of
           the text search), then base's results not already in it, up to k.
           On 150 silver needs written five ways it scored mean NDCG@10 0.9158 and
           NDCG@100 0.9233 against base's 0.8596 and 0.8743, with the official
@@ -33,17 +43,18 @@ import re
 import sys
 import time
 
+import abbrev_fix as af
 import cohort_finder as cf
 import sentence_need as sen
 import snapshot as sn
 import wording_fix as wf
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 ACCESSION_RE = re.compile(r"^phs\d{6}\.v\d+\.p\d+$")
 METADATA_KEYS = ("team_id", "submission_id", "info_need_id", "info_need")
-SYSTEMS = ("pad", "base")
-SYSTEM = "pad"
+SYSTEMS = ("abbrev", "pad", "base")
+SYSTEM = "abbrev"
 
 
 def peak_memory_mb():
@@ -84,7 +95,18 @@ def padded_answer(index, text, k=sn.K, tier=sen.TIER):
     return pad(first, answer(index, text, k, tier), k)
 
 
-ANSWERS = {"pad": padded_answer, "base": answer}
+def abbrev_answer(index, text, k=sn.K, tier=sen.TIER):
+    """Ranked accessions for one need with the abbrev system (the same steps as abbrev_fix.answer).
+
+    A need without a disease abbreviation gets exactly padded_answer's list."""
+    new_text, alts, found = af.plan(index, text)
+    if not found:
+        return padded_answer(index, text, k, tier)
+    with af.topic_alternatives(alts):
+        return padded_answer(index, new_text, k, tier)
+
+
+ANSWERS = {"abbrev": abbrev_answer, "pad": padded_answer, "base": answer}
 
 
 def run(index, needs, team_id, submission_id, k=sn.K, tier=sen.TIER, system=SYSTEM):
@@ -185,7 +207,8 @@ def main(argv=None):
     p.add_argument("-k", type=int, default=sn.K)
     p.add_argument("--tier", type=float, default=sen.TIER, help="0 turns primary-disease tiering off")
     p.add_argument("--system", choices=SYSTEMS, default=SYSTEM,
-                   help="pad (default): wording_fix's list filled from base's; base: the 0.1.0 system")
+                   help="abbrev (default): pad with disease abbreviations handled; "
+                        "pad: wording_fix's list filled from base's; base: the 0.1.0 system")
     p.add_argument("--stats", help="write timing, memory and check results here as JSON")
     p = sub.add_parser("check", help="check an existing submission")
     p.add_argument("--needs", required=True)
@@ -210,7 +233,7 @@ def main(argv=None):
             f.write(line + "\n")
     problems = check(read_lines(args.out), needs, {s["accession"] for s in index.studies}, args.k)
     stats = {"version": __version__, "system": args.system, "sentence_need": sen.__version__,
-             "wording_fix": wf.__version__, "needs": len(needs),
+             "wording_fix": wf.__version__, "abbrev_fix": af.__version__, "needs": len(needs),
              "studies": len(index.studies), "k": args.k, "tier": args.tier or None,
              "load_seconds": round(load_seconds, 2), "total_need_seconds": round(sum(seconds), 2),
              "mean_need_seconds": round(sum(seconds) / len(seconds), 3) if seconds else None,
