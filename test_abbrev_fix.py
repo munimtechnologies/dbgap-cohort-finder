@@ -89,5 +89,52 @@ class AlternativesTest(unittest.TestCase):
         self.assertIs(sn.disease_requirement, original)
 
 
+class FakeIndex:
+    def __init__(self, studies):
+        self.studies = studies
+
+
+SENSE_STUDIES = [
+    {"title": "Overall survival (OS) after surgery", "description":
+     "Overall survival (OS) in adults. Overall survival (OS) again.", "conditions": ["Breast Neoplasms"],
+     "focus": ["Breast Neoplasms"]},
+    {"title": "Osteosarcoma (OS) cohort", "description": "", "conditions": ["Osteosarcoma"],
+     "focus": ["Osteosarcoma"]},
+]
+
+
+class SenseTest(unittest.TestCase):
+    """0.1.1: prefer a mined long form that the snapshot stores as a disease term."""
+
+    def test_term_names(self):
+        self.assertEqual(af.term_names("Anemia, Sickle Cell"), ["anemia, sickle cell", "sickle cell anemia"])
+        self.assertEqual(af.term_names("Lyme Disease"), ["lyme disease"])
+        self.assertEqual(af.term_names(""), [])
+
+    def test_disease_terms(self):
+        terms = af.disease_terms([{"conditions": ["Carcinoma, Small Cell"], "focus": ["Lyme Disease"]}, {}])
+        self.assertEqual(terms, {"carcinoma, small cell", "small cell carcinoma", "lyme disease"})
+
+    def test_sense_long_form(self):
+        defs = af.mine(["overall survival (OS)", "Overall survival (OS)", "overall survival (OS)",
+                        "osteosarcoma (OS)"])
+        self.assertEqual(af.long_form(defs, "OS"), ("overall survival", 3))
+        self.assertEqual(af.sense_long_form(defs, "OS", {"osteosarcoma"}), ("osteosarcoma", 1))
+        self.assertEqual(af.sense_long_form(defs, "OS", set()), ("overall survival", 3))
+        self.assertEqual(af.sense_long_form(defs, "XYZ", {"osteosarcoma"}), (None, 0))
+
+    def test_plan_sense_and_old_behaviour(self):
+        text = "OS studies with WGS data"
+        old_text, _, old_found = af.plan(FakeIndex(SENSE_STUDIES), text, sense=False)
+        self.assertEqual(old_text, "overall survival studies with WGS data")
+        self.assertEqual(old_found[0]["chosen"], "overall survival")
+        new_text, alts, found = af.plan(FakeIndex(SENSE_STUDIES), text)
+        self.assertEqual(new_text, "osteosarcoma studies with WGS data")
+        self.assertEqual(found[0]["chosen"], "osteosarcoma")
+        self.assertEqual(found[0]["mined"], "overall survival")
+        self.assertTrue(alts)
+        self.assertEqual(af.plan(FakeIndex(SENSE_STUDIES), "Breast cancer studies with WGS data")[1:], ([], []))
+
+
 if __name__ == "__main__":
     unittest.main()

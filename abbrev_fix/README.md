@@ -1,10 +1,11 @@
 # Disease abbreviations: letting a SPARK need say "SCLC" or "HIV"
 
-`abbrev_fix.py` 0.1.0, checked 2026-11-01 on NLM's SPARK dbGaP snapshot (3,578 studies) in a `python:3.12`
-container (2 CPUs, 54 minutes, 0.35 GB peak), and checked out of sample on 2026-11-02 (below). Made with AI
-agents working in MV2's name (MV2, Munim, Inc.). No person has checked these readings. Reports:
-[`report-2026-11-01.json`](report-2026-11-01.json) and [`oos-report-2026-11-02.json`](oos-report-2026-11-02.json)
-(CC BY 4.0).
+`abbrev_fix.py` 0.1.0 was checked on 2026-11-01 on NLM's SPARK dbGaP snapshot (3,578 studies) in a `python:3.12`
+container (2 CPUs, 54 minutes, 0.35 GB peak). It was checked out of sample on 2026-11-02, and 0.1.1 adds a
+sense check that was tested the same day on 75 fresh needs (both below). Made with AI agents working in MV2's
+name (MV2, Munim, Inc.). No person has checked these readings. Reports:
+[`report-2026-11-01.json`](report-2026-11-01.json), [`oos-report-2026-11-02.json`](oos-report-2026-11-02.json)
+and [`sense-report-2026-11-02.json`](sense-report-2026-11-02.json) (CC BY 4.0).
 
 ## Why
 
@@ -19,9 +20,11 @@ Only needs that contain a disease abbreviation change. Words that are data types
 measurements, or part of a "with X measured" phrase are skipped. Every other need gets exactly the padded
 default's list.
 
-1. An unknown abbreviation is replaced by its most frequent long form among the snapshot's own definitions.
+1. An unknown abbreviation is replaced by a long form taken from the snapshot's own definitions.
    These are mined from study titles, descriptions and disease terms written as "long form (SHORT)", with the
-   Schwartz & Hearst rule (Pac Symp Biocomput 2003). 3,256 short forms are mined in 0.3 s.
+   Schwartz & Hearst rule (Pac Symp Biocomput 2003). 3,256 short forms are mined in 0.3 s. Since 0.1.1 the
+   long form is the most frequent one that the snapshot also stores as a disease term (see "Sense check"
+   below); 0.1.0 took the most frequent one.
 2. While the need is ranked, a study's disease fit is the best of three things: the parsed topic, the
    abbreviation itself, and the need's topic as written. A mined long form that differs from the table's is
    also tried.
@@ -100,18 +103,64 @@ the 0.2.0 default's loss and won back 38%. At most 2 needs were to fall, and 4 d
 
 **What this shows.** When the snapshot's most frequent definition of a short form is the need's disease,
 `abbrev_fix` wins back the whole loss. When it is another sense, it makes things worse, because it replaces the
-short form with the wrong long form. Three of the four losses are that case. A sense check that prefers long
-forms the snapshot stores as a disease term is being tested on fresh needs under its own pre-registration.
-Until it has been graded, it is not in `abbrev_fix.py` on `main`.
+short form with the wrong long form. Three of the four losses are that case. That led to the sense check below.
+
+## Sense check (0.1.1, tested on fresh needs on 2026-11-02)
+
+`abbrev_fix.py` 0.1.1 changes one thing. When a short form has several mined long forms, it takes the most
+frequent one that the snapshot also stores as a disease term: a study's main disease or MeSH name, with "b, a"
+headings also read as "a b". If none is stored, it falls back to 0.1.0's pick. `plan(..., sense=False)` and
+`answer(..., sense=False)` give 0.1.0's behaviour exactly.
+
+The sense check was written after reading the 24 out-of-sample needs above, so it was tested on needs nobody
+had read. `abbrev_sense.py` 0.1.0 builds a fresh silver set (`devset -n 1000 --seed 11`: 422 needs), drops every
+need whose disease is in the earlier seed-7 set (111) or among the 39 hand-picked diseases (39), and applies
+`abbrev_oos`'s pick rule to the rest. 75 needs got a short form (197 had none). Each was ranked written with
+the disease as stored (d0) and with the short form, in both sentence frames. Three systems were compared:
+base = the 0.2.0 padded default, a = `abbrev_fix` 0.1.0 (`sense=False`, the 0.3.0 default as first released),
+and b = `abbrev_fix` 0.1.1. It ran on 2026-11-02 (`python:3.12`, 2 CPUs, 27 minutes, 0.30 GB peak, 33 tests OK).
+
+NDCG@10 on the short-form rows (v0_short frame; the official frame is within 0.02 and moves the same way):
+
+| rows | needs | d0 | base | a (0.1.0) | b (0.1.1) | b - a |
+|---|---|---|---|---|---|---|
+| all picked | 75 | 0.9623 | 0.6376 | 0.8283 | **0.8816** | +0.0533 |
+| sense changed by the check | 6 | 1.0 | 0.3363 | 0.3333 | 1.0 | +0.6667 |
+| sense unchanged | 69 | 0.9590 | 0.6638 | 0.8713 | 0.8713 | 0 (no need changed) |
+
+- **Up (4):** CM 0 -> 1 ("cryptococcal meningoencephalitis" -> coccidioidomycosis), HSP 0 -> 1 ("Henoch-Schönlein
+  purpura" -> hereditary spastic paraplegia), WT 0 -> 1 ("wild-type" -> Wilms tumor) and GEP 0 -> 1 ("gene
+  expression profile" -> "gene expression profiling", the stored form). For HSP and WT, 0.1.0 had made the
+  need worse than the 0.2.0 default (1.0 -> 0 and 0.39 -> 0); 0.1.1 brings both to 1.0.
+- **Unchanged score (2):** HSC and TGCT, where the check only swapped a singular for a plural.
+- **Down:** none. No need whose sense stayed the same changed at all, and no disease-as-stored need changed.
+- **Still wrong (by design):** when the wrong sense is itself a stored disease, the check keeps it. MM (the need
+  meant meningomyelocele; mined "myeloma"), DM (dermatomyositis; "diabetes mellitus") and CHD (congenital heart
+  defects; "coronary heart disease").
+- Short-form needs took 2.6 s each on average with 0.1.1 (2.7 s with 0.1.0, 1.1 s with the 0.2.0 default). The
+  official example's study stays 2nd in both wordings.
+
+**Pre-registered predictions: 10 of 10 held**, after a gate that passed (12 files fetched, 33 tests OK, at least
+30 needs picked). The check changed no need whose sense stayed the same (held) and no disease-as-stored need
+(held). It did no net harm (held). With 6 needs changed (3 or more were needed for the test to count), it gained
++0.67 on them (at least +0.10 predicted, held), picked the disease for all 6 (at least half, held) and lowered
+none (at most 1, held). The 0.3.0 default with 0.1.1 still beats the 0.2.0 default by +0.24 (at least +0.02,
+held). 0.1.0's most frequent sense was the disease for 80% of the picks (at least 60%, held). Speed (at most
+3.5 s per row) and the example's rank (2nd) held. By the rule written before the run, 0.1.1 replaces 0.1.0 on
+`main`, so `spark_submit.py`'s `abbrev` default now uses the sense check. The Docker image's code hash changes
+with it, and its image check is being re-run under its own pre-registration.
 
 ## Limits
 
-- Silver labels are circular: they come from `main_disease`, the field the matcher reads first.
+- Silver labels are circular: they come from `main_disease`, the field the matcher reads first. The sense check
+  also reads stored disease terms, so on silver needs the right sense is always one of them. This favours 0.1.1,
+  and real needs may name diseases the snapshot does not store.
 - The 39 abbreviations were written by agents who had read the matcher. The fix was written after seeing which
-  abbreviations failed, so that gain is in-sample. The out-of-sample check above covers 24 needs, all with short
-  forms the snapshot itself defines.
-- Mining picks the most frequent long form, which can be the wrong sense for an ambiguous short form. This
-  happened for 6 of 24 out-of-sample needs ("OS", "LD", "IA", "SCA", "AD", "CFSs").
+  abbreviations failed, so that gain is in-sample. The two out-of-sample checks above cover 24 and 75 needs, all
+  with short forms the snapshot itself defines.
+- Mining can pick the wrong sense of an ambiguous short form. 0.1.1 fixes this only when the wrong sense is not a
+  stored disease ("OS" -> overall survival). When it is one ("SCA" -> sickle cell anemia, "MM" -> myeloma), the
+  wrong sense stays.
 - The best-of fit can raise unrelated studies that use the short form in their titles.
 - Gene symbols such as "APOE" also set it off (harmless so far, since none was defined as a disease).
 - There is one official example need. NLM's wording of its ~1,000 evaluation needs is unknown.
@@ -123,8 +172,12 @@ python abbrev_check.py --studies out/studies.jsonl --variables data/variables.js
     --values data/var_values.jsonl.gz --devset devset.json --needs official_needs.jsonl --out out
 python abbrev_oos.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
     --values data/var_values.jsonl.gz --devset devset.json --out out
+python snapshot.py ... devset -n 150 --seed 7 --out dev7.json
+python snapshot.py ... devset -n 1000 --seed 11 --out dev11.json
+python abbrev_sense.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
+    --values data/var_values.jsonl.gz --devset dev11.json --exclude-devset dev7.json --max-picks 150 --out out
 ```
 
 These need `disease_check.py`, `wording_check.py`, `wording_fix.py`, `spark_submit.py`, `sentence_need.py`,
 `snapshot.py` and `cohort_finder.py` from this repository. To run the tests:
-`python -m unittest -v test_abbrev_fix test_abbrev_oos`.
+`python -m unittest -v test_abbrev_fix test_abbrev_oos test_abbrev_sense`.

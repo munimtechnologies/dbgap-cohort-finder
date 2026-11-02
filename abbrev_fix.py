@@ -19,7 +19,17 @@ This module changes only needs that contain a disease abbreviation:
    form that differs from the table's), so no reading the current system makes is lost.
 Needs without a disease abbreviation get exactly spark_submit.padded_answer.
 
-Pre-registered in 20261101T140844Z-civic-tech/findings/prereg-abbrev-fix.md.
+0.1.1 (sense check): when a short form has several mined long forms, prefer the most
+frequent one that the snapshot also stores as a disease term (a study's main disease
+or MeSH name, "b, a" headings also read as "a b"). abbrev-oos-v1 (2026-11-02) found
+that every out-of-sample loss came from the most frequent sense not being a disease
+("OS" -> overall survival, "LD" -> linkage disequilibrium, "IA" -> islet
+autoantibody) or being another disease ("SCA" -> sickle cell anemia). The check
+fixes the first kind only. plan(..., sense=False) and answer(..., sense=False) give
+0.1.0's behaviour exactly.
+
+Pre-registered in 20261101T140844Z-civic-tech/findings/prereg-abbrev-fix.md (0.1.0)
+and 20261102T094543Z-civic-tech/findings/prereg-abbrev-sense.md (0.1.1).
 
 Made by MV2 of Munim, Inc. with AI agents. Apache-2.0 license.
 """
@@ -32,7 +42,7 @@ import cohort_finder as cf
 import sentence_need as sen
 import snapshot as sn
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 CANDIDATE_RE = re.compile(r"(?<![\w-])([A-Za-z][A-Za-z0-9]*(?:-[A-Za-z0-9]+)*)(?![\w-])")
 PAREN_RE = re.compile(r"\(\s*([A-Za-z][A-Za-z0-9]*(?:-[A-Za-z0-9]+)*)\s*\)")
@@ -123,8 +133,8 @@ def index_definitions(index):
     return defs
 
 
-def long_form(defs, short):
-    """(most frequent long form, its count) for short (exact case first, then any case), or (None, 0)."""
+def long_form_counts(defs, short):
+    """Counter of mined long forms for short (exact case first, then any case)."""
     counts = (defs or {}).get(short)
     if not counts:
         merged = collections.Counter()
@@ -132,10 +142,59 @@ def long_form(defs, short):
             if key.upper() == short.upper():
                 merged.update(c)
         counts = merged
+    return counts
+
+
+def _most_frequent(items):
+    return sorted(items, key=lambda kv: (-kv[1], len(kv[0]), kv[0]))[0]
+
+
+def long_form(defs, short):
+    """(most frequent long form, its count) for short (exact case first, then any case), or (None, 0)."""
+    counts = long_form_counts(defs, short)
     if not counts:
         return None, 0
-    long, n = sorted(counts.items(), key=lambda kv: (-kv[1], len(kv[0]), kv[0]))[0]
-    return long, n
+    return _most_frequent(counts.items())
+
+
+def term_names(term):
+    """The normalized names of one stored disease term: as stored, and a "b, a" heading read as "a b"."""
+    name = normalize(term or "")
+    names = [name] if name else []
+    if ", " in name:
+        turned = " ".join(reversed(name.split(", ")))
+        if turned not in names:
+            names.append(turned)
+    return names
+
+
+def disease_terms(studies):
+    """Set of normalized disease names the studies store (main disease and MeSH names)."""
+    terms = set()
+    for s in studies:
+        for c in s.get("conditions") or []:
+            terms.update(term_names(c))
+        for c in s.get("focus") or []:
+            terms.update(term_names(c))
+    return terms
+
+
+def index_disease_terms(index):
+    """disease_terms over every study in the index, computed once per index."""
+    terms = getattr(index, "_abbrev_terms", None)
+    if terms is None:
+        terms = index._abbrev_terms = disease_terms(index.studies)
+    return terms
+
+
+def sense_long_form(defs, short, terms):
+    """(long form, count): the most frequent mined long form that is a stored disease term,
+    else long_form's pick; (None, 0) if nothing is mined."""
+    counts = long_form_counts(defs, short)
+    if not counts:
+        return None, 0
+    stored = [(lf, n) for lf, n in counts.items() if normalize(lf) in (terms or ())]
+    return _most_frequent(stored) if stored else _most_frequent(counts.items())
 
 
 def disease_abbreviations(text, defs=None):
@@ -190,26 +249,35 @@ def topic_alternatives(alternatives):
         sn.disease_requirement = original
 
 
-def plan(index, text):
-    """(text to rank, topic alternatives, abbreviations found) for one need."""
-    found = disease_abbreviations(text, index_definitions(index))
+def plan(index, text, sense=True):
+    """(text to rank, topic alternatives, abbreviations found) for one need.
+
+    Each found abbreviation also gets "chosen": the long form used (with sense=True, the most
+    frequent mined long form that is a stored disease term; with sense=False, 0.1.0's pick)."""
+    defs = index_definitions(index)
+    found = disease_abbreviations(text, defs)
     if not found:
         return text, [], found
+    terms = index_disease_terms(index) if sense else None
     replacements, alts = {}, []
     for f in found:
+        mined = f["mined"]
+        if sense and mined:
+            mined = sense_long_form(defs, f["abbrev"], terms)[0]
+        f["chosen"] = mined
         alts.append(cf.tokens(f["abbrev"]))
-        if f["table"] is None and f["mined"]:
-            replacements[f["abbrev"]] = f["mined"]
-        elif f["table"] and f["mined"] and normalize(f["mined"]) != normalize(f["table"]):
-            alts.append(sn.topic_tokens(f["mined"], cf.parse_query(f["mined"])))
+        if f["table"] is None and mined:
+            replacements[f["abbrev"]] = mined
+        elif f["table"] and mined and normalize(mined) != normalize(f["table"]):
+            alts.append(sn.topic_tokens(mined, cf.parse_query(mined)))
     alts.append(sen.parse_need(text).get("topic") or [])
     return rewrite(text, replacements), alts, found
 
 
-def answer(index, text, k=sn.K, tier=sen.TIER):
+def answer(index, text, k=sn.K, tier=sen.TIER, sense=True):
     """Ranked accessions for one need: spark_submit.padded_answer, with abbreviations handled as above."""
     import spark_submit as ss
-    new_text, alts, found = plan(index, text)
+    new_text, alts, found = plan(index, text, sense=sense)
     if not found:
         return ss.padded_answer(index, text, k, tier)
     with topic_alternatives(alts):

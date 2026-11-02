@@ -173,7 +173,16 @@ default raised NDCG@10 from 0.6284 to 0.7547. When the snapshot's most
 frequent sense of the short form was the disease (18 needs), it won back the
 whole loss. When it was another sense ("OS" read as overall survival, "LD"
 as linkage disequilibrium), it made things worse. 6 of 8 pre-registered
-predictions held. Details: [`abbrev_fix/`](abbrev_fix/README.md).
+predictions held. **`abbrev_fix.py` 0.1.1** adds a sense check: of the mined
+long forms, it prefers the most frequent one the snapshot also stores as a
+disease term. On 75 fresh needs that no one had read (`abbrev_sense.py`), it
+raised NDCG@10 on the short-form rows from 0.8283 (0.1.0) to 0.8816, against
+0.6376 for the 0.2.0 default. It changed the sense for 6 needs and picked the
+disease each time ("CM" now reads as coccidioidomycosis, not cryptococcal
+meningoencephalitis; "WT" as Wilms tumor, not wild-type). It lowered none, and
+no other need changed. All 10 pre-registered predictions held. A wrong sense
+that is itself a disease ("MM" read as myeloma) stays wrong. Details:
+[`abbrev_fix/`](abbrev_fix/README.md).
 
 **A local re-ranker (negative result).** `rerank_check.py` re-scored each
 need's top 30 with NCBI's open-weight MedCPT cross-encoder on CPU and fused it
@@ -215,8 +224,10 @@ and the official example's expected study was 2nd in both of its wordings.
 from the snapshot: "coronavirus disease 2019"), "HIV" and "APOE". Only the
 COVID-19 and HIV needs got a different top 10. "APOE" is a gene, not a
 disease; no long form was found for it, so it changed nothing, and a later
-version will skip gene symbols. The 0.1.0 measurements and pre-registered
-predictions (5 of 7 held): [`submission/`](submission/README.md).
+version will skip gene symbols. Those figures were measured with
+`abbrev_fix` 0.1.0; the same check with 0.1.1 is queued under its own
+pre-registration. The 0.1.0 measurements and pre-registered predictions (5 of
+7 held): [`submission/`](submission/README.md).
 
 ### Recording and checking hashes
 
@@ -280,7 +291,9 @@ content) equal those of the 2026-11-01 image check, and of the 42 needs that
 are not silver, only the two whose disease abbreviation was expanded got a
 different top 10. All 10 pre-registered predictions held. Report and hashes:
 `submission/image-2026-11-02.json` and
-`submission/image-manifest-2026-11-02.json`. The earlier checks are in
+`submission/image-manifest-2026-11-02.json`. That check used `abbrev_fix`
+0.1.0. Version 0.1.1 changes that file's hash, so the image check is being
+re-run with it under its own pre-registration. The earlier checks are in
 `submission/image-2026-11-01.json` (padded 0.2.0 system, 8 of 8 held) and
 `submission/image-2026-10-31.json` (0.1.0 system, 7 of 7 held), each with its
 manifest. Limits: `docker build` itself has not been run yet, so the
@@ -449,10 +462,13 @@ system, use `Dockerfile.spark` (see above).
   default since `spark_submit.py` 0.3.0, recovers about 70% of that loss on
   the silver rows; "HES" (never defined in the snapshot) and "SCLC" (stored as
   "carcinoma, small cell") still fail, and it also reacts to gene symbols such
-  as "APOE" (harmless so far, since none was defined as a disease). It takes
-  the most frequent sense the snapshot defines for a short form, which was the
-  wrong sense for 6 of 24 out-of-sample needs and cost 3 of them their
-  disease ([`abbrev_fix/`](abbrev_fix/README.md)).
+  as "APOE" (harmless so far, since none was defined as a disease). Version
+  0.1.0 took the most frequent sense the snapshot defines for a short form,
+  which was the wrong sense for 6 of 24 out-of-sample needs. Version 0.1.1
+  prefers a sense the snapshot stores as a disease. That fixes wrong senses
+  that are not diseases ("wild-type", "overall survival") but not ones that
+  are ("myeloma" for "MM" when a need meant meningomyelocele)
+  ([`abbrev_fix/`](abbrev_fix/README.md)).
 - `spark_submit.py check` follows the one example record in the Task 2
   description. NIH's later technical guidance may add rules.
 - Counts are study-wide. The tool can't yet tell how many of a study's 5,000
@@ -514,7 +530,9 @@ and synthetic studies. They make no network calls and need no model.
   `submission/image-2026-11-02.json`). `abbrev_oos.py` 0.1.0 and its report
   (`abbrev_fix/oos-report-2026-11-02.json`): the abbreviation default on 24
   automatically picked abbreviations (6 of 8 pre-registered predictions held
-  on 2026-11-02).
+  on 2026-11-02). `abbrev_fix.py` 0.1.1 (sense check), `abbrev_sense.py` 0.1.0
+  and their report (`abbrev_fix/sense-report-2026-11-02.json`): 75 fresh
+  needs, 10 of 10 pre-registered predictions held on 2026-11-02.
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
