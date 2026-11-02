@@ -1,0 +1,3807 @@
+{
+ "abbrev_oos": "0.1.0",
+ "abbrev_fix": "0.1.0",
+ "spark_submit": "0.3.0",
+ "disease_check": "0.1.0",
+ "sentence_need": "0.2.0",
+ "tier": 0.6,
+ "systems": {
+  "base": "spark_submit.padded_answer (0.2.0 default)",
+  "fix": "spark_submit.abbrev_answer (0.3.0 default)"
+ },
+ "questions": 150,
+ "unparsed": [],
+ "excluded_in_sample": [
+  "dev002",
+  "dev004",
+  "dev008",
+  "dev012",
+  "dev031",
+  "dev032",
+  "dev038",
+  "dev039",
+  "dev042",
+  "dev043",
+  "dev044",
+  "dev048",
+  "dev054",
+  "dev061",
+  "dev064",
+  "dev066",
+  "dev081",
+  "dev082",
+  "dev083",
+  "dev084",
+  "dev087",
+  "dev091",
+  "dev098",
+  "dev100",
+  "dev101",
+  "dev103",
+  "dev105",
+  "dev111",
+  "dev123",
+  "dev126",
+  "dev129",
+  "dev133",
+  "dev136",
+  "dev138",
+  "dev141",
+  "dev142",
+  "dev143",
+  "dev144",
+  "dev146"
+ ],
+ "no_pick": [
+  "dev001",
+  "dev003",
+  "dev005",
+  "dev007",
+  "dev009",
+  "dev010",
+  "dev011",
+  "dev013",
+  "dev014",
+  "dev015",
+  "dev016",
+  "dev018",
+  "dev019",
+  "dev020",
+  "dev021",
+  "dev022",
+  "dev023",
+  "dev024",
+  "dev025",
+  "dev026",
+  "dev027",
+  "dev028",
+  "dev029",
+  "dev030",
+  "dev034",
+  "dev036",
+  "dev037",
+  "dev040",
+  "dev041",
+  "dev045",
+  "dev046",
+  "dev047",
+  "dev049",
+  "dev050",
+  "dev051",
+  "dev056",
+  "dev057",
+  "dev058",
+  "dev062",
+  "dev063",
+  "dev065",
+  "dev069",
+  "dev070",
+  "dev072",
+  "dev074",
+  "dev076",
+  "dev077",
+  "dev078",
+  "dev080",
+  "dev085",
+  "dev086",
+  "dev089",
+  "dev090",
+  "dev092",
+  "dev093",
+  "dev094",
+  "dev095",
+  "dev096",
+  "dev097",
+  "dev099",
+  "dev102",
+  "dev104",
+  "dev106",
+  "dev107",
+  "dev109",
+  "dev110",
+  "dev112",
+  "dev113",
+  "dev115",
+  "dev116",
+  "dev117",
+  "dev119",
+  "dev121",
+  "dev124",
+  "dev125",
+  "dev128",
+  "dev130",
+  "dev131",
+  "dev132",
+  "dev134",
+  "dev135",
+  "dev137",
+  "dev139",
+  "dev145",
+  "dev147",
+  "dev148",
+  "dev150"
+ ],
+ "picked": 24,
+ "load_seconds": 8.94,
+ "mined_short_forms": 3256,
+ "picks": {
+  "dev006": {
+   "abbrev": "DR",
+   "matched": "diabetic retinopathy",
+   "count": 3,
+   "top": "diabetic retinopathy",
+   "top_count": 3,
+   "top_matches": true,
+   "disease": "diabetic retinopathy"
+  },
+  "dev017": {
+   "abbrev": "CBH",
+   "matched": "cerebellar hypoplasia",
+   "count": 5,
+   "top": "cerebellar hypoplasia",
+   "top_count": 5,
+   "top_matches": true,
+   "disease": "cerebellar hypoplasia"
+  },
+  "dev033": {
+   "abbrev": "MPS",
+   "matched": "mucopolysaccharidoses",
+   "count": 1,
+   "top": "mucopolysaccharidoses",
+   "top_count": 1,
+   "top_matches": true,
+   "disease": "mucopolysaccharidoses"
+  },
+  "dev035": {
+   "abbrev": "BA",
+   "matched": "biliary atresia",
+   "count": 2,
+   "top": "biliary atresia",
+   "top_count": 2,
+   "top_matches": true,
+   "disease": "biliary atresia"
+  },
+  "dev052": {
+   "abbrev": "TS",
+   "matched": "tourette syndrome",
+   "count": 3,
+   "top": "tourette syndrome",
+   "top_count": 3,
+   "top_matches": true,
+   "disease": "tourette syndrome"
+  },
+  "dev053": {
+   "abbrev": "CD",
+   "matched": "crohn disease",
+   "count": 4,
+   "top": "crohn disease",
+   "top_count": 4,
+   "top_matches": true,
+   "disease": "crohn disease"
+  },
+  "dev055": {
+   "abbrev": "AB",
+   "matched": "ameloblastoma",
+   "count": 1,
+   "top": "ameloblastoma",
+   "top_count": 1,
+   "top_matches": true,
+   "disease": "ameloblastoma"
+  },
+  "dev059": {
+   "abbrev": "SCA",
+   "matched": "spinocerebellar ataxias",
+   "count": 1,
+   "top": "sickle cell anemia",
+   "top_count": 2,
+   "top_matches": false,
+   "disease": "spinocerebellar ataxias"
+  },
+  "dev060": {
+   "abbrev": "HB",
+   "matched": "hepatoblastoma",
+   "count": 3,
+   "top": "hepatoblastoma",
+   "top_count": 3,
+   "top_matches": true,
+   "disease": "hepatoblastoma"
+  },
+  "dev067": {
+   "abbrev": "AD",
+   "matched": "atopic dermatitis",
+   "count": 2,
+   "top": "alzheimer disease",
+   "top_count": 8,
+   "top_matches": false,
+   "disease": "dermatitis, atopic"
+  },
+  "dev068": {
+   "abbrev": "UM",
+   "matched": "uveal melanoma",
+   "count": 7,
+   "top": "uveal melanoma",
+   "top_count": 7,
+   "top_matches": true,
+   "disease": "uveal melanoma"
+  },
+  "dev071": {
+   "abbrev": "NBL",
+   "matched": "neuroblastoma",
+   "count": 2,
+   "top": "neuroblastoma",
+   "top_count": 2,
+   "top_matches": true,
+   "disease": "neuroblastoma"
+  },
+  "dev073": {
+   "abbrev": "GEX",
+   "matched": "gene expression",
+   "count": 1,
+   "top": "gene expression",
+   "top_count": 1,
+   "top_matches": true,
+   "disease": "gene expression"
+  },
+  "dev075": {
+   "abbrev": "CMs",
+   "matched": "cardiomyopathies",
+   "count": 1,
+   "top": "cardiomyopathies",
+   "top_count": 1,
+   "top_matches": true,
+   "disease": "cardiomyopathies"
+  },
+  "dev079": {
+   "abbrev": "HTN",
+   "matched": "hypertension",
+   "count": 2,
+   "top": "hypertension",
+   "top_count": 2,
+   "top_matches": true,
+   "disease": "hypertension"
+  },
+  "dev088": {
+   "abbrev": "IA",
+   "matched": "intracranial aneurysm",
+   "count": 1,
+   "top": "islet autoantibody",
+   "top_count": 1,
+   "top_matches": false,
+   "disease": "intracranial aneurysm"
+  },
+  "dev108": {
+   "abbrev": "EHRs",
+   "matched": "electronic health records",
+   "count": 1,
+   "top": "electronic health records",
+   "top_count": 1,
+   "top_matches": true,
+   "disease": "electronic health records"
+  },
+  "dev114": {
+   "abbrev": "BV",
+   "matched": "bacterial vaginosis",
+   "count": 3,
+   "top": "bacterial vaginosis",
+   "top_count": 3,
+   "top_matches": true,
+   "disease": "vaginosis, bacterial"
+  },
+  "dev118": {
+   "abbrev": "HME",
+   "matched": "hemimegalencephaly",
+   "count": 2,
+   "top": "hemimegalencephaly",
+   "top_count": 2,
+   "top_matches": true,
+   "disease": "hemimegalencephaly"
+  },
+  "dev120": {
+   "abbrev": "CCA",
+   "matched": "cholangiocarcinoma",
+   "count": 1,
+   "top": "cholangiocarcinoma",
+   "top_count": 1,
+   "top_matches": true,
+   "disease": "cholangiocarcinoma"
+  },
+  "dev122": {
+   "abbrev": "CFSs",
+   "matched": "chromosome fragile sites",
+   "count": 1,
+   "top": "common fragile sites",
+   "top_count": 1,
+   "top_matches": false,
+   "disease": "chromosome fragile sites"
+  },
+  "dev127": {
+   "abbrev": "OS",
+   "matched": "osteosarcoma",
+   "count": 2,
+   "top": "overall survival",
+   "top_count": 13,
+   "top_matches": false,
+   "disease": "osteosarcoma"
+  },
+  "dev140": {
+   "abbrev": "FA",
+   "matched": "fanconi anemia",
+   "count": 3,
+   "top": "fanconi anemia",
+   "top_count": 3,
+   "top_matches": true,
+   "disease": "fanconi anemia"
+  },
+  "dev149": {
+   "abbrev": "LD",
+   "matched": "lyme disease",
+   "count": 1,
+   "top": "linkage disequilibrium",
+   "top_count": 3,
+   "top_matches": false,
+   "disease": "lyme disease"
+  }
+ },
+ "top_matches": 18,
+ "summary": {
+  "v0_short": {
+   "all": {
+    "needs": 24,
+    "d0_base": 0.963,
+    "d0_fix": 0.963,
+    "base": 0.6284,
+    "fix": 0.7547,
+    "fix_minus_base": 0.1263,
+    "base_drop": 0.3346,
+    "recovered": 0.3775,
+    "fix_lower": 4,
+    "fix_higher": 7,
+    "base_seconds": 1.1841,
+    "fix_seconds": 2.9893
+   },
+   "top_matches": {
+    "needs": 18,
+    "d0_base": 0.9507,
+    "d0_fix": 0.9507,
+    "base": 0.6712,
+    "fix": 0.9507,
+    "fix_minus_base": 0.2795,
+    "base_drop": 0.2795,
+    "recovered": 1.0,
+    "fix_lower": 1,
+    "fix_higher": 7,
+    "base_seconds": 1.1543,
+    "fix_seconds": 3.1184
+   },
+   "top_differs": {
+    "needs": 6,
+    "d0_base": 1.0,
+    "d0_fix": 1.0,
+    "base": 0.5,
+    "fix": 0.1667,
+    "fix_minus_base": -0.3333,
+    "base_drop": 0.5,
+    "recovered": -0.6666,
+    "fix_lower": 3,
+    "fix_higher": 0,
+    "base_seconds": 1.2735,
+    "fix_seconds": 2.6022
+   },
+   "in_table": {
+    "needs": 1,
+    "d0_base": 1.0,
+    "d0_fix": 1.0,
+    "base": 0.0,
+    "fix": 0.0,
+    "fix_minus_base": 0.0,
+    "base_drop": 1.0,
+    "recovered": 0.0,
+    "fix_lower": 0,
+    "fix_higher": 0,
+    "base_seconds": 2.242,
+    "fix_seconds": 5.189
+   },
+   "not_in_table": {
+    "needs": 23,
+    "d0_base": 0.9614,
+    "d0_fix": 0.9614,
+    "base": 0.6557,
+    "fix": 0.7875,
+    "fix_minus_base": 0.1318,
+    "base_drop": 0.3057,
+    "recovered": 0.4311,
+    "fix_lower": 4,
+    "fix_higher": 7,
+    "base_seconds": 1.1381,
+    "fix_seconds": 2.8937
+   },
+   "triggered": {
+    "needs": 24,
+    "d0_base": 0.963,
+    "d0_fix": 0.963,
+    "base": 0.6284,
+    "fix": 0.7547,
+    "fix_minus_base": 0.1263,
+    "base_drop": 0.3346,
+    "recovered": 0.3775,
+    "fix_lower": 4,
+    "fix_higher": 7,
+    "base_seconds": 1.1841,
+    "fix_seconds": 2.9893
+   },
+   "not_triggered": {
+    "needs": 0
+   },
+   "d0_rows": 24,
+   "d0_fix_differs": 0
+  },
+  "v1_official": {
+   "all": {
+    "needs": 24,
+    "d0_base": 0.963,
+    "d0_fix": 0.963,
+    "base": 0.6284,
+    "fix": 0.7547,
+    "fix_minus_base": 0.1263,
+    "base_drop": 0.3346,
+    "recovered": 0.3775,
+    "fix_lower": 4,
+    "fix_higher": 7,
+    "base_seconds": 1.2352,
+    "fix_seconds": 3.2153
+   },
+   "top_matches": {
+    "needs": 18,
+    "d0_base": 0.9507,
+    "d0_fix": 0.9507,
+    "base": 0.6712,
+    "fix": 0.9507,
+    "fix_minus_base": 0.2795,
+    "base_drop": 0.2795,
+    "recovered": 1.0,
+    "fix_lower": 1,
+    "fix_higher": 7,
+    "base_seconds": 1.1937,
+    "fix_seconds": 3.4358
+   },
+   "top_differs": {
+    "needs": 6,
+    "d0_base": 1.0,
+    "d0_fix": 1.0,
+    "base": 0.5,
+    "fix": 0.1667,
+    "fix_minus_base": -0.3333,
+    "base_drop": 0.5,
+    "recovered": -0.6666,
+    "fix_lower": 3,
+    "fix_higher": 0,
+    "base_seconds": 1.3595,
+    "fix_seconds": 2.5538
+   },
+   "in_table": {
+    "needs": 1,
+    "d0_base": 1.0,
+    "d0_fix": 1.0,
+    "base": 0.0,
+    "fix": 0.0,
+    "fix_minus_base": 0.0,
+    "base_drop": 1.0,
+    "recovered": 0.0,
+    "fix_lower": 0,
+    "fix_higher": 0,
+    "base_seconds": 2.868,
+    "fix_seconds": 4.57
+   },
+   "not_in_table": {
+    "needs": 23,
+    "d0_base": 0.9614,
+    "d0_fix": 0.9614,
+    "base": 0.6557,
+    "fix": 0.7875,
+    "fix_minus_base": 0.1318,
+    "base_drop": 0.3057,
+    "recovered": 0.4311,
+    "fix_lower": 4,
+    "fix_higher": 7,
+    "base_seconds": 1.1642,
+    "fix_seconds": 3.1564
+   },
+   "triggered": {
+    "needs": 24,
+    "d0_base": 0.963,
+    "d0_fix": 0.963,
+    "base": 0.6284,
+    "fix": 0.7547,
+    "fix_minus_base": 0.1263,
+    "base_drop": 0.3346,
+    "recovered": 0.3775,
+    "fix_lower": 4,
+    "fix_higher": 7,
+    "base_seconds": 1.2352,
+    "fix_seconds": 3.2153
+   },
+   "not_triggered": {
+    "needs": 0
+   },
+   "d0_rows": 24,
+   "d0_fix_differs": 0
+  }
+ },
+ "official": [
+  {
+   "id": "official-p1",
+   "base": 2,
+   "fix": 2
+  },
+  {
+   "id": "official-p5",
+   "base": 2,
+   "fix": 2
+  }
+ ],
+ "items": [
+  {
+   "source": "dev006",
+   "disease": "diabetic retinopathy",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "diabetic retinopathy",
+   "topic": [
+    "diabetic",
+    "retinopathy"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.947
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.985
+   }
+  },
+  {
+   "source": "dev006",
+   "disease": "diabetic retinopathy",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "diabetic retinopathy",
+   "topic": [
+    "diabetic",
+    "retinopathy"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.233
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.257
+   }
+  },
+  {
+   "source": "dev006",
+   "disease": "diabetic retinopathy",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "DR",
+   "topic": [
+    "dr"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.391
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 4.241
+   },
+   "triggered": true,
+   "found": [
+    "DR"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev006",
+   "disease": "diabetic retinopathy",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "DR",
+   "topic": [
+    "dr"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.477
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.972
+   },
+   "triggered": true,
+   "found": [
+    "DR"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev017",
+   "disease": "cerebellar hypoplasia",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "cerebellar hypoplasia",
+   "topic": [
+    "cerebellar",
+    "hypoplasia"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.349
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.36
+   }
+  },
+  {
+   "source": "dev017",
+   "disease": "cerebellar hypoplasia",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "cerebellar hypoplasia",
+   "topic": [
+    "cerebellar",
+    "hypoplasia"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.34
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.337
+   }
+  },
+  {
+   "source": "dev017",
+   "disease": "cerebellar hypoplasia",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "CBH",
+   "topic": [
+    "cbh"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.316
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.956
+   },
+   "triggered": true,
+   "found": [
+    "CBH"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev017",
+   "disease": "cerebellar hypoplasia",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "CBH",
+   "topic": [
+    "cbh"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.346
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.921
+   },
+   "triggered": true,
+   "found": [
+    "CBH"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev033",
+   "disease": "mucopolysaccharidoses",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "mucopolysaccharidoses",
+   "topic": [
+    "mucopolysaccharidose"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.131
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.098
+   }
+  },
+  {
+   "source": "dev033",
+   "disease": "mucopolysaccharidoses",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "mucopolysaccharidoses",
+   "topic": [
+    "mucopolysaccharidose"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.179
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.152
+   }
+  },
+  {
+   "source": "dev033",
+   "disease": "mucopolysaccharidoses",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "MPS",
+   "topic": [
+    "mps"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.07
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.965
+   },
+   "triggered": true,
+   "found": [
+    "MPS"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev033",
+   "disease": "mucopolysaccharidoses",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "MPS",
+   "topic": [
+    "mps"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.04
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.088
+   },
+   "triggered": true,
+   "found": [
+    "MPS"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev035",
+   "disease": "biliary atresia",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "biliary atresia",
+   "topic": [
+    "atresia",
+    "biliary"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.494
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.852
+   }
+  },
+  {
+   "source": "dev035",
+   "disease": "biliary atresia",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "biliary atresia",
+   "topic": [
+    "atresia",
+    "biliary"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.621
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.533
+   }
+  },
+  {
+   "source": "dev035",
+   "disease": "biliary atresia",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "BA",
+   "topic": [
+    "ba"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.373
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 4.607
+   },
+   "triggered": true,
+   "found": [
+    "BA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev035",
+   "disease": "biliary atresia",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "BA",
+   "topic": [
+    "ba"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.936
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 5.249
+   },
+   "triggered": true,
+   "found": [
+    "BA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev052",
+   "disease": "tourette syndrome",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "tourette syndrome",
+   "topic": [
+    "syndrome",
+    "tourette"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.724
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.667
+   }
+  },
+  {
+   "source": "dev052",
+   "disease": "tourette syndrome",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "tourette syndrome",
+   "topic": [
+    "syndrome",
+    "tourette"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.675
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.596
+   }
+  },
+  {
+   "source": "dev052",
+   "disease": "tourette syndrome",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "TS",
+   "topic": [
+    "ts"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.422
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.178
+   },
+   "triggered": true,
+   "found": [
+    "TS"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev052",
+   "disease": "tourette syndrome",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "TS",
+   "topic": [
+    "ts"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.979
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.153
+   },
+   "triggered": true,
+   "found": [
+    "TS"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev053",
+   "disease": "crohn disease",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "crohn disease",
+   "topic": [
+    "crohn"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 2.091
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.513
+   }
+  },
+  {
+   "source": "dev053",
+   "disease": "crohn disease",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "crohn disease",
+   "topic": [
+    "crohn"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.94
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.944
+   }
+  },
+  {
+   "source": "dev053",
+   "disease": "crohn disease",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "CD",
+   "topic": [
+    "cd"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.416
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 5.887
+   },
+   "triggered": true,
+   "found": [
+    "CD"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev053",
+   "disease": "crohn disease",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "CD",
+   "topic": [
+    "cd"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.465
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 9.772
+   },
+   "triggered": true,
+   "found": [
+    "CD"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev055",
+   "disease": "ameloblastoma",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "ameloblastoma",
+   "topic": [
+    "ameloblastoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 2.556
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.432
+   }
+  },
+  {
+   "source": "dev055",
+   "disease": "ameloblastoma",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "ameloblastoma",
+   "topic": [
+    "ameloblastoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 2.801
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.721
+   }
+  },
+  {
+   "source": "dev055",
+   "disease": "ameloblastoma",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "AB",
+   "topic": [
+    "ab"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 2.759
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 4.759
+   },
+   "triggered": true,
+   "found": [
+    "AB"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev055",
+   "disease": "ameloblastoma",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "AB",
+   "topic": [
+    "ab"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 1.693
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 5.344
+   },
+   "triggered": true,
+   "found": [
+    "AB"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev059",
+   "disease": "spinocerebellar ataxias",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "spinocerebellar ataxias",
+   "topic": [
+    "ataxia",
+    "spinocerebellar"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.552
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.585
+   }
+  },
+  {
+   "source": "dev059",
+   "disease": "spinocerebellar ataxias",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "spinocerebellar ataxias",
+   "topic": [
+    "ataxia",
+    "spinocerebellar"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.614
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.566
+   }
+  },
+  {
+   "source": "dev059",
+   "disease": "spinocerebellar ataxias",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "SCA",
+   "topic": [
+    "sca"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.614
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 3.666
+   },
+   "triggered": true,
+   "found": [
+    "SCA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev059",
+   "disease": "spinocerebellar ataxias",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "SCA",
+   "topic": [
+    "sca"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.774
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 4.303
+   },
+   "triggered": true,
+   "found": [
+    "SCA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev060",
+   "disease": "hepatoblastoma",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "hepatoblastoma",
+   "topic": [
+    "hepatoblastoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.742
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.586
+   }
+  },
+  {
+   "source": "dev060",
+   "disease": "hepatoblastoma",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "hepatoblastoma",
+   "topic": [
+    "hepatoblastoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.753
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.597
+   }
+  },
+  {
+   "source": "dev060",
+   "disease": "hepatoblastoma",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "HB",
+   "topic": [
+    "hb"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.6309,
+    "seconds": 1.199
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 4.141
+   },
+   "triggered": true,
+   "found": [
+    "HB"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev060",
+   "disease": "hepatoblastoma",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "HB",
+   "topic": [
+    "hb"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.6309,
+    "seconds": 1.721
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 5.032
+   },
+   "triggered": true,
+   "found": [
+    "HB"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev067",
+   "disease": "dermatitis, atopic",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "dermatitis, atopic",
+   "topic": [
+    "atopic",
+    "dermatitis"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.672
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.505
+   }
+  },
+  {
+   "source": "dev067",
+   "disease": "dermatitis, atopic",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "dermatitis, atopic",
+   "topic": [
+    "atopic",
+    "dermatitis"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 2.473
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.106
+   }
+  },
+  {
+   "source": "dev067",
+   "disease": "dermatitis, atopic",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "AD",
+   "topic": [
+    "alzheimer"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 2.242
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 5.189
+   },
+   "triggered": true,
+   "found": [
+    "AD"
+   ],
+   "in_table": true
+  },
+  {
+   "source": "dev067",
+   "disease": "dermatitis, atopic",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "AD",
+   "topic": [
+    "alzheimer"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 2.868
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 4.57
+   },
+   "triggered": true,
+   "found": [
+    "AD"
+   ],
+   "in_table": true
+  },
+  {
+   "source": "dev068",
+   "disease": "uveal melanoma",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "uveal melanoma",
+   "topic": [
+    "melanoma",
+    "uveal"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.099
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.094
+   }
+  },
+  {
+   "source": "dev068",
+   "disease": "uveal melanoma",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "uveal melanoma",
+   "topic": [
+    "melanoma",
+    "uveal"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.098
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.112
+   }
+  },
+  {
+   "source": "dev068",
+   "disease": "uveal melanoma",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "UM",
+   "topic": [
+    "um"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.8048,
+    "seconds": 1.328
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.335
+   },
+   "triggered": true,
+   "found": [
+    "UM"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev068",
+   "disease": "uveal melanoma",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "UM",
+   "topic": [
+    "um"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.8048,
+    "seconds": 1.124
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.26
+   },
+   "triggered": true,
+   "found": [
+    "UM"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev071",
+   "disease": "neuroblastoma",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "neuroblastoma",
+   "topic": [
+    "neuroblastoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.544
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.486
+   }
+  },
+  {
+   "source": "dev071",
+   "disease": "neuroblastoma",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "neuroblastoma",
+   "topic": [
+    "neuroblastoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.068
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.163
+   }
+  },
+  {
+   "source": "dev071",
+   "disease": "neuroblastoma",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "NBL",
+   "topic": [
+    "nbl"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.496
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 4.247
+   },
+   "triggered": true,
+   "found": [
+    "NBL"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev071",
+   "disease": "neuroblastoma",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "NBL",
+   "topic": [
+    "nbl"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.302
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.708
+   },
+   "triggered": true,
+   "found": [
+    "NBL"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev073",
+   "disease": "gene expression",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "gene expression",
+   "topic": [
+    "gene"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq",
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.623
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.58
+   }
+  },
+  {
+   "source": "dev073",
+   "disease": "gene expression",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "gene expression",
+   "topic": [
+    "gene"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "rnaseq",
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.388
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.299
+   }
+  },
+  {
+   "source": "dev073",
+   "disease": "gene expression",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "GEX",
+   "topic": [
+    "gex"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 2.001
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.868
+   },
+   "triggered": true,
+   "found": [
+    "GEX"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev073",
+   "disease": "gene expression",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "GEX",
+   "topic": [
+    "gex"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 2.591
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 5.041
+   },
+   "triggered": true,
+   "found": [
+    "GEX"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev075",
+   "disease": "cardiomyopathies",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "cardiomyopathies",
+   "topic": [
+    "cardiomyopathy"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.82
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.937
+   }
+  },
+  {
+   "source": "dev075",
+   "disease": "cardiomyopathies",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "cardiomyopathies",
+   "topic": [
+    "cardiomyopathy"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.868
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.59
+   }
+  },
+  {
+   "source": "dev075",
+   "disease": "cardiomyopathies",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "CMs",
+   "topic": [
+    "cms"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 0.58
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.866
+   },
+   "triggered": true,
+   "found": [
+    "CMs"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev075",
+   "disease": "cardiomyopathies",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "CMs",
+   "topic": [
+    "cms"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 0.73
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.769
+   },
+   "triggered": true,
+   "found": [
+    "CMs"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev079",
+   "disease": "hypertension",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "hypertension",
+   "topic": [
+    "hypertension"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.1131,
+    "seconds": 0.551
+   },
+   "fix": {
+    "ndcg@10": 0.1131,
+    "seconds": 0.523
+   }
+  },
+  {
+   "source": "dev079",
+   "disease": "hypertension",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "hypertension",
+   "topic": [
+    "hypertension"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.1131,
+    "seconds": 0.52
+   },
+   "fix": {
+    "ndcg@10": 0.1131,
+    "seconds": 0.466
+   }
+  },
+  {
+   "source": "dev079",
+   "disease": "hypertension",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "HTN",
+   "topic": [
+    "htn"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.1461,
+    "seconds": 0.426
+   },
+   "fix": {
+    "ndcg@10": 0.1131,
+    "seconds": 1.741
+   },
+   "triggered": true,
+   "found": [
+    "HTN"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev079",
+   "disease": "hypertension",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "HTN",
+   "topic": [
+    "htn"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [],
+    "groups": [
+     "black"
+    ],
+    "min_subjects": 100,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.1461,
+    "seconds": 0.676
+   },
+   "fix": {
+    "ndcg@10": 0.1131,
+    "seconds": 1.672
+   },
+   "triggered": true,
+   "found": [
+    "HTN"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev088",
+   "disease": "intracranial aneurysm",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "intracranial aneurysm",
+   "topic": [
+    "aneurysm",
+    "intracranial"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 2.132
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.213
+   }
+  },
+  {
+   "source": "dev088",
+   "disease": "intracranial aneurysm",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "intracranial aneurysm",
+   "topic": [
+    "aneurysm",
+    "intracranial"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.849
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.898
+   }
+  },
+  {
+   "source": "dev088",
+   "disease": "intracranial aneurysm",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "IA",
+   "topic": [
+    "ia"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.3869,
+    "seconds": 1.692
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 4.164
+   },
+   "triggered": true,
+   "found": [
+    "IA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev088",
+   "disease": "intracranial aneurysm",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "IA",
+   "topic": [
+    "ia"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.3869,
+    "seconds": 1.607
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 3.96
+   },
+   "triggered": true,
+   "found": [
+    "IA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev108",
+   "disease": "electronic health records",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "electronic health records",
+   "topic": [
+    "electronic"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.264
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.182
+   }
+  },
+  {
+   "source": "dev108",
+   "disease": "electronic health records",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "electronic health records",
+   "topic": [
+    "electronic"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": [
+     [
+      "electronic"
+     ]
+    ]
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.446
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.344
+   }
+  },
+  {
+   "source": "dev108",
+   "disease": "electronic health records",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "EHRs",
+   "topic": [
+    "ehr"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 0.882
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.919
+   },
+   "triggered": true,
+   "found": [
+    "EHRs"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev108",
+   "disease": "electronic health records",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "EHRs",
+   "topic": [
+    "ehr"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 1.064
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 4.795
+   },
+   "triggered": true,
+   "found": [
+    "EHRs"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev114",
+   "disease": "vaginosis, bacterial",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "vaginosis, bacterial",
+   "topic": [
+    "bacterial",
+    "vaginosis"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 2.011
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.041
+   }
+  },
+  {
+   "source": "dev114",
+   "disease": "vaginosis, bacterial",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "vaginosis, bacterial",
+   "topic": [
+    "bacterial",
+    "vaginosis"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 2.278
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.866
+   }
+  },
+  {
+   "source": "dev114",
+   "disease": "vaginosis, bacterial",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "BV",
+   "topic": [
+    "bv"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.775
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.615
+   },
+   "triggered": true,
+   "found": [
+    "BV"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev114",
+   "disease": "vaginosis, bacterial",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "BV",
+   "topic": [
+    "bv"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     18,
+     null
+    ],
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.542
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.703
+   },
+   "triggered": true,
+   "found": [
+    "BV"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev118",
+   "disease": "hemimegalencephaly",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "hemimegalencephaly",
+   "topic": [
+    "hemimegalencephaly"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.329
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.331
+   }
+  },
+  {
+   "source": "dev118",
+   "disease": "hemimegalencephaly",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "hemimegalencephaly",
+   "topic": [
+    "hemimegalencephaly"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.231
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.237
+   }
+  },
+  {
+   "source": "dev118",
+   "disease": "hemimegalencephaly",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "HME",
+   "topic": [
+    "hme"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.329
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.835
+   },
+   "triggered": true,
+   "found": [
+    "HME"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev118",
+   "disease": "hemimegalencephaly",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "HME",
+   "topic": [
+    "hme"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": [
+     0,
+     17
+    ],
+    "consent": [],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.226
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.57
+   },
+   "triggered": true,
+   "found": [
+    "HME"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev120",
+   "disease": "cholangiocarcinoma",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "cholangiocarcinoma",
+   "topic": [
+    "cholangiocarcinoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes",
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.102
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.108
+   }
+  },
+  {
+   "source": "dev120",
+   "disease": "cholangiocarcinoma",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "cholangiocarcinoma",
+   "topic": [
+    "cholangiocarcinoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes",
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.917
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.053
+   }
+  },
+  {
+   "source": "dev120",
+   "disease": "cholangiocarcinoma",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "CCA",
+   "topic": [
+    "cca"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes",
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.17
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 3.189
+   },
+   "triggered": true,
+   "found": [
+    "CCA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev120",
+   "disease": "cholangiocarcinoma",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "CCA",
+   "topic": [
+    "cca"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes",
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.844
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.542
+   },
+   "triggered": true,
+   "found": [
+    "CCA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev122",
+   "disease": "chromosome fragile sites",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "chromosome fragile sites",
+   "topic": [
+    "chromosome",
+    "fragile",
+    "site"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.329
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.329
+   }
+  },
+  {
+   "source": "dev122",
+   "disease": "chromosome fragile sites",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "chromosome fragile sites",
+   "topic": [
+    "chromosome",
+    "fragile",
+    "site"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.34
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.322
+   }
+  },
+  {
+   "source": "dev122",
+   "disease": "chromosome fragile sites",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "CFSs",
+   "topic": [
+    "cfss"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.058
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.526
+   },
+   "triggered": true,
+   "found": [
+    "CFSs"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev122",
+   "disease": "chromosome fragile sites",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "CFSs",
+   "topic": [
+    "cfss"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wgs"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.785
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.516
+   },
+   "triggered": true,
+   "found": [
+    "CFSs"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev127",
+   "disease": "osteosarcoma",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "osteosarcoma",
+   "topic": [
+    "osteosarcoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.879
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.894
+   }
+  },
+  {
+   "source": "dev127",
+   "disease": "osteosarcoma",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "osteosarcoma",
+   "topic": [
+    "osteosarcoma"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.894
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.873
+   }
+  },
+  {
+   "source": "dev127",
+   "disease": "osteosarcoma",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "OS",
+   "topic": [
+    "os"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 0.908
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 0.827
+   },
+   "triggered": true,
+   "found": [
+    "OS"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev127",
+   "disease": "osteosarcoma",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "OS",
+   "topic": [
+    "os"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [
+     "GRU"
+    ],
+    "data_types": [],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.0,
+    "seconds": 0.96
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 0.739
+   },
+   "triggered": true,
+   "found": [
+    "OS"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev140",
+   "disease": "fanconi anemia",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "fanconi anemia",
+   "topic": [
+    "anemia",
+    "fanconi"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.904
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.869
+   }
+  },
+  {
+   "source": "dev140",
+   "disease": "fanconi anemia",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "fanconi anemia",
+   "topic": [
+    "anemia",
+    "fanconi"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 0.776
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 0.782
+   }
+  },
+  {
+   "source": "dev140",
+   "disease": "fanconi anemia",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "FA",
+   "topic": [
+    "fa"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.5,
+    "seconds": 0.845
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.782
+   },
+   "triggered": true,
+   "found": [
+    "FA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev140",
+   "disease": "fanconi anemia",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "FA",
+   "topic": [
+    "fa"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "wes"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.5,
+    "seconds": 0.731
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 2.254
+   },
+   "triggered": true,
+   "found": [
+    "FA"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev149",
+   "disease": "lyme disease",
+   "variant": "d0_as_is",
+   "frame": "v0_short",
+   "named": "lyme disease",
+   "topic": [
+    "lyme"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.424
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.463
+   }
+  },
+  {
+   "source": "dev149",
+   "disease": "lyme disease",
+   "variant": "d0_as_is",
+   "frame": "v1_official",
+   "named": "lyme disease",
+   "topic": [
+    "lyme"
+   ],
+   "fit": 1.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 1.0,
+    "seconds": 1.405
+   },
+   "fix": {
+    "ndcg@10": 1.0,
+    "seconds": 1.375
+   }
+  },
+  {
+   "source": "dev149",
+   "disease": "lyme disease",
+   "variant": "auto",
+   "frame": "v0_short",
+   "named": "LD",
+   "topic": [
+    "ld"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.6131,
+    "seconds": 1.127
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 0.241
+   },
+   "triggered": true,
+   "found": [
+    "LD"
+   ],
+   "in_table": false
+  },
+  {
+   "source": "dev149",
+   "disease": "lyme disease",
+   "variant": "auto",
+   "frame": "v1_official",
+   "named": "LD",
+   "topic": [
+    "ld"
+   ],
+   "fit": 0.0,
+   "constraints": {
+    "age": null,
+    "consent": [],
+    "data_types": [
+     "rnaseq"
+    ],
+    "groups": [],
+    "min_subjects": null,
+    "var_alts": [],
+    "var_terms": []
+   },
+   "base": {
+    "ndcg@10": 0.6131,
+    "seconds": 1.163
+   },
+   "fix": {
+    "ndcg@10": 0.0,
+    "seconds": 0.235
+   },
+   "triggered": true,
+   "found": [
+    "LD"
+   ],
+   "in_table": false
+  }
+ ],
+ "note": "Silver labels are circular; the short forms are ones the snapshot defines; this measures abbreviation handling out of the hand-picked sample, not the official score."
+}

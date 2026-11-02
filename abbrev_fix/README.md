@@ -1,8 +1,10 @@
 # Disease abbreviations: letting a SPARK need say "SCLC" or "HIV"
 
 `abbrev_fix.py` 0.1.0, checked 2026-11-01 on NLM's SPARK dbGaP snapshot (3,578 studies) in a `python:3.12`
-container (2 CPUs, 54 minutes, 0.35 GB peak). Made with AI agents working in MV2's name (MV2, Munim, Inc.).
-No person has checked these readings. Report: [`report-2026-11-01.json`](report-2026-11-01.json) (CC BY 4.0).
+container (2 CPUs, 54 minutes, 0.35 GB peak), and checked out of sample on 2026-11-02 (below). Made with AI
+agents working in MV2's name (MV2, Munim, Inc.). No person has checked these readings. Reports:
+[`report-2026-11-01.json`](report-2026-11-01.json) and [`oos-report-2026-11-02.json`](oos-report-2026-11-02.json)
+(CC BY 4.0).
 
 ## Why
 
@@ -57,18 +59,61 @@ The predictions were written before the run and are summarized here. The base re
 the fix off. At most 5 of 750 reworded needs were to set it off, and 0 did. The predicted minimum gains were
 +0.03 for all abbreviations and +0.04 for those not in the table. The forecast for HIV was at least 0.9. The
 predictions also required no loss on everyday names, the example study at rank 2, and at most 3.5 s per need.
-By the rule written before the run, this fix becomes the default ranker in `spark_submit.py` 0.3.0. That
-change is checked first, with its own Docker-image and hash check, under its own pre-registration. Until that
-check passes, the published default is still `pad`.
+By the rule written before the run, this fix became the default ranker in `spark_submit.py` 0.3.0, after its
+own image and hash check in a `python:3.12-slim` container (10 of 10 pre-registered predictions held on
+2026-11-02; `docker build` itself has not been run yet).
+
+## Out of sample (2026-11-02)
+
+The 39 abbreviations above were chosen by agents who had read the matcher, so the gain above is in-sample.
+`abbrev_oos.py` 0.1.0 picks abbreviations with no human or agent choice. It takes every silver need whose
+disease is not one of the 39 and finds the short form that the snapshot's own text defines most often with that
+disease as its long form ("... uveal melanoma (UM) ..."). Each picked need is written with the disease as
+stored (d0) and with the short form, in both sentence frames. Each is ranked by the 0.2.0 default (padded) and
+by the 0.3.0 default (padded + `abbrev_fix`). The test ran on 2026-11-02, after 0.3.0 reached `main` (2 CPUs,
+18 minutes, 0.31 GB peak, 31 tests OK).
+
+Of 150 silver needs, 39 were excluded (their disease is one of the 39), 87 have no such short form, and 24
+were picked. Both frames give the same figures:
+
+| rows | needs | d0 | 0.2.0 default | 0.3.0 default | change |
+|---|---|---|---|---|---|
+| all picked | 24 | 0.9630 | 0.6284 | 0.7547 | **+0.1263** |
+| most frequent mined sense is the disease | 18 | 0.9507 | 0.6712 | 0.9507 | +0.2795 (all of the loss) |
+| most frequent mined sense is something else | 6 | 1.0 | 0.5000 | 0.1667 | -0.3333 |
+
+- **Up (7):** AB (ameloblastoma) 0 -> 1, GEX 0 -> 1, CMs 0 -> 1, EHRs 0 -> 1, HB (hepatoblastoma) 0.63 -> 1,
+  UM (uveal melanoma) 0.80 -> 1, FA (Fanconi anemia) 0.5 -> 1.
+- **Down (4):** SCA 1 -> 0 (mined as "sickle cell anemia"; the need meant spinocerebellar ataxias), IA 0.39 -> 0
+  ("islet autoantibody", not intracranial aneurysm), LD 0.61 -> 0 ("linkage disequilibrium", not Lyme disease),
+  and HTN 0.146 -> 0.113 (the same as its d0 score).
+- **Zero under both:** OS (mined as "overall survival", not osteosarcoma) and AD (in the table as Alzheimer
+  disease; this need meant atopic dermatitis).
+- No need that names its disease as stored changed. The official example's study stays 2nd. Abbreviated needs
+  took about 3 s each (1.2 s with the 0.2.0 default).
+
+**Pre-registered predictions: 6 of 8 held.** It does no net harm (held) and gains at least +0.02 (held).
+It does not change disease-as-stored needs (held). For 18 of the 24 needs, at least 70% as predicted, the
+most frequent mined sense is the disease (held). Needs where it is not gain less than the rest (held), and a
+need takes at most 3.5 s (held). Two predictions failed. The 0.3.0 default was to win back at least half of
+the 0.2.0 default's loss and won back 38%. At most 2 needs were to fall, and 4 did. The 0.3.0 default stays.
+
+**What this shows.** When the snapshot's most frequent definition of a short form is the need's disease,
+`abbrev_fix` wins back the whole loss. When it is another sense, it makes things worse, because it replaces the
+short form with the wrong long form. Three of the four losses are that case. A sense check that prefers long
+forms the snapshot stores as a disease term is being tested on fresh needs under its own pre-registration.
+Until it has been graded, it is not in `abbrev_fix.py` on `main`.
 
 ## Limits
 
 - Silver labels are circular: they come from `main_disease`, the field the matcher reads first.
 - The 39 abbreviations were written by agents who had read the matcher. The fix was written after seeing which
-  abbreviations failed, so the gain is measured in-sample and is optimistic.
-- Mining picks the most frequent long form, which can be the wrong sense for an ambiguous short form ("HD",
-  "AD").
+  abbreviations failed, so that gain is in-sample. The out-of-sample check above covers 24 needs, all with short
+  forms the snapshot itself defines.
+- Mining picks the most frequent long form, which can be the wrong sense for an ambiguous short form. This
+  happened for 6 of 24 out-of-sample needs ("OS", "LD", "IA", "SCA", "AD", "CFSs").
 - The best-of fit can raise unrelated studies that use the short form in their titles.
+- Gene symbols such as "APOE" also set it off (harmless so far, since none was defined as a disease).
 - There is one official example need. NLM's wording of its ~1,000 evaluation needs is unknown.
 
 ## Run it
@@ -76,7 +121,10 @@ check passes, the published default is still `pad`.
 ```
 python abbrev_check.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
     --values data/var_values.jsonl.gz --devset devset.json --needs official_needs.jsonl --out out
+python abbrev_oos.py --studies out/studies.jsonl --variables data/variables.jsonl.gz \
+    --values data/var_values.jsonl.gz --devset devset.json --out out
 ```
 
-This needs `disease_check.py`, `wording_check.py`, `wording_fix.py`, `spark_submit.py`, `sentence_need.py`,
-`snapshot.py` and `cohort_finder.py` from this repository. To run the tests: `python -m unittest -v test_abbrev_fix`.
+These need `disease_check.py`, `wording_check.py`, `wording_fix.py`, `spark_submit.py`, `sentence_need.py`,
+`snapshot.py` and `cohort_finder.py` from this repository. To run the tests:
+`python -m unittest -v test_abbrev_fix test_abbrev_oos`.

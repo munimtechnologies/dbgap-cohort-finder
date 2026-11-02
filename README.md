@@ -166,7 +166,14 @@ from 0.7622 to 0.8698 (0.7615 to 0.9038 for the 26 the table lacks). No need
 with the disease as stored changed, none of the 750 reworded needs set it
 off, and the official example's study stays 2nd. All 11 pre-registered
 predictions held; the gain is in-sample. **Since `spark_submit.py` 0.3.0 it
-is the default** (see below). Details: [`abbrev_fix/`](abbrev_fix/README.md).
+is the default** (see below). Out of sample, `abbrev_oos.py` picked an
+abbreviation with no human choice for 24 other silver needs: the short form
+the snapshot itself defines most often with each need's disease. There the
+default raised NDCG@10 from 0.6284 to 0.7547. When the snapshot's most
+frequent sense of the short form was the disease (18 needs), it won back the
+whole loss. When it was another sense ("OS" read as overall survival, "LD"
+as linkage disequilibrium), it made things worse. 6 of 8 pre-registered
+predictions held. Details: [`abbrev_fix/`](abbrev_fix/README.md).
 
 **A local re-ranker (negative result).** `rerank_check.py` re-scored each
 need's top 30 with NCBI's open-weight MedCPT cross-encoder on CPU and fused it
@@ -442,8 +449,10 @@ system, use `Dockerfile.spark` (see above).
   default since `spark_submit.py` 0.3.0, recovers about 70% of that loss on
   the silver rows; "HES" (never defined in the snapshot) and "SCLC" (stored as
   "carcinoma, small cell") still fail, and it also reacts to gene symbols such
-  as "APOE" (harmless so far, since none was defined as a disease)
-  ([`abbrev_fix/`](abbrev_fix/README.md)).
+  as "APOE" (harmless so far, since none was defined as a disease). It takes
+  the most frequent sense the snapshot defines for a short form, which was the
+  wrong sense for 6 of 24 out-of-sample needs and cost 3 of them their
+  disease ([`abbrev_fix/`](abbrev_fix/README.md)).
 - `spark_submit.py check` follows the one example record in the Task 2
   description. NIH's later technical guidance may add rules.
 - Counts are study-wide. The tool can't yet tell how many of a study's 5,000
@@ -502,7 +511,10 @@ and synthetic studies. They make no network calls and need no model.
   `spark_system.py` 0.3.0: `abbrev` is the default (`--system
   abbrev|pad|base`), and `abbrev_fix.py` is in the Docker image and its
   manifest (10 of 10 pre-registered predictions held on 2026-11-02,
-  `submission/image-2026-11-02.json`).
+  `submission/image-2026-11-02.json`). `abbrev_oos.py` 0.1.0 and its report
+  (`abbrev_fix/oos-report-2026-11-02.json`): the abbreviation default on 24
+  automatically picked abbreviations (6 of 8 pre-registered predictions held
+  on 2026-11-02).
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
