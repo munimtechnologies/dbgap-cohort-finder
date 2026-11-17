@@ -225,9 +225,11 @@ from the snapshot: "coronavirus disease 2019"), "HIV" and "APOE". Only the
 COVID-19 and HIV needs got a different top 10. "APOE" is a gene, not a
 disease; no long form was found for it, so it changed nothing, and a later
 version will skip gene symbols. Those figures were measured with
-`abbrev_fix` 0.1.0; the same check with 0.1.1 is queued under its own
-pre-registration. The 0.1.0 measurements and pre-registered predictions (5 of
-7 held): [`submission/`](submission/README.md).
+`abbrev_fix` 0.1.0. With 0.1.1 the sense check chose the same long forms for
+all three, every top 10 stayed the same, and a need took 0.79 s on average
+(3.64 s at most, 314 MB); see the Docker section below. The 0.1.0
+measurements and pre-registered predictions (5 of 7 held):
+[`submission/`](submission/README.md).
 
 ### Recording and checking hashes
 
@@ -281,19 +283,21 @@ default is `abbrev`. `noegress.py` runs a Python script with socket connects,
 sends and name lookups refused and counted. Use it where `--network none`
 isn't available.
 
-On 2026-11-02 the image's commands, with the `abbrev` default, were run in a
-`python:3.12-slim` container with 2 CPUs on the full snapshot. The build took
-261 s and the job peaked at 860 MB. A 192-need submission under `noegress.py`
-took 164 s (0.81 s per need on average, 3.83 s at most, 314 MB). It made 0
-network attempts and had 0 format problems, and both manifest checks matched
-all 12 files. The index hashes (`studies.jsonl`, and the `.gz` files by
-content) equal those of the 2026-11-01 image check, and of the 42 needs that
-are not silver, only the two whose disease abbreviation was expanded got a
-different top 10. All 10 pre-registered predictions held. Report and hashes:
-`submission/image-2026-11-02.json` and
-`submission/image-manifest-2026-11-02.json`. That check used `abbrev_fix`
-0.1.0. Version 0.1.1 changes that file's hash, so the image check is being
-re-run with it under its own pre-registration. The earlier checks are in
+The latest image check used the current code (`abbrev_fix` 0.1.1). On
+2026-11-02 the image's commands, with the `abbrev` default, were run in a
+`python:3.12-slim` container with 2 CPUs on the full snapshot. The job peaked
+at 380 MB. A 192-need submission under `noegress.py` took 160 s (0.79 s per
+need on average, 3.64 s at most, 314 MB). It made 0 network attempts and had
+0 format problems, and both manifest checks matched all 12 files. The three
+index hashes equal those of the earlier check, and `abbrev_fix.py` is the only
+code file whose hash changed. None of the 42 needs that are not silver got a
+different top 10: the sense check chose the same long forms for "COVID-19",
+"HIV" and "APOE" as 0.1.0 did. On the 150 silver needs NDCG@10 stayed 0.919
+(NDCG@100 0.9259), and the official example's study stayed 2nd in both
+wordings. All 10 pre-registered predictions held. Report and hashes:
+`submission/image-2026-11-02b.json` and
+`submission/image-manifest-2026-11-02b.json`. The earlier checks are in
+`submission/image-2026-11-02.json` (`abbrev_fix` 0.1.0, 10 of 10 held),
 `submission/image-2026-11-01.json` (padded 0.2.0 system, 8 of 8 held) and
 `submission/image-2026-10-31.json` (0.1.0 system, 7 of 7 held), each with its
 manifest. Limits: `docker build` itself has not been run yet, so the
@@ -532,7 +536,9 @@ and synthetic studies. They make no network calls and need no model.
   automatically picked abbreviations (6 of 8 pre-registered predictions held
   on 2026-11-02). `abbrev_fix.py` 0.1.1 (sense check), `abbrev_sense.py` 0.1.0
   and their report (`abbrev_fix/sense-report-2026-11-02.json`): 75 fresh
-  needs, 10 of 10 pre-registered predictions held on 2026-11-02.
+  needs, 10 of 10 pre-registered predictions held on 2026-11-02. The image
+  check with 0.1.1 (`submission/image-2026-11-02b.json` and its manifest): 10
+  of 10 pre-registered predictions held.
 - 0.2.0: public data dictionaries and sex counts (`dictionaries`, with
   `--budget-minutes`), abbreviations, conversational follow-ups (`chat`),
   silver dev set (`devset`), `bench`, `census`, better plural folding,
