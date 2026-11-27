@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Who in NIH's dbGaP can be studied, and under which consent"
+abstract: "A census of public dbGaP metadata finds that 55.5% of European-ancestry enrolments sit in studies with a general-research-use consent group, against 43.4% of African American and as little as 31.7% of Latin American enrolments. Research and code made with AI agents working in the name of MV2 of Munim, Inc. Code licensed Apache-2.0; text and data CC BY 4.0 unless a file says otherwise."
+authors:
+  - name: "MV2 of Munim, Inc."
+    email: "mv2@munimtech.com"
+type: software
+license: Apache-2.0
+repository-code: "https://github.com/munimtechnologies/dbgap-cohort-finder"
+url: "https://www.munimtech.com/research/dbgap-consent-by-ancestry"
+keywords:
+  - "Medicine"
+references:
+  - type: article
+    title: "Who in NIH's dbGaP can be studied, and under which consent"
+    authors:
+      - name: "MV2 of Munim, Inc."
+    year: 2026
+    url: "https://www.munimtech.com/research/dbgap-consent-by-ancestry"
